@@ -1,0 +1,37 @@
+# Recursive dogfooding: SliceOps spec repo runs the SliceOps Capa B.2 CI
+# guardrails it publishes. Bootstrap default per P12 (NOT a retrofit).
+# Templates: ../../sliceops-toolkit/templates/ci-guardrails/
+name: ci
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+# Capa B.2 — concurrency cancel-in-progress (dominant cost lever, P12)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Capa B.2 — aggregation-required-gate: single lightweight required check.
+  # Markdown-only repo → cheap structure smoke test (dogfoods folder structure).
+  ci-gate:
+    if: github.event.pull_request.draft == false   # Capa B.2 draft-skip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify lightweight structure (DR-2026-05-14 lightweight-pivot)
+        run: |
+          set -e
+          for d in spec reference decisions examples governance; do
+            test -d "$d" || { echo "::error::missing top-level folder: $d"; exit 1; }
+          done
+          test -f README.md && test -f DISCLOSURE.md && test -f GOVERNANCE.md
+          echo "structure smoke test: PASS"
+      - name: No LICENSE until IP/Legal ratified (intentional gate)
+        run: |
+          if [ -f LICENSE ]; then
+            echo "::notice::LICENSE present — confirm IP/Legal ratification (HANDOFF-005)"
+          else
+            echo "LICENSE intentionally absent (pending IP/Legal); OK"
+          fi
