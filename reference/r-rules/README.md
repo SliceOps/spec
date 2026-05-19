@@ -7,6 +7,7 @@ Each R-rule is a **hard gate**: a PR violating any rule does not merge. R1–R14
 ## Files
 
 - [`r1-r14-starter.md`](r1-r14-starter.md) — the 14 canonical starter rules (statement · rationale · principle · check pattern · allowlist · instantiation note)
+- [`layer-3-validators.md`](layer-3-validators.md) — consistency-management Layer 3 CI validator specs (Phase 2 + 3) + the counter-discipline / counter-atomicity pattern (P12)
 
 ## How adopters instantiate
 
