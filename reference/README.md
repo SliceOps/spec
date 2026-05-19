@@ -10,12 +10,14 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `knowledge-categories/` | 27 canonical knowledge categories (reference taxonomy v1.0) | B.1 |
 | `r-rules/` | R1–R14 starter templates (regex vendor-agnostic, adopter-instantiable) | B.1 |
 | `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, LearningPattern, CognitiveFramework) including Layer 1 consistency-management fields | B.1 |
-| `templates/` | File templates (slice, DEC, InsightRecord, etc.) | B.1 |
+| `templates/` | File templates (slice, DEC, InsightRecord) | B.1 |
+| `agent-skill/` | Agent-Skill concept spec (vendor-neutral procedural-pack concept; distinct from the Capability cognitive entity) | B.1 |
+| `patterns/` | Capa B.2 Universal Engineering Patterns — reaffirmed industry-canonical + SliceOps-formalized (Determinism-over-Regeneration, CI/Pipeline Cost Economy) | B.2 |
 | `workflows/` | CI workflow exemplars (full reference implementation lives in the SliceOps toolkit repo) | B.2 |
 
 ## Status
 
-Scaffolding in progress. Sub-folders are placeholders; Capa B.1 content drafting is the next work batch.
+Capa B.1 reference core drafted: entity-catalog, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars + adopter onboarding are remaining.
 
 ## Note on "Skill" vs "Capability"
 
