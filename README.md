@@ -2,7 +2,7 @@
 
 > The open methodology and audit plane for AI-first software engineering. Multi-agent teams ship auditable software, not vibe code.
 
-**Status: scaffolding in progress (private).** Skeleton + governance in place; Capa B reference content drafting is the next batch. Made public when Capa B.1 content is drafted, license ratified, and governance complete.
+**Status: pre-launch (private).** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). Skeleton, governance, and Capa B.1 reference content are in place; the repository goes public on founder approval (P9 — human-in-the-loop authority).
 
 ## What SliceOps is
 
@@ -26,9 +26,18 @@ Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diáta
 - **Capa B — Reference Patterns**: B.1 Methodology Artifacts + B.2 Universal Engineering Patterns. SliceOps IP.
 - **Capa C — Implementations**: C.1 Vendor Runtimes + C.2 Adopter Stack Patterns. Owned by vendors/adopters.
 
-## Licensing
+## License
 
-Intended: documentation under CC BY 4.0, code templates under MIT. **Final terms pending IP/Legal ratification — no `LICENSE` file yet by design.** See `governance/IPR_POLICY.md` and `DISCLOSURE.md`.
+This repository contains mixed-scope content under two licenses:
+
+- **Documentation** (prose, spec, governance, decisions, examples, READMEs) is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
+- **Code** (templates, workflows, schemas, validators) is licensed under the [MIT License](LICENSE-CODE).
+
+Code files carry an `SPDX-License-Identifier: MIT` header making per-file scope unambiguous. Full terms and the contribution posture (Inbound = Outbound; no CLA for v1) are in [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md).
+
+Copyright (c) 2026 Andrés Ramírez Sierra.
+
+SliceOps™ is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). Trademark usage is governed separately by `TRADEMARK.md` (pending) — the CC BY 4.0 / MIT licenses **do not** transfer trademark rights. See [`DISCLOSURE.md`](DISCLOSURE.md).
 
 ---
 

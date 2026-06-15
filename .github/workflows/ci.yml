@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recursive dogfooding: SliceOps spec repo runs the SliceOps Capa B.2 CI
 # guardrails it publishes. Bootstrap default per P12 (NOT a retrofit).
 # Templates: ../../sliceops-toolkit/templates/ci-guardrails/
