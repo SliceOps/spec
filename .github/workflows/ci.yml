@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify lightweight structure (DR-2026-05-14 lightweight-pivot)
+      - name: Verify lightweight structure (per the canonical repo-structure spec)
         run: |
           set -e
           for d in spec reference decisions examples governance; do
@@ -31,7 +31,7 @@ jobs:
       - name: No LICENSE until IP/Legal ratified (intentional gate)
         run: |
           if [ -f LICENSE ]; then
-            echo "::notice::LICENSE present — confirm IP/Legal ratification (HANDOFF-005)"
+            echo "::notice::LICENSE present — confirm IP/Legal ratification before public release"
           else
             echo "LICENSE intentionally absent (pending IP/Legal); OK"
           fi
