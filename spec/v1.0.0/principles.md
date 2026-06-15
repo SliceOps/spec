@@ -28,6 +28,10 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Slices touching unrelated concerns (DI + business logic + DB migration + UI)
 - Slices without explicit scope declaration
 
+**Clarification (slice ⊂ session)**: P1's statement is preserved as-is **for the DEV Session-Type** — the slice IS the DEV Session-Type, the one that produces a PR. Other Session-Types (Meta, Audit, Learning, Support, Infra, Artifact, Orchestrate) are valid AI interactions that do not produce a PR (governance decisions, blameless verification, exploration, incident care, infra ops). **Every slice is a session; not every session is a slice.** P1 governs the atomicity of DEV slices; it is not violated by non-DEV sessions. See `../../reference/sessions/` for the Session-Type taxonomy.
+
+**Sizing**: token-band measures throughput (billed-equivalent); **context-band** measures peak context footprint (orthogonal). Both are calibrated, not axiomatic — see `../../reference/sizing/`.
+
 ---
 
 ## P2 — Audit Plane Discipline
@@ -90,6 +94,8 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - "We decided this in a meeting" — re-record as a slice
 - Decisions in a chat backlog never committed to the corpus
 - DECs that supersede priors without explaining what changed in context
+
+**Clarification (decisions emerge from sessions)**: P4's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
 
 ---
 

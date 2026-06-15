@@ -6,7 +6,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 
 | Folder | Content | Capa |
 |---|---|---|
-| `entity-catalog/` | 12 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value) — each with frontmatter schema + lifecycle + generic examples + anti-patterns | B.1 |
+| `entity-catalog/` | 13 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**) — each with frontmatter schema + lifecycle + generic examples + anti-patterns | B.1 |
 | `knowledge-categories/` | 27 canonical knowledge categories (reference taxonomy v1.0) | B.1 |
 | `r-rules/` | R1–R14 starter templates (regex vendor-agnostic, adopter-instantiable) | B.1 |
 | `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, LearningPattern, CognitiveFramework) including Layer 1 consistency-management fields | B.1 |

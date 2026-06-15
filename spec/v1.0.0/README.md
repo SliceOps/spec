@@ -11,7 +11,7 @@ The canonical SliceOps™ methodology specification, version 1.0.0.
 
 ## Status
 
-Core spec documents present (this batch). Pending next batches: the 12-entity catalog (`../../reference/entity-catalog/`), 27 knowledge categories, R1–R14 templates, frontmatter schemas, file templates.
+Core spec documents present. The 13-entity catalog, 27 knowledge categories, R1–R14 templates, frontmatter schemas, file templates, agent-skill concept, B.2 patterns, and Layer 3 validator specs are materialized in `../../reference/`. Sizing (token-band + context-band), Model Triage, Context Router, and the development-model characterization are documented alongside.
 
 Licensing pending IP/Legal ratification — no `LICENSE` file yet by design (see `../../governance/IPR_POLICY.md`, `../../DISCLOSURE.md`). Repository private until scaffolding complete.
 

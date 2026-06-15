@@ -39,7 +39,7 @@ Currently none; P1–P12 are monolithic. Future principle dimensions (e.g., comp
 
 | Sub-layer | Content |
 |---|---|
-| **B.1 — Methodology Artifacts** | The 12-entity cognitive catalog, repo folder structure, R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism. SliceOps-originated. |
+| **B.1 — Methodology Artifacts** | The 13-entity cognitive catalog, repo folder structure, R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism, sizing artifacts, model triage. SliceOps-originated. |
 | **B.2 — Universal Engineering Patterns** | SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense in Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration. Industry-canonical, reaffirmed; vendor-agnostic, stack-agnostic. |
 
 Future potential: **B.3 — Compliance Pattern Mappings**; **B.4 — Domain Pattern Libraries**.
@@ -65,9 +65,9 @@ Future potential: **C.3 — Adopter Compliance Mappings**; **C.4 — Adopter Dom
 
 ---
 
-## The 12-entity catalog (Capa B.1)
+## The 13-entity catalog (Capa B.1)
 
-The canonical cognitive entity catalog is **SliceOps IP, shared across vendors** (CC BY 4.0): DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value. Each entity has a frontmatter schema + lifecycle + cross-reference patterns + anti-patterns (see `../../reference/entity-catalog/`, drafting).
+The canonical cognitive entity catalog is **SliceOps IP, shared across vendors** (CC BY 4.0): DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**. Each entity has a frontmatter schema + lifecycle + cross-reference patterns + anti-patterns (see `../../reference/entity-catalog/`).
 
 ### Why the catalog is shared SliceOps IP, not vendor-proprietary
 

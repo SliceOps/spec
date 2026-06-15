@@ -64,10 +64,16 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: capa-b-engineering-universal, adopter, brain-pack-injection
 
 ### entity-catalog
-- **Scope**: Decisions about the 12 canonical cognitive entity types.
+- **Scope**: Decisions about the 13 canonical cognitive entity types.
 - **Parent**: capa-b-methodology-artifact
-- **Sub-topics**: decision-record-pattern, insight-record-pattern, learning-pattern, etc.
-- **Cross-references**: vocabulary-discipline, capa-b-methodology-artifact
+- **Sub-topics**: decision-record-pattern, insight-record-pattern, learning-pattern, session-management, etc.
+- **Cross-references**: vocabulary-discipline, capa-b-methodology-artifact, session-management
+
+### session-management
+- **Scope**: Decisions about the Session entity (#13), Session-Type taxonomy, lifecycle disposition, cross-cutting dimensions, and the slice⊂session containment.
+- **Parent**: capa-b-methodology-artifact
+- **Sub-topics**: session-type, slice-type, lifecycle-disposition, orchestrate-session
+- **Cross-references**: entity-catalog, audit-plane, development-model
 
 ### folder-structure
 - **Scope**: Decisions about the canonical repo folder structure for SliceOps-compliant repos.
