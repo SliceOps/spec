@@ -14,6 +14,7 @@ Industry-canonical engineering patterns SliceOps **reaffirms**. Vendor-agnostic,
 | Defense in Depth | Reaffirmed (industry-canonical) | Industry literature |
 | **CI/Pipeline Cost Economy** | SliceOps-formalized | Spec below + runnable templates in the **SliceOps toolkit** repo |
 | **Determinism-over-Regeneration** | SliceOps-formalized | Spec below |
+| **LLM-Inference-Cost-Economy** | SliceOps-formalized (B.2 sub-domain of CI/Pipeline Cost Economy) | [Dedicated spec](llm-inference-cost-economy.md) + runnable templates in toolkit |
 
 The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-first engineering, where the failure modes are intrinsic to multi-agent parallelism and stochastic generation.
 

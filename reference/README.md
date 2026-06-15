@@ -11,6 +11,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `sizing/` | Bidimensional sizing: **token-band** (throughput, billed-equivalent) + **context-band** (peak footprint, model-viability filter) + calibration discipline | B.1 |
 | `model-triage/` | Model Triage artifact: 5 axes (context-band primary filter → sensitivity → complexity → latency → cost) + execution-modes + synthesis efficiency + consuming/producing distinction | B.1 |
 | `context-router/` | Context Router: selective routing of context-experts (consumption side) — pairs with synthesis efficiency in Model Triage (production side) | B.1 |
+| `development-model/` | Canonical SliceOps development model: decision-driven + style-agnostic + acceptance-first preferred convention | B.1 |
 | `knowledge-categories/` | 27 canonical knowledge categories (reference taxonomy v1.0) | B.1 |
 | `r-rules/` | R1–R14 starter templates (regex vendor-agnostic, adopter-instantiable) | B.1 |
 | `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, LearningPattern, CognitiveFramework) including Layer 1 consistency-management fields | B.1 |

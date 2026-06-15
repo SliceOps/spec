@@ -14,6 +14,18 @@ Use as the PR description / slice scope declaration. Replace all <…>.
 **In scope**: <bullets>
 **Out of scope**: <bullets — deferred to which future slice>
 
+## Acceptance criteria (executable preferred — preferred convention)
+
+<Declared upfront. Each criterion is testable. Together they define what makes this slice "done".
+
+Executable form (preferred): an acceptance test (or small test suite) that codifies the criteria. The test pass IS the evidence-gate that closes the slice (P5). One artifact bridges scope (start) ↔ evidence (end).
+
+Prose form (override permitted): a numbered list of testable statements. Maps to evidence in the Evidence plan below.>
+
+- [ ] AC-1 — <criterion>
+- [ ] AC-2 — <criterion>
+- [ ] AC-3 — <criterion>
+
 ## Decisions produced (P2/P4)
 
 - DR-YYYY-MM-DD-<slug> — <one line> (or "none")
