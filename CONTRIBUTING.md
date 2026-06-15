@@ -35,6 +35,6 @@ By opening a pull request, you license your contribution under the same license 
 - **Documentation** (prose, spec, governance, decisions, examples, READMEs) → [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
 - **Code** (templates, workflows, schemas, validators, CI) → [MIT License](LICENSE-CODE), as declared by each file's `SPDX-License-Identifier: MIT` header (or the disambiguation rule in [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md) when no header is present).
 
-No Contributor License Agreement (CLA) is required for v1 — the Inbound = Outbound posture is sufficient. **Trademark is not part of this license:** contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by `TRADEMARK.md` (pending). Full policy: [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md).
+No Contributor License Agreement (CLA) is required for v1 — the Inbound = Outbound posture is sufficient. **Trademark is not part of this license:** contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by [`TRADEMARK.md`](TRADEMARK.md). Full policy: [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md).
 
 Conduct expectations: see `CODE_OF_CONDUCT.md`.

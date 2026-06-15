@@ -37,7 +37,7 @@ Code files carry an `SPDX-License-Identifier: MIT` header making per-file scope 
 
 Copyright (c) 2026 Andrés Ramírez Sierra.
 
-SliceOps™ is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). Trademark usage is governed separately by `TRADEMARK.md` (pending) — the CC BY 4.0 / MIT licenses **do not** transfer trademark rights. See [`DISCLOSURE.md`](DISCLOSURE.md).
+SliceOps™ is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). Trademark usage is governed separately by [`TRADEMARK.md`](TRADEMARK.md) — the CC BY 4.0 / MIT licenses **do not** transfer trademark rights. See [`DISCLOSURE.md`](DISCLOSURE.md).
 
 ---
 

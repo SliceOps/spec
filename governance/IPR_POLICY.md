@@ -15,14 +15,14 @@ Code files carry an `SPDX-License-Identifier: MIT` header so per-file scope is u
 
 ## Trademark — separate from copyright
 
-"SliceOps™" is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). **The CC BY 4.0 / MIT licenses do not transfer trademark rights.** Copyright governs use, copying, and redistribution of the content; the trademark governs use of the name "SliceOps™" in commerce and marketing. An adopter may use and redistribute SliceOps content under CC BY 4.0 / MIT (with attribution) and publish derivatives under their own name, but may not brand a derivative "SliceOps <anything>" or claim "SliceOps-compliant" without honoring the spec. Trademark usage guidelines (allowable claims, attribution, anti-misuse) are published separately in `TRADEMARK.md` (pending). See also [`../DISCLOSURE.md`](../DISCLOSURE.md).
+"SliceOps™" is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). **The CC BY 4.0 / MIT licenses do not transfer trademark rights.** Copyright governs use, copying, and redistribution of the content; the trademark governs use of the name "SliceOps™" in commerce and marketing. An adopter may use and redistribute SliceOps content under CC BY 4.0 / MIT (with attribution) and publish derivatives under their own name, but may not brand a derivative "SliceOps <anything>" or claim "SliceOps-compliant" without honoring the spec. Trademark usage guidelines (allowable claims, attribution, anti-misuse) are published separately in [`TRADEMARK.md`](../TRADEMARK.md). See also [`../DISCLOSURE.md`](../DISCLOSURE.md).
 
 ## Contributions — Inbound = Outbound
 
 Contributions are accepted under the **Inbound = Outbound** principle: by opening a pull request, a contributor licenses their contribution under the same license that governs the file being changed (CC BY 4.0 for documentation, MIT for code, per the file's SPDX header or the disambiguation rule above).
 
 - **No Contributor License Agreement (CLA) is required for v1.** The Inbound = Outbound posture keeps contribution friction low.
-- **Trademark is not included in the contribution license.** Contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by `TRADEMARK.md`.
+- **Trademark is not included in the contribution license.** Contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by [`TRADEMARK.md`](../TRADEMARK.md).
 - Changes to a principle, reference pattern, or canonical vocabulary follow the RFC process. See [`RFC-PROCESS.md`](RFC-PROCESS.md).
 
 A CLA (DCO-style or Apache-style) may be re-evaluated if the contributor base grows past ~50 distinct individuals, a re-licensing need arises, or enterprise adopters require it for due diligence.
@@ -37,4 +37,4 @@ SliceOps is an open methodology. Vendor runtime implementations (including the f
 - [`../LICENSE`](../LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`../LICENSE-CODE`](../LICENSE-CODE) — MIT License (code).
 - [`../DISCLOSURE.md`](../DISCLOSURE.md) — SliceOps / reference-runtime relationship and IP transparency.
-- `TRADEMARK.md` — trademark usage policy (pending).
+- [`TRADEMARK.md`](../TRADEMARK.md) — trademark usage policy.
