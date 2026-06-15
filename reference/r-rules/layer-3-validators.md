@@ -11,6 +11,19 @@ The consistency-management mechanism has six layers. Layers 1–2 are immediate 
 | `validate-frontmatter-schema` | Layer 1 fields present + well-formed (`conflicts-with`, `related-decs`, `topics`, `vocabulary-changes`, `consistency-check`) | YAML schema validation |
 | `validate-topic-tags` | Every value in `topics:` exists in the canonical topic taxonomy | set membership against `spec/v1.0.0/topics.md` |
 
+## Phase 2.5 — denormalized-drift + unit/cost coherence
+
+Added on top of Phase 2 because the manual fix-on-touch of denormalized counts empirically does not converge (the count of canonical things — principles, entities — is duplicated as a literal in N places; manual updates leave residuals; the failure mode is recurrent).
+
+| Validator | Rule | Check |
+|---|---|---|
+| `principle-count-coherence` | The count of P-NN headings in the canonical principles spec IS the truth; every literal "N principles" / "P1-PN" elsewhere must match | count P-NN headings + grep all literals + compare |
+| `entity-count-coherence` | The count of `NN-*.md` files in the entity catalog IS the truth; every literal "N entities" / "N cognitive entities" / "N-entity" must match | count files + grep all literals + compare |
+| `band-unit` | Token-band must be in **billed-equivalent** (not total-with-cache, which inflates ~5×) | scan spec/sizing/templates for "token-band ... total-with-cache" |
+| `llm-ci-cost` | **R-LLM-CI-COST.** A workflow calling a paid-LLM endpoint must satisfy the four bright-line rules of the LLM-Inference-Cost-Economy sub-domain | scan workflows for a paid-LLM endpoint + check concurrency, trigger-set, draft gate |
+
+Phase 2.5 closes the gaps Phase 2 does not address. Phase 3 below is the deeper structural reconciliation.
+
 ## Phase 3 — advanced validators (medium complexity, later)
 
 | Validator | Rule |
