@@ -1,4 +1,4 @@
-# Layer 1 Consistency Fields — Capa B.1
+# Layer 1 Consistency Fields — Layer B.1
 
 The **mandatory consistency-management frontmatter** for every DecisionRecord (Layer 1 of the consistency-management mechanism). These fields make corpus consistency machine-checkable and force the author to articulate consistency thinking explicitly rather than implicitly.
 

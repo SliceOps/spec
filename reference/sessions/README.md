@@ -1,4 +1,4 @@
-# Sessions — Capa B.1 (v1.0)
+# Sessions — Layer B.1 (v1.0)
 
 Canonical Session-Type taxonomy. Every human–AI interaction is a **Session** (cognitive entity #13, see `../entity-catalog/13-session.md`). This document specifies how Sessions are classified: 8 canonical Session-Types (level 1), Slice-Types (level 2, only when Session-Type=Slice), and 2 orthogonal axes (lifecycle + cross-cutting dimensions).
 
@@ -19,7 +19,7 @@ The taxonomy is **hierarchical, not flat** — earlier operational practice mixe
 | **Learn** | **Learning** | Exploration / research / knowledge acquisition (feeds P7). |
 | **Orchestrate** | **Orchestrate** | Coordinates other sessions; does not produce direct work output. **Full word per naming convention — replaces the abbreviated "COORD".** |
 
-Each Session-Type is canonical and reserved (P10). Adopters add **sub-variants** (Capa C.2) for their stack/business, never new top-level Session-Types without a superseding decision.
+Each Session-Type is canonical and reserved (P10). Adopters add **sub-variants** (Layer C.2) for their stack/business, never new top-level Session-Types without a superseding decision.
 
 ---
 
@@ -33,11 +33,11 @@ Each Session-Type is canonical and reserved (P10). Adopters add **sub-variants**
 | **Refactor** | patch `vX.Y.Z` | No functional change — structural improvement. |
 | **Fix** | patch `vX.Y.Z` | Bug fix — restores intended behavior. |
 
-SemVer already encodes part of the distinction; the Slice-Type makes it explicit and queryable. Adopters may add stack-specific Slice-Types (Capa C.2 — e.g., a banking adopter could add a `Regulatory` Slice-Type).
+SemVer already encodes part of the distinction; the Slice-Type makes it explicit and queryable. Adopters may add stack-specific Slice-Types (Layer C.2 — e.g., a banking adopter could add a `Regulatory` Slice-Type).
 
 ### Support-variant (when Session-Type=Support)
 
-`Capa C.2` — adopter-defined sub-variants (e.g., "Support Multi" for multi-ticket→1-WI flows; "Support General" for sessions without an inbound ticket). The sub-variant depends on the adopter's ticketing system and is NOT part of the canonical SliceOps taxonomy.
+`Layer C.2` — adopter-defined sub-variants (e.g., "Support Multi" for multi-ticket→1-WI flows; "Support General" for sessions without an inbound ticket). The sub-variant depends on the adopter's ticketing system and is NOT part of the canonical SliceOps taxonomy.
 
 ---
 
@@ -57,7 +57,7 @@ SemVer already encodes part of the distinction; the Slice-Type makes it explicit
 
 ---
 
-## Mapping legacy "flat 17" → canonical structure
+## Mapping legacy "flat 17" to canonical structure
 
 Adopters or scripts that used an earlier flat categorization migrate as follows:
 
@@ -66,7 +66,7 @@ Adopters or scripts that used an earlier flat categorization migrate as follows:
 | SliceOps (BL-NN…) | Slice (Session-Type, level 1) |
 | Dev, Refactor, Fix | Slice-Type (level 2) |
 | Support | Support (Session-Type, level 1) |
-| Support Multi, Support General | Support-variant (level 2) → Capa C.2 |
+| Support Multi, Support General | Support-variant (level 2) → Layer C.2 |
 | Artifact | Artifact (Session-Type) |
 | Documentation | Artifact sub-type (or its own Session-Type per adopter preference) |
 | Infra | Infra (Session-Type) |
@@ -75,10 +75,10 @@ Adopters or scripts that used an earlier flat categorization migrate as follows:
 | Audit | Audit (Session-Type) |
 | Meta | Meta (Session-Type) |
 | Security | Cross-cutting dimension (axis B) |
-| Admin, Business | Capa C.2 (adopter-specific ops, not part of the canonical framework taxonomy) |
+| Admin, Business | Layer C.2 (adopter-specific ops, not part of the canonical framework taxonomy) |
 | Delete | Lifecycle disposition (axis A) |
 
-Result: 17 flat labels → **8 canonical Session-Types + Slice-Types + 2 orthogonal axes** — scalable and without level confusion.
+Result: 17 flat labels become **8 canonical Session-Types + Slice-Types + 2 orthogonal axes** — scalable and without level confusion.
 
 ---
 
@@ -89,17 +89,17 @@ A flat list cannot represent that:
 - "Dev" is a sub-classification of Slice (level 2), not a sibling of Slice (level 1).
 - "Security" is an attribute that cuts across types, not a sibling of Slice.
 - "Delete" is a state, not a kind.
-- "Admin" / "Business" are adopter ops, not part of the methodology.
+- "Admin" / "Business" are adopter ops, not part of the framework.
 
 Mixing these in one list creates ambiguity ("what kind of session is a Security session?"), prevents clean tagging (the same session is two labels), and breaks calibration (DEV sessions and Meta sessions have very different sizing distributions; aggregating them blurs the bands).
 
-The hierarchical taxonomy mirrors the same pattern used elsewhere in SliceOps (Capa A/B/C top-level + sub-numbering for new dimensions) — top-level stability + extensible sub-numbering, no renaming on growth.
+The hierarchical taxonomy mirrors the same pattern used elsewhere in SliceOps (Layer A/B/C top-level + sub-numbering for new dimensions) — top-level stability + extensible sub-numbering, no renaming on growth.
 
 ---
 
 ## Adopter customization rules
 
-Adopters **may**: use the 8 canonical types as-is (recommended — cross-adopter interoperability); add **Capa C.2 sub-variants** for their stack/business (e.g., Support Multi/General, banking-specific Slice-Types); add new cross-cutting **dimensions** to axis B.
+Adopters **may**: use the 8 canonical types as-is (recommended — cross-adopter interoperability); add **Layer C.2 sub-variants** for their stack/business (e.g., Support Multi/General, banking-specific Slice-Types); add new cross-cutting **dimensions** to axis B.
 
 Adopters **may not**: add new top-level Session-Types without a superseding decision (this would alter the canonical catalog); reuse a deprecated abbreviation (e.g., "COORD" for Orchestrate); claim SliceOps-compliance while conflicting canonical Session-Type semantics.
 

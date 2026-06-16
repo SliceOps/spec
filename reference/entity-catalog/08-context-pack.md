@@ -1,4 +1,4 @@
-# ContextPack — Capa B.1 Cognitive Entity
+# ContextPack — Layer B.1 Cognitive Entity
 
 > Pre-computed context bundles loaded at slice/session start. **Mapped principle: P8 (Platform-Agnostic).**
 

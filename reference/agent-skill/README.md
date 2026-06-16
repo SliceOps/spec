@@ -1,4 +1,4 @@
-# Agent-Skill — Capa B.1 Concept Spec (v1.0)
+# Agent-Skill — Layer B.1 Concept Spec (v1.0)
 
 > **Status: formalized concept, vendor-neutral.** A distinct concept from the **Capability** cognitive entity (entity #4 in the catalog). "Skill" is the reserved term for *this* concept and must NOT be used for the cognitive entity.
 
@@ -28,9 +28,9 @@ They relate (using an Agent-Skill can accrue a Capability) but are categorically
 
 ## Relationship to the rest of the framework
 
-- An Agent-Skill **bundles** deterministic tools → instances of Determinism-over-Regeneration (`../patterns/`).
-- An Agent-Skill is **composed**, not custom-built per task → P1 at skill granularity.
-- An Agent-Skill **improves** via the recursive-learning loop → its tuning is the artifact-level granularity of P7 (the "one-off vs permanent" tuning gate): when a skill underperforms, ask "one-off or permanent?"; if permanent, update the skill artifact immediately (don't wait for the ≥3 LearningPattern threshold).
+- An Agent-Skill **bundles** deterministic tools — instances of Determinism-over-Regeneration (`../patterns/`).
+- An Agent-Skill is **composed**, not custom-built per task — P1 at skill granularity.
+- An Agent-Skill **improves** via the recursive-learning loop — its tuning is the artifact-level granularity of P7 (the "one-off vs permanent" tuning gate): when a skill underperforms, ask "one-off or permanent?"; if permanent, update the skill artifact immediately (don't wait for the ≥3 LearningPattern threshold).
 - An Agent-Skill's **invocation-control** flags are a concrete P9 mechanism (high-risk actions require explicit human authorization; the model may not silently self-invoke them).
 
 ## Anti-patterns
@@ -44,8 +44,8 @@ They relate (using an Agent-Skill can accrue a Capability) but are categorically
 
 ## Formalization status & scope
 
-This document **formalizes the concept** (the term, the six elements, the principle alignment, the boundary vs Capability). It is intentionally a *concept spec*, not a runtime schema: concrete on-disk skill formats are a runtime/adopter concern (Capa C). Conformance test vectors and an authoring template are future work, gated behind real adopter usage (P7 — avoid premature over-formalization).
+This document **formalizes the concept** (the term, the six elements, the principle alignment, the boundary vs Capability). It is intentionally a *concept spec*, not a runtime schema: concrete on-disk skill formats are a runtime/adopter concern (Layer C). Conformance test vectors and an authoring template are future work, gated behind real adopter usage (P7 — avoid premature over-formalization).
 
 ## External corroboration (not source)
 
-The six-element structure is consistent with how engineers at a leading AI lab publicly describe using agent skills (composable, more than prompts, deterministic tools, smarter every session, invocation control). This is **external validation** that SliceOps's P1/P7/P9 were already correct — corroboration, not the source of the methodology. SliceOps formalizes as an auditable methodology what is otherwise tacit practice.
+The six-element structure is consistent with how engineers at a leading AI lab publicly describe using agent skills (composable, more than prompts, deterministic tools, smarter every session, invocation control). This is **external validation** that SliceOps's P1/P7/P9 were already correct — corroboration, not the source of the framework. SliceOps formalizes as an auditable framework what is otherwise tacit practice.

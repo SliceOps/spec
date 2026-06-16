@@ -1,4 +1,4 @@
-# OutcomeRecord — Capa B.1 Cognitive Entity
+# OutcomeRecord — Layer B.1 Cognitive Entity
 
 > Tracked outcomes of slices/blocks — what shipped, what worked, what the result was. **Mapped principle: P5 (Evidence-by-Construction).**
 

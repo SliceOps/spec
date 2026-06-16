@@ -1,5 +1,5 @@
 <!--
-Slice template (Capa B.1) — one chat = one PR = one atomic vertical slice (P1).
+Slice template (Layer B.1) — one chat = one PR = one atomic vertical slice (P1).
 Use as the PR description / slice scope declaration. Replace all <…>.
 -->
 

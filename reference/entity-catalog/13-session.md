@@ -1,4 +1,4 @@
-# Session — Capa B.1 Cognitive Entity
+# Session — Layer B.1 Cognitive Entity
 
 > The unit of human–AI interaction (one conversation/chat with an AI agent). **Mapped principles: P2 (Audit Plane), P4 (Decision Integrity — generalized: decisions emerge from sessions), P5 (provenance evidence category).**
 

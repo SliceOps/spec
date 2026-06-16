@@ -1,6 +1,6 @@
-# Context Router — Capa B.1 (v1.0)
+# Context Router — Layer B.1 (v1.0)
 
-A Capa B.1 artifact: routes context **selectively** to each slice/session — instead of loading the whole corpus, activates only the relevant **context-experts**. SliceOps IP, CC BY 4.0. Vendor-neutral.
+A Layer B.1 artifact: routes context **selectively** to each slice/session — instead of loading the whole corpus, activates only the relevant **context-experts**. SliceOps IP, CC BY 4.0. Vendor-neutral.
 
 The Context Router is the **consumption** side of context efficiency. Its complement, the **production** side (synthesis efficiency), is documented as an axis of Model Triage (see `../model-triage/`).
 
@@ -43,7 +43,7 @@ Per session, **select context-experts**. A **context-expert** is a specialized c
 Routing inputs (typical):
 - The declared scope of the session (Session-Type, slice-id, declared topics).
 - Cross-references in already-loaded entities (transitive expansion).
-- Adopter-specific routing rules (Capa C.2).
+- Adopter-specific routing rules (Layer C.2).
 
 ### 2. Context compression
 
@@ -71,7 +71,7 @@ The Context Router is the **coherent pattern** that unifies them — it does not
 ## Connection to Model Triage + sizing
 
 - **Context-band** (see `../sizing/`) **measures** peak footprint. The Context Router **reduces** it.
-- A smaller footprint **expands the feasible set** of Model Triage (more slices fit in smaller windows → more local / cheaper / private models become viable). This is the direct contribution to **compliance-by-construction**: routing shrinks footprint enough that sensitive work fits in local-mode models.
+- A smaller footprint **expands the feasible set** of Model Triage (more slices fit in smaller windows, so more local / cheaper / private models become viable). This is the direct contribution to **compliance-by-construction**: routing shrinks footprint enough that sensitive work fits in local-mode models.
 
 ---
 
@@ -83,4 +83,4 @@ Routing tightens consumption today; synthesis efficiency keeps tomorrow's corpus
 
 ## Adopter implementation note
 
-The router pattern is vendor-neutral. Concrete implementations (the routing rules, the expert clusters, the integration with a specific agent platform's session-start hook) are **Capa C.2** — adopter-defined. The SliceOps toolkit hosts reference instantiations; adopters extend with stack-specific rules.
+The router pattern is vendor-neutral. Concrete implementations (the routing rules, the expert clusters, the integration with a specific agent platform's session-start hook) are **Layer C.2** — adopter-defined. The SliceOps toolkit hosts reference instantiations; adopters extend with stack-specific rules.

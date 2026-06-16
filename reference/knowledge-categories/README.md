@@ -1,6 +1,6 @@
-# Knowledge Categories — Capa B.1 Reference Taxonomy v1.0
+# Knowledge Categories — Layer B.1 Reference Taxonomy v1.0
 
-The canonical SliceOps™ knowledge-layer taxonomy: **27 universal categories**. SliceOps IP (Capa B.1); documentation under CC BY 4.0 (final terms pending IP/Legal — see `../../governance/IPR_POLICY.md`).
+The canonical SliceOps™ knowledge-layer taxonomy: **27 universal categories**. SliceOps IP (Layer B.1); documentation under CC BY 4.0 (final terms pending IP/Legal — see `../../governance/IPR_POLICY.md`).
 
 This taxonomy classifies the *knowledge layer* of a SliceOps-compliant corpus (the data a brain holds), distinct from the *cognitive entities* (`../entity-catalog/`, the reasoning artifacts). It is a **reference** taxonomy — like a library classification scheme: the category structure is universal and shared; the contents are the adopter's own and never part of this spec.
 

@@ -1,6 +1,6 @@
-# Sizing — Bidimensional Slice/Session Sizing (Capa B.1)
+# Sizing — Bidimensional Slice/Session Sizing (Layer B.1)
 
-A slice or session is sized on **two orthogonal axes** — never conflated into a single composite. SliceOps IP (Capa B.1); CC BY 4.0.
+A slice or session is sized on **two orthogonal axes** — never conflated into a single composite. SliceOps IP (Layer B.1); CC BY 4.0.
 
 | Axis | Measures | Unit | Governs |
 |---|---|---|---|
@@ -73,8 +73,8 @@ When local-medium reaches mainstream 128K, or frontier crosses ~2M, **recalibrat
 
 A single composite size axis conflates throughput and footprint and fails honestly:
 
-- A local model with a small window may have **plenty** of throughput capacity but cannot fit the slice's footprint → it fails on **viability**, not cost.
-- A frontier model may have ample window but the slice still costs a lot → it fails on **cost**, not viability.
+- A local model with a small window may have **plenty** of throughput capacity but cannot fit the slice's footprint, so it fails on **viability**, not cost.
+- A frontier model may have ample window but the slice still costs a lot, so it fails on **cost**, not viability.
 
 Cost and viability are different failure modes; they need different bands. P1 already named "context window finita" in its rationale; only the throughput (cost) had been operationalized as token-band. Context-band closes the missing axis.
 

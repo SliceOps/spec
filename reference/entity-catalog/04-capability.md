@@ -1,4 +1,4 @@
-# Capability — Capa B.1 Cognitive Entity
+# Capability — Layer B.1 Cognitive Entity
 
 > Capabilities accrued by individuals, agents, or teams. **Mapped principle: P7 (Recursive Learning by Capture).**
 

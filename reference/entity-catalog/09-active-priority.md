@@ -1,4 +1,4 @@
-# ActivePriority — Capa B.1 Cognitive Entity
+# ActivePriority — Layer B.1 Cognitive Entity
 
 > Current priorities tracked with status + ownership. **Mapped principle: universal.**
 

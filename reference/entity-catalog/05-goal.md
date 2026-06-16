@@ -1,4 +1,4 @@
-# Goal — Capa B.1 Cognitive Entity
+# Goal — Layer B.1 Cognitive Entity
 
 > Forward-looking objectives at various time horizons. **Mapped principle: universal.**
 

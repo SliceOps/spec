@@ -1,4 +1,4 @@
-# InsightRecord — Capa B.1 Cognitive Entity
+# InsightRecord — Layer B.1 Cognitive Entity
 
 > Empirical observations captured from slices; raw material for LearningPatterns. **Mapped principle: P7 (Recursive Learning by Capture).**
 

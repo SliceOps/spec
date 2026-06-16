@@ -1,5 +1,5 @@
 <!--
-DecisionRecord template (Capa B.1). Naming: DR-YYYY-MM-DD-<slug>.md
+DecisionRecord template (Layer B.1). Naming: DR-YYYY-MM-DD-<slug>.md
 Layer 1 consistency fields are mandatory. Replace all <…>.
 -->
 ---

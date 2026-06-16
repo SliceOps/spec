@@ -4,8 +4,8 @@ SliceOps™ is authored and maintained by Andrés Ramírez Sierra. Trademark and
 
 ## Decision authority (P9 — Human-in-the-Loop Authority)
 
-- Canonical principle (Capa A) amendments require a ratified DEC with an elevated human-in-the-loop gate (no auto-merge regardless of CI status).
-- Reference pattern (Capa B) changes require a ratified DEC.
+- Canonical principle (Layer A) amendments require a ratified DEC with an elevated human-in-the-loop gate (no auto-merge regardless of CI status).
+- Reference pattern (Layer B) changes require a ratified DEC.
 - Routine contributions follow the RFC process and require maintainer approval before merge.
 
 AI agents propose; humans dispose. Critical decisions are never auto-merged.

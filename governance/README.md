@@ -1,6 +1,6 @@
 # governance/ — Roadmap, RFC process, maintainers, IPR
 
-How the SliceOps™ methodology evolves and who stewards it.
+How the SliceOps™ framework evolves and who stewards it.
 
 | Document | Purpose |
 |---|---|

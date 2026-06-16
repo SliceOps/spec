@@ -1,4 +1,4 @@
-# Entity Catalog — Capa B.1 (v1.0)
+# Entity Catalog — Layer B.1 (v1.0)
 
 The canonical SliceOps™ cognitive entity catalog: **13 universal entities**. SliceOps IP, shared across vendors (documentation under CC BY 4.0; final terms pending IP/Legal — see `../../governance/IPR_POLICY.md`).
 

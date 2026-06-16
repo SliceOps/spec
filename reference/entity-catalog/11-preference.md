@@ -1,10 +1,10 @@
-# Preference — Capa B.1 Cognitive Entity
+# Preference — Layer B.1 Cognitive Entity
 
 > Stated preferences (style, tooling, approach) — personal or team/org level. **Mapped principle: universal.**
 
 ## Purpose
 
-Records a stated "we/I prefer X over Y" so that recurring choices are explicit and auditable rather than re-litigated each slice. A Preference carries meaning standalone in markdown (which is why it is Capa B, runtime-independent). Distinct from a Value (a deeper guiding principle) and a DecisionRecord (a binding architectural decision): a Preference is a softer, revisable default.
+Records a stated "we/I prefer X over Y" so that recurring choices are explicit and auditable rather than re-litigated each slice. A Preference carries meaning standalone in markdown (which is why it is Layer B, runtime-independent). Distinct from a Value (a deeper guiding principle) and a DecisionRecord (a binding architectural decision): a Preference is a softer, revisable default.
 
 ## Frontmatter schema
 

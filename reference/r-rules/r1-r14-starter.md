@@ -1,6 +1,6 @@
-# R1–R14 — Canonical Starter Rules (Capa B.1)
+# R1–R14 — Canonical Starter Rules (Layer B.1)
 
-Vendor-neutral, stack-agnostic merge gates. Each is a **hard gate**. The check patterns are abstract; adopters bind them to their stack (Capa C.2). Allowlist marker convention: an inline comment `<!-- r<N>-allowlist: <reason ≥10 non-hyphen chars> -->` documents an audited exception.
+Vendor-neutral, stack-agnostic merge gates. Each is a **hard gate**. The check patterns are abstract; adopters bind them to their stack (Layer C.2). Allowlist marker convention: an inline comment `<!-- r<N>-allowlist: <reason ≥10 non-hyphen chars> -->` documents an audited exception.
 
 ---
 
@@ -84,4 +84,4 @@ Every rule traces to ≥1 principle (P2/P4/P5/P6/P8/P9/P10/P12 above). An R-rule
 
 ## Amendment
 
-R-rule additions/changes require a DEC citing a LearningPattern as evidence (P7 + P9). Adopter-specific rules start at R15 and are Capa C.2 (the adopter's stack instantiation), not part of this canonical starter pack.
+R-rule additions/changes require a DEC citing a LearningPattern as evidence (P7 + P9). Adopter-specific rules start at R15 and are Layer C.2 (the adopter's stack instantiation), not part of this canonical starter pack.

@@ -1,4 +1,4 @@
-# CognitiveFramework — Capa B.1 Cognitive Entity
+# CognitiveFramework — Layer B.1 Cognitive Entity
 
 > Mental models and reference structures for reasoning + decision-making. **Mapped principle: universal.**
 

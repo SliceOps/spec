@@ -14,25 +14,25 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 ## Top-level topics
 
 ### foundational
-- **Scope**: Decisions establishing Capa A principles or foundational framework concepts.
+- **Scope**: Decisions establishing Layer A principles or foundational framework concepts.
 - **Parent**: (none — top-level)
 - **Sub-topics**: principles, vocabulary-discipline, meta-framework
 - **Cross-references**: principles, meta-framework
 
 ### principles
-- **Scope**: Decisions about Capa A principles (P1–P12): amendments, deprecation, clarification.
+- **Scope**: Decisions about Layer A principles (P1–P12): amendments, deprecation, clarification.
 - **Parent**: foundational
 - **Sub-topics**: specific principles can become sub-topics if extensive DECs emerge (e.g., `p7-recursive-learning-operational`)
 - **Cross-references**: foundational, capa-a-principles-amendment
 
 ### ip-boundary
-- **Scope**: Decisions about the IP/scope axis — Capa A/B/C boundary, ownership, licensing.
+- **Scope**: Decisions about the IP/scope axis — Layer A/B/C boundary, ownership, licensing.
 - **Parent**: foundational
 - **Sub-topics**: capa-a-principles, capa-b-reference-patterns, capa-c-implementations, licensing, trademark
 - **Cross-references**: licensing, capa-c-vendor-runtime, capa-c-adopter-stack
 
 ### hierarchical-taxonomy
-- **Scope**: Decisions about naming structure and the hierarchical layer taxonomy (Capa A/B/C top-level + sub-numbering B.1, C.2, etc.).
+- **Scope**: Decisions about naming structure and the hierarchical layer taxonomy (Layer A/B/C top-level + sub-numbering B.1, C.2, etc.).
 - **Parent**: foundational
 - **Sub-topics**: layer-naming, sub-layer-numbering
 - **Cross-references**: ip-boundary, scalability, vocabulary-discipline
@@ -40,25 +40,25 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 ## Patterns + practice
 
 ### capa-b-methodology-artifact
-- **Scope**: Capa B.1 patterns — entity catalog, folder structure, R-rules, counter discipline, frontmatter schemas, file templates.
+- **Scope**: Layer B.1 patterns — entity catalog, folder structure, R-rules, counter discipline, frontmatter schemas, file templates.
 - **Parent**: ip-boundary > capa-b-reference-patterns
 - **Sub-topics**: entity-catalog, folder-structure, r-rules, counter-discipline, frontmatter-schema, file-templates
 - **Cross-references**: capa-b-engineering-universal
 
 ### capa-b-engineering-universal
-- **Scope**: Capa B.2 universal engineering patterns — SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense-in-Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration.
+- **Scope**: Layer B.2 universal engineering patterns — SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense-in-Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration.
 - **Parent**: ip-boundary > capa-b-reference-patterns
 - **Sub-topics**: solid, acid, outbox, idempotency, fail-fast, defense-in-depth, ci-cost-economy, determinism-over-regeneration
 - **Cross-references**: capa-c-adopter-stack
 
 ### capa-c-vendor-runtime
-- **Scope**: Capa C.1 — vendor-owned runtime product implementations.
+- **Scope**: Layer C.1 — vendor-owned runtime product implementations.
 - **Parent**: ip-boundary > capa-c-implementations
 - **Sub-topics**: adapters
 - **Cross-references**: vendor, capa-c-adopter-stack
 
 ### capa-c-adopter-stack
-- **Scope**: Capa C.2 — adopter-defined stack-specific instantiable patterns.
+- **Scope**: Layer C.2 — adopter-defined stack-specific instantiable patterns.
 - **Parent**: ip-boundary > capa-c-implementations
 - **Sub-topics**: dotnet-stack, nodejs-stack, flutter-stack, python-stack, rust-stack, go-stack (added as adopters publish)
 - **Cross-references**: capa-b-engineering-universal, adopter, brain-pack-injection
@@ -156,13 +156,13 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: scalability, multi-agent-parallelism, p7-recursive-learning-operational, capa-b-engineering-universal
 
 ### ci-cost-economy
-- **Scope**: Decisions about the Capa B.2 pattern "CI/Pipeline Cost Economy" — concurrency-cancel + change-gating + aggregation-gate + draft-skip + dependency-cache; plus per-CI-provider/stack C.2 instances.
+- **Scope**: Decisions about the Layer B.2 pattern "CI/Pipeline Cost Economy" — concurrency-cancel + change-gating + aggregation-gate + draft-skip + dependency-cache; plus per-CI-provider/stack C.2 instances.
 - **Parent**: capa-b-engineering-universal
 - **Sub-topics**: aggregation-required-gate, change-scoped-job-gating, concurrency-cancel-in-progress
 - **Cross-references**: finite-resource-stewardship, capa-b-engineering-universal, capa-c-adopter-stack
 
 ### determinism-over-regeneration
-- **Scope**: Decisions about the Capa B.2 pattern "Determinism-over-Regeneration" — materialize repeated processes as deterministic reusable artifacts vs AI regeneration; plus the Skill→Capability naming resolution (P10) from the same analysis.
+- **Scope**: Decisions about the Layer B.2 pattern "Determinism-over-Regeneration" — materialize repeated processes as deterministic reusable artifacts vs AI regeneration; plus the Skill→Capability naming resolution (P10) from the same analysis.
 - **Parent**: capa-b-engineering-universal
 - **Sub-topics**: one-off-vs-permanent-tuning-gate
 - **Cross-references**: capa-b-engineering-universal, vocabulary-discipline, p7-recursive-learning-operational, ci-cost-economy
@@ -170,7 +170,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 ## Compliance + governance
 
 ### compliance-mapping
-- **Scope**: Mappings of SliceOps Capa A/B to compliance frameworks (ISO 42001, SOC 2, EU AI Act, NIST AI RMF).
+- **Scope**: Mappings of SliceOps Layer A/B to compliance frameworks (ISO 42001, SOC 2, EU AI Act, NIST AI RMF).
 - **Parent**: foundational
 - **Sub-topics**: iso-42001, soc-2, eu-ai-act, nist-ai-rmf, slsa, aibom
 - **Cross-references**: ip-boundary, evidence-categories
@@ -207,7 +207,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: capa-c-adopter-stack
 
 ### brain-pack-injection
-- **Scope**: The mechanism for injecting applicable Capa C.2 stack patterns at the start of each slice.
+- **Scope**: The mechanism for injecting applicable Layer C.2 stack patterns at the start of each slice.
 - **Parent**: capa-c-adopter-stack
 - **Cross-references**: capa-c-adopter-stack, context-pack
 
@@ -219,11 +219,11 @@ Adopters may extend this taxonomy with domain-specific topics in their own brain
 
 ## Maintenance
 
-- DEC introducing a new topic → DEC body justifies why existing topics are insufficient + adds the topic here (same slice).
+- A DEC introducing a new topic must justify in its body why existing topics are insufficient and add the topic here (same slice).
 - Quarterly Curation ritual — topic merging (over-granular consolidation) + splitting (over-broad decomposition) + orphan archival.
 - Fix-on-touch per P10.
 
-Major restructure → version bump.
+Major restructure leads to a version bump.
 
 ## Likely future topics (scenarios)
 

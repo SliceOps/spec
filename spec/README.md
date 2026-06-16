@@ -1,6 +1,6 @@
-# spec/ — Versioned canonical methodology spec
+# spec/ — Versioned canonical framework spec
 
-The authoritative SliceOps™ methodology specification, versioned with SemVer.
+The authoritative SliceOps™ framework specification, versioned with SemVer.
 
 - `v1.0.0/` — first published spec version (content drafting in progress)
 - `latest` → symlink to current GA version (added at first release)
@@ -13,10 +13,10 @@ Scaffolding in progress. Canonical content (principles, glossary, topics, IP bou
 
 | Document | Purpose |
 |---|---|
-| `principles.md` | The 12 canonical principles (Capa A) — non-negotiable methodology core |
+| `principles.md` | The 12 canonical principles (Layer A) — non-negotiable framework core |
 | `glossary.md` | Canonical vocabulary (P10 substrate) |
 | `topics.md` | Canonical topic taxonomy |
-| `ip-boundary.md` | Capa A/B/C three-layer IP boundary + sub-numbering taxonomy |
+| `ip-boundary.md` | Layer A/B/C three-layer IP boundary + sub-numbering taxonomy |
 
 ## What does NOT live here
 

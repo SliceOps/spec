@@ -1,4 +1,4 @@
-# Value — Capa B.1 Cognitive Entity
+# Value — Layer B.1 Cognitive Entity
 
 > Core values guiding decisions — personal or org level. **Mapped principle: P9 (Human-in-the-Loop Authority).**
 

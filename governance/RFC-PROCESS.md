@@ -1,6 +1,6 @@
 # RFC Process
 
-How a proposed change to the SliceOps™ methodology becomes canonical.
+How a proposed change to the SliceOps™ framework becomes canonical.
 
 ## Flow
 
@@ -13,7 +13,7 @@ How a proposed change to the SliceOps™ methodology becomes canonical.
 
 ## Principle amendments
 
-Amending a Capa A principle requires superseding the canonical principles DEC explicitly, with a cross-reference impact analysis, under an elevated HITL gate (P9).
+Amending a Layer A principle requires superseding the canonical principles DEC explicitly, with a cross-reference impact analysis, under an elevated HITL gate (P9).
 
 ## Status
 

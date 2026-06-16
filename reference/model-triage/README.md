@@ -1,6 +1,6 @@
-# Model Triage — Capa B.1 (v1.0)
+# Model Triage — Layer B.1 (v1.0)
 
-A Capa B.1 artifact: routes each slice/session to a **(model, execution-mode)** recommendation according to five axes, in filter order. Recommends; the human disposes (P9). The choice is recorded on the Session record as auditable provenance (P2 — the audit plane extended to the model-selection decision).
+A Layer B.1 artifact: routes each slice/session to a **(model, execution-mode)** recommendation according to five axes, in filter order. Recommends; the human disposes (P9). The choice is recorded on the Session record as auditable provenance (P2 — the audit plane extended to the model-selection decision).
 
 SliceOps IP, CC BY 4.0. Vendor-neutral.
 

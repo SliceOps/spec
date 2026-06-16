@@ -1,6 +1,6 @@
-# Frontmatter Schemas — Capa B.1 (v1.0)
+# Frontmatter Schemas — Layer B.1 (v1.0)
 
-Canonical frontmatter schemas. SliceOps IP (Capa B.1). The **per-entity** field schemas live in the entity catalog (`../entity-catalog/`); this folder specifies the **cross-cutting** schema layers every entity shares.
+Canonical frontmatter schemas. SliceOps IP (Layer B.1). The **per-entity** field schemas live in the entity catalog (`../entity-catalog/`); this folder specifies the **cross-cutting** schema layers every entity shares.
 
 ## Files
 

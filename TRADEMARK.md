@@ -2,7 +2,7 @@
 
 > **Status: active (2026-06-15).** This policy governs use of the **SliceOps™** name, logo, and related marks. Like the rest of this repository's prose it is published under [CC BY 4.0](LICENSE), but it is a **statement of trademark policy** — not a grant of trademark rights. The trademark is held personally by Andrés Ramírez Sierra (pre-incorporation of SliceOps LLC).
 
-SliceOps™ is an open methodology and framework for AI-first software engineering. The **content** of this project — the spec, reference patterns, templates, and tooling — is openly licensed so anyone can read, use, adapt, and redistribute it. The **name and brand** "SliceOps" are a trademark, and trademarks work differently from copyright: their job is to tell people reliably where something comes from and whether it is what it claims to be. This policy explains how you may — and may not — use the SliceOps name and marks, so that the openness of the content is never mistaken for a license to imply endorsement, affiliation, or official status.
+SliceOps™ is an open framework for AI-first software engineering. The **content** of this project — the spec, reference patterns, templates, and tooling — is openly licensed so anyone can read, use, adapt, and redistribute it. The **name and brand** "SliceOps" are a trademark, and trademarks work differently from copyright: their job is to tell people reliably where something comes from and whether it is what it claims to be. This policy explains how you may — and may not — use the SliceOps name and marks, so that the openness of the content is never mistaken for a license to imply endorsement, affiliation, or official status.
 
 The policy is deliberately permissive about honest, descriptive, and nominative use, and strict about uses that could mislead.
 
@@ -12,10 +12,10 @@ The SliceOps content is licensed under **CC BY 4.0** (documentation) and the **M
 
 This restates Decision 6 of the ratified license decision `DR-2026-06-15-sliceops-license-ratification`:
 
-- **Copyright license** → governs the **content** (use, copy, redistribute, adapt).
-- **Trademark policy** (this file) → governs the **name "SliceOps™"** in commerce, marketing, and product identity.
+- **Copyright license** — governs the **content** (use, copy, redistribute, adapt).
+- **Trademark policy** (this file) — governs the **name "SliceOps™"** in commerce, marketing, and product identity.
 
-Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives you **no** trademark rights. The CC BY 4.0 attribution that crediting "SliceOps" as the source requires is expected and welcome — that is *nominative* use of the name (covered in §3), not a trademark grant.
+Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives you **no** trademark rights. Attribution, by contrast, **is required**: CC BY 4.0 requires you to credit "SliceOps" as the source whenever you redistribute or adapt the documentation, and MIT requires preserving the notice (see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md)). That crediting is *nominative* use of the name (covered in §3) — welcome and expected — not a trademark grant.
 
 ## 2. The mark and its status
 
@@ -30,10 +30,10 @@ Until registration is granted, "SliceOps™" is asserted as a common-law / pendi
 
 ## 3. Uses that are always allowed (no permission needed)
 
-You do **not** need permission for honest, descriptive, *nominative* use of the SliceOps name — using the word "SliceOps" to refer to **this** methodology, framework, or project. All of the following are fine:
+You do **not** need permission for honest, descriptive, *nominative* use of the SliceOps name — using the word "SliceOps" to refer to **this** framework or project. All of the following are fine:
 
 - **License attribution** — crediting "SliceOps" as the source when you use or redistribute the content under CC BY 4.0 / MIT.
-- **Descriptive / factual reference** — "We use SliceOps.", "built with SliceOps", "follows the SliceOps methodology", "compatible with SliceOps", "a SliceOps-based workflow".
+- **Descriptive / factual reference** — "We use SliceOps.", "built with SliceOps", "follows the SliceOps framework", "compatible with SliceOps", "a SliceOps-based workflow".
 - **Derivatives under your own name** — you may build on, adapt, or extend the openly licensed content and ship the result **under your own distinct name**, describing the relationship factually: e.g. *"FooFlow, based on SliceOps"* or *"FooFlow, a SliceOps-derived framework"*. The prominent name must be **yours**, with SliceOps mentioned descriptively.
 - **Education, commentary, research, journalism** — talks, articles, courses, books, comparisons, and critique that name SliceOps.
 - **Linking** — linking to the project, its repositories, or sliceops.org.
@@ -46,7 +46,7 @@ When you make nominative use, please:
 
 ## 4. "SliceOps-compliant" and conformance claims
 
-You may state that something **conforms to**, **implements**, or is **compatible with** SliceOps — but only if it is **true**. A claim such as "SliceOps-compliant", "SliceOps-conformant", or "implements SliceOps" means you actually honor the published specification: the canonical principles (Capa A) and the relevant reference patterns (Capa B) defined in this repository's `spec/`.
+You may state that something **conforms to**, **implements**, or is **compatible with** SliceOps — but only if it is **true**. A claim such as "SliceOps-compliant", "SliceOps-conformant", or "implements SliceOps" means you actually honor the published specification: the canonical principles (Layer A) and the relevant reference patterns (Layer B) defined in this repository's `spec/`.
 
 - The claim is **self-declared and descriptive**. SliceOps does **not** currently operate an official certification, accreditation, or "approved / official partner" program — so no such status may be claimed or implied.
 - A conformance claim must be **accurate and not misleading**. Do not claim compliance for something that does not follow the principles, and do not present a conformance claim as an endorsement by, or partnership with, the trademark owner.
@@ -99,4 +99,4 @@ The mark is held by **Andrés Ramírez Sierra**. Requests are handled personally
 
 ---
 
-SliceOps™ is an open methodology authored by Andrés Ramírez Sierra. Trademark and copyright held personally. This policy may be updated as the project and its trademark registrations evolve; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.
+SliceOps™ is an open framework authored by Andrés Ramírez Sierra. Trademark and copyright held personally. This policy may be updated as the project and its trademark registrations evolve; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.

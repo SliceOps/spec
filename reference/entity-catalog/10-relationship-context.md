@@ -1,4 +1,4 @@
-# RelationshipContext — Capa B.1 Cognitive Entity
+# RelationshipContext — Layer B.1 Cognitive Entity
 
 > Cross-references between entities, people, or orgs. **Mapped principle: universal.**
 

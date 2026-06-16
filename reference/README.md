@@ -1,10 +1,10 @@
-# reference/ — Capa B reference patterns + templates + schemas
+# reference/ — Layer B reference patterns + templates + schemas
 
 Vendor-agnostic, stack-agnostic reference material that materializes the canonical principles. SliceOps IP under CC BY 4.0 (documentation) + MIT (code templates / workflow exemplars).
 
 ## Sub-folders
 
-| Folder | Content | Capa |
+| Folder | Content | Layer |
 |---|---|---|
 | `entity-catalog/` | 13 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**) — each with frontmatter schema + lifecycle + generic examples + anti-patterns | B.1 |
 | `sessions/` | Session-Type taxonomy (8 canonical Session-Types + Slice-Types level 2 + 2 orthogonal axes) — hierarchical, replaces earlier flat 17-label practice | B.1 |
@@ -17,12 +17,12 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, LearningPattern, CognitiveFramework) including Layer 1 consistency-management fields | B.1 |
 | `templates/` | File templates (slice, DEC, InsightRecord) | B.1 |
 | `agent-skill/` | Agent-Skill concept spec (vendor-neutral procedural-pack concept; distinct from the Capability cognitive entity) | B.1 |
-| `patterns/` | Capa B.2 Universal Engineering Patterns — reaffirmed industry-canonical + SliceOps-formalized (Determinism-over-Regeneration, CI/Pipeline Cost Economy) | B.2 |
+| `patterns/` | Layer B.2 Universal Engineering Patterns — reaffirmed industry-canonical + SliceOps-formalized (Determinism-over-Regeneration, CI/Pipeline Cost Economy) | B.2 |
 | `workflows/` | CI workflow exemplars (full reference implementation lives in the SliceOps toolkit repo) | B.2 |
 
 ## Status
 
-Capa B.1 reference core drafted: entity-catalog, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars + adopter onboarding are remaining.
+Layer B.1 reference core drafted: entity-catalog, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars + adopter onboarding are remaining.
 
 ## Note on "Skill" vs "Capability"
 

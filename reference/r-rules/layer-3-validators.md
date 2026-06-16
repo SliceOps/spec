@@ -1,4 +1,4 @@
-# Layer 3 — Consistency CI Validators (Capa B.1)
+# Layer 3 — Consistency CI Validators (Layer B.1)
 
 The consistency-management mechanism has six layers. Layers 1–2 are immediate manual discipline (frontmatter fields + pre-merge checklist + HITL gate). **Layer 3** automates consistency as CI validators so corpus health does not depend 100% on human discipline — it does not scale past ~20 DECs by hand. This document is the **specification** of the Layer 3 validators; runnable workflow templates live in the **SliceOps toolkit** repo (`templates/consistency-validators/`).
 
@@ -38,7 +38,7 @@ A future `detect-semantic-overlap` (embeddings-based near-duplicate DEC detectio
 
 `validate-counter-atomicity` — enforces the counter-discipline pattern that prevents cross-coordinator numbering collisions (a finite/serialized shared resource per P12). Root cause: parallel agents independently claiming the same `INS-NNN`/`HANDOFF-NNN`/`LP-NNN`.
 
-**Pattern (Capa B.1, vendor-neutral)**:
+**Pattern (Layer B.1, vendor-neutral)**:
 - A counter store per numeric prefix (date-based artifacts like `DR-YYYY-MM-DD-slug` need none — date+slug carries uniqueness).
 - Pre-flight: re-scan the **real max** before claiming; never trust a stale "counter currently at" cache (it drifts under parallel work).
 - Claim = increment the counter store **and** create the artifact in the same logical step.
@@ -53,4 +53,4 @@ Every Layer 3 validator traces to a principle: bidirectional/orphan/supersession
 
 ## Adopter instantiation
 
-These specs are vendor-neutral (Capa B.1). The runnable form (CI workflow + parser scripts) is Capa C.2 — the adopter binds the abstract checks to their stack and CI provider. The SliceOps toolkit provides reference starters; adopters extend (R15+).
+These specs are vendor-neutral (Layer B.1). The runnable form (CI workflow + parser scripts) is Layer C.2 — the adopter binds the abstract checks to their stack and CI provider. The SliceOps toolkit provides reference starters; adopters extend (R15+).

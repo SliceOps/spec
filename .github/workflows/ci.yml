@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Recursive dogfooding: SliceOps spec repo runs the SliceOps Capa B.2 CI
+# Recursive dogfooding: SliceOps spec repo runs the SliceOps Layer B.2 CI
 # guardrails it publishes. Bootstrap default per P12 (NOT a retrofit).
 # Templates: ../../sliceops-toolkit/templates/ci-guardrails/
 name: ci
@@ -8,16 +8,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
-# Capa B.2 — concurrency cancel-in-progress (dominant cost lever, P12)
+# Layer B.2 — concurrency cancel-in-progress (dominant cost lever, P12)
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  # Capa B.2 — aggregation-required-gate: single lightweight required check.
-  # Markdown-only repo → cheap structure smoke test (dogfoods folder structure).
+  # Layer B.2 — aggregation-required-gate: single lightweight required check.
+  # Markdown-only repo, so a cheap structure smoke test (dogfoods folder structure).
   ci-gate:
-    if: github.event.pull_request.draft == false   # Capa B.2 draft-skip
+    if: github.event.pull_request.draft == false   # Layer B.2 draft-skip
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

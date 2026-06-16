@@ -1,4 +1,4 @@
-# LearningPattern — Capa B.1 Cognitive Entity
+# LearningPattern — Layer B.1 Cognitive Entity
 
 > A pattern observed ≥3 times across InsightRecords, promoted to a canonical pattern. **Mapped principle: P7 (Recursive Learning by Capture).**
 

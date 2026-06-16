@@ -1,6 +1,6 @@
-# SliceOps™ Canonical Principles (Capa A) — v1.0.0
+# SliceOps™ Canonical Principles (Layer A) — v1.0.0
 
-SliceOps™ as a framework is constituted by **12 canonical principles (Capa A)**. Without any one of them, the result **is not SliceOps**. Each principle is defined with a statement, rationale, implication, and anti-pattern.
+SliceOps™ as a framework is constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**. Each principle is defined with a statement, rationale, implication, and anti-pattern.
 
 These principles are **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendments to this set require a superseding decision under an elevated human-in-the-loop gate (P9).
 
@@ -20,7 +20,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - DAG dependencies explicit (`depends_on`)
 - Branch naming aligned with slice ID
 - Slice ID is the provenance carrier in every artifact produced
-- A slice does NOT span multiple architectural concerns; if it must → split
+- A slice does NOT span multiple architectural concerns; if it must, split it
 
 **Anti-pattern**:
 - Catch-all PRs ("misc fixes")
@@ -41,7 +41,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 **Rationale**: Code-quality tools audit code. Runtime tools audit behavior. Compliance tools audit post-hoc. **No existing tool audits the decision plane** — what was decided, by whom (human/agent), why, when, with which alternatives considered, with what supersession chain. This layer **is** the SliceOps wedge. Without P2, SliceOps is just another collection of CI rules.
 
 **Implication**:
-- DecisionRecord schema mandatory (Capa B catalog)
+- DecisionRecord schema mandatory (Layer B catalog)
 - DECs date-based or counter-based, with a uniqueness check enforced in CI
 - DEC content: context, alternatives considered, rationale, consequences, supersession chain
 - Cross-slice DEC consistency check enforced in CI
@@ -81,7 +81,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Statement**: Decisions emerge from slices. Every DEC traces to a slice (where it was produced) and is reachable from that slice (back-link). Decisions made out-of-band must be backed into a slice retroactively.
 
-**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P4 → tribal knowledge re-emerges → the audit plane is theater.
+**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P4, tribal knowledge re-emerges and the audit plane is theater.
 
 **Implication**:
 - DEC frontmatter includes slice provenance (`originating_slice:` in the canonical Block-Section-Slice ID format)
@@ -113,9 +113,9 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Coverage threshold per slice (not just project-wide average)
 
 **Anti-pattern**:
-- Tests added in a "follow-up slice" → block merge or fix retroactively
+- Tests added in a "follow-up slice" — block merge or fix retroactively
 - Coverage skipped for a "small slice" — all slices evidenced regardless of size
-- Manual QA only → not evidenced; testing must be CI-enforced
+- Manual QA only — not evidenced; testing must be CI-enforced
 - "We'll add tests later" — never happens; merge with tests or don't merge
 
 ---
@@ -124,7 +124,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Statement**: Security is a per-slice gate, not a periodic audit. Every slice passes security validation before merge: SAST, secrets scan, dependency vulnerability check, SBOM update, supply-chain provenance attestation.
 
-**Rationale**: AI-generated code introduces specific vectors that traditional security gates miss: (a) hallucinated dependencies → typosquat attacks via packages the model invents; (b) prompt injection in outputs surfaced to other agents; (c) secrets leakage in agent-generated logs/DECs; (d) supply chain via inflated context windows. Compliance requires a security baseline. Without P6, the compliance wedge is theater and adopters face real attack vectors invisible to status-quo gates.
+**Rationale**: AI-generated code introduces specific vectors that traditional security gates miss: (a) hallucinated dependencies leading to typosquat attacks via packages the model invents; (b) prompt injection in outputs surfaced to other agents; (c) secrets leakage in agent-generated logs/DECs; (d) supply chain via inflated context windows. Compliance requires a security baseline. Without P6, the compliance wedge is theater and adopters face real attack vectors invisible to status-quo gates.
 
 **Implication**:
 - Hard CI gates per slice: SAST, secrets scan, dependency vulnerabilities
@@ -147,10 +147,10 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Rationale**: ADRs are static — decided once, recorded, archived. Static methodologies have no first-class learning loop. Black-box trajectory replay learns for the vendor, not the adopter. SliceOps is recursive: adopters' own corpora improve their own frameworks. InsightRecords → LearningPatterns → R-rules → DECs → updated corpus. This is probably the principle **most differentiated** from existing approaches.
 
-**Granularity clarification** (does not change the statement): the ≥3 threshold applies to **LearningPattern promotion** (framework-level, deliberate). A complementary finer granularity exists — **artifact-level tuning**: whenever an artifact (reference file / script / template / skill) does not behave as expected, ask "one-off adjustment or permanent?"; if permanent → update the artifact immediately (do not wait for ≥3).
+**Granularity clarification** (does not change the statement): the ≥3 threshold applies to **LearningPattern promotion** (framework-level, deliberate). A complementary finer granularity exists — **artifact-level tuning**: whenever an artifact (reference file / script / template / skill) does not behave as expected, ask "one-off adjustment or permanent?"; if permanent, update the artifact immediately (do not wait for ≥3).
 
 **Implication**:
-- InsightRecord schema (Capa B catalog) captures cross-slice empirical observations
+- InsightRecord schema (Layer B catalog) captures cross-slice empirical observations
 - LearningPattern schema captures recurring patterns (threshold ≥3 observations)
 - R-rule amendments require DECs referencing LearningPatterns as evidence
 - Block Retrospective mandatory sections: "forward forecast adjustments" + "captured insights"
@@ -169,13 +169,13 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Statement**: SliceOps runs on any text-based AI agent + git + atomic-slice scoping + file-producing capability. Specific platforms add velocity and UX but are NOT a gate of entry. SliceOps is not locked to any vendor.
 
-**Rationale**: Vendor lock-in kills adoption. Frameworks tied to a single tool limit ecosystem growth. The SliceOps wedge **is** the methodology, which must run anywhere. Specific platforms unlock additional capability (multi-chat unlocks the parallelism wedge, knowledge-graph integration unlocks substrate features) but adopters get base value (Audit Plane, Decision Integrity) with no specific tool.
+**Rationale**: Vendor lock-in kills adoption. Frameworks tied to a single tool limit ecosystem growth. The SliceOps wedge **is** the framework, which must run anywhere. Specific platforms unlock additional capability (multi-chat unlocks the parallelism wedge, knowledge-graph integration unlocks substrate features) but adopters get base value (Audit Plane, Decision Integrity) with no specific tool.
 
 **Implication**:
 - **Mode S** (single-agent, sequential) and **Mode M** (multi-agent, parallel) — both produce full audit-plane evidence
 - Mode M unlocks Wedge B (parallelism); Mode S unlocks Wedge A (audit) without Wedge B
 - Minimum declared prerequisites: text-based AI agent, git, file system, atomic-slice scoping capability
-- Capability matrix per platform (Capa B pattern): which platforms unlock which features
+- Capability matrix per platform (Layer B pattern): which platforms unlock which features
 - **A reference runtime is one runtime, not the runtime.** Substrate options (third-party tool adapters, custom homegrown brains) are valid and are architectural peers
 
 **Anti-pattern**:
@@ -190,7 +190,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Statement**: Humans retain final authority over scope, merges, and architectural direction. AI agents propose; humans dispose. Critical decisions (Block-scope DECs, R-rule amendments, repo-level changes) require a human approval gate. Routine slices may auto-approve based on policy + evidence, but an escape hatch to a human always exists.
 
-**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus → poisoned training data → future agents inherit the poison (P7 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
+**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus, producing poisoned training data, and future agents inherit the poison (P7 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
 
 **Implication**:
 - Merge gate is human approval (CODEOWNERS or equivalent)
@@ -220,7 +220,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - DEC required to add/rename/retire a canonical term
 - "Fix on touch" — any slice that detects drift updates content forward
 - Adopters may extend with domain-specific vocabulary, but SliceOps core terms are reserved
-- Linters enforce vocabulary (Capa B pattern: term-linter)
+- Linters enforce vocabulary (Layer B pattern: term-linter)
 
 **Anti-pattern**:
 - "Slice" + "story" + "ticket" used interchangeably
@@ -234,7 +234,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 **Statement**: Code, infrastructure-as-code, database schemas, and environment configuration form one continuum. SliceOps discipline applies uniformly across them: atomic slice, DEC trail, evidence-by-construction, security gates, HITL authority. Infrastructure is not a separate domain.
 
-**Rationale**: Many SDLC frameworks bifurcate code vs infrastructure (a separate ops workflow, separate review, separate tooling). AI-first SDLC **cannot bifurcate** — AI agents can and will modify Terraform, Pulumi, CloudFormation, k8s manifests, DB migrations, env configs. Without P11, infrastructure becomes a "shadow domain" where AI changes happen without slice discipline → audit-plane gaps → security gaps → compliance gaps. SOC 2 + ISO 27001 + banking-grade compliance require infrastructure change tracking equivalent to code. DB migrations are particularly risky (complex rollback, data-loss potential) — AI generating them without a DEC trail + rollback plan + evidence is a critical failure vector for regulated ventures.
+**Rationale**: Many SDLC frameworks bifurcate code vs infrastructure (a separate ops workflow, separate review, separate tooling). AI-first SDLC **cannot bifurcate** — AI agents can and will modify Terraform, Pulumi, CloudFormation, k8s manifests, DB migrations, env configs. Without P11, infrastructure becomes a "shadow domain" where AI changes happen without slice discipline, leading to audit-plane gaps, then security gaps, then compliance gaps. SOC 2 + ISO 27001 + banking-grade compliance require infrastructure change tracking equivalent to code. DB migrations are particularly risky (complex rollback, data-loss potential) — AI generating them without a DEC trail + rollback plan + evidence is a critical failure vector for regulated ventures.
 
 **Implication**:
 - IaC changes are slices with the same atomicity and DEC trail
@@ -258,7 +258,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ## P12 — Shared-Resource Pre-flight
 
-**Statement**: Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate + cap + alert + telemeter every finite/serialized shared resource that lever consumes. SliceOps's parallel throughput stresses shared resources the methodology must protect **proactively** — protection is bootstrap, not reaction.
+**Statement**: Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate + cap + alert + telemeter every finite/serialized shared resource that lever consumes. SliceOps's parallel throughput stresses shared resources the framework must protect **proactively** — protection is bootstrap, not reaction.
 
 **Rationale**: Multi-agent parallelism is **constitutive** of SliceOps (Wedge B) — no other SDLC runs 5–13 simultaneous agents as its normal mode. So this failure mode (parallelism stresses an un-enumerated finite/serialized shared resource) is **more intrinsic to SliceOps than to any existing framework**. Operating theorem: *"the success of a parallelism lever is the source of the next bottleneck."* Observed in reference-implementation practice ≥3 times (serialized-counter contention, shared worktree/checkout state, CI-minute exhaustion — same family as API rate limits, branch-protection serialization, DB migration locks). Without systematic pre-flight, the primary wedge silently self-destructs (invisible hard-stop).
 
@@ -267,7 +267,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Each resource: **cap** (hard limit) + **alert** (warns BEFORE the limit, not at it) + **telemetry** (continuous visibility)
 - Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P3 + velocity recalibration — NOT a fixed magic number)
 - Default for any shared resource = cap+alert, **never silent hard-stop** ("warned degradation" > "invisible hard-cut")
-- Cost-ledger extended to an infra/CI dimension (not just tokens) — Capa B.1
+- Cost-ledger extended to an infra/CI dimension (not just tokens) — Layer B.1
 - Guardrails as repo-scaffold bootstrap defaults, NOT post-incident retrofit
 
 **Anti-pattern**:

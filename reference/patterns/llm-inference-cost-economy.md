@@ -1,4 +1,4 @@
-# LLM-Inference-Cost-Economy — Capa B.2 (sub-domain of CI/Pipeline Cost Economy)
+# LLM-Inference-Cost-Economy — Layer B.2 (sub-domain of CI/Pipeline Cost Economy)
 
 A **specialized sub-domain pattern** of CI/Pipeline Cost Economy. Applies when a CI/CD workflow calls a **paid LLM API** (audit, code-review, QA, codegen, summarization). Adds three genuinely-new levers and refines two parent levers for LLM-specific economics. Vendor-neutral.
 
@@ -50,7 +50,7 @@ Token economy LLM-specific: each KB of extra context is a recurring spend across
 Refines the parent's `change-scoped job gating` specifically for LLM-in-CI:
 
 - **Default**: PR-trigger on `opened, reopened, ready_for_review` only — **no `synchronize`**.
-- `synchronize` fires on every push to a PR branch → N audits per PR for N pushes.
+- `synchronize` fires on every push to a PR branch, leading to N audits per PR for N pushes.
 - The effective merge gate is the commit at `ready_for_review`; intermediate-push audits are waste.
 - Re-trigger after RFR via close+reopen or draft↔ready toggle.
 - Add `synchronize` ONLY with a documented cost-DEC exception.
@@ -97,9 +97,9 @@ The pre-Block checklist gains an item: "verify LLM-API-in-CI budget headroom".
 
 ---
 
-## Adopter enforcement (Capa C.2 candidate)
+## Adopter enforcement (Layer C.2 candidate)
 
-Adopters instantiate a Capa C.2 enforcement lint / pre-commit / CI gate that fails if a workflow YAML calls a paid-LLM endpoint without:
+Adopters instantiate a Layer C.2 enforcement lint / pre-commit / CI gate that fails if a workflow YAML calls a paid-LLM endpoint without:
 - A system / first stable content block with a cache directive (vendor-specific syntax).
 - A `pull_request` trigger without `synchronize` (or with a documented `# synchronize-allowed: <exception ref>` comment).
 - A `concurrency` block with `cancel-in-progress: true`.

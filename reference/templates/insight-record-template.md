@@ -1,5 +1,5 @@
 <!--
-InsightRecord template (Capa B.1). Naming: INS-NNN-<slug>.md
+InsightRecord template (Layer B.1). Naming: INS-NNN-<slug>.md
 Append-only (P7): never edit to "correct"; append a new record + cross-ref.
 Blameless: describe patterns, never name individuals. Replace all <…>.
 -->

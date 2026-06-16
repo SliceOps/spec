@@ -1,8 +1,8 @@
-# Development Model — SliceOps™ (Capa B.1)
+# Development Model — SliceOps™ (Layer B.1)
 
 The canonical answer to "what kind of development model is SliceOps?" — and how it relates to spec-first / test-first / contract-first authoring styles. SliceOps IP, CC BY 4.0.
 
-Three characterizations, all derived from the canonical principles — none of them adds a new Capa A principle (anti-over-promotion discipline applies):
+Three characterizations, all derived from the canonical principles — none of them adds a new Layer A principle (anti-over-promotion discipline applies):
 
 1. **Decision-driven + evidence-gated** (not spec-driven-first).
 2. **Development-style-agnostic** (analog to P8 Platform-Agnostic, applied to input/authoring style).
@@ -31,7 +31,7 @@ Spec-driven-first assumes the **spec is correct upfront**, code conforms, diverg
 
 - **P1**: every slice carries a spec as its first element (anchors scope, prevents drift) — co-equal with decision/evidence, not sovereign.
 - **Scope declaration** in the slice template = a mini-spec per slice.
-- **The framework itself** has a versioned spec (this very document tree) — but that is the spec of the methodology, not spec-driven-development per project.
+- **The framework itself** has a versioned spec (this very document tree) — but that is the spec of the framework, not spec-driven-development per project.
 
 **"Spec-anchored"** = the spec anchors the slice. **"Spec-driven"** = the spec is the driver and source of truth. SliceOps is the first, not the second.
 
@@ -41,7 +41,7 @@ Spec-driven-first assumes the **spec is correct upfront**, code conforms, diverg
 
 Spec-driven is an **input/authoring style**; SliceOps is a **discipline plane** that wraps any style. Analog to P8 (Platform-Agnostic) but for development-style instead of tools:
 
-- An adopter can be **spec-first AND SliceOps-compliant**: a spec-first toolchain handles spec → code; SliceOps adds audit plane + slice atomicity + evidence + recursive learning **on top**.
+- An adopter can be **spec-first AND SliceOps-compliant**: a spec-first toolchain handles spec to code; SliceOps adds audit plane + slice atomicity + evidence + recursive learning **on top**.
 - Or **test-first AND SliceOps**, or **contract-first AND SliceOps**, or **sketch-first AND SliceOps**.
 - The 12 principles **do not prescribe an input style** — they prescribe the discipline plane (auditable decisions, atomic slices, gated evidence, captured learning).
 
@@ -49,7 +49,7 @@ Spec-driven is an **input/authoring style**; SliceOps is a **discipline plane** 
 
 SliceOps **does not compete** with spec-first / contract-first toolchains — it **wraps** them. Messaging: *"Use your preferred authoring flow to go from intent to code; use SliceOps to make the whole process auditable, atomic, and self-improving."* Consistent with the pattern established elsewhere (SliceOps operates on top of code-quality, runtime governance, compliance, and CI tools — now also on top of authoring-flow tools on the input axis).
 
-**Documentation status**: development-style-agnostic is documented as a **characterization** (it derives from the spirit of P8 + the framework's composable nature), NOT as a new Capa A principle. Re-evaluable if the need to elevate it recurs.
+**Documentation status**: development-style-agnostic is documented as a **characterization** (it derives from the spirit of P8 + the framework's composable nature), NOT as a new Layer A principle. Re-evaluable if the need to elevate it recurs.
 
 ---
 
@@ -75,7 +75,7 @@ Convention-over-configuration (Rails-style): SliceOps is style-agnostic in capab
 | Type/contract-first | ✅ for API surface | partial | API only |
 
 It also reinforces:
-- **Determinism-over-Regeneration** (B.2): acceptance tests are deterministic (same input → same result).
+- **Determinism-over-Regeneration** (B.2): acceptance tests are deterministic (same input gives same result).
 - **P2 Audit Plane**: the acceptance test is part of the audit trail.
 - **P7 Recursive Learning**: acceptance criteria can evolve; the change is captured as a decision (not as spec-rigidity).
 

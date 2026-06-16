@@ -1,4 +1,4 @@
-# Base Frontmatter Schema — Capa B.1
+# Base Frontmatter Schema — Layer B.1
 
 Every SliceOps entity document carries this common base. Entity-specific fields are added per the entity catalog (`../entity-catalog/<NN>-<entity>.md`).
 

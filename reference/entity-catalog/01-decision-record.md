@@ -1,4 +1,4 @@
-# DecisionRecord — Capa B.1 Cognitive Entity
+# DecisionRecord — Layer B.1 Cognitive Entity
 
 > Architectural/strategic decisions with lifecycle, supersession, and rationale. **Mapped principles: P2 (Audit Plane Discipline), P4 (Decision Integrity by Construction).**
 

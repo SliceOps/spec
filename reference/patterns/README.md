@@ -1,4 +1,4 @@
-# Capa B.2 — Universal Engineering Patterns (v1.0)
+# Layer B.2 — Universal Engineering Patterns (v1.0)
 
 Industry-canonical engineering patterns SliceOps **reaffirms**. Vendor-agnostic, stack-agnostic. SliceOps does not claim authorship of the long-established ones (SOLID, ACID, etc.) — it reaffirms them as non-optional and adds two patterns it formalizes from AI-first practice.
 
@@ -47,7 +47,7 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 
 **Principle alignment**: P12 (Shared-Resource Pre-flight) — CI minutes are a finite, serialized, shared resource; these levers are bootstrap defaults, not post-incident retrofit. Pairs with the infra-cost-ledger.
 
-**Specification + runnable templates**: the executable reference implementation (the five lever templates + a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Capa B.2 (vendor-agnostic); each concrete CI-provider instance is Capa C.2 (adopter-defined).
+**Specification + runnable templates**: the executable reference implementation (the five lever templates + a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Layer B.2 (vendor-agnostic); each concrete CI-provider instance is Layer C.2 (adopter-defined).
 
 **Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard-cut), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
 
@@ -55,4 +55,4 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 
 ## Adopter rule
 
-Capa B.2 patterns are vendor-/stack-agnostic. The concrete instantiation per stack/CI-provider is **Capa C.2** (the adopter defines and enforces it with their own tooling). Adopters reaffirm the industry-canonical patterns as non-optional and instantiate the two SliceOps-formalized ones for their stack.
+Layer B.2 patterns are vendor-/stack-agnostic. The concrete instantiation per stack/CI-provider is **Layer C.2** (the adopter defines and enforces it with their own tooling). Adopters reaffirm the industry-canonical patterns as non-optional and instantiate the two SliceOps-formalized ones for their stack.

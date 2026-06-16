@@ -5,7 +5,7 @@
 ## Now (scaffolding)
 
 - Repo skeleton (lightweight industry-aligned structure)
-- Capa B reference content drafting (entity catalog, knowledge categories, R-rules, frontmatter schemas, templates)
+- Layer B reference content drafting (entity catalog, knowledge categories, R-rules, frontmatter schemas, templates)
 - Bootstrap CI guardrails (shared-resource pre-flight — P12)
 
 ## Next
