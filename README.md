@@ -6,7 +6,9 @@
 
 ## What SliceOps is
 
-An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable. It runs on any text-based AI agent + git + atomic-slice scoping; no specific platform or runtime is required (P8).
+An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable. It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P8).
+
+[Why a framework, not a methodology?](spec/v1.0.0/framework-not-methodology.md)
 
 ## Structure
 
@@ -15,16 +17,16 @@ An open framework constituted by **12 canonical principles** (Layer A) — non-n
 | `spec/` | Versioned canonical framework spec (principles, glossary, topics, IP boundary) |
 | `reference/` | Layer B reference patterns — entity catalog, knowledge categories, R-rules, frontmatter schemas, templates, workflow exemplars |
 | `decisions/` | DECs about the framework itself (recursive dogfooding) |
-| `examples/` | Reference implementations + adopter onboarding |
+| `examples/` | Reference implementations and adopter onboarding |
 | `governance/` | Roadmap, RFC process, maintainers, IPR policy |
 
-Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). Grows into more folders only per explicit promotion criteria — structure emerges from need (P3 + P7), not imposed top-down.
+Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). Grows into more folders only per explicit promotion criteria — structure emerges from need (P3 and P7), not imposed top-down.
 
 ## Layers (IP boundary)
 
 - **Layer A — Principles**: 12 canonical principles. SliceOps IP.
-- **Layer B — Reference Patterns**: B.1 Framework Artifacts + B.2 Universal Engineering Patterns. SliceOps IP.
-- **Layer C — Implementations**: C.1 Vendor Runtimes + C.2 Adopter Stack Patterns. Owned by vendors/adopters.
+- **Layer B — Reference Patterns**: B.1 Framework Artifacts and B.2 Universal Engineering Patterns. SliceOps IP.
+- **Layer C — Implementations**: C.1 Vendor Runtimes and C.2 Adopter Stack Patterns. Owned by vendors and adopters.
 
 ## License
 

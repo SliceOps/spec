@@ -12,7 +12,7 @@ This concept is **vendor-neutral** (P8 — Platform-Agnostic). Multiple AI codin
 
 | Element | Definition | SliceOps principle alignment |
 |---|---|---|
-| **1. Description** | What the skill is for + when to invoke it (the selection contract) | P10 (precise, canonical naming) |
+| **1. Description** | What the skill is for and when to invoke it (the selection contract) | P10 (precise, canonical naming) |
 | **2. Instructions** | The procedural knowledge — how to do the work well | P2/P4 (the "how" is recorded, not tribal) |
 | **3. Deterministic tools** | Bundled scripts/functions the skill calls instead of regenerating logic stochastically | **Determinism-over-Regeneration (B.2)**; P5 (repeatable evidence) |
 | **4. Composability** | Small, chainable, reusable — not a monolithic custom mega-skill | **P1 (Slice Atomicity)** — same rationale at the skill level |

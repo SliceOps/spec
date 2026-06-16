@@ -16,7 +16,7 @@ Scaffolding in progress. Canonical content (principles, glossary, topics, IP bou
 | `principles.md` | The 12 canonical principles (Layer A) — non-negotiable framework core |
 | `glossary.md` | Canonical vocabulary (P10 substrate) |
 | `topics.md` | Canonical topic taxonomy |
-| `ip-boundary.md` | Layer A/B/C three-layer IP boundary + sub-numbering taxonomy |
+| `ip-boundary.md` | Layer A/B/C three-layer IP boundary and sub-numbering taxonomy |
 
 ## What does NOT live here
 

@@ -10,7 +10,7 @@
 
 ## Next
 
-- v1.0.0 spec publication (principles + glossary + topics + IP boundary)
+- v1.0.0 spec publication (principles, glossary, topics, and IP boundary)
 - Reference implementations catalog
 - Consistency-management CI validators (Layer 3)
 

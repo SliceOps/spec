@@ -5,7 +5,7 @@ A slice or session is sized on **two orthogonal axes** — never conflated into 
 | Axis | Measures | Unit | Governs |
 |---|---|---|---|
 | **Token-band** | Throughput of the slice/session | **billed-equivalent** tokens | Cost (P12), forecast |
-| **Context-band** | Peak context footprint (input+cache in the largest single turn) | tokens | **Model viability** (primary filter of Model Triage) |
+| **Context-band** | Peak context footprint (input and cache in the largest single turn) | tokens | **Model viability** (primary filter of Model Triage) |
 
 A slice can be XL-token / S-context (lots of output, small working set) or S-token / XL-context (little output, must load a large codebase). They are independent.
 
@@ -29,7 +29,7 @@ Token-band governs cost (P12) and forecast. It is the throughput band — indepe
 
 ## Context-band — peak footprint, model-viability filter
 
-`max` across turns of `input_tokens + cache_creation_input_tokens + cache_read_input_tokens` — the maximum context loaded in the largest single turn of the session. Anchored to real model windows + the empirical distribution:
+`max` across turns of `input_tokens + cache_creation_input_tokens + cache_read_input_tokens` — the maximum context loaded in the largest single turn of the session. Anchored to real model windows and the empirical distribution:
 
 | Band | Range (peak footprint) |
 |---|---|
@@ -45,11 +45,11 @@ Context-band governs **viability** of a model: a model whose context window is s
 
 ## Calibration discipline
 
-The bands are **calibrated against real data + the vigent model landscape, NOT axiomatic**. Three rules:
+The bands are **calibrated against real data and the vigent model landscape, NOT axiomatic**. Three rules:
 
-1. **Reproducible** — a versioned deterministic script parses a real session corpus (`.jsonl`) → peak-footprint + billed-equivalent throughput → percentiles → bands. NOT ad-hoc per calibration. Materializes Determinism-over-Regeneration (the script is written once and reused). Reference implementation: the SliceOps toolkit `calibration/`.
+1. **Reproducible** — a versioned deterministic script parses a real session corpus (`.jsonl`) → peak-footprint and billed-equivalent throughput → percentiles → bands. NOT ad-hoc per calibration. Materializes Determinism-over-Regeneration (the script is written once and reused). Reference implementation: the SliceOps toolkit `calibration/`.
 2. **Quarterly cadence** — recalibration hooks into the Quarterly Curation Ritual (Layer 6 of the consistency-management mechanism). Not a new ritual; a Layer 6 item.
-3. **Versioned** — each calibration records `date + script-version + dataset (N sessions, corpus) + model landscape + percentiles + resulting bands`. Drift over time is auditable. The historical record is the **band-calibration-register** (lives alongside the script).
+3. **Versioned** — each calibration records `date, script-version, dataset (N sessions, corpus), model landscape, percentiles, resulting bands`. Drift over time is auditable. The historical record is the **band-calibration-register** (lives alongside the script).
 
 ### Why recalibrate
 
@@ -59,7 +59,7 @@ Model context windows and capability change. Frontier-class windows have grown f
 
 The first calibration anchored the bands against this landscape (recorded for audit; recalibration is triggered when this changes materially):
 
-- **Frontier long-context**: ~1M (the calibration model class) + ~1M+ peers.
+- **Frontier long-context**: ~1M (the calibration model class) and ~1M+ peers.
 - **Claude-class**: ~200K.
 - **GPT-class**: ~128K.
 - **Local-medium**: ~32K (Qwen/Llama mainstream).
@@ -82,4 +82,4 @@ Cost and viability are different failure modes; they need different bands. P1 al
 
 ## Sizing in the Session record
 
-Both bands are recorded on the Session entity (#13) as `token_band` + `context_band`. Together with `model_used` + `execution_mode` + `triage_rationale` they form the auditable provenance of "why this model was chosen for this work" — the audit-plane (P2) extended to the model-selection decision.
+Both bands are recorded on the Session entity (#13) as `token_band` and `context_band`. Together with `model_used`, `execution_mode`, and `triage_rationale` they form the auditable provenance of "why this model was chosen for this work" — the audit-plane (P2) extended to the model-selection decision.

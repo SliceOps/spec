@@ -1,6 +1,6 @@
 <!--
 InsightRecord template (Layer B.1). Naming: INS-NNN-<slug>.md
-Append-only (P7): never edit to "correct"; append a new record + cross-ref.
+Append-only (P7): never edit to "correct"; append a new record and cross-ref.
 Blameless: describe patterns, never name individuals. Replace all <…>.
 -->
 ---
@@ -30,7 +30,7 @@ promoted-to: null           # <LP id> when this contributes to a LearningPattern
 ## Candidate pattern
 <If this looks like it may recur: the hypothesized pattern. When the
 same observation reaches ≥3 occurrences across InsightRecords it is
-promoted to a LearningPattern (set promoted-to + the LP aggregates this).>
+promoted to a LearningPattern (set promoted-to and the LP aggregates this).>
 
 ## Cross-references
 <related-insights, the DEC/Block this emerged from, any sibling observations.>

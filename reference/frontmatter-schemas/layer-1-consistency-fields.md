@@ -24,13 +24,13 @@ consistency-check: |                 # mandatory multi-line paragraph
 |---|---|---|
 | `conflicts-with` | DECs that could *appear* to contradict this one | body MUST include a "Conflict Resolution" section explaining each (supersession / sub-scoping / complementarity) |
 | `related-decs` | Topically adjacent DECs | bidirectional: referenced DECs' frontmatter should reference back |
-| `topics` | Canonical taxonomy tags | enables corpus indexing + topic-related conflict detection |
+| `topics` | Canonical taxonomy tags | enables corpus indexing and topic-related conflict detection |
 | `vocabulary-changes` | New/changed canonical terms | each term added to the glossary in the same slice |
 | `consistency-check` | Author's explicit consistency declaration | empty `conflicts-with` (preferred) still requires a paragraph confirming coexistence intent |
 
 ## The Layer 2 pre-merge checklist (companion)
 
-Layer 1 fields are completed alongside the Layer 2 manual pre-merge checklist (human/HITL gate, P9): searched topic-related DECs · read the top-related ones end-to-end · declared conflicts + resolutions · updated bidirectional cross-references · updated glossary/topics if vocabulary changed · self-application test (this DEC's own frontmatter satisfies this spec).
+Layer 1 fields are completed alongside the Layer 2 manual pre-merge checklist (human/HITL gate, P9): searched topic-related DECs · read the top-related ones end-to-end · declared conflicts and resolutions · updated bidirectional cross-references · updated glossary/topics if vocabulary changed · self-application test (this DEC's own frontmatter satisfies this spec).
 
 ## Self-application
 
@@ -38,4 +38,4 @@ This spec is itself subject to it: a DEC amending these fields must carry these 
 
 ## Enforcement
 
-R3 validates presence + well-formedness. Higher layers (CI validators — see the toolkit) validate bidirectional integrity, topic-tag membership, glossary coverage, and supersession-chain acyclicity.
+R3 validates presence and well-formedness. Higher layers (CI validators — see the toolkit) validate bidirectional integrity, topic-tag membership, glossary coverage, and supersession-chain acyclicity.

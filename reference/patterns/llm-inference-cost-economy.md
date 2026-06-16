@@ -2,7 +2,7 @@
 
 A **specialized sub-domain pattern** of CI/Pipeline Cost Economy. Applies when a CI/CD workflow calls a **paid LLM API** (audit, code-review, QA, codegen, summarization). Adds three genuinely-new levers and refines two parent levers for LLM-specific economics. Vendor-neutral.
 
-SliceOps IP, CC BY 4.0 (docs) + MIT (toolkit reference impl).
+SliceOps IP, CC BY 4.0 (docs) and MIT (toolkit reference impl).
 
 **Relationship to parent**: this is a *sub-domain*, not a *standalone B.2*. CI/Pipeline Cost Economy provides the general pipeline-cost levers (concurrency, change-gating, draft-skip, dependency-cache). This sub-domain adds LLM-specific levers (caching, model-tier, diff-only context) and refines two parent levers for LLM-aware behavior. If a workflow does not call a paid LLM API, only the parent applies; if it does, both apply.
 
@@ -14,7 +14,7 @@ Any CI/CD workflow that calls a **paid LLM API** must satisfy the five disciplin
 
 ---
 
-## The five levers — 3 new + 2 refinements
+## The five levers — 3 new and 2 refinements
 
 ### Lever A (NEW) — Prompt-caching discipline
 
@@ -34,7 +34,7 @@ Direct application of **Determinism-over-Regeneration** to model selection: use 
 - **Code-reasoning / architectural critique / final ready-for-review gate** → top-tier model justified.
 - **NO top-tier "just in case"** — typically a ~3× cost penalty with no output difference for pattern-match tasks.
 
-**Cost-ledger row** must declare the tier chosen + the justification.
+**Cost-ledger row** must declare the tier chosen and the justification.
 
 ### Lever C (NEW) — Diff-only context windowing
 
@@ -52,7 +52,7 @@ Refines the parent's `change-scoped job gating` specifically for LLM-in-CI:
 - **Default**: PR-trigger on `opened, reopened, ready_for_review` only — **no `synchronize`**.
 - `synchronize` fires on every push to a PR branch, leading to N audits per PR for N pushes.
 - The effective merge gate is the commit at `ready_for_review`; intermediate-push audits are waste.
-- Re-trigger after RFR via close+reopen or draft↔ready toggle.
+- Re-trigger after RFR via close and reopen or draft↔ready toggle.
 - Add `synchronize` ONLY with a documented cost-DEC exception.
 
 ### Lever E (REFINEMENT of parent) — LLM-aware draft gate (green-not-skipped)
@@ -64,13 +64,13 @@ Refines the parent's `draft-skip` for LLM-in-CI: draft PRs are not mergeable, au
 - Subsequent step is conditional: `if: <skip != true>` runs the API call.
 - Required check passes (green); no LLM bill.
 
-This differs from the parent's general draft-skip (which is time-economy of CI minutes): here it is **cost-economy of the LLM bill + correctness** of the required-check satisfaction.
+This differs from the parent's general draft-skip (which is time-economy of CI minutes): here it is **cost-economy of the LLM bill and correctness** of the required-check satisfaction.
 
 ---
 
 ## Cost-ledger 3rd dimension
 
-The cost-ledger (originally token + infra/CI) gains a **third dimension**: **LLM-API-in-CI cost** — separate because it scales with `velocity × push-frequency × prompt-size`, dynamics distinct from token-throughput and infra-minutes.
+The cost-ledger (originally token and infra/CI) gains a **third dimension**: **LLM-API-in-CI cost** — separate because it scales with `velocity × push-frequency × prompt-size`, dynamics distinct from token-throughput and infra-minutes.
 
 | Dimension | Scales with |
 |---|---|
@@ -89,8 +89,8 @@ The pre-Block checklist gains an item: "verify LLM-API-in-CI budget headroom".
 | AP-1 | Large system prompt without a cache directive | ~50–90% of the cost is preventable recurring spend |
 | AP-2 | `synchronize` trigger on a paid-LLM workflow | Cost scales linearly with push count; velocity becomes the cost penalty |
 | AP-3 | "I'll tune when I see the bill" | Paid-LLM cost compounds silently; the bill is the only signal |
-| AP-4 | Audit of drafts ("real-time dev feedback") | Drafts iterate more + do not merge; audit there is systemic waste |
-| AP-5 | Top-tier model "just in case" for pattern-match | A ~3× cost penalty with no quality difference; violates Lever B + Determinism-over-Regeneration |
+| AP-4 | Audit of drafts ("real-time dev feedback") | Drafts iterate more and do not merge; audit there is systemic waste |
+| AP-5 | Top-tier model "just in case" for pattern-match | A ~3× cost penalty with no quality difference; violates Lever B and Determinism-over-Regeneration |
 | AP-6 | Whole-file context when only the diff is needed | Token economy unbounded; spend scales with file size across runs |
 | AP-7 | No `concurrency` block | Stacked audits all bill (inherited from parent) |
 | AP-8 | Draft-skip via job removal (skipped in CI) | The required-check context becomes "skipped" → the PR is permanently blocked. The gate MUST end green-not-skipped |
@@ -111,7 +111,7 @@ A canonical R-rule (`R-LLM-CI-COST`) captures the four checks — see `../r-rule
 
 ## Mapping to principles
 
-- **P5 (Evidence-by-Construction)** — a cost-ledger row is mandatory per LLM-in-CI workflow at merge time (declared per-run cost estimate + monthly volume estimate; reviewable against real billing).
+- **P5 (Evidence-by-Construction)** — a cost-ledger row is mandatory per LLM-in-CI workflow at merge time (declared per-run cost estimate and monthly volume estimate; reviewable against real billing).
 - **P7 (Recursive Learning by Capture)** — this pattern IS output of the P7 loop (its formalization came from a recurrence of cost-blowup observations across reference implementations).
-- **P12 (Shared-Resource Pre-flight)** — LLM API budget = finite shared resource across repos / PRs / authors; the P12 pre-flight checklist includes enumerate + cap + alert + telemeter LLM-API spend.
+- **P12 (Shared-Resource Pre-flight)** — LLM API budget = finite shared resource across repos / PRs / authors; the P12 pre-flight checklist includes enumerate, cap, alert, and telemeter LLM-API spend.
 - **Determinism-over-Regeneration** — Lever B (model-tier) is a direct application: "cheaper deterministic alternative when adequate" extended to "cheaper model tier when adequate".

@@ -1,6 +1,6 @@
 # ActivePriority — Layer B.1 Cognitive Entity
 
-> Current priorities tracked with status + ownership. **Mapped principle: universal.**
+> Current priorities tracked with status and ownership. **Mapped principle: universal.**
 
 ## Purpose
 

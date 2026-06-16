@@ -15,7 +15,7 @@ This concentration of authorship — the same hand on the open framework and on 
 - All runtime implementations — those authored by the framework's own author, adapters over third-party tools, and custom homegrown systems alike — are **architectural peers**, not subordinates. None is "the official" SliceOps runtime.
 - A runtime's **product license is its own**, chosen by that runtime's vendor and independent of the framework's CC BY 4.0 / MIT terms. Likewise, the SliceOps trademark is licensed separately from the content — see [`TRADEMARK.md`](TRADEMARK.md).
 
-The framework runs on any text-based AI agent + git + atomic-slice scoping + file-producing capability. No specific platform or runtime is a gate of entry.
+The framework runs on any text-based AI agent, git, atomic-slice scoping, and file-producing capability. No specific platform or runtime is a gate of entry.
 
 ## References
 
@@ -23,4 +23,4 @@ The framework runs on any text-based AI agent + git + atomic-slice scoping + fil
 - [`TRADEMARK.md`](TRADEMARK.md) — SliceOps™ trademark usage policy.
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`LICENSE-CODE`](LICENSE-CODE) — MIT License (code).
-- Decision record `DR-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 + MIT licensing and the trademark / copyright separation.
+- Decision record `DR-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 and MIT licensing and the trademark / copyright separation.

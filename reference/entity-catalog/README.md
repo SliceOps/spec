@@ -14,9 +14,9 @@ These 13 entities are **vendor-neutral and runtime-independent** — each carrie
 | 4 | [Capability](04-capability.md) | Capabilities accrued by individuals/agents/teams | P7 |
 | 5 | [Goal](05-goal.md) | Forward-looking objectives at various time horizons | universal |
 | 6 | [LearningPattern](06-learning-pattern.md) | Patterns observed ≥3 times across InsightRecords | P7 |
-| 7 | [CognitiveFramework](07-cognitive-framework.md) | Mental models for reasoning + decision-making | universal |
+| 7 | [CognitiveFramework](07-cognitive-framework.md) | Mental models for reasoning and decision-making | universal |
 | 8 | [ContextPack](08-context-pack.md) | Pre-computed bundles loaded at session start (evolves to *routed* per Context Router) | P8 |
-| 9 | [ActivePriority](09-active-priority.md) | Current priorities tracked with status + ownership | universal |
+| 9 | [ActivePriority](09-active-priority.md) | Current priorities tracked with status and ownership | universal |
 | 10 | [RelationshipContext](10-relationship-context.md) | Cross-references between entities/people/orgs | universal |
 | 11 | [Preference](11-preference.md) | Stated preferences (style, tooling, approach) | universal |
 | 12 | [Value](12-value.md) | Core values guiding decisions | P9 |
@@ -28,9 +28,9 @@ These 13 entities are **vendor-neutral and runtime-independent** — each carrie
 
 Each entity spec contains:
 
-1. **Purpose** — what the entity is for + mapped principle(s)
+1. **Purpose** — what the entity is for and mapped principle(s)
 2. **Frontmatter schema** — the canonical YAML fields (vendor-neutral)
-3. **Lifecycle states** — valid status values + transitions
+3. **Lifecycle states** — valid status values and transitions
 4. **Usage example** — a generic, vendor-neutral example
 5. **Cross-reference patterns** — how it links to other entities
 6. **Anti-patterns** — explicitly prohibited usage
@@ -45,4 +45,4 @@ The vendor-neutral canonical type key is `entity:` (value = the entity name, e.g
 
 ## Adopter rules
 
-Adopters **may**: use the catalog as-is (recommended — preserves interop); add adopter-specific entities (in their own brain, not here); fork with renames/extensions (requires attribution + documenting in adopter DECs). Adopters **may not**: remove canonical entities and still claim SliceOps-compliance; conflict canonical entity semantics.
+Adopters **may**: use the catalog as-is (recommended — preserves interop); add adopter-specific entities (in their own brain, not here); fork with renames/extensions (requires attribution and documenting in adopter DECs). Adopters **may not**: remove canonical entities and still claim SliceOps-compliance; conflict canonical entity semantics.

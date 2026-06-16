@@ -31,7 +31,7 @@ If the work touches restricted/sensitive data (per the `sensitivity` field on th
 ### Complexity, latency, cost
 
 Within the feasible set:
-- **Complexity** = token-band + Slice-Type (Dev vs Refactor vs Fix vs adopter-specific) → reasoning capability tier.
+- **Complexity** = token-band and Slice-Type (Dev vs Refactor vs Fix vs adopter-specific) → reasoning capability tier.
 - **Latency** = how fast a human needs the response (interactive vs background batch).
 - **Cost** = the economic tier within the feasible set (P12 — cheapest adequate model wins; see also the LLM-Inference-Cost-Economy B.2 sub-pattern).
 

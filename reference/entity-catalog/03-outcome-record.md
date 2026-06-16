@@ -25,7 +25,7 @@ related-decs: [<DEC id>...]
 
 ## Lifecycle states
 
-`open` (slice/block in flight) → `closed` (merged + evidence complete). A `closed` OutcomeRecord is immutable; corrections append a new record citing the original.
+`open` (slice/block in flight) → `closed` (merged and evidence complete). A `closed` OutcomeRecord is immutable; corrections append a new record citing the original.
 
 ## Usage example (generic)
 

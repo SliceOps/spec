@@ -4,13 +4,13 @@ SliceOps™ is a founder-stewarded open framework. This document is the top-leve
 
 ## Stewardship
 
-Authored and maintained by Andrés Ramírez Sierra. Trademark + copyright held personally (pre-incorporation; planned SliceOps LLC; eventual foundation governance — precedent: Linux/Torvalds, Python/PSF).
+Authored and maintained by Andrés Ramírez Sierra. Trademark and copyright held personally (pre-incorporation; planned SliceOps LLC; eventual foundation governance — precedent: Linux/Torvalds, Python/PSF).
 
 ## Decision-making
 
 - **Layer A (Principles)** — the 12 canonical principles. Amendments require a ratified DEC superseding the canonical principles DEC, under an elevated human-in-the-loop gate (P9). Non-negotiable: an implementation violating any principle is not SliceOps-compliant.
-- **Layer B (Reference Patterns)** — B.1 Framework Artifacts + B.2 Universal Engineering Patterns. Changes via ratified DEC.
-- **Layer C (Implementations)** — vendor runtimes (C.1) + adopter stack patterns (C.2). Owned by vendors/adopters, not by SliceOps.
+- **Layer B (Reference Patterns)** — B.1 Framework Artifacts and B.2 Universal Engineering Patterns. Changes via ratified DEC.
+- **Layer C (Implementations)** — vendor runtimes (C.1) and adopter stack patterns (C.2). Owned by vendors/adopters, not by SliceOps.
 
 Top-level layers (A/B/C) are stable; sub-numbering (B.1, B.2, C.1, C.2, …) is extensible via DEC without renaming parents.
 

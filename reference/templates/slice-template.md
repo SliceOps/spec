@@ -35,7 +35,7 @@ Prose form (override permitted): a numbered list of testable statements. Maps to
 - [ ] Functional: <tests>
 - [ ] Quality: <lint/format/coverage threshold>
 - [ ] Security: <SAST / secrets scan / dependency check> (P6)
-- [ ] Decision: DEC(s) + InsightRecord(s) above
+- [ ] Decision: DEC(s) and InsightRecord(s) above
 - [ ] Provenance: slice id in branch, commits, PR title
 
 ## Infrastructure (P11, if touched)
@@ -44,7 +44,7 @@ Prose form (override permitted): a numbered list of testable statements. Maps to
 
 ## Shared-resource pre-flight (P12, if scaling parallelism)
 
-- [ ] Finite/serialized resources enumerated + cap+alert verified — or N/A
+- [ ] Finite/serialized resources enumerated, cap and alert verified — or N/A
 
 ## HITL (P9)
 

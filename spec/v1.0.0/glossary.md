@@ -41,7 +41,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Slice, Stage, Block Retrospective
 
 ### Block Retrospective
-- **Definition**: Mandatory ritual at Block close. Includes velocity recalibration + Cross-DEC Consistency Check section + InsightRecord harvesting.
+- **Definition**: Mandatory ritual at Block close. Includes velocity recalibration, a Cross-DEC Consistency Check section, and InsightRecord harvesting.
 - **Origin**: P3, P7
 - **Cross-references**: Block, Velocity, Consistency check
 
@@ -59,7 +59,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Layer B — Reference Patterns
 - **Definition**: Top-level taxonomy layer. Reference patterns that materialize the principles. SliceOps IP. Has sub-layers (B.1 Framework Artifacts, B.2 Universal Engineering Patterns).
-- **Origin**: IP boundary + hierarchical taxonomy
+- **Origin**: IP boundary and hierarchical taxonomy
 - **Aliases prohibited**: bare "Layer B" without sub-letter is ambiguous in technical context — always specify B.1 or B.2 when relevant
 - **Cross-references**: Layer B.1, Layer B.2
 
@@ -70,33 +70,33 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Layer B.2 — Universal Engineering Patterns
 - **Definition**: Sub-layer of Layer B. Industry-canonical engineering patterns SliceOps reaffirms: SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense in Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration. Vendor-agnostic, stack-agnostic.
-- **Origin**: Stack-patterns + hierarchical taxonomy
+- **Origin**: Stack-patterns and hierarchical taxonomy
 - **Cross-references**: SOLID, ACID, Outbox, Idempotency, CI/Pipeline Cost Economy, Determinism-over-Regeneration
 
 ### Layer C — Implementations
 - **Definition**: Top-level taxonomy layer. Specific implementations, not canonical SliceOps. Has sub-layers (C.1 Vendor Runtimes, C.2 Adopter Stack Patterns).
-- **Origin**: IP boundary + hierarchical taxonomy
+- **Origin**: IP boundary and hierarchical taxonomy
 - **Aliases prohibited**: bare "Layer C" without sub-letter is ambiguous — specify C.1 or C.2
 - **Cross-references**: Layer C.1, Layer C.2
 
 ### Layer C.1 — Vendor Runtimes
 - **Definition**: Sub-layer of Layer C. Vendor-owned runtime products implementing the SliceOps Layer B catalog — e.g., hosted knowledge-graph products, third-party tool adapters, custom homegrown brains. A reference runtime is one runtime, not the runtime (P8).
-- **Origin**: IP boundary + hierarchical taxonomy
+- **Origin**: IP boundary and hierarchical taxonomy
 - **Cross-references**: Vendor, Adapter, P8
 
 ### Layer C.2 — Adopter Stack Patterns
 - **Definition**: Sub-layer of Layer C. Adopter-defined patterns instantiable per technology stack — e.g., Repository pattern (.NET), FluentValidation, Riverpod state management (Flutter). Each adopter defines its own Layer C.2 with enforcement tooling (analyzers / lint rules / CI gates).
-- **Origin**: Stack-patterns + hierarchical taxonomy
+- **Origin**: Stack-patterns and hierarchical taxonomy
 - **Cross-references**: Adopter, Stack pattern, Brain pack injection
 
 ### Capability
 - **Definition**: Cognitive entity #4 in the Layer B.1 catalog. Capabilities accrued by individuals/agents/teams. **Renamed from "Skill"** ("capabilities accrued" describes Capability, not Skill; the rename improves precision and frees the term "Skill").
-- **Origin**: Catalog split (entity #4) + Determinism-over-Regeneration (rename)
+- **Origin**: Catalog split (entity #4) and Determinism-over-Regeneration (rename)
 - **Aliases prohibited**: "Skill" (former name, now reserved for a distinct concept — do NOT use for this entity)
 - **Cross-references**: Cognitive entity, Layer B.1, P7, Skill (reserved — distinct concept)
 
 ### CI/Pipeline Cost Economy
-- **Definition**: A Layer B.2 Universal Engineering Pattern. Five stack-agnostic levers for pipeline economy: concurrency-cancel-in-progress + change-scoped job gating + aggregation-required-gate + draft-skip of expensive jobs + dependency-cache. Materializes P12 in the CI domain. The concrete per-CI-provider/stack instance is Layer C.2.
+- **Definition**: A Layer B.2 Universal Engineering Pattern. Five stack-agnostic levers for pipeline economy: concurrency-cancel-in-progress, change-scoped job gating, aggregation-required-gate, draft-skip of expensive jobs, and dependency-cache. Materializes P12 in the CI domain. The concrete per-CI-provider/stack instance is Layer C.2.
 - **Origin**: Shared-Resource Pre-flight (P12)
 - **Aliases prohibited**: "CI optimization" (generic), "pipeline tuning" (under-specified)
 - **Cross-references**: P12, Layer B.2, aggregation-required-gate, Outbox (sibling B.2)
@@ -107,13 +107,13 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: CI/Pipeline Cost Economy, change-scoped job gating
 
 ### Cognitive entity
-- **Definition**: One of the 13 canonical entity types of SliceOps Layer B.1 (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**). Each has a frontmatter schema + lifecycle.
-- **Origin**: Catalog split + Session as first-class unit
+- **Definition**: One of the 13 canonical entity types of SliceOps Layer B.1 (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**). Each has a frontmatter schema and lifecycle.
+- **Origin**: Catalog split and Session as first-class unit
 - **Aliases prohibited**: "entity type" (ambiguous with database entities), "metadata record" (under-specified)
 - **Cross-references**: Layer B.1, Entity catalog, DecisionRecord, InsightRecord, Session
 
 ### CognitiveFramework
-- **Definition**: Cognitive entity. A mental model or reference structure for reasoning + decision-making (e.g., this glossary, the topic taxonomy).
+- **Definition**: Cognitive entity. A mental model or reference structure for reasoning and decision-making (e.g., this glossary, the topic taxonomy).
 - **Origin**: Catalog split
 - **Cross-references**: Cognitive entity
 
@@ -123,23 +123,23 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Layer 1, Frontmatter discipline, conflicts-with
 
 ### conflicts-with (frontmatter field)
-- **Definition**: Mandatory DEC frontmatter field. Lists DEC IDs that could appear to contradict + a resolution paragraph in the body if non-empty.
+- **Definition**: Mandatory DEC frontmatter field. Lists DEC IDs that could appear to contradict, and a resolution paragraph in the body if non-empty.
 - **Origin**: Consistency-management mechanism
 - **Cross-references**: Layer 1, consistency-check
 
 ### ContextPack
 - **Definition**: Cognitive entity. A pre-computed bundle of context loaded at slice/session start. Enables P8 platform-agnosticism (bundles portable cross-tools). **Evolves from static to routed/dynamic** per the Context Router (selection of relevant context-experts by topic/dependency at session start, rather than loading the whole corpus).
-- **Origin**: Catalog split + Context Router
+- **Origin**: Catalog split and Context Router
 - **Cross-references**: Brain pack injection, P8, Context Router, context-expert
 
 ### Calibration discipline
-- **Definition**: The discipline of deriving the sizing bands (token-band, context-band) from **real data + the vigent model landscape**, NOT axiomatically. Reproducible (a versioned deterministic script parses real session corpus → percentiles → bands), quarterly cadence (hooks into the Quarterly Curation Ritual — Layer 6), and versioned (each calibration records date + script-version + dataset + model landscape + resulting bands so band drift is auditable over time).
-- **Origin**: Bidimensional sizing + Calibration discipline
+- **Definition**: The discipline of deriving the sizing bands (token-band, context-band) from **real data and the vigent model landscape**, NOT axiomatically. Reproducible (a versioned deterministic script parses real session corpus → percentiles → bands), quarterly cadence (hooks into the Quarterly Curation Ritual — Layer 6), and versioned (each calibration records date, script-version, dataset, model landscape, and resulting bands so band drift is auditable over time).
+- **Origin**: Bidimensional sizing and Calibration discipline
 - **Aliases prohibited**: "ad-hoc calibration" (anti-pattern: not reproducible, not versioned), "axiomatic bands" (rejected)
 - **Cross-references**: Token-band, context-band, Model Triage, model landscape, Quarterly Curation, Determinism-over-Regeneration
 
 ### Counter discipline
-- **Definition**: Layer B.1 pattern. Atomic increment per prefix + a validate-no-duplicate CI check. Prevents counter collision in multi-coordinator parallel work. Originated as empirical practice in reference-implementation context; canonicalized in SliceOps.
+- **Definition**: Layer B.1 pattern. Atomic increment per prefix and a validate-no-duplicate CI check. Prevents counter collision in multi-coordinator parallel work. Originated as empirical practice in reference-implementation context; canonicalized in SliceOps.
 - **Origin**: IP boundary (canonicalized)
 - **Cross-references**: R-rules, P12, DEC numbering
 
@@ -162,7 +162,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P4, Slice provenance, Originating slice
 
 ### Decision-driven (development model)
-- **Definition**: SliceOps's canonical development model: **decision-driven + evidence-gated**, with **spec-anchoring** per slice. The driver and wedge is the audit/decision plane (P2), NOT the spec. Distinct from spec-driven-first (where the spec is the source of truth, immutable, and divergence is a bug): in SliceOps the source of truth is the corpus of decisions + merged code with evidence; the spec evolves and the decision-of-why-it-changed is itself the valuable artifact (P7).
+- **Definition**: SliceOps's canonical development model: **decision-driven and evidence-gated**, with **spec-anchoring** per slice. The driver and wedge is the audit/decision plane (P2), NOT the spec. Distinct from spec-driven-first (where the spec is the source of truth, immutable, and divergence is a bug): in SliceOps the source of truth is the corpus of decisions and merged code with evidence; the spec evolves and the decision-of-why-it-changed is itself the valuable artifact (P7).
 - **Origin**: SliceOps development model
 - **Aliases prohibited**: "spec-driven" (incorrect characterization), "specless" (also incorrect — specs are anchors)
 - **Cross-references**: P2, P4, P5, P7, spec-anchored, development-style-agnostic, Acceptance-first slice
@@ -186,19 +186,19 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 ## E
 
 ### Evidence-by-Construction
-- **Definition**: P5. Each slice produces evidence in 4 categories (functional, quality, decision, provenance) + security (P6). Hard gates enforce; slices without complete evidence don't merge.
+- **Definition**: P5. Each slice produces evidence in 4 categories (functional, quality, decision, provenance) plus security (P6). Hard gates enforce; slices without complete evidence don't merge.
 - **Origin**: P5
 - **Cross-references**: P5, P6, Evidence categories
 
 ### Entity catalog
-- **Definition**: The canonical set of 13 cognitive entity types of SliceOps Layer B.1. Each entity has a frontmatter schema + lifecycle + cross-reference patterns + anti-patterns. Published in `reference/entity-catalog/`.
-- **Origin**: Catalog split + Session as first-class unit
+- **Definition**: The canonical set of 13 cognitive entity types of SliceOps Layer B.1. Each entity has a frontmatter schema, lifecycle, cross-reference patterns, and anti-patterns. Published in `reference/entity-catalog/`.
+- **Origin**: Catalog split and Session as first-class unit
 - **Cross-references**: Cognitive entity, Layer B.1, Session
 
 ## F
 
 ### Finite/serialized shared resource
-- **Definition**: A consumable or serialized resource, shared cross-slice/cross-coordinator, with a hard limit: CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools. The resource class P12 mandates enumerating + capping + alerting + telemetering before scaling parallelism.
+- **Definition**: A consumable or serialized resource, shared cross-slice/cross-coordinator, with a hard limit: CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools. The resource class P12 mandates enumerating, capping, alerting, and telemetering before scaling parallelism.
 - **Origin**: Shared-Resource Pre-flight (P12)
 - **Aliases prohibited**: generic "shared resource" without "finite/serialized" (loses the key property)
 - **Cross-references**: P12, infra-cost-ledger
@@ -275,14 +275,14 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P8, Wedge A, Wedge B, Coordinator
 
 ### Model Triage
-- **Definition**: A Layer B.1 artifact. Routes each slice/session to a **(model + execution-mode)** recommendation according to five axes, in filter order: (1) **context-band** as primary filter — which models have a window ≥ footprint? (2) **sensitivity → locality** — can it leave to an external API or must it be local? (3) **complexity** — token-band + slice-type → reasoning tier. (4) **latency** — speed need. (5) **cost** — economic tier. Plus a **synthesis efficiency** axis with the consuming/producing distinction. Recommends; the human disposes (P9). The choice (`model_used`, `execution_mode`, `triage_rationale`) is recorded in Session provenance (P2 audit plane).
-- **Origin**: Bidimensional sizing + Model Triage
+- **Definition**: A Layer B.1 artifact. Routes each slice/session to a **(model and execution-mode)** recommendation according to five axes, in filter order: (1) **context-band** as primary filter — which models have a window ≥ footprint? (2) **sensitivity → locality** — can it leave to an external API or must it be local? (3) **complexity** — token-band and slice-type → reasoning tier. (4) **latency** — speed need. (5) **cost** — economic tier. Plus a **synthesis efficiency** axis with the consuming/producing distinction. Recommends; the human disposes (P9). The choice (`model_used`, `execution_mode`, `triage_rationale`) is recorded in Session provenance (P2 audit plane).
+- **Origin**: Bidimensional sizing and Model Triage
 - **Aliases prohibited**: "model selection" (under-specified), "routing" (ambiguous — distinct from Context Router)
 - **Cross-references**: context-band, Token-band, Session, synthesis efficiency, P9, P12, execution-mode, model landscape
 
 ### model landscape
 - **Definition**: A snapshot of the model classes / context windows available at the time of a calibration. Recalibration is triggered when the landscape changes materially (e.g., local models reaching mainstream 128K, frontier crossing 2M). Versioned as part of the Calibration discipline.
-- **Origin**: Bidimensional sizing + Calibration discipline
+- **Origin**: Bidimensional sizing and Calibration discipline
 - **Cross-references**: Model Triage, Calibration discipline, Quarterly Curation
 
 ### execution-mode
@@ -306,7 +306,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Layer A, P1–P12
 
 ### Provenance
-- **Definition**: Origin-tracking metadata. Slice ID + agent attribution + timestamps + commit SHA. An evidence category per P5.
+- **Definition**: Origin-tracking metadata. Slice ID, agent attribution, timestamps, and commit SHA. An evidence category per P5.
 - **Origin**: P5
 - **Cross-references**: P5, Slice ID, Evidence categories
 
@@ -319,25 +319,25 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Layer B.1, CI gates, Counter discipline
 
 ### Recursive Learning by Capture
-- **Definition**: P7. The framework improves itself through capture. InsightRecords + LearningPatterns inform R-rule amendments via DECs. The corpus is training data.
+- **Definition**: P7. The framework improves itself through capture. InsightRecords and LearningPatterns inform R-rule amendments via DECs. The corpus is training data.
 - **Origin**: P7
 - **Cross-references**: P7, InsightRecord, LearningPattern, R-rules
 
 ### Reconciliation ritual
-- **Definition**: Layer 5–6 mechanisms — Block Retrospective consistency review + Quarterly Curation. Periodic drift detection + reconciliation DECs.
+- **Definition**: Layer 5–6 mechanisms — Block Retrospective consistency review and Quarterly Curation. Periodic drift detection and reconciliation DECs.
 - **Origin**: Consistency-management mechanism
 - **Cross-references**: Block Retrospective, Quarterly Curation
 
 ## S
 
 ### Shared-Resource Pre-flight (P12)
-- **Definition**: The 12th canonical principle (Layer A). Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate + cap + alert + telemeter every finite/serialized shared resource that lever consumes. Operating theorem: "the success of a parallelism lever is the source of the next bottleneck."
+- **Definition**: The 12th canonical principle (Layer A). Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate, cap, alert, and telemeter every finite/serialized shared resource that lever consumes. Operating theorem: "the success of a parallelism lever is the source of the next bottleneck."
 - **Origin**: Shared-Resource Pre-flight
 - **Aliases prohibited**: "resource management" (generic), "P11" (Infrastructure Continuity — distinct), "10x rule" (rejected — trigger is calibrated baseline, not a magic number)
 - **Cross-references**: P11 (orthogonal — see "Why P12 ≠ P11"), Finite/serialized shared resource, CI/Pipeline Cost Economy, P3, P7
 
 ### warned degradation vs invisible hard-cut
-- **Definition**: The anti-pattern framing of P12. The default for any finite shared resource must be cap+alert ("warned degradation"), never a silent hard-stop ("invisible hard-cut"). A `$0` default spending limit is the paradigmatic anti-pattern.
+- **Definition**: The anti-pattern framing of P12. The default for any finite shared resource must be cap and alert ("warned degradation"), never a silent hard-stop ("invisible hard-cut"). A `$0` default spending limit is the paradigmatic anti-pattern.
 - **Origin**: Shared-Resource Pre-flight (P12)
 - **Cross-references**: P12, Finite/serialized shared resource
 
@@ -359,14 +359,14 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Session-Type, Slice
 
 ### Slice
-- **Definition**: An atomic, vertical, end-to-end unit of work. One AI-agent chat + one PR + one cohesive outcome. Spec + decision + code + tests + evidence + merge in one unit. **Clarification (slice ⊂ session)**: the Slice is the DEV Session-Type — there are other valid Session-Types (Meta, Audit, Learning, etc.) that do not produce a PR; P1 governs the atomicity of DEV slices specifically.
+- **Definition**: An atomic, vertical, end-to-end unit of work. One AI-agent chat, one PR, one cohesive outcome. Spec, decision, code, tests, evidence, and merge in one unit. **Clarification (slice ⊂ session)**: the Slice is the DEV Session-Type — there are other valid Session-Types (Meta, Audit, Learning, etc.) that do not produce a PR; P1 governs the atomicity of DEV slices specifically.
 - **Origin**: P1; clarified by Session as first-class unit
 - **Aliases prohibited**: "story", "ticket", "task", "work item"
 - **Cross-references**: P1, Session, Session-Type, Slice-Type, Token-band
 
 ### synthesis efficiency
 - **Definition**: A calibrable model attribute = the **semantic density** with which a model creates context (information preserved per output token). "Says the same thing without losing the idea." Varies across models (a language skill, like code-golf for code: 1 line vs 70). An **axis of Model Triage** (priority for context-producing slices). Proxy measurement: output-tokens to pass fixed acceptance criteria. Caveat: density ≠ terseness; optimum is maximum density that still passes the acceptance gate (P5) and remains auditable (P2).
-- **Origin**: Context Router + synthesis efficiency
+- **Origin**: Context Router and synthesis efficiency
 - **Cross-references**: Model Triage, context-consuming vs context-producing slice, P5, Determinism-over-Regeneration
 
 ### Slice ID
@@ -400,7 +400,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Token-band
 - **Definition**: Slice/session size classification (XS/S/M/L/XL) for **throughput** — measured in **billed-equivalent** tokens (input + cache_creation×1.25 + cache_read×0.1 + output), NOT total-with-cache (which inflates ~5×). Calibrated bands (baseline 2026-06-15): XS<2M · S 2–5M · M 5–10M · L 10–20M · XL>20M. Governs cost (P12) and forecast.
-- **Origin**: P1 + Bidimensional sizing
+- **Origin**: P1 and Bidimensional sizing
 - **Aliases prohibited**: "total-with-cache" as the band unit (inflates the measurement; not the canonical unit)
 - **Cross-references**: P1, P12, Slice, Session, context-band, Sizing, Calibration discipline
 
@@ -411,7 +411,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Context Router
 - **Definition**: A Layer B.1 artifact. Routes context selectively to each slice/session — instead of loading the whole corpus, activates only the relevant **context-experts** (DECs/entities/code-modules grouped by topic/dependency). Three mechanisms: (1) routing, (2) compression (coordinator summaries, handoff contracts), (3) sparse working set. Reduces the context-band footprint that Model Triage filters on. MoE-inspired (gating-network analog at the orchestration level, NOT a claim about the transformer's internal architecture).
-- **Origin**: Context Router + synthesis efficiency
+- **Origin**: Context Router and synthesis efficiency
 - **Cross-references**: ContextPack, context-band, context-expert, Model Triage
 
 ### context-expert
@@ -421,11 +421,11 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### context-consuming vs context-producing slice
 - **Definition**: A triage distinction. A **context-consuming** slice reads a lot (analysis over existing code/corpus), so Model Triage prioritizes a large window. A **context-producing** slice writes a lot (specs/docs/code/refactor), so Model Triage prioritizes synthesis efficiency (density). A model optimal for consuming is not necessarily optimal for producing.
-- **Origin**: Context Router + synthesis efficiency
+- **Origin**: Context Router and synthesis efficiency
 - **Cross-references**: Model Triage, synthesis efficiency, Context Router
 
 ### Topic (canonical)
-- **Definition**: A tag from the canonical topic taxonomy used in DEC frontmatter `topics:`. Enables corpus indexing by theme + topic-related search.
+- **Definition**: A tag from the canonical topic taxonomy used in DEC frontmatter `topics:`. Enables corpus indexing by theme and topic-related search.
 - **Origin**: Consistency-management mechanism
 - **Cross-references**: Topic taxonomy, Layer 1
 
@@ -467,7 +467,7 @@ Adopters may extend this glossary with domain-specific terms in their own glossa
 ## Maintenance
 
 - DEC with non-empty `vocabulary-changes` triggers an update here (same slice).
-- Quarterly Curation ritual — drift detection + reconciliation.
+- Quarterly Curation ritual — drift detection and reconciliation.
 - Fix-on-touch per P10 — slices touching stale references update forward.
 
 Major restructure leads to a version bump (`glossary` under a new spec version directory).

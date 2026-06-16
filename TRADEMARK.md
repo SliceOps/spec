@@ -95,7 +95,7 @@ The mark is held by **Andrés Ramírez Sierra**. Requests are handled personally
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`LICENSE-CODE`](LICENSE-CODE) — MIT License (code).
 - [`DISCLOSURE.md`](DISCLOSURE.md) — SliceOps and reference-runtime relationship; framework neutrality.
-- Decision record `DR-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 + MIT licensing and the trademark / copyright separation (Decision 6) this policy implements.
+- Decision record `DR-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 and MIT licensing and the trademark / copyright separation (Decision 6) this policy implements.
 
 ---
 

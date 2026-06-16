@@ -4,19 +4,19 @@ The canonical answer to "what kind of development model is SliceOps?" — and ho
 
 Three characterizations, all derived from the canonical principles — none of them adds a new Layer A principle (anti-over-promotion discipline applies):
 
-1. **Decision-driven + evidence-gated** (not spec-driven-first).
+1. **Decision-driven and evidence-gated** (not spec-driven-first).
 2. **Development-style-agnostic** (analog to P8 Platform-Agnostic, applied to input/authoring style).
 3. **Acceptance-first slices** as the **preferred convention** (Rails-style: opinionated default, override permitted).
 
 ---
 
-## 1. Decision-driven + evidence-gated, NOT spec-driven-first
+## 1. Decision-driven and evidence-gated, NOT spec-driven-first
 
-The **driver** of SliceOps is the slice (atomic unit), and the **canonical differentiating artifact** is the decision (DEC, audit plane). The spec is **a component** of the slice (P1: "spec + decision + code + tests + evidence + merge") — co-equal, not sovereign.
+The **driver** of SliceOps is the slice (atomic unit), and the **canonical differentiating artifact** is the decision (DEC, audit plane). The spec is **a component** of the slice (P1: "spec, decision, code, tests, evidence, and merge") — co-equal, not sovereign.
 
 | Dimension | Spec-driven-first | SliceOps |
 |---|---|---|
-| Source of truth | The spec (canonical, immutable) | The corpus of decisions + merged code with evidence |
+| Source of truth | The spec (canonical, immutable) | The corpus of decisions and merged code with evidence |
 | Primary artifact | Spec document | DecisionRecord (audit plane) |
 | What is audited | Conformance code ↔ spec | Integrity of the decisions (what / why / who) |
 | Flow | spec → plan → code → conformance | slice scope (spec-anchor) → execution → decisions captured → evidence-gated → merge → learning |
@@ -41,7 +41,7 @@ Spec-driven-first assumes the **spec is correct upfront**, code conforms, diverg
 
 Spec-driven is an **input/authoring style**; SliceOps is a **discipline plane** that wraps any style. Analog to P8 (Platform-Agnostic) but for development-style instead of tools:
 
-- An adopter can be **spec-first AND SliceOps-compliant**: a spec-first toolchain handles spec to code; SliceOps adds audit plane + slice atomicity + evidence + recursive learning **on top**.
+- An adopter can be **spec-first AND SliceOps-compliant**: a spec-first toolchain handles spec to code; SliceOps adds audit plane, slice atomicity, evidence, and recursive learning **on top**.
 - Or **test-first AND SliceOps**, or **contract-first AND SliceOps**, or **sketch-first AND SliceOps**.
 - The 12 principles **do not prescribe an input style** — they prescribe the discipline plane (auditable decisions, atomic slices, gated evidence, captured learning).
 
@@ -49,7 +49,7 @@ Spec-driven is an **input/authoring style**; SliceOps is a **discipline plane** 
 
 SliceOps **does not compete** with spec-first / contract-first toolchains — it **wraps** them. Messaging: *"Use your preferred authoring flow to go from intent to code; use SliceOps to make the whole process auditable, atomic, and self-improving."* Consistent with the pattern established elsewhere (SliceOps operates on top of code-quality, runtime governance, compliance, and CI tools — now also on top of authoring-flow tools on the input axis).
 
-**Documentation status**: development-style-agnostic is documented as a **characterization** (it derives from the spirit of P8 + the framework's composable nature), NOT as a new Layer A principle. Re-evaluable if the need to elevate it recurs.
+**Documentation status**: development-style-agnostic is documented as a **characterization** (it derives from the spirit of P8 and the framework's composable nature), NOT as a new Layer A principle. Re-evaluable if the need to elevate it recurs.
 
 ---
 
@@ -81,7 +81,7 @@ It also reinforces:
 
 ### Convention, NOT mandate
 
-It is a **recommended default with override permitted**. An adopter may use prose-first, TDD-pure, or any other style and remain SliceOps-compliant if they honor the 12 principles. SliceOps recommends acceptance-first because it best materializes P1 + P5 + P7 — but does not require it (development-style-agnostic is preserved, characterization 2).
+It is a **recommended default with override permitted**. An adopter may use prose-first, TDD-pure, or any other style and remain SliceOps-compliant if they honor the 12 principles. SliceOps recommends acceptance-first because it best materializes P1, P5, and P7 — but does not require it (development-style-agnostic is preserved, characterization 2).
 
 ---
 

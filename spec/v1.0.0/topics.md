@@ -32,12 +32,12 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: licensing, capa-c-vendor-runtime, capa-c-adopter-stack
 
 ### hierarchical-taxonomy
-- **Scope**: Decisions about naming structure and the hierarchical layer taxonomy (Layer A/B/C top-level + sub-numbering B.1, C.2, etc.).
+- **Scope**: Decisions about naming structure and the hierarchical layer taxonomy (Layer A/B/C top-level and sub-numbering B.1, C.2, etc.).
 - **Parent**: foundational
 - **Sub-topics**: layer-naming, sub-layer-numbering
 - **Cross-references**: ip-boundary, scalability, vocabulary-discipline
 
-## Patterns + practice
+## Patterns and practice
 
 ### capa-b-methodology-artifact
 - **Scope**: Layer B.1 patterns — entity catalog, folder structure, R-rules, counter discipline, frontmatter schemas, file templates.
@@ -87,14 +87,14 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: capa-b-methodology-artifact, ci-gates, p7-recursive-learning-operational
 
 ### counter-discipline
-- **Scope**: Counter atomicity + reconciliation strategies (renumber, accept-ours, merge).
+- **Scope**: Counter atomicity and reconciliation strategies (renumber, accept-ours, merge).
 - **Parent**: capa-b-methodology-artifact
 - **Cross-references**: r-rules, cross-coordinator-shared-state, finite-resource-stewardship
 
-## Operation + workflow
+## Operation and workflow
 
 ### evidence-categories
-- **Scope**: The evidence categories (functional, quality, security, decision, provenance) per P5 + P6.
+- **Scope**: The evidence categories (functional, quality, security, decision, provenance) per P5 and P6.
 - **Parent**: principles > p5-evidence-by-construction
 - **Cross-references**: p5-evidence-by-construction, p6-security-by-construction
 
@@ -128,7 +128,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: vocabulary-discipline, p2-audit-plane, p7-recursive-learning-operational
 
 ### vocabulary-discipline
-- **Scope**: P10 principle + glossary + fix-on-touch policy.
+- **Scope**: P10 principle, glossary, and fix-on-touch policy.
 - **Parent**: principles > p10-vocabulary-discipline
 - **Sub-topics**: glossary-coverage, term-canonicity, fix-on-touch
 - **Cross-references**: glossary, consistency-management
@@ -140,23 +140,23 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: consistency-management, audit-plane
 
 ### p7-recursive-learning-operational
-- **Scope**: Operationalization of P7 — InsightRecord → LearningPattern → DEC flow + thresholds.
+- **Scope**: Operationalization of P7 — InsightRecord → LearningPattern → DEC flow and thresholds.
 - **Parent**: principles > p7-recursive-learning
 - **Cross-references**: p7-recursive-learning, insight-record-pattern, learning-pattern
 
 ### scalability
-- **Scope**: Framework properties enabling scaling from N=5 to N=500+ DECs without chaos.
+- **Scope**: Framework properties enabling scaling from N=5 to N=500 or more DECs without chaos.
 - **Parent**: meta-framework
 - **Cross-references**: meta-framework, consistency-management, hierarchical-taxonomy
 
 ### finite-resource-stewardship
-- **Scope**: Decisions about P12 (Shared-Resource Pre-flight) — enumerate + cap + alert + telemeter finite/serialized shared resources before scaling parallelism. Unifies resource-contention precedents (counter, worktree, CI minutes, rate limits).
+- **Scope**: Decisions about P12 (Shared-Resource Pre-flight) — enumerate, cap, alert, and telemeter finite/serialized shared resources before scaling parallelism. Unifies resource-contention precedents (counter, worktree, CI minutes, rate limits).
 - **Parent**: meta-framework
 - **Sub-topics**: ci-cost-economy, infra-cost-ledger, shared-resource-preflight
 - **Cross-references**: scalability, multi-agent-parallelism, p7-recursive-learning-operational, capa-b-engineering-universal
 
 ### ci-cost-economy
-- **Scope**: Decisions about the Layer B.2 pattern "CI/Pipeline Cost Economy" — concurrency-cancel + change-gating + aggregation-gate + draft-skip + dependency-cache; plus per-CI-provider/stack C.2 instances.
+- **Scope**: Decisions about the Layer B.2 pattern "CI/Pipeline Cost Economy" — concurrency-cancel, change-gating, aggregation-gate, draft-skip, and dependency-cache; plus per-CI-provider/stack C.2 instances.
 - **Parent**: capa-b-engineering-universal
 - **Sub-topics**: aggregation-required-gate, change-scoped-job-gating, concurrency-cancel-in-progress
 - **Cross-references**: finite-resource-stewardship, capa-b-engineering-universal, capa-c-adopter-stack
@@ -167,7 +167,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Sub-topics**: one-off-vs-permanent-tuning-gate
 - **Cross-references**: capa-b-engineering-universal, vocabulary-discipline, p7-recursive-learning-operational, ci-cost-economy
 
-## Compliance + governance
+## Compliance and governance
 
 ### compliance-mapping
 - **Scope**: Mappings of SliceOps Layer A/B to compliance frameworks (ISO 42001, SOC 2, EU AI Act, NIST AI RMF).
@@ -185,7 +185,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Parent**: ip-boundary
 - **Cross-references**: ip-boundary, licensing
 
-## Positioning + competitive
+## Positioning and competitive
 
 ### positioning
 - **Scope**: SliceOps positioning vs competitors, wedge identification, marketing framing.
@@ -220,7 +220,7 @@ Adopters may extend this taxonomy with domain-specific topics in their own brain
 ## Maintenance
 
 - A DEC introducing a new topic must justify in its body why existing topics are insufficient and add the topic here (same slice).
-- Quarterly Curation ritual — topic merging (over-granular consolidation) + splitting (over-broad decomposition) + orphan archival.
+- Quarterly Curation ritual — topic merging (over-granular consolidation), splitting (over-broad decomposition), and orphan archival.
 - Fix-on-touch per P10.
 
 Major restructure leads to a version bump.

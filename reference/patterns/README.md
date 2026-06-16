@@ -12,9 +12,9 @@ Industry-canonical engineering patterns SliceOps **reaffirms**. Vendor-agnostic,
 | Fail-Fast | Reaffirmed (industry-canonical) | Industry literature |
 | Idempotency | Reaffirmed (industry-canonical) | Industry literature |
 | Defense in Depth | Reaffirmed (industry-canonical) | Industry literature |
-| **CI/Pipeline Cost Economy** | SliceOps-formalized | Spec below + runnable templates in the **SliceOps toolkit** repo |
+| **CI/Pipeline Cost Economy** | SliceOps-formalized | Spec below and runnable templates in the **SliceOps toolkit** repo |
 | **Determinism-over-Regeneration** | SliceOps-formalized | Spec below |
-| **LLM-Inference-Cost-Economy** | SliceOps-formalized (B.2 sub-domain of CI/Pipeline Cost Economy) | [Dedicated spec](llm-inference-cost-economy.md) + runnable templates in toolkit |
+| **LLM-Inference-Cost-Economy** | SliceOps-formalized (B.2 sub-domain of CI/Pipeline Cost Economy) | [Dedicated spec](llm-inference-cost-economy.md) and runnable templates in toolkit |
 
 The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-first engineering, where the failure modes are intrinsic to multi-agent parallelism and stochastic generation.
 
@@ -34,7 +34,7 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 **Applies to**: validators, formatters, repeated codegen, domain checks, data transforms, document styling — any process where same-input → same-result.
 
 **Anti-patterns**:
-- Regenerating the same script/process with AI every session (token waste + drift + not repeatable).
+- Regenerating the same script/process with AI every session (token waste, drift, not repeatable).
 - Elaborate prompts wrapping poor tools (undocumented functions, nonsensical parameters) — the inverse of good practice.
 - Treating a determinizable process as if it required AI judgment every time.
 - Monolithic non-composable mega-artifact (violates P1; hampers debugging).
@@ -47,7 +47,7 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 
 **Principle alignment**: P12 (Shared-Resource Pre-flight) — CI minutes are a finite, serialized, shared resource; these levers are bootstrap defaults, not post-incident retrofit. Pairs with the infra-cost-ledger.
 
-**Specification + runnable templates**: the executable reference implementation (the five lever templates + a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Layer B.2 (vendor-agnostic); each concrete CI-provider instance is Layer C.2 (adopter-defined).
+**Specification and runnable templates**: the executable reference implementation (the five lever templates and a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Layer B.2 (vendor-agnostic); each concrete CI-provider instance is Layer C.2 (adopter-defined).
 
 **Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard-cut), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
 

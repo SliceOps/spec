@@ -21,7 +21,7 @@ updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: public | internal | restricted | sensitive
 
-# Volume / cost (links P12 + cost-ledger)
+# Volume / cost (links P12 and cost-ledger)
 turns: <int>
 token_band: XS | S | M | L | XL          # billed-equivalent throughput band (see ../sizing/)
 context_band: XS | S | M | L | XL         # peak context footprint band — model-viability filter
@@ -50,7 +50,7 @@ provenance:
 
 ## Lifecycle states
 
-`active` → (`archive` | `delete`). `archive` retains the session for audit; `delete` removes per data-retention policy. **Sessions are append-only during `active`** — a turn is added, never overwritten. Closure is recorded by setting `outcome` + `provenance.ended`. Re-opening an archived session for follow-up creates a new related session (with `related-sessions` cross-ref), not a mutation.
+`active` → (`archive` | `delete`). `archive` retains the session for audit; `delete` removes per data-retention policy. **Sessions are append-only during `active`** — a turn is added, never overwritten. Closure is recorded by setting `outcome` and `provenance.ended`. Re-opening an archived session for follow-up creates a new related session (with `related-sessions` cross-ref), not a mutation.
 
 > `lifecycle` is the **orthogonal axis A** — NOT a Session-Type. A "Delete" disposition is not a kind of session; it is the state of one.
 
@@ -76,8 +76,8 @@ Body: scope · turns summary · decisions produced · evidence references.
 ## Cross-reference patterns
 
 - **Produces** → DecisionRecord(s) (`originating_session`), InsightRecord(s), OutcomeRecord(s), or Capability accruals (Learning sessions).
-- **Sized by** → token-band + context-band (see `../sizing/`).
-- **Routed by** → Model Triage (see `../model-triage/`) — `model_used` + `execution_mode` + `triage_rationale` are auditable choices, not opaque defaults.
+- **Sized by** → token-band and context-band (see `../sizing/`).
+- **Routed by** → Model Triage (see `../model-triage/`) — `model_used`, `execution_mode`, and `triage_rationale` are auditable choices, not opaque defaults.
 - **Related to** → other sessions via `related-sessions` (follow-ups, orchestration parents).
 - **Coordinated by** → an `Orchestrate` Session-Type (renamed from the abbreviated "COORD"; full word per the naming convention).
 

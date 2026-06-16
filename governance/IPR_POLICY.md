@@ -41,7 +41,7 @@ SliceOps is an open framework. Vendor runtime implementations (including the fir
 
 ## References
 
-- Decision record: `DR-2026-06-15-sliceops-license-ratification` — CC BY 4.0 + MIT, dual-file Option A mechanics, SPDX convention, Inbound = Outbound, TM/copyright separation.
+- Decision record: `DR-2026-06-15-sliceops-license-ratification` — the ratified SliceOps license decision: CC BY 4.0 for documentation, MIT for code, SPDX convention, Inbound = Outbound, trademark and copyright separation.
 - [`../LICENSE`](../LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`../LICENSE-CODE`](../LICENSE-CODE) — MIT License (code).
 - [`../DCO`](../DCO) — Developer Certificate of Origin 1.1.

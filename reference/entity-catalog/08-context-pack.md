@@ -32,7 +32,7 @@ CP-01-entity-catalog.md
   status: active
   scope: topic
   includes: [reference/entity-catalog/*, spec/v1.0.0/glossary.md#cognitive-entity]
-  regenerated-from: build-context-packs script over reference/ + spec/
+  regenerated-from: build-context-packs script over reference/ and spec/
 Body: when to load · contents summary · regeneration command.
 ```
 

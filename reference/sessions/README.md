@@ -1,6 +1,6 @@
 # Sessions — Layer B.1 (v1.0)
 
-Canonical Session-Type taxonomy. Every human–AI interaction is a **Session** (cognitive entity #13, see `../entity-catalog/13-session.md`). This document specifies how Sessions are classified: 8 canonical Session-Types (level 1), Slice-Types (level 2, only when Session-Type=Slice), and 2 orthogonal axes (lifecycle + cross-cutting dimensions).
+Canonical Session-Type taxonomy. Every human–AI interaction is a **Session** (cognitive entity #13, see `../entity-catalog/13-session.md`). This document specifies how Sessions are classified: 8 canonical Session-Types (level 1), Slice-Types (level 2, only when Session-Type=Slice), and 2 orthogonal axes (lifecycle and cross-cutting dimensions).
 
 The taxonomy is **hierarchical, not flat** — earlier operational practice mixed levels (a 17-item flat list confused Session-Type with Slice-Type with sub-variants with lifecycle with cross-cutting axes). The canonical taxonomy separates them, which is what enables clean tagging, calibration by type, and audit-plane completeness.
 
@@ -78,7 +78,7 @@ Adopters or scripts that used an earlier flat categorization migrate as follows:
 | Admin, Business | Layer C.2 (adopter-specific ops, not part of the canonical framework taxonomy) |
 | Delete | Lifecycle disposition (axis A) |
 
-Result: 17 flat labels become **8 canonical Session-Types + Slice-Types + 2 orthogonal axes** — scalable and without level confusion.
+Result: 17 flat labels become **8 canonical Session-Types, Slice-Types, and 2 orthogonal axes** — scalable and without level confusion.
 
 ---
 
@@ -93,7 +93,7 @@ A flat list cannot represent that:
 
 Mixing these in one list creates ambiguity ("what kind of session is a Security session?"), prevents clean tagging (the same session is two labels), and breaks calibration (DEV sessions and Meta sessions have very different sizing distributions; aggregating them blurs the bands).
 
-The hierarchical taxonomy mirrors the same pattern used elsewhere in SliceOps (Layer A/B/C top-level + sub-numbering for new dimensions) — top-level stability + extensible sub-numbering, no renaming on growth.
+The hierarchical taxonomy mirrors the same pattern used elsewhere in SliceOps (Layer A/B/C top-level with sub-numbering for new dimensions) — top-level stability and extensible sub-numbering, no renaming on growth.
 
 ---
 

@@ -9,8 +9,8 @@ SliceOps is articulated in **three IP layers** with a stable top level and exten
 | Layer | Definition | Ownership | License |
 |---|---|---|---|
 | **Layer A — Principles** | The 12 canonical framework principles (P1–P12). The set without which it is not SliceOps. | SliceOps IP | CC BY 4.0 |
-| **Layer B — Reference Patterns** | Patterns that materialize the principles + reaffirmed universal engineering practices. | SliceOps IP | CC BY 4.0 (docs) + MIT (code templates) |
-| **Layer C — Implementations** | Specific implementations — vendor runtimes + adopter stack patterns. | Per vendor / adopter | Vendor / adopter choice |
+| **Layer B — Reference Patterns** | Patterns that materialize the principles and reaffirmed universal engineering practices. | SliceOps IP | CC BY 4.0 (docs) and MIT (code templates) |
+| **Layer C — Implementations** | Specific implementations — vendor runtimes and adopter stack patterns. | Per vendor / adopter | Vendor / adopter choice |
 
 > **Licensing status**: the intended licensing above is pending an IP/Legal ratification. No `LICENSE` file is published in this repository yet by design. See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`.
 
@@ -67,19 +67,19 @@ Future potential: **C.3 — Adopter Compliance Mappings**; **C.4 — Adopter Dom
 
 ## The 13-entity catalog (Layer B.1)
 
-The canonical cognitive entity catalog is **SliceOps IP, shared across vendors** (CC BY 4.0): DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**. Each entity has a frontmatter schema + lifecycle + cross-reference patterns + anti-patterns (see `../../reference/entity-catalog/`).
+The canonical cognitive entity catalog is **SliceOps IP, shared across vendors** (CC BY 4.0): DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**. Each entity has a frontmatter schema, lifecycle, cross-reference patterns, and anti-patterns (see `../../reference/entity-catalog/`).
 
 ### Why the catalog is shared SliceOps IP, not vendor-proprietary
 
 - **Schemas are weakly protectable by copyright** — naming entities "Account/Contact/Opportunity" or "blocks" has never been enforceable IP. Catalog-as-moat is weak protection regardless.
 - **Real runtime differentiation is runtime quality** — hosted operation, AI integration, sync, enterprise features, compliance certifications — not schema ownership.
-- **Mainstream adoption requires a catalog default** — purely abstract frameworks stay niche; a shared default catalog is what makes an ecosystem (precedent: SQL standard + vendor runtimes, container concepts + orchestrators).
+- **Mainstream adoption requires a catalog default** — purely abstract frameworks stay niche; a shared default catalog is what makes an ecosystem (precedent: SQL standard and vendor runtimes, container concepts and orchestrators).
 
 Operating analogy: a public production methodology (Lean / Toyota Production System) vs the private blueprints of a specific product. The methodology is public; specific product internals are private.
 
 ### Adopter customization rules
 
-Adopters **may**: use the catalog as-is (recommended — preserves cross-adopter interop); add adopter-specific entities (extends the catalog; lives in the adopter's own brain, NOT in the SliceOps spec); fork with renames/extensions (requires attribution + documenting the customization in adopter DECs).
+Adopters **may**: use the catalog as-is (recommended — preserves cross-adopter interop); add adopter-specific entities (extends the catalog; lives in the adopter's own brain, NOT in the SliceOps spec); fork with renames/extensions (requires attribution and documenting the customization in adopter DECs).
 
 Adopters **may not**: remove canonical entities and still claim SliceOps-compliance (breaks interop); conflict canonical entity semantics (e.g., redefine DecisionRecord to mean "user preferences").
 
@@ -104,8 +104,8 @@ For runtime selection guidance, see `../../examples/reference-implementations.md
 
 | Scenario | Resolution via taxonomy |
 |---|---|
-| Compliance mappings mature | New sub-layer **B.3** (reference patterns) — or top-level **Layer D — Compliance** if it spans A+B+C |
-| Domain vertical packs (banking/healthcare/gov) | **B.4 — Domain Pattern Libraries** + **C.3 — Adopter Domain Specializations** |
+| Compliance mappings mature | New sub-layer **B.3** (reference patterns) — or top-level **Layer D — Compliance** if it spans A, B, and C |
+| Domain vertical packs (banking/healthcare/gov) | **B.4 — Domain Pattern Libraries** and **C.3 — Adopter Domain Specializations** |
 | Certification / curriculum | **Layer E — Education Layer** (truly distinct dimension from IP/scope) |
 
 In every scenario the taxonomy scales **without breaking changes** — no top-level renaming. Precedent: the periodic table (stable groups, new elements added without renaming) and Linnaean taxonomy (hierarchy extends without renaming top ranks).

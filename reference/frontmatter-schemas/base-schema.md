@@ -23,6 +23,6 @@ sensitivity: public | internal | restricted | sensitive   # R11
 
 ## Notes
 
-- The base is intentionally minimal. Entity catalog specs add the typed fields each entity needs (e.g., DecisionRecord adds supersession + Layer 1 fields; InsightRecord adds append-only cross-refs).
-- Runtimes may add runtime-specific fields under their own IP, but the base + catalog fields must remain present and portable (P8).
+- The base is intentionally minimal. Entity catalog specs add the typed fields each entity needs (e.g., DecisionRecord adds supersession and Layer 1 fields; InsightRecord adds append-only cross-refs).
+- Runtimes may add runtime-specific fields under their own IP, but the base and catalog fields must remain present and portable (P8).
 - A document missing required base fields fails R3.

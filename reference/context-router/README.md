@@ -68,7 +68,7 @@ The Context Router is the **coherent pattern** that unifies them — it does not
 
 ---
 
-## Connection to Model Triage + sizing
+## Connection to Model Triage and sizing
 
 - **Context-band** (see `../sizing/`) **measures** peak footprint. The Context Router **reduces** it.
 - A smaller footprint **expands the feasible set** of Model Triage (more slices fit in smaller windows, so more local / cheaper / private models become viable). This is the direct contribution to **compliance-by-construction**: routing shrinks footprint enough that sensitive work fits in local-mode models.

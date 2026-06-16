@@ -24,7 +24,7 @@ consistency-check: |
 # DR-YYYY-MM-DD — <title>
 
 ## TL;DR
-<2–4 sentences: the decision + why it matters.>
+<2–4 sentences: the decision and why it matters.>
 
 ## Context
 <What forced this decision. Prior state. Trigger.>

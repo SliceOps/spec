@@ -45,7 +45,7 @@ Body: the value · what it means in practice · how it shapes decisions.
 
 ## Anti-patterns
 
-- Changing a Value without a DEC + elevated HITL gate (silent value drift — corrupts P9 substrate).
+- Changing a Value without a DEC and elevated HITL gate (silent value drift — corrupts P9 substrate).
 - Treating a Value as a revisable default (that is a Preference).
 - Value so vague it informs no concrete judgment (decorative).
 - Org Value asserted without the authority to set it.

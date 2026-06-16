@@ -23,7 +23,7 @@ promoted-to: <LP id> | null          # set when this insight contributes to a Le
 
 ## Lifecycle states
 
-`active` → `archived`. **Never `superseded`** — InsightRecords are append-only by design (P7). Archival is for noise reduction only and preserves the record + cross-references.
+`active` → `archived`. **Never `superseded`** — InsightRecords are append-only by design (P7). Archival is for noise reduction only and preserves the record and cross-references.
 
 ## Usage example (generic)
 

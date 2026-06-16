@@ -1,6 +1,6 @@
 # CognitiveFramework — Layer B.1 Cognitive Entity
 
-> Mental models and reference structures for reasoning + decision-making. **Mapped principle: universal.**
+> Mental models and reference structures for reasoning and decision-making. **Mapped principle: universal.**
 
 ## Purpose
 
@@ -24,7 +24,7 @@ topics: [<canonical topic>...]
 
 ## Lifecycle states
 
-`active` → `superseded`. Minor changes (additions, clarifications) bump `updated` + `version` patch/minor in place. Major restructure → a new versioned CF that `supersedes` the prior (bidirectional). Living document by design.
+`active` → `superseded`. Minor changes (additions, clarifications) bump `updated` and `version` patch/minor in place. Major restructure → a new versioned CF that `supersedes` the prior (bidirectional). Living document by design.
 
 ## Usage example (generic)
 

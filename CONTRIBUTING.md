@@ -37,7 +37,7 @@ Contributions follow SliceOps's own discipline (P1 — Slice Atomicity). One ato
 
 Any change to a principle, reference pattern, or canonical vocabulary is a DecisionRecord. See [`governance/RFC-PROCESS.md`](governance/RFC-PROCESS.md). Decisions are recorded with full audit-plane discipline (P2): context, alternatives considered, rationale, consequences, supersession chain.
 
-### 3. Frontmatter + consistency discipline
+### 3. Frontmatter and consistency discipline
 
 DECs carry Layer 1 frontmatter (`conflicts-with`, `related-decs`, `topics`, `vocabulary-changes`, `consistency-check`). The Layer 2 pre-merge checklist is mandatory. (These "Layer 1 / Layer 2" labels are the consistency-management layers, distinct from the A/B/C IP layers.)
 
