@@ -1,10 +1,91 @@
 # SliceOps™ Canonical Principles (Layer A) — v1.0.0
 
-SliceOps™ as a framework is constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**. Each principle is defined with a statement, rationale, implication, and anti-pattern.
+SliceOps™ is a **decision-driven framework** constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**.
+
+They are presented **Why → How → What**: *why* probabilistic, agentic construction needs disciplined control (**P1–P3**), *how* you build under that discipline (**P4–P10**), and *what* the discipline makes tangible, bound to no vendor (**P11–P12**). **Decision-first**: architecture, specs, plans, and execution are *consequences* of foundations and decisions — never the reverse. Each principle is defined with a statement, rationale, implication, and anti-pattern.
 
 These principles are **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendments to this set require a superseding decision under an elevated human-in-the-loop gate (P3).
 
 Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) is explicitly **out of scope** — the asymmetric risk via Goodhart's law, cobra effect, and quality erosion outweighs the benefit. SliceOps takes no position on gamification at any layer.
+
+---
+
+## WHY — the problem agentic construction creates
+
+*Probabilistic, agentic construction needs deterministic, auditable control with human authority — so that AI leverage never costs correctness, accountability, or trust. These three principles are the reason the rest exists.*
+
+---
+
+## P1 — Decision Integrity by Construction
+
+**Statement**: Decisions emerge from slices. Every DEC traces to a slice (where it was produced) and is reachable from that slice (back-link). Decisions made out-of-band must be backed into a slice retroactively.
+
+**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P1, tribal knowledge re-emerges and the audit plane is theater.
+
+**Implication**:
+- DEC frontmatter includes slice provenance (`originating_slice:` in the canonical Block-Section-Slice ID format)
+- Slice PRs include the DEC list produced
+- Retroactive DECs allowed but require a "back-fill slice" with an explicit retro-decision flag
+- Architecture-spanning decisions get their own slice (no decision is "free" of slice provenance)
+
+**Anti-pattern**:
+- DECs created without slice context
+- "We decided this in a meeting" — re-record as a slice
+- Decisions in a chat backlog never committed to the corpus
+- DECs that supersede priors without explaining what changed in context
+
+**Clarification (decisions emerge from sessions)**: P1's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
+
+---
+
+## P2 — Audit Plane Discipline
+
+**Statement**: Every architectural decision is recorded, traceable, and cross-slice consistent. The audit plane is the layer above code where decisions live as first-class artifacts.
+
+**Rationale**: Code-quality tools audit code. Runtime tools audit behavior. Compliance tools audit post-hoc. **No existing tool audits the decision plane** — what was decided, by whom (human/agent), why, when, with which alternatives considered, with what supersession chain. This layer **is** the SliceOps wedge. Without P2, SliceOps is just another collection of CI rules.
+
+**Implication**:
+- DecisionRecord schema mandatory (Layer B catalog)
+- DECs date-based or counter-based, with a uniqueness check enforced in CI
+- DEC content: context, alternatives considered, rationale, consequences, supersession chain
+- Cross-slice DEC consistency check enforced in CI
+- Counter discipline pattern (atomic increment per prefix, validate-no-duplicate)
+- DECs append-only; supersession explicit, never silent
+
+**Anti-pattern**:
+- Decisions in chat/email/meetings without a subsequent DEC
+- DECs created post-hoc to justify already-merged code
+- DECs contradicting prior DECs without explicit supersession
+- DECs without alternatives considered (false-binary thinking)
+
+---
+
+## P3 — Human-in-the-Loop Authority
+
+**Statement**: Humans retain final authority over scope, merges, and architectural direction. AI agents propose; humans dispose. Critical decisions (Block-scope DECs, R-rule amendments, repo-level changes) require a human approval gate. Routine slices may auto-approve based on policy and evidence, but an escape hatch to a human always exists.
+
+**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus, producing poisoned training data, and future agents inherit the poison (P8 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
+
+**Implication**:
+- Merge gate is human approval (CODEOWNERS or equivalent)
+- Critical DECs require explicit human ratification (≠ auto-merged)
+- Block-scope decisions (what enters/exits) are human authority
+- R-rule amendments require human DEC ratification
+- AI-generated content disclosed (EU AI Act Art. 50): content, code, decisions
+- Provenance metadata distinguishes human-authored vs agent-authored
+
+**Anti-pattern**:
+- Auto-merge on green CI without human review in critical scope
+- AI agents amending R-rules without a human DEC
+- AI agents closing Blocks without a retrospective
+- Hidden AI-generated content (no provenance, no disclosure)
+- "Agentic auto-merge" for L or XL slices (size disproportionate to human-review risk)
+
+---
+
+## HOW — the mechanisms of disciplined construction
+
+*The construction mechanisms that deliver the WHY: atomic units, derived planning, evidence and security by construction, recursive learning, shared-resource pre-flight, and infrastructure continuity.*
 
 ---
 
@@ -34,28 +115,6 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P2 — Audit Plane Discipline
-
-**Statement**: Every architectural decision is recorded, traceable, and cross-slice consistent. The audit plane is the layer above code where decisions live as first-class artifacts.
-
-**Rationale**: Code-quality tools audit code. Runtime tools audit behavior. Compliance tools audit post-hoc. **No existing tool audits the decision plane** — what was decided, by whom (human/agent), why, when, with which alternatives considered, with what supersession chain. This layer **is** the SliceOps wedge. Without P2, SliceOps is just another collection of CI rules.
-
-**Implication**:
-- DecisionRecord schema mandatory (Layer B catalog)
-- DECs date-based or counter-based, with a uniqueness check enforced in CI
-- DEC content: context, alternatives considered, rationale, consequences, supersession chain
-- Cross-slice DEC consistency check enforced in CI
-- Counter discipline pattern (atomic increment per prefix, validate-no-duplicate)
-- DECs append-only; supersession explicit, never silent
-
-**Anti-pattern**:
-- Decisions in chat/email/meetings without a subsequent DEC
-- DECs created post-hoc to justify already-merged code
-- DECs contradicting prior DECs without explicit supersession
-- DECs without alternatives considered (false-binary thinking)
-
----
-
 ## P5 — Stage as DAG-Derived View
 
 **Statement**: A Stage is a computed view of the slice dependency graph, **not** an imperative time-bound grouping. Slices belong to Blocks (logical scope) and depend on each other; Stage = "what is mergeable now given dependencies."
@@ -74,28 +133,6 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Slices assigned to "Sprint 1" / "Sprint 2" without DAG analysis
 - Burndown charts (Sprint artifact, not Block artifact)
 - "We committed to N slices this stage" — Stage is derived, not committed
-
----
-
-## P1 — Decision Integrity by Construction
-
-**Statement**: Decisions emerge from slices. Every DEC traces to a slice (where it was produced) and is reachable from that slice (back-link). Decisions made out-of-band must be backed into a slice retroactively.
-
-**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P1, tribal knowledge re-emerges and the audit plane is theater.
-
-**Implication**:
-- DEC frontmatter includes slice provenance (`originating_slice:` in the canonical Block-Section-Slice ID format)
-- Slice PRs include the DEC list produced
-- Retroactive DECs allowed but require a "back-fill slice" with an explicit retro-decision flag
-- Architecture-spanning decisions get their own slice (no decision is "free" of slice provenance)
-
-**Anti-pattern**:
-- DECs created without slice context
-- "We decided this in a meeting" — re-record as a slice
-- Decisions in a chat backlog never committed to the corpus
-- DECs that supersede priors without explaining what changed in context
-
-**Clarification (decisions emerge from sessions)**: P1's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
 
 ---
 
@@ -165,68 +202,29 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P11 — Platform-Agnostic
+## P9 — Shared-Resource Pre-flight
 
-**Statement**: SliceOps runs on any text-based AI agent, git, atomic-slice scoping, and file-producing capability. Specific platforms add velocity and UX but are NOT a gate of entry. SliceOps is not locked to any vendor.
+**Statement**: Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate, cap, alert, and telemeter every finite/serialized shared resource that lever consumes. SliceOps's parallel throughput stresses shared resources the framework must protect **proactively** — protection is bootstrap, not reaction.
 
-**Rationale**: Vendor lock-in kills adoption. Frameworks tied to a single tool limit ecosystem growth. The SliceOps wedge **is** the framework, which must run anywhere. Specific platforms unlock additional capability (multi-chat unlocks the parallelism wedge, knowledge-graph integration unlocks substrate features) but adopters get base value (Audit Plane, Decision Integrity) with no specific tool.
-
-**Implication**:
-- **Mode S** (single-agent, sequential) and **Mode M** (multi-agent, parallel) — both produce full audit-plane evidence
-- Mode M unlocks Wedge B (parallelism); Mode S unlocks Wedge A (audit) without Wedge B
-- Minimum declared prerequisites: text-based AI agent, git, file system, atomic-slice scoping capability
-- Capability matrix per platform (Layer B pattern): which platforms unlock which features
-- **A reference runtime is one runtime, not the runtime.** Substrate options (third-party tool adapters, custom homegrown brains) are valid and are architectural peers
-
-**Anti-pattern**:
-- Claiming SliceOps requires a specific AI coding tool
-- Documentation assuming specific platform features (e.g., "open a chat" assuming multi-chat exists)
-- Tooling that only works with specific platforms
-- License terms requiring a specific runtime
-
----
-
-## P3 — Human-in-the-Loop Authority
-
-**Statement**: Humans retain final authority over scope, merges, and architectural direction. AI agents propose; humans dispose. Critical decisions (Block-scope DECs, R-rule amendments, repo-level changes) require a human approval gate. Routine slices may auto-approve based on policy and evidence, but an escape hatch to a human always exists.
-
-**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus, producing poisoned training data, and future agents inherit the poison (P8 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
+**Rationale**: Multi-agent parallelism is **constitutive** of SliceOps (Wedge B) — no other SDLC runs 5–13 simultaneous agents as its normal mode. So this failure mode (parallelism stresses an un-enumerated finite/serialized shared resource) is **more intrinsic to SliceOps than to any existing framework**. Operating theorem: *"the success of a parallelism lever is the source of the next bottleneck."* Observed in reference-implementation practice ≥3 times (serialized-counter contention, shared worktree/checkout state, CI-minute exhaustion — same family as API rate limits, branch-protection serialization, DB migration locks). Without systematic pre-flight, the primary wedge silently self-destructs (invisible hard-stop).
 
 **Implication**:
-- Merge gate is human approval (CODEOWNERS or equivalent)
-- Critical DECs require explicit human ratification (≠ auto-merged)
-- Block-scope decisions (what enters/exits) are human authority
-- R-rule amendments require human DEC ratification
-- AI-generated content disclosed (EU AI Act Art. 50): content, code, decisions
-- Provenance metadata distinguishes human-authored vs agent-authored
+- Pre-Block checklist: enumerate finite/serialized shared resources the Block consumes (CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools)
+- Each resource: **cap** (hard limit), **alert** (warns BEFORE the limit, not at it), and **telemetry** (continuous visibility)
+- Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P5 and velocity recalibration — NOT a fixed magic number)
+- Default for any shared resource = cap and alert, **never silent hard-stop** ("warned degradation" > "invisible hard-cut")
+- Cost-ledger extended to an infra/CI dimension (not just tokens) — Layer B.1
+- Guardrails as repo-scaffold bootstrap defaults, NOT post-incident retrofit
 
 **Anti-pattern**:
-- Auto-merge on green CI without human review in critical scope
-- AI agents amending R-rules without a human DEC
-- AI agents closing Blocks without a retrospective
-- Hidden AI-generated content (no provenance, no disclosure)
-- "Agentic auto-merge" for L or XL slices (size disproportionate to human-review risk)
+- A `$0` spending limit / default quota that turns "exhaust resource" into "invisible hard-cut"
+- A cost-ledger that tracks only tokens (infra-cost blindness)
+- Scaling parallelism without enumerating the shared resources it consumes
+- Guardrails patched post-incident instead of bootstrap defaults
+- Treating CI minutes / counters / rate limits / locks as infinite
+- Docs/orchestration PRs burning the same finite budget as heavy code PRs without change-gating
 
----
-
-## P12 — Vocabulary Discipline
-
-**Statement**: Canonical terms have canonical meanings. Synonyms drift; SliceOps does not. **Vocabulary is canon, not preference.** Drift detected on touch is fixed forward.
-
-**Rationale**: Without vocabulary discipline, the corpus becomes junk. Adopters with N words for "slice" cannot interoperate. A cross-org ecosystem becomes impossible. SliceOps adopters speaking the same language **is** the ecosystem-compounding effect. Vocabulary drift is silent corruption of the audit plane (P2) — auditing decisions requires consistent term semantics.
-
-**Implication**:
-- Canonical glossary at `spec/v1.0.0/glossary.md`
-- DEC required to add/rename/retire a canonical term
-- "Fix on touch" — any slice that detects drift updates content forward
-- Adopters may extend with domain-specific vocabulary, but SliceOps core terms are reserved
-- Linters enforce vocabulary (Layer B pattern: term-linter)
-
-**Anti-pattern**:
-- "Slice", "story", and "ticket" used interchangeably
-- "DEC", "ADR", and "decision doc" treated as synonyms
-- New terms invented without a DEC
-- Marketing content using non-canonical terms (drift entry vector)
+**Why P9 ≠ P10**: P10 (Infrastructure Continuity) = "infra changes are slices (atomicity applied to infra)." P9 = "before scaling parallelism, protect the finite shared resources it consumes." An adopter can honor P10 perfectly (migrations as slices) and still exhaust CI minutes by never enumerating that resource. Orthogonal.
 
 ---
 
@@ -256,29 +254,57 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P9 — Shared-Resource Pre-flight
+## WHAT — the discipline made tangible, bound to nothing
 
-**Statement**: Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate, cap, alert, and telemeter every finite/serialized shared resource that lever consumes. SliceOps's parallel throughput stresses shared resources the framework must protect **proactively** — protection is bootstrap, not reaction.
+*The construction discipline materialized: the principles (Layer A), the reference patterns and artifacts (Layer B.1), the toolkit (Layer B.2), and a governed, single-source context substrate (P12 Context Discipline — agents are memoryless, so the corpus is their context; canonical vocabulary is one facet) — platform-agnostic (P11), bound to no AI, model, or runtime. The runtime that executes the discipline is Layer C — a vendor runtime built on these principles, not SliceOps's What.*
 
-**Rationale**: Multi-agent parallelism is **constitutive** of SliceOps (Wedge B) — no other SDLC runs 5–13 simultaneous agents as its normal mode. So this failure mode (parallelism stresses an un-enumerated finite/serialized shared resource) is **more intrinsic to SliceOps than to any existing framework**. Operating theorem: *"the success of a parallelism lever is the source of the next bottleneck."* Observed in reference-implementation practice ≥3 times (serialized-counter contention, shared worktree/checkout state, CI-minute exhaustion — same family as API rate limits, branch-protection serialization, DB migration locks). Without systematic pre-flight, the primary wedge silently self-destructs (invisible hard-stop).
+---
+
+## P11 — Platform-Agnostic
+
+**Statement**: SliceOps runs on any text-based AI agent, git, atomic-slice scoping, and file-producing capability. Specific platforms add velocity and UX but are NOT a gate of entry. SliceOps is not locked to any vendor.
+
+**Rationale**: Vendor lock-in kills adoption. Frameworks tied to a single tool limit ecosystem growth. The SliceOps wedge **is** the framework, which must run anywhere. Specific platforms unlock additional capability (multi-chat unlocks the parallelism wedge, knowledge-graph integration unlocks substrate features) but adopters get base value (Audit Plane, Decision Integrity) with no specific tool.
 
 **Implication**:
-- Pre-Block checklist: enumerate finite/serialized shared resources the Block consumes (CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools)
-- Each resource: **cap** (hard limit), **alert** (warns BEFORE the limit, not at it), and **telemetry** (continuous visibility)
-- Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P5 and velocity recalibration — NOT a fixed magic number)
-- Default for any shared resource = cap and alert, **never silent hard-stop** ("warned degradation" > "invisible hard-cut")
-- Cost-ledger extended to an infra/CI dimension (not just tokens) — Layer B.1
-- Guardrails as repo-scaffold bootstrap defaults, NOT post-incident retrofit
+- **Mode S** (single-agent, sequential) and **Mode M** (multi-agent, parallel) — both produce full audit-plane evidence
+- Mode M unlocks Wedge B (parallelism); Mode S unlocks Wedge A (audit) without Wedge B
+- Minimum declared prerequisites: text-based AI agent, git, file system, atomic-slice scoping capability
+- Capability matrix per platform (Layer B pattern): which platforms unlock which features
+- **A reference runtime is one runtime, not the runtime.** Substrate options (third-party tool adapters, custom homegrown brains) are valid and are architectural peers
 
 **Anti-pattern**:
-- A `$0` spending limit / default quota that turns "exhaust resource" into "invisible hard-cut"
-- A cost-ledger that tracks only tokens (infra-cost blindness)
-- Scaling parallelism without enumerating the shared resources it consumes
-- Guardrails patched post-incident instead of bootstrap defaults
-- Treating CI minutes / counters / rate limits / locks as infinite
-- Docs/orchestration PRs burning the same finite budget as heavy code PRs without change-gating
+- Claiming SliceOps requires a specific AI coding tool
+- Documentation assuming specific platform features (e.g., "open a chat" assuming multi-chat exists)
+- Tooling that only works with specific platforms
+- License terms requiring a specific runtime
 
-**Why P9 ≠ P10**: P10 (Infrastructure Continuity) = "infra changes are slices (atomicity applied to infra)." P9 = "before scaling parallelism, protect the finite shared resources it consumes." An adopter can honor P10 perfectly (migrations as slices) and still exhaust CI minutes by never enumerating that resource. Orthogonal.
+---
+
+## P12 — Context Discipline
+
+> Reframed from **"Vocabulary Discipline"**: vocabulary discipline is preserved as **one facet**. The number is unchanged; the scope is widened.
+
+**Statement**: AI agents are memoryless across sessions; the corpus IS their persistent, shared context. Context is therefore engineered as a **single source of truth** — foundations, decisions, architecture, specs, and plans form **one governed substrate** — enriched yet **selectively routed**, so that multiple agents operate coherently within finite windows. Duplicated or drifted context is corruption. **Canonical vocabulary is one facet**: canonical terms have canonical meanings; synonyms drift, SliceOps does not.
+
+**Rationale**: In a classical SDLC, context lives in humans' heads; in AI-first, agents are **memoryless** — the corpus is their only shared memory. Context therefore stops being implicit and becomes a **first-class engineering artifact** — the most AI-native principle (no classical SDLC needs it). Three pressures make it constitutive: (a) **source of truth** — without a single source the corpus turns to junk and adopters cannot interoperate (the vocabulary facet; the ecosystem-compounding effect is adopters speaking one language); (b) **finite windows** — un-routed context blows the context-band (P4) and inflates cost (P9); (c) **multi-agent coherence** — N agents without a shared source diverge. The failure mode is **empirical, not theoretical**: denormalized-reference drift (duplicated counts/refs drift when the source changes) and cross-coordinator collision are this principle predicting its own failure. It is silent corruption of the audit plane (P2): auditing decisions requires consistent term and context semantics.
+
+**Implication**:
+- **Single source of truth per fact**: each datum (term, count, reference, decision) lives in ONE place; every other locus derives from or points to it, never copies (anti-denormalization).
+- **Foundations-first governed substrate**: foundations → decisions → architecture → specs → plan → execution IS the context architecture (how context is organized to be single-source and routable).
+- **Declared selective routing**: each slice loads the relevant context-experts (by topic/dependency), not the whole corpus (Context Router, Layer B.1); the routing is declared in the slice scope.
+- **Vocabulary canon (facet)**: canonical glossary + topic taxonomy (`glossary.md`); a DEC is required to add/rename/retire a canonical term; fix-on-touch for drift.
+- **Cross-agent coherence enforced**: Consistency Management + cross-coordinator pre-flight (ties to P9) + linters/validators (term-linter, validate-topic-tags, validate-principle-count-coherence — Layer B.2).
+- Adopters extend with domain-specific context; SliceOps core terms and structure are reserved.
+
+**Anti-pattern**:
+- Context **assumed/implicit** rather than authored (the root AI-first anti-pattern).
+- **Denormalized** counts/refs/terms duplicated across N loci that drift.
+- Loading the **whole corpus** into every agent (no routing → context bloat → finite-window failure and cost; anti-P4/P9).
+- N agents operating **without a shared source of truth**.
+- "Slice", "story", and "ticket" used interchangeably; "DEC" and "ADR" as synonyms; new terms without a DEC; non-canonical terms in published content (the vocabulary facet).
+
+**Why vocabulary is a facet, not a separate principle**: vocabulary-canonicity, single-source, routing, and coherence are the same discipline — context as a governed substrate. The core is **binary/auditable**: is single-source declared? is denormalized-drift zero? is context routing declared per slice? The **optimal density** of context is calibration (Context Router / Model Triage — Layer B.1), not part of the binary gate.
 
 ---
 
