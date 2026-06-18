@@ -118,7 +118,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 ### meta-framework
 - **Scope**: Decisions about the framework itself — taxonomy, naming, consistency management, vocabulary discipline.
 - **Parent**: foundational
-- **Sub-topics**: hierarchical-taxonomy, consistency-management, vocabulary-discipline, corpus-integrity
+- **Sub-topics**: hierarchical-taxonomy, consistency-management, context-discipline, vocabulary-discipline, corpus-integrity
 - **Cross-references**: foundational, scalability
 
 ### consistency-management
@@ -127,11 +127,17 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Sub-topics**: frontmatter-discipline, pre-merge-checklist, r-rules-validators, reconciliation-ritual
 - **Cross-references**: vocabulary-discipline, p2-audit-plane, p7-recursive-learning-operational
 
+### context-discipline
+- **Scope**: The P12 principle — context as a **governed substrate** for memoryless agents: single-source-of-truth, foundations-first context architecture, selective routing (Context Router), and multi-agent coherence. The vocabulary canon is one facet. Reframed from "Vocabulary Discipline".
+- **Parent**: principles + meta-framework
+- **Sub-topics**: vocabulary-discipline, context-router, model-triage, consistency-management, corpus-integrity
+- **Cross-references**: vocabulary-discipline, context-router, consistency-management, corpus-integrity, model-triage
+
 ### vocabulary-discipline
-- **Scope**: P12 principle, glossary, and fix-on-touch policy.
-- **Parent**: principles > p10-vocabulary-discipline
+- **Scope**: **Facet of P12 Context Discipline** — term canonicity: glossary, fix-on-touch policy, and term-canonicity.
+- **Parent**: context-discipline
 - **Sub-topics**: glossary-coverage, term-canonicity, fix-on-touch
-- **Cross-references**: glossary, consistency-management
+- **Cross-references**: context-discipline, glossary, consistency-management
 
 ### corpus-integrity
 - **Scope**: Decisions about corpus health — bidirectional cross-references, acyclic supersession chain, no orphans, drift detection.

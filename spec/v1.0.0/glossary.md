@@ -1,6 +1,6 @@
 # SliceOps™ Canonical Glossary — v1.0.0
 
-Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Vocabulary Discipline). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
+Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Context Discipline, vocabulary facet). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
 
 **Living document**: new terms emerge via decisions with non-empty `vocabulary-changes`; updates are part of the slice that produces the decision. Major restructure leads to a version bump.
 
@@ -209,9 +209,9 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P9, Layer B.1, cost-ledger, token-band
 
 ### Fix-on-touch
-- **Definition**: A P12 Vocabulary Discipline policy. Any slice that detects vocabulary drift in a file it touches updates it forward (no separate cleanup slice).
+- **Definition**: A P12 Context Discipline policy (vocabulary facet). Any slice that detects vocabulary drift in a file it touches updates it forward (no separate cleanup slice).
 - **Origin**: P12
-- **Cross-references**: P12, Vocabulary discipline, Glossary
+- **Cross-references**: P12, Context discipline, Vocabulary discipline, Glossary
 
 ### Frontmatter discipline (Layer 1)
 - **Definition**: The Layer 1 mandatory frontmatter spec for all DECs. Includes consistency-check, conflicts-with, topics, vocabulary-changes fields.
@@ -441,10 +441,15 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Origin**: IP boundary (three-layer)
 - **Cross-references**: Adopter, Layer C.1
 
+### Context Discipline
+- **Definition**: P12. AI agents are memoryless across sessions; the corpus IS their persistent, shared context, engineered as a **single source of truth** (foundations → decisions → architecture → specs → plan) — enriched yet **selectively routed** so multiple agents stay coherent within finite windows. Duplicated or drifted context is corruption. Reframed from "Vocabulary Discipline"; canonical vocabulary is one facet.
+- **Origin**: P12 (reframed from Vocabulary Discipline; vocabulary = facet)
+- **Cross-references**: P12, Vocabulary Discipline (facet), Context Router, Consistency management, Glossary
+
 ### Vocabulary Discipline
-- **Definition**: P12. Canonical terms have canonical meanings. Synonyms drift; SliceOps does not. Fix-on-touch policy applies.
-- **Origin**: P12
-- **Cross-references**: P12, Glossary, Fix-on-touch
+- **Definition**: A **facet of P12 Context Discipline**. Canonical terms have canonical meanings; synonyms drift, SliceOps does not. Fix-on-touch policy applies.
+- **Origin**: P12 (Context Discipline, vocabulary facet)
+- **Cross-references**: P12, Context Discipline, Glossary, Fix-on-touch
 
 ### vocabulary-changes (frontmatter field)
 - **Definition**: Mandatory DEC frontmatter field. Lists canonical terms introduced or modified by the DEC. Triggers a glossary update.
