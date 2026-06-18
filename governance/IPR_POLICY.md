@@ -1,6 +1,6 @@
 # Intellectual Property & Contribution Policy
 
-> **Status: ratified 2026-06-15** (decision `DR-2026-06-15-sliceops-license-ratification`). The license terms below are binding. This repository is private pre-launch; it goes public on founder approval (P9 — human-in-the-loop authority).
+> **Status: ratified 2026-06-15** (decision `DR-2026-06-15-sliceops-license-ratification`). The license terms below are binding. This repository is private pre-launch; it goes public on founder approval (P3 — human-in-the-loop authority).
 
 This is the **authoritative** policy for licensing, trademark, and contributions. [`../CONTRIBUTING.md`](../CONTRIBUTING.md) is the practical how-to and defers here for the binding terms.
 
@@ -37,7 +37,7 @@ A formal CLA may still be re-evaluated if the contributor base grows past roughl
 
 ## SliceOps and reference runtimes
 
-SliceOps is an open framework. Vendor runtime implementations (including the first reference runtime) are architectural peers — none is "the official" runtime, and the framework never requires a specific runtime (P8). See [`../DISCLOSURE.md`](../DISCLOSURE.md).
+SliceOps is an open framework. Vendor runtime implementations (including the first reference runtime) are architectural peers — none is "the official" runtime, and the framework never requires a specific runtime (P11). See [`../DISCLOSURE.md`](../DISCLOSURE.md).
 
 ## References
 

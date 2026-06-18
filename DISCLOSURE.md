@@ -11,7 +11,7 @@ This concentration of authorship — the same hand on the open framework and on 
 ## How framework neutrality is protected
 
 - The SliceOps spec does **not** include any runtime-internal artifacts — internal decision IDs, slice IDs, internal paths, or runtime-specific schemas. The published spec is the framework, never a particular product's implementation of it.
-- Any conforming runtime must honor the SliceOps principles (per **P8 — Platform-Agnostic**). The framework never requires a specific runtime.
+- Any conforming runtime must honor the SliceOps principles (per **P11 — Platform-Agnostic**). The framework never requires a specific runtime.
 - All runtime implementations — those authored by the framework's own author, adapters over third-party tools, and custom homegrown systems alike — are **architectural peers**, not subordinates. None is "the official" SliceOps runtime.
 - A runtime's **product license is its own**, chosen by that runtime's vendor and independent of the framework's CC BY 4.0 / MIT terms. Likewise, the SliceOps trademark is licensed separately from the content — see [`TRADEMARK.md`](TRADEMARK.md).
 

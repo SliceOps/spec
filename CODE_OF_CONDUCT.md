@@ -18,7 +18,7 @@ Unacceptable behavior includes harassment, derogatory comments, personal or poli
 
 ## Blameless culture
 
-SliceOps practices blameless postmortems (P7 — Recursive Learning by Capture). Discussion of incidents focuses on patterns and systems, never on assigning personal blame.
+SliceOps practices blameless postmortems (P8 — Recursive Learning by Capture). Discussion of incidents focuses on patterns and systems, never on assigning personal blame.
 
 ## Reporting
 
