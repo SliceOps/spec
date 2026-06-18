@@ -1,6 +1,6 @@
 # InsightRecord — Layer B.1 Cognitive Entity
 
-> Empirical observations captured from slices; raw material for LearningPatterns. **Mapped principle: P7 (Recursive Learning by Capture).**
+> Empirical observations captured from slices; raw material for LearningPatterns. **Mapped principle: P8 (Recursive Learning by Capture).**
 
 ## Purpose
 
@@ -23,7 +23,7 @@ promoted-to: <LP id> | null          # set when this insight contributes to a Le
 
 ## Lifecycle states
 
-`active` → `archived`. **Never `superseded`** — InsightRecords are append-only by design (P7). Archival is for noise reduction only and preserves the record and cross-references.
+`active` → `archived`. **Never `superseded`** — InsightRecords are append-only by design (P8). Archival is for noise reduction only and preserves the record and cross-references.
 
 ## Usage example (generic)
 

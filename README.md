@@ -2,13 +2,13 @@
 
 > The open framework and audit plane for AI-first software engineering. Multi-agent teams ship auditable software, not vibe code.
 
-**Status: pre-launch (private).** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). Skeleton, governance, and Layer B.1 reference content are in place; the repository goes public on founder approval (P9 — human-in-the-loop authority).
+**Status: pre-launch (private).** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). Skeleton, governance, and Layer B.1 reference content are in place; the repository goes public on founder approval (P3 — human-in-the-loop authority).
 
 ## What SliceOps is
 
-An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable. It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P8).
+An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable — presented in **Why → How → What** order: *why* agentic construction needs disciplined control (P1–P3), *how* you build under it (P4–P10), and *what* it makes tangible (P11–P12). It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P11 Platform-Agnostic).
 
-[Why a framework, not a methodology?](spec/v1.0.0/framework-not-methodology.md)
+[The 12 canonical principles](spec/v1.0.0/principles.md) · [Why a framework, not a methodology?](spec/v1.0.0/framework-not-methodology.md)
 
 ## Structure
 
@@ -20,13 +20,17 @@ An open framework constituted by **12 canonical principles** (Layer A) — non-n
 | `examples/` | Reference implementations and adopter onboarding |
 | `governance/` | Roadmap, RFC process, maintainers, IPR policy |
 
-Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). Grows into more folders only per explicit promotion criteria — structure emerges from need (P3 and P7), not imposed top-down.
+Lightweight, industry-aligned **publishing layout** (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). It grows folders only per explicit promotion criteria — structure emerges from need (P5 Stage-as-DAG-Derived View and P8 Recursive Learning by Capture), not imposed top-down. This publishing layout is deliberately distinct from the foundations-first project structure the framework *prescribes* to adopters — see [`reference/project-structure/`](reference/project-structure/).
 
-## Layers (IP boundary)
+## Layers
 
-- **Layer A — Principles**: 12 canonical principles. SliceOps IP.
-- **Layer B — Reference Patterns**: B.1 Framework Artifacts and B.2 Universal Engineering Patterns. SliceOps IP.
-- **Layer C — Implementations**: C.1 Vendor Runtimes and C.2 Adopter Stack Patterns. Owned by vendors and adopters.
+SliceOps is organized in three layers — a stable top level with extensible sub-numbering:
+
+- **Layer A — Principles**: the 12 canonical, non-negotiable principles — the *why* and the rules. SliceOps IP.
+- **Layer B — Reference Patterns**: the materializations of the principles — **B.1 Framework Artifacts** (entity catalog, R-rules, frontmatter schemas, file templates, the prescribed project structure) and **B.2 Universal Engineering Patterns** (reaffirmed industry practices plus SliceOps-formalized ones). SliceOps IP.
+- **Layer C — Implementations**: concrete builds — **C.1 Vendor Runtimes** (the runtimes that execute the discipline) and **C.2 Adopter Stack Patterns** (per-stack instantiations). Owned by the vendors and adopters who build them, not by SliceOps.
+
+The IP boundary follows these layers: A and B are SliceOps IP; C belongs to the vendor or adopter. See [`spec/v1.0.0/ip-boundary.md`](spec/v1.0.0/ip-boundary.md).
 
 ## License
 

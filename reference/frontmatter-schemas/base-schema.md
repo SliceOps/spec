@@ -17,12 +17,12 @@ sensitivity: public | internal | restricted | sensitive   # R11
 |---|---|---|
 | `entity` | R3 | Must be a canonical entity name (entity catalog) or an adopter-declared extension |
 | `status` | R3, R5 | Lifecycle state; transitions are atomic (R5) |
-| `created` / `updated` | R3 | `updated` bumps on every semantic touch (P10 fix-on-touch) |
-| `owner` | R3 | Single accountable party; not an AI handle (P9 — humans accountable) |
+| `created` / `updated` | R3 | `updated` bumps on every semantic touch (P12 fix-on-touch) |
+| `owner` | R3 | Single accountable party; not an AI handle (P3 — humans accountable) |
 | `sensitivity` | R11 | From the canonical set; adopters may restrict the allowed subset by audience policy |
 
 ## Notes
 
 - The base is intentionally minimal. Entity catalog specs add the typed fields each entity needs (e.g., DecisionRecord adds supersession and Layer 1 fields; InsightRecord adds append-only cross-refs).
-- Runtimes may add runtime-specific fields under their own IP, but the base and catalog fields must remain present and portable (P8).
+- Runtimes may add runtime-specific fields under their own IP, but the base and catalog fields must remain present and portable (P11).
 - A document missing required base fields fails R3.

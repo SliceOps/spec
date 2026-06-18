@@ -1,6 +1,6 @@
 # decisions/ — DECs about the framework itself (recursive dogfooding)
 
-SliceOps uses SliceOps to develop SliceOps. Decisions about the framework are recorded here as DecisionRecords, following the same audit-plane discipline (P2) and decision-integrity discipline (P4) the framework prescribes.
+SliceOps uses SliceOps to develop SliceOps. Decisions about the framework are recorded here as DecisionRecords, following the same audit-plane discipline (P2) and decision-integrity discipline (P1) the framework prescribes.
 
 This is **process** dogfooding (the framework governs its own evolution), not **schema** dogfooding (this folder layout is not required to match an adopter's codebase layout).
 

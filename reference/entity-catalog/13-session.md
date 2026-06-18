@@ -1,12 +1,12 @@
 # Session — Layer B.1 Cognitive Entity
 
-> The unit of human–AI interaction (one conversation/chat with an AI agent). **Mapped principles: P2 (Audit Plane), P4 (Decision Integrity — generalized: decisions emerge from sessions), P5 (provenance evidence category).**
+> The unit of human–AI interaction (one conversation/chat with an AI agent). **Mapped principles: P2 (Audit Plane), P1 (Decision Integrity — generalized: decisions emerge from sessions), P6 (provenance evidence category).**
 
 ## Purpose
 
 Every human–AI interaction is a **Session** — an identifiable, auditable, classifiable unit. SliceOps gives the interaction a name so the audit plane (P2) covers ALL of it, not only the development subset. The **Slice is the DEV Session-Type** (the one that produces a PR); other Session-Types (Meta, Audit, Learning, Support, Infra, Artifact, Orchestrate) are valid AI interactions that do not produce a PR. *Every slice is a session; not every session is a slice.*
 
-P4 generalizes accordingly: **decisions emerge from sessions** (not only slices) — Meta/Audit/Learning sessions also produce decisions with provenance. The originating-session field on every DecisionRecord closes the audit-plane hole for governance decisions.
+P1 generalizes accordingly: **decisions emerge from sessions** (not only slices) — Meta/Audit/Learning sessions also produce decisions with provenance. The originating-session field on every DecisionRecord closes the audit-plane hole for governance decisions.
 
 ## Frontmatter schema
 
@@ -21,7 +21,7 @@ updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: public | internal | restricted | sensitive
 
-# Volume / cost (links P12 and cost-ledger)
+# Volume / cost (links P9 and cost-ledger)
 turns: <int>
 token_band: XS | S | M | L | XL          # billed-equivalent throughput band (see ../sizing/)
 context_band: XS | S | M | L | XL         # peak context footprint band — model-viability filter
@@ -85,8 +85,8 @@ Body: scope · turns summary · decisions produced · evidence references.
 
 - Confusing `lifecycle` (orthogonal axis) with `session_type` (categorical) — "Delete" is not a Session-Type.
 - Confusing a `dimensions` cross-cutting axis (Security/Compliance) with a Session-Type — Security is not a kind of session; it cross-cuts.
-- Using **COORD** instead of **Orchestrate** (naming convention violates P10 — full words, not opaque abbreviations).
-- Treating non-DEV sessions as second-class because they produce no PR (Meta/Audit/Learning are valid audit-plane sessions with provenance; P4 generalized).
+- Using **COORD** instead of **Orchestrate** (naming convention violates P12 — full words, not opaque abbreviations).
+- Treating non-DEV sessions as second-class because they produce no PR (Meta/Audit/Learning are valid audit-plane sessions with provenance; P1 generalized).
 - Editing a closed session instead of opening a related one (violates append-only / audit-trail integrity).
-- A Session with no `provenance.human` — unaccountable AI work (violates P9).
+- A Session with no `provenance.human` — unaccountable AI work (violates P3).
 - Forcing a Support or Infra interaction into a slice-shaped PR-required mold (the framework absorbs them natively as Session-Types — see the Session-Type taxonomy in `../sessions/`).

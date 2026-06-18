@@ -15,7 +15,7 @@ This restates Decision 6 of the ratified license decision `DR-2026-06-15-sliceop
 - **Copyright license** — governs the **content** (use, copy, redistribute, adapt).
 - **Trademark policy** (this file) — governs the **name "SliceOps™"** in commerce, marketing, and product identity.
 
-Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives you **no** trademark rights. Attribution, by contrast, **is required**: CC BY 4.0 requires you to credit "SliceOps" as the source whenever you redistribute or adapt the documentation, and MIT requires preserving the notice (see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md)). That crediting is *nominative* use of the name (covered in §3) — welcome and expected — not a trademark grant.
+Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives you **no** trademark rights. Attribution, by contrast, **is required**: CC BY 4.0 requires you to credit "SliceOps" as the source whenever you redistribute or adapt the documentation, and MIT requires preserving the notice (see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md)). That crediting is *nominative* use of the name (covered in Section 3) — welcome and expected — not a trademark grant.
 
 ## 2. The mark and its status
 
@@ -41,8 +41,8 @@ You do **not** need permission for honest, descriptive, *nominative* use of the 
 When you make nominative use, please:
 
 1. Use "SliceOps" only as much as needed to identify the project — don't make it the most prominent element of *your* branding.
-2. Don't alter the spelling or styling of the mark (see §6).
-3. Don't imply sponsorship, endorsement, or official status (see §5).
+2. Don't alter the spelling or styling of the mark (see Section 6).
+3. Don't imply sponsorship, endorsement, or official status (see Section 5).
 
 ## 4. "SliceOps-compliant" and conformance claims
 
@@ -50,7 +50,7 @@ You may state that something **conforms to**, **implements**, or is **compatible
 
 - The claim is **self-declared and descriptive**. SliceOps does **not** currently operate an official certification, accreditation, or "approved / official partner" program — so no such status may be claimed or implied.
 - A conformance claim must be **accurate and not misleading**. Do not claim compliance for something that does not follow the principles, and do not present a conformance claim as an endorsement by, or partnership with, the trademark owner.
-- Do not turn a conformance claim into a brand. "SliceOps-compliant" as a factual statement about your product is fine; "SliceOps Certified™", a "SliceOps" badge presented as an official seal, or a product *named* around the claim is not (see §5).
+- Do not turn a conformance claim into a brand. "SliceOps-compliant" as a factual statement about your product is fine; "SliceOps Certified™", a "SliceOps" badge presented as an official seal, or a product *named* around the claim is not (see Section 5).
 
 If a formal certification or conformance program is established in the future, it will be announced through the project's official channels and this policy updated.
 
@@ -61,11 +61,11 @@ These uses are likely to confuse people about origin or endorsement, and are **n
 - **Product, project, company, or service names** built on the mark — e.g. **"SliceOps Pro"**, **"SliceOps Enterprise"**, **"SliceOps Cloud"**, **"SliceOps Premium"**, "SliceOps Hosted", "SliceOps Inc.", "Andrés' SliceOps". You may not name your product, company, or commercial service using "SliceOps", alone or with a qualifier.
 - **Domain names, social accounts, and app/store listings** whose dominant element is "SliceOps" or a confusingly similar variant, presented as if it were an official SliceOps property.
 - **Implying endorsement, affiliation, or official status** — calling yourself or your product "official", "endorsed by SliceOps", "the SliceOps team", an "official SliceOps partner / distribution / runtime", and the like. No runtime or implementation is "the official" SliceOps runtime (see [`DISCLOSURE.md`](DISCLOSURE.md)).
-- **Using the mark as the primary name of a fork or competing distribution** — forks are welcome under the content license, but must carry their **own** primary name (nominative reference to SliceOps is still fine, per §3).
+- **Using the mark as the primary name of a fork or competing distribution** — forks are welcome under the content license, but must carry their **own** primary name (nominative reference to SliceOps is still fine, per Section 3).
 - **Merchandise or promotional goods** carrying the SliceOps name or logo as the main design.
-- **Modifying the mark or logo** and presenting the result as SliceOps (see §6).
+- **Modifying the mark or logo** and presenting the result as SliceOps (see Section 6).
 
-Permission is **not** unreasonably withheld for good-faith community uses — user groups, meetups, non-commercial events, honest "compatible with" badges. When in doubt, ask (§7).
+Permission is **not** unreasonably withheld for good-faith community uses — user groups, meetups, non-commercial events, honest "compatible with" badges. When in doubt, ask (Section 7).
 
 ## 6. The name and logo
 
@@ -82,7 +82,7 @@ Keep reasonable clear space around the logo and do not present it as a seal of a
 
 ## 7. Requesting permission
 
-For any use that needs permission under §5 — or if you are unsure whether your use is allowed — please ask before using the mark. Reach the trademark owner through:
+For any use that needs permission under Section 5 — or if you are unsure whether your use is allowed — please ask before using the mark. Reach the trademark owner through:
 
 - the project website, **sliceops.org**; or
 - an issue in the **[SliceOps/spec](https://github.com/SliceOps/spec)** repository describing the intended use.

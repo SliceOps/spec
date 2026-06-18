@@ -16,7 +16,7 @@ Industry-canonical engineering patterns SliceOps **reaffirms**. Vendor-agnostic,
 | **Determinism-over-Regeneration** | SliceOps-formalized | Spec below |
 | **LLM-Inference-Cost-Economy** | SliceOps-formalized (B.2 sub-domain of CI/Pipeline Cost Economy) | [Dedicated spec](llm-inference-cost-economy.md) and runnable templates in toolkit |
 
-The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-first engineering, where the failure modes are intrinsic to multi-agent parallelism and stochastic generation.
+The two SliceOps-formalized patterns materialize principles (P9, P6/P8) in AI-first engineering, where the failure modes are intrinsic to multi-agent parallelism and stochastic generation.
 
 ---
 
@@ -27,9 +27,9 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 **Operating rule**: *"If you can use code instead of AI, do. Have AI write the code once, then reuse it."* Invest effort in the **tools** (deterministic layer), not only in prompts (stochastic layer).
 
 **Principle alignment**:
-- **P5 (Evidence-by-Construction)** — deterministic code produces repeatable evidence; drifting AI output is fragile evidence.
-- **P7 (Recursive Learning by Capture)** — the trigger to *materialize* is the recursive-learning loop: what repeats is captured as an artifact, not re-learned each session. Operates at the artifact-level "one-off vs permanent" granularity.
-- **P12 (Shared-Resource Pre-flight / cost economy)** — trading AI tokens for code execution is directly cost economy; the infra-cost-ledger benefits.
+- **P6 (Evidence-by-Construction)** — deterministic code produces repeatable evidence; drifting AI output is fragile evidence.
+- **P8 (Recursive Learning by Capture)** — the trigger to *materialize* is the recursive-learning loop: what repeats is captured as an artifact, not re-learned each session. Operates at the artifact-level "one-off vs permanent" granularity.
+- **P9 (Shared-Resource Pre-flight / cost economy)** — trading AI tokens for code execution is directly cost economy; the infra-cost-ledger benefits.
 
 **Applies to**: validators, formatters, repeated codegen, domain checks, data transforms, document styling — any process where same-input → same-result.
 
@@ -37,19 +37,19 @@ The two SliceOps-formalized patterns materialize principles (P12, P5/P7) in AI-f
 - Regenerating the same script/process with AI every session (token waste, drift, not repeatable).
 - Elaborate prompts wrapping poor tools (undocumented functions, nonsensical parameters) — the inverse of good practice.
 - Treating a determinizable process as if it required AI judgment every time.
-- Monolithic non-composable mega-artifact (violates P1; hampers debugging).
+- Monolithic non-composable mega-artifact (violates P4; hampers debugging).
 
 ---
 
 ## CI/Pipeline Cost Economy
 
-**Statement**: Five stack-agnostic levers for pipeline economy — concurrency-cancel-in-progress, change-scoped job gating, aggregation-required-gate, draft-skip of expensive jobs, dependency-cache. Materializes P12 in the CI domain.
+**Statement**: Five stack-agnostic levers for pipeline economy — concurrency-cancel-in-progress, change-scoped job gating, aggregation-required-gate, draft-skip of expensive jobs, dependency-cache. Materializes P9 in the CI domain.
 
-**Principle alignment**: P12 (Shared-Resource Pre-flight) — CI minutes are a finite, serialized, shared resource; these levers are bootstrap defaults, not post-incident retrofit. Pairs with the infra-cost-ledger.
+**Principle alignment**: P9 (Shared-Resource Pre-flight) — CI minutes are a finite, serialized, shared resource; these levers are bootstrap defaults, not post-incident retrofit. Pairs with the infra-cost-ledger.
 
 **Specification and runnable templates**: the executable reference implementation (the five lever templates and a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Layer B.2 (vendor-agnostic); each concrete CI-provider instance is Layer C.2 (adopter-defined).
 
-**Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard-cut), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
+**Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard cutoff), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
 
 ---
 

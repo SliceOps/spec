@@ -16,4 +16,4 @@ Scaffolding in progress. Content pending the Layer B.1 drafting batch.
 
 ## Note
 
-Examples must be vendor-neutral and platform-agnostic (P8). Tutorial content that assumes a specific platform's features does not belong here.
+Examples must be vendor-neutral and platform-agnostic (P11). Tutorial content that assumes a specific platform's features does not belong here.

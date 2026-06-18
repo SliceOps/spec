@@ -1,6 +1,6 @@
 # DecisionRecord — Layer B.1 Cognitive Entity
 
-> Architectural/strategic decisions with lifecycle, supersession, and rationale. **Mapped principles: P2 (Audit Plane Discipline), P4 (Decision Integrity by Construction).**
+> Architectural/strategic decisions with lifecycle, supersession, and rationale. **Mapped principles: P2 (Audit Plane Discipline), P1 (Decision Integrity by Construction).**
 
 ## Purpose
 
@@ -15,7 +15,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: public | internal | restricted | sensitive
-originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P4 provenance; null only for back-fill
+originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance; null only for back-fill
 supersedes: [<DEC id>...]
 superseded-by: <DEC id> | null
 conflicts-with: [<DEC id>...]               # Layer 1; non-empty → body resolution paragraph
@@ -48,7 +48,7 @@ Body sections: Context · Decision · Alternatives considered · Consequences ·
 
 ## Cross-reference patterns
 
-- Produced by a slice → `originating_slice` (P4).
+- Produced by a slice → `originating_slice` (P1).
 - Supersedes/superseded-by → other DecisionRecords (bidirectional).
 - Evidence trail → links InsightRecords, OutcomeRecords produced alongside.
 - R-rule amendments → cite a LearningPattern as evidence.
@@ -58,5 +58,5 @@ Body sections: Context · Decision · Alternatives considered · Consequences ·
 - DEC created post-hoc to justify already-merged code.
 - DEC contradicting a prior DEC without explicit supersession.
 - DEC without "alternatives considered" (false-binary thinking).
-- DEC with no `originating_slice` and no back-fill flag (violates P4).
+- DEC with no `originating_slice` and no back-fill flag (violates P1).
 - Decisions left in chat/email/meeting notes without a subsequent DEC.

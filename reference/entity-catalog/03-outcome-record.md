@@ -1,6 +1,6 @@
 # OutcomeRecord — Layer B.1 Cognitive Entity
 
-> Tracked outcomes of slices/blocks — what shipped, what worked, what the result was. **Mapped principle: P5 (Evidence-by-Construction).**
+> Tracked outcomes of slices/blocks — what shipped, what worked, what the result was. **Mapped principle: P6 (Evidence-by-Construction).**
 
 ## Purpose
 
@@ -44,13 +44,13 @@ Body: shipped scope · forecast vs actual narrative · evidence links · carry-f
 ## Cross-reference patterns
 
 - Anchors a slice/block → `ref`.
-- Drift feeds velocity recalibration in the Block Retrospective (P3).
+- Drift feeds velocity recalibration in the Block Retrospective (P5).
 - Links the DECs and evidence produced in scope.
-- Negative outcomes pair with a blameless Postmortem and emit InsightRecords (P7).
+- Negative outcomes pair with a blameless Postmortem and emit InsightRecords (P8).
 
 ## Anti-patterns
 
-- Closing an OutcomeRecord without all required evidence categories present (violates P5).
+- Closing an OutcomeRecord without all required evidence categories present (violates P6).
 - "We'll record the outcome later" — outcome is a per-slice/Block byproduct, not deferred.
 - Editing a closed OutcomeRecord instead of appending a correction.
 - Forecast/actual omitted (breaks velocity recalibration input).

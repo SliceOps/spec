@@ -2,7 +2,7 @@
 
 SliceOps™ is authored and maintained by Andrés Ramírez Sierra. Trademark and copyright are held personally (pre-incorporation; planned SliceOps LLC).
 
-## Decision authority (P9 — Human-in-the-Loop Authority)
+## Decision authority (P3 — Human-in-the-Loop Authority)
 
 - Canonical principle (Layer A) amendments require a ratified DEC with an elevated human-in-the-loop gate (no auto-merge regardless of CI status).
 - Reference pattern (Layer B) changes require a ratified DEC.

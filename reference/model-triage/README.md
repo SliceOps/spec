@@ -1,6 +1,6 @@
 # Model Triage — Layer B.1 (v1.0)
 
-A Layer B.1 artifact: routes each slice/session to a **(model, execution-mode)** recommendation according to five axes, in filter order. Recommends; the human disposes (P9). The choice is recorded on the Session record as auditable provenance (P2 — the audit plane extended to the model-selection decision).
+A Layer B.1 artifact: routes each slice/session to a **(model, execution-mode)** recommendation according to five axes, in filter order. Recommends; the human disposes (P3). The choice is recorded on the Session record as auditable provenance (P2 — the audit plane extended to the model-selection decision).
 
 SliceOps IP, CC BY 4.0. Vendor-neutral.
 
@@ -10,11 +10,11 @@ SliceOps IP, CC BY 4.0. Vendor-neutral.
 
 ```
 1. context-band  → PRIMARY FILTER: which models have window ≥ footprint? (hard restriction)
-2. sensitivity   → locality: can the work leave to an external API or must it stay local? (P6)
+2. sensitivity   → locality: can the work leave to an external API or must it stay local? (P7)
    ── feasible set bounded ──
 3. complexity    → reasoning tier (token-band + slice-type → which capability tier?)
 4. latency       → speed need
-5. cost          → economic tier (P12)
+5. cost          → economic tier (P9)
                  → recommendation
 ```
 
@@ -24,7 +24,7 @@ Plus a **synthesis efficiency** axis (see below) used when the slice is context-
 
 A model whose window is smaller than the slice's footprint cannot run the slice — full stop. No amount of speed or low cost recovers from a context overflow. Context-band sets the feasible set first; all other axes refine within it. Empirically the dominant restriction: in the baseline calibration, the majority of real sessions exceed a 200K window — a smaller local model is infeasible for most work even before cost or speed enters the conversation.
 
-### Sensitivity → locality (P6)
+### Sensitivity → locality (P7)
 
 If the work touches restricted/sensitive data (per the `sensitivity` field on the Session), the triage filters to **local** execution modes only — never to an external API, regardless of cost or speed advantages. This is compliance-by-construction for regulated work.
 
@@ -33,7 +33,7 @@ If the work touches restricted/sensitive data (per the `sensitivity` field on th
 Within the feasible set:
 - **Complexity** = token-band and Slice-Type (Dev vs Refactor vs Fix vs adopter-specific) → reasoning capability tier.
 - **Latency** = how fast a human needs the response (interactive vs background batch).
-- **Cost** = the economic tier within the feasible set (P12 — cheapest adequate model wins; see also the LLM-Inference-Cost-Economy B.2 sub-pattern).
+- **Cost** = the economic tier within the feasible set (P9 — cheapest adequate model wins; see also the LLM-Inference-Cost-Economy B.2 sub-pattern).
 
 ---
 
@@ -70,7 +70,7 @@ A model optimal for consuming is not necessarily optimal for producing. Calibrat
 
 A calibrable model attribute. **Proxy**: given the same fixed acceptance criteria, count the output tokens required for the artifact to pass the gate. Lower tokens = denser synthesis. Calibrate per model at the same Quarterly Curation cadence as the bands.
 
-**Caveat**: density ≠ blind terseness. The optimum is maximum density that still passes the acceptance gate (P5) and remains auditable (P2). Code-golf extremes are anti-patterns.
+**Caveat**: density ≠ blind terseness. The optimum is maximum density that still passes the acceptance gate (P6) and remains auditable (P2). Code-golf extremes are anti-patterns.
 
 ---
 
@@ -80,7 +80,7 @@ Closed and opaque competitors hard-code a model or route invisibly between a sma
 
 ---
 
-## Conflict surfacing (P9 HITL)
+## Conflict surfacing (P3 HITL)
 
 When axes conflict — e.g., an XL-context slice (needs a large window) that is high-sensitivity (cannot leave) — the triage **surfaces the tension** rather than silently picking. The human decides: split the slice to lower the footprint, use a local long-context model, or accept the risk (with a rationale recorded). Surfacing > guessing.
 

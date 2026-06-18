@@ -1,12 +1,12 @@
 # Capability — Layer B.1 Cognitive Entity
 
-> Capabilities accrued by individuals, agents, or teams. **Mapped principle: P7 (Recursive Learning by Capture).**
+> Capabilities accrued by individuals, agents, or teams. **Mapped principle: P8 (Recursive Learning by Capture).**
 
 > **Naming**: this entity is **Capability**. It was formerly called "Skill"; renamed because "capabilities accrued" precisely describes it. The term **"Skill"** is now **reserved** for the future *Agent-Skill* concept (a vendor-neutral procedural pack) and must NOT be used for this entity.
 
 ## Purpose
 
-Tracks what an individual, agent, or team *can now do that it could not before* — capability accrued through slices, retrospectives, and learning. Distinct from a Goal (an objective) and from a LearningPattern (a recurring framework-level pattern): a Capability is an accrued competence held by an actor. Supports P7 by making the growth of the system's actors a first-class, auditable artifact.
+Tracks what an individual, agent, or team *can now do that it could not before* — capability accrued through slices, retrospectives, and learning. Distinct from a Goal (an objective) and from a LearningPattern (a recurring framework-level pattern): a Capability is an accrued competence held by an actor. Supports P8 by making the growth of the system's actors a first-class, auditable artifact.
 
 ## Frontmatter schema
 
@@ -35,7 +35,7 @@ CAP-007-multi-agent-coordination.md
   status: established
   holder: platform-team
   level: proficient
-  evidence: [BL-04.SEC-01.SL-009, OUT-BL04-block-outcome]
+  evidence: [BL-XX.SEC-XX.SL-XXX, OUT-BLXX-block-outcome]
 Body: what the capability is · how it was accrued · demonstrations · gaps.
 ```
 

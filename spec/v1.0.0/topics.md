@@ -23,13 +23,13 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Scope**: Decisions about Layer A principles (P1–P12): amendments, deprecation, clarification.
 - **Parent**: foundational
 - **Sub-topics**: specific principles can become sub-topics if extensive DECs emerge (e.g., `p7-recursive-learning-operational`)
-- **Cross-references**: foundational, capa-a-principles-amendment
+- **Cross-references**: foundational, layer-a-principles-amendment
 
 ### ip-boundary
 - **Scope**: Decisions about the IP/scope axis — Layer A/B/C boundary, ownership, licensing.
 - **Parent**: foundational
-- **Sub-topics**: capa-a-principles, capa-b-reference-patterns, capa-c-implementations, licensing, trademark
-- **Cross-references**: licensing, capa-c-vendor-runtime, capa-c-adopter-stack
+- **Sub-topics**: layer-a-principles, layer-b-reference-patterns, layer-c-implementations, licensing, trademark
+- **Cross-references**: licensing, layer-c-vendor-runtime, layer-c-adopter-stack
 
 ### hierarchical-taxonomy
 - **Scope**: Decisions about naming structure and the hierarchical layer taxonomy (Layer A/B/C top-level and sub-numbering B.1, C.2, etc.).
@@ -39,62 +39,62 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 
 ## Patterns and practice
 
-### capa-b-methodology-artifact
+### layer-b-framework-artifact
 - **Scope**: Layer B.1 patterns — entity catalog, folder structure, R-rules, counter discipline, frontmatter schemas, file templates.
-- **Parent**: ip-boundary > capa-b-reference-patterns
+- **Parent**: ip-boundary > layer-b-reference-patterns
 - **Sub-topics**: entity-catalog, folder-structure, r-rules, counter-discipline, frontmatter-schema, file-templates
-- **Cross-references**: capa-b-engineering-universal
+- **Cross-references**: layer-b-engineering-universal
 
-### capa-b-engineering-universal
+### layer-b-engineering-universal
 - **Scope**: Layer B.2 universal engineering patterns — SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense-in-Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration.
-- **Parent**: ip-boundary > capa-b-reference-patterns
+- **Parent**: ip-boundary > layer-b-reference-patterns
 - **Sub-topics**: solid, acid, outbox, idempotency, fail-fast, defense-in-depth, ci-cost-economy, determinism-over-regeneration
-- **Cross-references**: capa-c-adopter-stack
+- **Cross-references**: layer-c-adopter-stack
 
-### capa-c-vendor-runtime
+### layer-c-vendor-runtime
 - **Scope**: Layer C.1 — vendor-owned runtime product implementations.
-- **Parent**: ip-boundary > capa-c-implementations
+- **Parent**: ip-boundary > layer-c-implementations
 - **Sub-topics**: adapters
-- **Cross-references**: vendor, capa-c-adopter-stack
+- **Cross-references**: vendor, layer-c-adopter-stack
 
-### capa-c-adopter-stack
+### layer-c-adopter-stack
 - **Scope**: Layer C.2 — adopter-defined stack-specific instantiable patterns.
-- **Parent**: ip-boundary > capa-c-implementations
+- **Parent**: ip-boundary > layer-c-implementations
 - **Sub-topics**: dotnet-stack, nodejs-stack, flutter-stack, python-stack, rust-stack, go-stack (added as adopters publish)
-- **Cross-references**: capa-b-engineering-universal, adopter, brain-pack-injection
+- **Cross-references**: layer-b-engineering-universal, adopter, brain-pack-injection
 
 ### entity-catalog
 - **Scope**: Decisions about the 13 canonical cognitive entity types.
-- **Parent**: capa-b-methodology-artifact
+- **Parent**: layer-b-framework-artifact
 - **Sub-topics**: decision-record-pattern, insight-record-pattern, learning-pattern, session-management, etc.
-- **Cross-references**: vocabulary-discipline, capa-b-methodology-artifact, session-management
+- **Cross-references**: vocabulary-discipline, layer-b-framework-artifact, session-management
 
 ### session-management
 - **Scope**: Decisions about the Session entity (#13), Session-Type taxonomy, lifecycle disposition, cross-cutting dimensions, and the slice⊂session containment.
-- **Parent**: capa-b-methodology-artifact
+- **Parent**: layer-b-framework-artifact
 - **Sub-topics**: session-type, slice-type, lifecycle-disposition, orchestrate-session
 - **Cross-references**: entity-catalog, audit-plane, development-model
 
 ### folder-structure
 - **Scope**: Decisions about the canonical repo folder structure for SliceOps-compliant repos.
-- **Parent**: capa-b-methodology-artifact
-- **Cross-references**: capa-b-methodology-artifact, recursive-dogfooding
+- **Parent**: layer-b-framework-artifact
+- **Cross-references**: layer-b-framework-artifact, recursive-dogfooding
 
 ### r-rules
 - **Scope**: The R-rules system — enforced CI merge gates. Adopter-instantiable (R1–R14 starter, R15+ adopter-specific).
-- **Parent**: capa-b-methodology-artifact
+- **Parent**: layer-b-framework-artifact
 - **Sub-topics**: r1-counter-discipline, r2-frontmatter-schema, …, r-rules-amendment
-- **Cross-references**: capa-b-methodology-artifact, ci-gates, p7-recursive-learning-operational
+- **Cross-references**: layer-b-framework-artifact, ci-gates, p7-recursive-learning-operational
 
 ### counter-discipline
 - **Scope**: Counter atomicity and reconciliation strategies (renumber, accept-ours, merge).
-- **Parent**: capa-b-methodology-artifact
+- **Parent**: layer-b-framework-artifact
 - **Cross-references**: r-rules, cross-coordinator-shared-state, finite-resource-stewardship
 
 ## Operation and workflow
 
 ### evidence-categories
-- **Scope**: The evidence categories (functional, quality, security, decision, provenance) per P5 and P6.
+- **Scope**: The evidence categories (functional, quality, security, decision, provenance) per P6 and P7.
 - **Parent**: principles > p5-evidence-by-construction
 - **Cross-references**: p5-evidence-by-construction, p6-security-by-construction
 
@@ -118,7 +118,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 ### meta-framework
 - **Scope**: Decisions about the framework itself — taxonomy, naming, consistency management, vocabulary discipline.
 - **Parent**: foundational
-- **Sub-topics**: hierarchical-taxonomy, consistency-management, vocabulary-discipline, corpus-integrity
+- **Sub-topics**: hierarchical-taxonomy, consistency-management, context-discipline, vocabulary-discipline, corpus-integrity
 - **Cross-references**: foundational, scalability
 
 ### consistency-management
@@ -127,11 +127,17 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Sub-topics**: frontmatter-discipline, pre-merge-checklist, r-rules-validators, reconciliation-ritual
 - **Cross-references**: vocabulary-discipline, p2-audit-plane, p7-recursive-learning-operational
 
+### context-discipline
+- **Scope**: The P12 principle — context as a **governed substrate** for memoryless agents: single-source-of-truth, foundations-first context architecture, selective routing (Context Router), and multi-agent coherence. The vocabulary canon is one facet. Reframed from "Vocabulary Discipline".
+- **Parent**: principles + meta-framework
+- **Sub-topics**: vocabulary-discipline, context-router, model-triage, consistency-management, corpus-integrity
+- **Cross-references**: vocabulary-discipline, context-router, consistency-management, corpus-integrity, model-triage
+
 ### vocabulary-discipline
-- **Scope**: P10 principle, glossary, and fix-on-touch policy.
-- **Parent**: principles > p10-vocabulary-discipline
+- **Scope**: **Facet of P12 Context Discipline** — term canonicity: glossary, fix-on-touch policy, and term-canonicity.
+- **Parent**: context-discipline
 - **Sub-topics**: glossary-coverage, term-canonicity, fix-on-touch
-- **Cross-references**: glossary, consistency-management
+- **Cross-references**: context-discipline, glossary, consistency-management
 
 ### corpus-integrity
 - **Scope**: Decisions about corpus health — bidirectional cross-references, acyclic supersession chain, no orphans, drift detection.
@@ -140,7 +146,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: consistency-management, audit-plane
 
 ### p7-recursive-learning-operational
-- **Scope**: Operationalization of P7 — InsightRecord → LearningPattern → DEC flow and thresholds.
+- **Scope**: Operationalization of P8 — InsightRecord → LearningPattern → DEC flow and thresholds.
 - **Parent**: principles > p7-recursive-learning
 - **Cross-references**: p7-recursive-learning, insight-record-pattern, learning-pattern
 
@@ -150,22 +156,22 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: meta-framework, consistency-management, hierarchical-taxonomy
 
 ### finite-resource-stewardship
-- **Scope**: Decisions about P12 (Shared-Resource Pre-flight) — enumerate, cap, alert, and telemeter finite/serialized shared resources before scaling parallelism. Unifies resource-contention precedents (counter, worktree, CI minutes, rate limits).
+- **Scope**: Decisions about P9 (Shared-Resource Pre-flight) — enumerate, cap, alert, and telemeter finite/serialized shared resources before scaling parallelism. Unifies resource-contention precedents (counter, worktree, CI minutes, rate limits).
 - **Parent**: meta-framework
 - **Sub-topics**: ci-cost-economy, infra-cost-ledger, shared-resource-preflight
-- **Cross-references**: scalability, multi-agent-parallelism, p7-recursive-learning-operational, capa-b-engineering-universal
+- **Cross-references**: scalability, multi-agent-parallelism, p7-recursive-learning-operational, layer-b-engineering-universal
 
 ### ci-cost-economy
 - **Scope**: Decisions about the Layer B.2 pattern "CI/Pipeline Cost Economy" — concurrency-cancel, change-gating, aggregation-gate, draft-skip, and dependency-cache; plus per-CI-provider/stack C.2 instances.
-- **Parent**: capa-b-engineering-universal
+- **Parent**: layer-b-engineering-universal
 - **Sub-topics**: aggregation-required-gate, change-scoped-job-gating, concurrency-cancel-in-progress
-- **Cross-references**: finite-resource-stewardship, capa-b-engineering-universal, capa-c-adopter-stack
+- **Cross-references**: finite-resource-stewardship, layer-b-engineering-universal, layer-c-adopter-stack
 
 ### determinism-over-regeneration
-- **Scope**: Decisions about the Layer B.2 pattern "Determinism-over-Regeneration" — materialize repeated processes as deterministic reusable artifacts vs AI regeneration; plus the Skill→Capability naming resolution (P10) from the same analysis.
-- **Parent**: capa-b-engineering-universal
+- **Scope**: Decisions about the Layer B.2 pattern "Determinism-over-Regeneration" — materialize repeated processes as deterministic reusable artifacts vs AI regeneration; plus the Skill→Capability naming resolution (P12) from the same analysis.
+- **Parent**: layer-b-engineering-universal
 - **Sub-topics**: one-off-vs-permanent-tuning-gate
-- **Cross-references**: capa-b-engineering-universal, vocabulary-discipline, p7-recursive-learning-operational, ci-cost-economy
+- **Cross-references**: layer-b-engineering-universal, vocabulary-discipline, p7-recursive-learning-operational, ci-cost-economy
 
 ## Compliance and governance
 
@@ -204,12 +210,12 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Scope**: Decisions about adopter-specific topics — multi-adopter ecosystem, retroactive adoption, born-on-SliceOps.
 - **Parent**: ip-boundary
 - **Sub-topics**: retroactive-adoption, born-on-sliceops (per-adopter sub-topics added as adopters publish)
-- **Cross-references**: capa-c-adopter-stack
+- **Cross-references**: layer-c-adopter-stack
 
 ### brain-pack-injection
 - **Scope**: The mechanism for injecting applicable Layer C.2 stack patterns at the start of each slice.
-- **Parent**: capa-c-adopter-stack
-- **Cross-references**: capa-c-adopter-stack, context-pack
+- **Parent**: layer-c-adopter-stack
+- **Cross-references**: layer-c-adopter-stack, context-pack
 
 ---
 
@@ -221,7 +227,7 @@ Adopters may extend this taxonomy with domain-specific topics in their own brain
 
 - A DEC introducing a new topic must justify in its body why existing topics are insufficient and add the topic here (same slice).
 - Quarterly Curation ritual — topic merging (over-granular consolidation), splitting (over-broad decomposition), and orphan archival.
-- Fix-on-touch per P10.
+- Fix-on-touch per P12.
 
 Major restructure leads to a version bump.
 
