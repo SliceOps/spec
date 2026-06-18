@@ -336,8 +336,8 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Aliases prohibited**: "resource management" (generic), "P10" (Infrastructure Continuity — distinct), "10x rule" (rejected — trigger is calibrated baseline, not a magic number)
 - **Cross-references**: P10 (orthogonal — see "Why P9 ≠ P10"), Finite/serialized shared resource, CI/Pipeline Cost Economy, P5, P8
 
-### warned degradation vs invisible hard-cut
-- **Definition**: The anti-pattern framing of P9. The default for any finite shared resource must be cap and alert ("warned degradation"), never a silent hard-stop ("invisible hard-cut"). A `$0` default spending limit is the paradigmatic anti-pattern.
+### announced degradation vs invisible hard cutoff
+- **Definition**: The anti-pattern framing of P9. The default for any finite shared resource must be cap and alert ("announced degradation"), never a silent hard-stop ("invisible hard cutoff"). A `$0` default spending limit is the paradigmatic anti-pattern.
 - **Origin**: Shared-Resource Pre-flight (P9)
 - **Cross-references**: P9, Finite/serialized shared resource
 

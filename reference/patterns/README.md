@@ -49,7 +49,7 @@ The two SliceOps-formalized patterns materialize principles (P9, P6/P8) in AI-fi
 
 **Specification and runnable templates**: the executable reference implementation (the five lever templates and a dual-dimension cost-ledger template) lives in the **SliceOps toolkit** repo under `templates/`. The *pattern* here is Layer B.2 (vendor-agnostic); each concrete CI-provider instance is Layer C.2 (adopter-defined).
 
-**Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard-cut), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
+**Anti-patterns** (summary; full list in the toolkit templates): `$0` default spending limit (invisible hard cutoff), token-only cost-ledger (infra-cost blindness), scaling parallelism without enumerating shared resources, guardrails patched post-incident.
 
 ---
 

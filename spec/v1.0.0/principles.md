@@ -212,12 +212,12 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Pre-Block checklist: enumerate finite/serialized shared resources the Block consumes (CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools)
 - Each resource: **cap** (hard limit), **alert** (warns BEFORE the limit, not at it), and **telemetry** (continuous visibility)
 - Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P5 and velocity recalibration — NOT a fixed magic number)
-- Default for any shared resource = cap and alert, **never silent hard-stop** ("warned degradation" > "invisible hard-cut")
+- Default for any shared resource = cap and alert, **never silent hard-stop** ("announced degradation" > "invisible hard cutoff")
 - Cost-ledger extended to an infra/CI dimension (not just tokens) — Layer B.1
 - Guardrails as repo-scaffold bootstrap defaults, NOT post-incident retrofit
 
 **Anti-pattern**:
-- A `$0` spending limit / default quota that turns "exhaust resource" into "invisible hard-cut"
+- A `$0` spending limit / default quota that turns "exhaust resource" into "invisible hard cutoff"
 - A cost-ledger that tracks only tokens (infra-cost blindness)
 - Scaling parallelism without enumerating the shared resources it consumes
 - Guardrails patched post-incident instead of bootstrap defaults
