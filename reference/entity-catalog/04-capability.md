@@ -35,7 +35,7 @@ CAP-007-multi-agent-coordination.md
   status: established
   holder: platform-team
   level: proficient
-  evidence: [BL-04.SEC-01.SL-009, OUT-BL04-block-outcome]
+  evidence: [BL-XX.SEC-XX.SL-XXX, OUT-BLXX-block-outcome]
 Body: what the capability is · how it was accrued · demonstrations · gaps.
 ```
 
