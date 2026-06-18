@@ -2,11 +2,11 @@
 
 > The open framework and audit plane for AI-first software engineering. Multi-agent teams ship auditable software, not vibe code.
 
-**Status: pre-launch (private).** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). Skeleton, governance, and Layer B.1 reference content are in place; the repository goes public on founder approval (P9 — human-in-the-loop authority).
+**Status: pre-launch (private).** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). Skeleton, governance, and Layer B.1 reference content are in place; the repository goes public on founder approval (P3 — human-in-the-loop authority).
 
 ## What SliceOps is
 
-An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable. It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P8).
+An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable. It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P11).
 
 [Why a framework, not a methodology?](spec/v1.0.0/framework-not-methodology.md)
 
@@ -20,7 +20,7 @@ An open framework constituted by **12 canonical principles** (Layer A) — non-n
 | `examples/` | Reference implementations and adopter onboarding |
 | `governance/` | Roadmap, RFC process, maintainers, IPR policy |
 
-Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). Grows into more folders only per explicit promotion criteria — structure emerges from need (P3 and P7), not imposed top-down.
+Lightweight, industry-aligned structure (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs). Grows into more folders only per explicit promotion criteria — structure emerges from need (P5 and P8), not imposed top-down.
 
 ## Layers (IP boundary)
 

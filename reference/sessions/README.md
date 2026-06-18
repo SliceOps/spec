@@ -13,13 +13,13 @@ The taxonomy is **hierarchical, not flat** — earlier operational practice mixe
 | **Build** | **Slice** | Full end-to-end development → PR. Has Slice-Types (level 2). |
 | **Build** | **Artifact** | A bounded output (script / template / config / doc). May be code, but NOT a complete slice. |
 | **Ops** | **Support** | Incidents / care (internal or customer). Generic operations. |
-| **Ops** | **Infra** | Infra / deploy / environment operations (connects to P11). |
+| **Ops** | **Infra** | Infra / deploy / environment operations (connects to P10). |
 | **Govern** | **Meta** | Governance: foundations, planning, framework or project decisions. |
 | **Govern** | **Audit** | Verification / control / compliance — operationalizes P2. |
-| **Learn** | **Learning** | Exploration / research / knowledge acquisition (feeds P7). |
+| **Learn** | **Learning** | Exploration / research / knowledge acquisition (feeds P8). |
 | **Orchestrate** | **Orchestrate** | Coordinates other sessions; does not produce direct work output. **Full word per naming convention — replaces the abbreviated "COORD".** |
 
-Each Session-Type is canonical and reserved (P10). Adopters add **sub-variants** (Layer C.2) for their stack/business, never new top-level Session-Types without a superseding decision.
+Each Session-Type is canonical and reserved (P12). Adopters add **sub-variants** (Layer C.2) for their stack/business, never new top-level Session-Types without a superseding decision.
 
 ---
 

@@ -9,4 +9,4 @@ Canonical frontmatter schemas. SliceOps IP (Layer B.1). The **per-entity** field
 
 ## Vendor-neutral key
 
-The canonical type key is `entity:` (value = entity name from the catalog). Runtimes MAY map this to a runtime-specific typed key; `entity:` is the portable, standalone, cross-adopter form (P8). Adopters keep `entity:` for interoperability.
+The canonical type key is `entity:` (value = entity name from the catalog). Runtimes MAY map this to a runtime-specific typed key; `entity:` is the portable, standalone, cross-adopter form (P11). Adopters keep `entity:` for interoperability.

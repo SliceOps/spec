@@ -26,6 +26,6 @@ SliceOps is the kitchen, not the recipe.
 
 - You adopt SliceOps without abandoning your current process — it adds guarantees, not ceremonies.
 - "SliceOps-compliant" means you honor the principles and the relevant reference patterns, not that you followed a prescribed sequence.
-- It is **decision-driven and evidence-gated**, and it runs on any text-based AI agent, git, and atomic-slice scoping (P8 — Platform-Agnostic).
+- It is **decision-driven and evidence-gated**, and it runs on any text-based AI agent, git, and atomic-slice scoping (P11 — Platform-Agnostic).
 
 > SliceOps is the structure that makes AI-first software engineering auditable. The methods you run inside it are yours.

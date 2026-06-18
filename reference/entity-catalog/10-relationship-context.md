@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Makes a relationship a first-class, queryable artifact rather than an implicit link buried in prose — "entity X depends on Y", "person A owns domain B", "org C adopts framework D". RelationshipContext is the connective tissue that lets the corpus be traversed as a graph (supporting audit-plane reachability, P2/P4) without coupling to any runtime's graph engine (P8).
+Makes a relationship a first-class, queryable artifact rather than an implicit link buried in prose — "entity X depends on Y", "person A owns domain B", "org C adopts framework D". RelationshipContext is the connective tissue that lets the corpus be traversed as a graph (supporting audit-plane reachability, P2/P1) without coupling to any runtime's graph engine (P11).
 
 ## Frontmatter schema
 

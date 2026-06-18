@@ -15,7 +15,7 @@ The need for context tends to infinity (a serious operator's corpus only grows; 
 | **Consumption** | How much context is *loaded* per session | **Context Router** (this doc) |
 | **Production** | How *densely* context is *created* | **Synthesis efficiency** (`../model-triage/`) |
 
-Production is the upstream cause of future consumption: verbose creation today inflates tomorrow's footprint. P7 corollary: a dense corpus is good training data; a verbose corpus is compounding debt.
+Production is the upstream cause of future consumption: verbose creation today inflates tomorrow's footprint. P8 corollary: a dense corpus is good training data; a verbose corpus is compounding debt.
 
 ---
 
@@ -77,7 +77,7 @@ The Context Router is the **coherent pattern** that unifies them — it does not
 
 ## Why this matters compounding
 
-Routing tightens consumption today; synthesis efficiency keeps tomorrow's corpus from inflating; both compound. P7 reads the corpus as training data — the denser and the better-routed it is, the more leverage each future session has. The two-sided treatment is what makes context efficiency a tractable engineering problem instead of an unbounded one.
+Routing tightens consumption today; synthesis efficiency keeps tomorrow's corpus from inflating; both compound. P8 reads the corpus as training data — the denser and the better-routed it is, the more leverage each future session has. The two-sided treatment is what makes context efficiency a tractable engineering problem instead of an unbounded one.
 
 ---
 

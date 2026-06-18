@@ -17,7 +17,7 @@ Added on top of Phase 2 because the manual fix-on-touch of denormalized counts e
 
 | Validator | Rule | Check |
 |---|---|---|
-| `principle-count-coherence` | The count of P-NN headings in the canonical principles spec IS the truth; every literal "N principles" / "P1-PN" elsewhere must match | count P-NN headings, grep all literals, and compare |
+| `principle-count-coherence` | The count of P-NN headings in the canonical principles spec IS the truth; every literal "N principles" / "P4-PN" elsewhere must match | count P-NN headings, grep all literals, and compare |
 | `entity-count-coherence` | The count of `NN-*.md` files in the entity catalog IS the truth; every literal "N entities" / "N cognitive entities" / "N-entity" must match | count files, grep all literals, and compare |
 | `band-unit` | Token-band must be in **billed-equivalent** (not total-with-cache, which inflates ~5×) | scan spec/sizing/templates for "token-band ... total-with-cache" |
 | `llm-ci-cost` | **R-LLM-CI-COST.** A workflow calling a paid-LLM endpoint must satisfy the four bright-line rules of the LLM-Inference-Cost-Economy sub-domain | scan workflows for a paid-LLM endpoint and check concurrency, trigger-set, draft gate |
@@ -34,22 +34,22 @@ Phase 2.5 closes the gaps Phase 2 does not address. Phase 3 below is the deeper 
 
 A future `detect-semantic-overlap` (embeddings-based near-duplicate DEC detection) is out of scope for CI starters (high complexity; runtime/MCP capability).
 
-## Counter-discipline validator (P12-driven, ships with Phase 2)
+## Counter-discipline validator (P9-driven, ships with Phase 2)
 
-`validate-counter-atomicity` — enforces the counter-discipline pattern that prevents cross-coordinator numbering collisions (a finite/serialized shared resource per P12). Root cause: parallel agents independently claiming the same `INS-NNN`/`HANDOFF-NNN`/`LP-NNN`.
+`validate-counter-atomicity` — enforces the counter-discipline pattern that prevents cross-coordinator numbering collisions (a finite/serialized shared resource per P9). Root cause: parallel agents independently claiming the same `INS-NNN`/`HANDOFF-NNN`/`LP-NNN`.
 
 **Pattern (Layer B.1, vendor-neutral)**:
 - A counter store per numeric prefix (date-based artifacts like `DR-YYYY-MM-DD-slug` need none — date and slug carries uniqueness).
 - Pre-flight: re-scan the **real max** before claiming; never trust a stale "counter currently at" cache (it drifts under parallel work).
 - Claim = increment the counter store **and** create the artifact in the same logical step.
-- Collision rule: the resolved/closed artifact keeps its number; the open/new one renumbers; the human is flagged (P9 HITL).
+- Collision rule: the resolved/closed artifact keeps its number; the open/new one renumbers; the human is flagged (P3 HITL).
 - Check: no two artifacts share a `<PREFIX>-NNN`; the counter store ≥ real max.
 
-This validator traces to **P12** (Shared-Resource Pre-flight — counters are a finite/serialized shared resource) and **P2/P4** (audit-plane integrity — duplicate IDs corrupt traceability). It is the automated backstop for the manual P12 pre-flight discipline.
+This validator traces to **P9** (Shared-Resource Pre-flight — counters are a finite/serialized shared resource) and **P2/P1** (audit-plane integrity — duplicate IDs corrupt traceability). It is the automated backstop for the manual P9 pre-flight discipline.
 
 ## Mapping to principles
 
-Every Layer 3 validator traces to a principle: bidirectional/orphan/supersession → P2 and P4 (audit-plane reachability and decision integrity); frontmatter-schema/topic-tags/glossary → P10 (vocabulary discipline) and the consistency mechanism; counter-atomicity → P12. A validator with no principle backing is a retirement candidate (P7).
+Every Layer 3 validator traces to a principle: bidirectional/orphan/supersession → P2 and P1 (audit-plane reachability and decision integrity); frontmatter-schema/topic-tags/glossary → P12 (vocabulary discipline) and the consistency mechanism; counter-atomicity → P9. A validator with no principle backing is a retirement candidate (P8).
 
 ## Adopter instantiation
 

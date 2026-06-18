@@ -6,7 +6,7 @@ How the SliceOps™ framework evolves and who stewards it.
 |---|---|
 | `ROADMAP.md` | Forward direction of the framework (revised quarterly) |
 | `RFC-PROCESS.md` | How a proposed change becomes a ratified DEC |
-| `MAINTAINERS.md` | Who has decision authority and how it is exercised (HITL — P9) |
+| `MAINTAINERS.md` | Who has decision authority and how it is exercised (HITL — P3) |
 | `IPR_POLICY.md` | Intellectual-property and contribution licensing terms |
 
 ## Status

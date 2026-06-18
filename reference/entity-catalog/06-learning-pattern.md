@@ -1,6 +1,6 @@
 # LearningPattern — Layer B.1 Cognitive Entity
 
-> A pattern observed ≥3 times across InsightRecords, promoted to a canonical pattern. **Mapped principle: P7 (Recursive Learning by Capture).**
+> A pattern observed ≥3 times across InsightRecords, promoted to a canonical pattern. **Mapped principle: P8 (Recursive Learning by Capture).**
 
 ## Purpose
 

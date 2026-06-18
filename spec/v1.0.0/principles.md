@@ -2,17 +2,17 @@
 
 SliceOps™ as a framework is constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**. Each principle is defined with a statement, rationale, implication, and anti-pattern.
 
-These principles are **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendments to this set require a superseding decision under an elevated human-in-the-loop gate (P9).
+These principles are **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendments to this set require a superseding decision under an elevated human-in-the-loop gate (P3).
 
 Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) is explicitly **out of scope** — the asymmetric risk via Goodhart's law, cobra effect, and quality erosion outweighs the benefit. SliceOps takes no position on gamification at any layer.
 
 ---
 
-## P1 — Slice Atomicity
+## P4 — Slice Atomicity
 
 **Statement**: One chat = one PR = one atomic vertical slice. A slice carries one outcome end-to-end: spec, decision, code, tests, evidence, merge.
 
-**Rationale**: Atomic units of work are a prerequisite for parallelization, audit, and recursive learning (P7). Without atomicity, scope drifts, decisions smear across multiple PRs, evidence fragments, post-hoc reconstruction is impossible. AI agents specifically benefit from bounded scope: a chat session has finite context window, finite attention budget, finite reasoning depth. Atomicity matches the capability envelope of the agent.
+**Rationale**: Atomic units of work are a prerequisite for parallelization, audit, and recursive learning (P8). Without atomicity, scope drifts, decisions smear across multiple PRs, evidence fragments, post-hoc reconstruction is impossible. AI agents specifically benefit from bounded scope: a chat session has finite context window, finite attention budget, finite reasoning depth. Atomicity matches the capability envelope of the agent.
 
 **Implication**:
 - Slices declare scope upfront (spec block in PR description or DEC)
@@ -28,7 +28,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Slices touching unrelated concerns (DI, business logic, DB migration, and UI)
 - Slices without explicit scope declaration
 
-**Clarification (slice ⊂ session)**: P1's statement is preserved as-is **for the DEV Session-Type** — the slice IS the DEV Session-Type, the one that produces a PR. Other Session-Types (Meta, Audit, Learning, Support, Infra, Artifact, Orchestrate) are valid AI interactions that do not produce a PR (governance decisions, blameless verification, exploration, incident care, infra ops). **Every slice is a session; not every session is a slice.** P1 governs the atomicity of DEV slices; it is not violated by non-DEV sessions. See `../../reference/sessions/` for the Session-Type taxonomy.
+**Clarification (slice ⊂ session)**: P4's statement is preserved as-is **for the DEV Session-Type** — the slice IS the DEV Session-Type, the one that produces a PR. Other Session-Types (Meta, Audit, Learning, Support, Infra, Artifact, Orchestrate) are valid AI interactions that do not produce a PR (governance decisions, blameless verification, exploration, incident care, infra ops). **Every slice is a session; not every session is a slice.** P4 governs the atomicity of DEV slices; it is not violated by non-DEV sessions. See `../../reference/sessions/` for the Session-Type taxonomy.
 
 **Sizing**: token-band measures throughput (billed-equivalent); **context-band** measures peak context footprint (orthogonal). Both are calibrated, not axiomatic — see `../../reference/sizing/`.
 
@@ -56,7 +56,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P3 — Stage as DAG-Derived View
+## P5 — Stage as DAG-Derived View
 
 **Statement**: A Stage is a computed view of the slice dependency graph, **not** an imperative time-bound grouping. Slices belong to Blocks (logical scope) and depend on each other; Stage = "what is mergeable now given dependencies."
 
@@ -77,11 +77,11 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P4 — Decision Integrity by Construction
+## P1 — Decision Integrity by Construction
 
 **Statement**: Decisions emerge from slices. Every DEC traces to a slice (where it was produced) and is reachable from that slice (back-link). Decisions made out-of-band must be backed into a slice retroactively.
 
-**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P4, tribal knowledge re-emerges and the audit plane is theater.
+**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P1, tribal knowledge re-emerges and the audit plane is theater.
 
 **Implication**:
 - DEC frontmatter includes slice provenance (`originating_slice:` in the canonical Block-Section-Slice ID format)
@@ -95,11 +95,11 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Decisions in a chat backlog never committed to the corpus
 - DECs that supersede priors without explaining what changed in context
 
-**Clarification (decisions emerge from sessions)**: P4's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
+**Clarification (decisions emerge from sessions)**: P1's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
 
 ---
 
-## P5 — Evidence-by-Construction
+## P6 — Evidence-by-Construction
 
 **Statement**: Every slice produces evidence in **4 mandatory categories**: functional (tests pass), quality (linters/metrics), decision (DECs and InsightRecords), provenance (slice ID, agent, timestamps, commit SHA). Evidence is non-negotiable; un-evidenced slices do not merge.
 
@@ -120,11 +120,11 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P6 — Security-by-Construction
+## P7 — Security-by-Construction
 
 **Statement**: Security is a per-slice gate, not a periodic audit. Every slice passes security validation before merge: SAST, secrets scan, dependency vulnerability check, SBOM update, supply-chain provenance attestation.
 
-**Rationale**: AI-generated code introduces specific vectors that traditional security gates miss: (a) hallucinated dependencies leading to typosquat attacks via packages the model invents; (b) prompt injection in outputs surfaced to other agents; (c) secrets leakage in agent-generated logs/DECs; (d) supply chain via inflated context windows. Compliance requires a security baseline. Without P6, the compliance wedge is theater and adopters face real attack vectors invisible to status-quo gates.
+**Rationale**: AI-generated code introduces specific vectors that traditional security gates miss: (a) hallucinated dependencies leading to typosquat attacks via packages the model invents; (b) prompt injection in outputs surfaced to other agents; (c) secrets leakage in agent-generated logs/DECs; (d) supply chain via inflated context windows. Compliance requires a security baseline. Without P7, the compliance wedge is theater and adopters face real attack vectors invisible to status-quo gates.
 
 **Implication**:
 - Hard CI gates per slice: SAST, secrets scan, dependency vulnerabilities
@@ -141,7 +141,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P7 — Recursive Learning by Capture
+## P8 — Recursive Learning by Capture
 
 **Statement**: The framework improves itself through capture. Every slice produces InsightRecords (empirical observations); patterns appearing ≥3 times become LearningPatterns; LearningPatterns inform R-rule amendments via DECs; R-rule amendments apply forward to subsequent slices. **The corpus is the training data.**
 
@@ -165,7 +165,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P8 — Platform-Agnostic
+## P11 — Platform-Agnostic
 
 **Statement**: SliceOps runs on any text-based AI agent, git, atomic-slice scoping, and file-producing capability. Specific platforms add velocity and UX but are NOT a gate of entry. SliceOps is not locked to any vendor.
 
@@ -186,11 +186,11 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P9 — Human-in-the-Loop Authority
+## P3 — Human-in-the-Loop Authority
 
 **Statement**: Humans retain final authority over scope, merges, and architectural direction. AI agents propose; humans dispose. Critical decisions (Block-scope DECs, R-rule amendments, repo-level changes) require a human approval gate. Routine slices may auto-approve based on policy and evidence, but an escape hatch to a human always exists.
 
-**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus, producing poisoned training data, and future agents inherit the poison (P7 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
+**Rationale**: AI agents make confident-sounding wrong decisions. Without HITL, errors compound into the corpus, producing poisoned training data, and future agents inherit the poison (P8 backfires without HITL). Regulatory: EU AI Act Article 14 mandates human oversight for high-risk systems. Reputational: AI-only orgs lose trust fast. SliceOps explicitly preserves human authority while maximizing AI leverage.
 
 **Implication**:
 - Merge gate is human approval (CODEOWNERS or equivalent)
@@ -209,7 +209,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P10 — Vocabulary Discipline
+## P12 — Vocabulary Discipline
 
 **Statement**: Canonical terms have canonical meanings. Synonyms drift; SliceOps does not. **Vocabulary is canon, not preference.** Drift detected on touch is fixed forward.
 
@@ -230,33 +230,33 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ---
 
-## P11 — Infrastructure Continuity
+## P10 — Infrastructure Continuity
 
 **Statement**: Code, infrastructure-as-code, database schemas, and environment configuration form one continuum. SliceOps discipline applies uniformly across them: atomic slice, DEC trail, evidence-by-construction, security gates, HITL authority. Infrastructure is not a separate domain.
 
-**Rationale**: Many SDLC frameworks bifurcate code vs infrastructure (a separate ops workflow, separate review, separate tooling). AI-first SDLC **cannot bifurcate** — AI agents can and will modify Terraform, Pulumi, CloudFormation, k8s manifests, DB migrations, env configs. Without P11, infrastructure becomes a "shadow domain" where AI changes happen without slice discipline, leading to audit-plane gaps, then security gaps, then compliance gaps. SOC 2, ISO 27001, and banking-grade compliance require infrastructure change tracking equivalent to code. DB migrations are particularly risky (complex rollback, data-loss potential) — AI generating them without a DEC trail, rollback plan, and evidence is a critical failure vector for regulated ventures.
+**Rationale**: Many SDLC frameworks bifurcate code vs infrastructure (a separate ops workflow, separate review, separate tooling). AI-first SDLC **cannot bifurcate** — AI agents can and will modify Terraform, Pulumi, CloudFormation, k8s manifests, DB migrations, env configs. Without P10, infrastructure becomes a "shadow domain" where AI changes happen without slice discipline, leading to audit-plane gaps, then security gaps, then compliance gaps. SOC 2, ISO 27001, and banking-grade compliance require infrastructure change tracking equivalent to code. DB migrations are particularly risky (complex rollback, data-loss potential) — AI generating them without a DEC trail, rollback plan, and evidence is a critical failure vector for regulated ventures.
 
 **Implication**:
 - IaC changes are slices with the same atomicity and DEC trail
 - DB migrations are slices with a mandatory rollback plan in the spec
 - Environment-specific configs versioned; differences declared in a DEC
-- Infrastructure DECs (cloud provider, DB type, region, runtime topology) follow P2/P4 like any other DEC
+- Infrastructure DECs (cloud provider, DB type, region, runtime topology) follow P2/P1 like any other DEC
 - Multi-environment testing for deploy slices (dev → staging → prod evidence chain)
-- Secrets/credentials handled per environment with P6 discipline
-- AI-generated IaC requires a human review gate per P9
+- Secrets/credentials handled per environment with P7 discipline
+- AI-generated IaC requires a human review gate per P3
 
 **Anti-pattern**:
 - "Ops team handles infra" — separate workflow from slice discipline
 - DB migrations without a DEC and without a rollback plan
 - Production hotfixes without slice provenance
 - Cross-environment config drift unreviewed
-- AI-generated IaC merged without human review (also violates P9)
+- AI-generated IaC merged without human review (also violates P3)
 - Database schema changes that are not slices
 - Infrastructure as a "shadow domain" outside the audit plane
 
 ---
 
-## P12 — Shared-Resource Pre-flight
+## P9 — Shared-Resource Pre-flight
 
 **Statement**: Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate, cap, alert, and telemeter every finite/serialized shared resource that lever consumes. SliceOps's parallel throughput stresses shared resources the framework must protect **proactively** — protection is bootstrap, not reaction.
 
@@ -265,7 +265,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 **Implication**:
 - Pre-Block checklist: enumerate finite/serialized shared resources the Block consumes (CI minutes, counters, API rate limits, branch-protection serialization, DB migration locks, worktree/checkout state, connection pools)
 - Each resource: **cap** (hard limit), **alert** (warns BEFORE the limit, not at it), and **telemetry** (continuous visibility)
-- Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P3 and velocity recalibration — NOT a fixed magic number)
+- Trigger: crossing the baseline calibrated in the last Block Retrospective (tied to P5 and velocity recalibration — NOT a fixed magic number)
 - Default for any shared resource = cap and alert, **never silent hard-stop** ("warned degradation" > "invisible hard-cut")
 - Cost-ledger extended to an infra/CI dimension (not just tokens) — Layer B.1
 - Guardrails as repo-scaffold bootstrap defaults, NOT post-incident retrofit
@@ -278,10 +278,10 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Treating CI minutes / counters / rate limits / locks as infinite
 - Docs/orchestration PRs burning the same finite budget as heavy code PRs without change-gating
 
-**Why P12 ≠ P11**: P11 (Infrastructure Continuity) = "infra changes are slices (atomicity applied to infra)." P12 = "before scaling parallelism, protect the finite shared resources it consumes." An adopter can honor P11 perfectly (migrations as slices) and still exhaust CI minutes by never enumerating that resource. Orthogonal.
+**Why P9 ≠ P10**: P10 (Infrastructure Continuity) = "infra changes are slices (atomicity applied to infra)." P9 = "before scaling parallelism, protect the finite shared resources it consumes." An adopter can honor P10 perfectly (migrations as slices) and still exhaust CI minutes by never enumerating that resource. Orthogonal.
 
 ---
 
 ## Amendment policy
 
-This set evolves only via a superseding DEC under an elevated HITL gate (P9), with explicit cross-reference impact analysis. The derivation history of these principles is itself corpus produced by the framework operating on itself (P4 and P7) — a recursive demonstration, at a cadence of roughly one principle per intensive operating period, which is a maturity signal, not instability.
+This set evolves only via a superseding DEC under an elevated HITL gate (P3), with explicit cross-reference impact analysis. The derivation history of these principles is itself corpus produced by the framework operating on itself (P1 and P8) — a recursive demonstration, at a cadence of roughly one principle per intensive operating period, which is a maturity signal, not instability.

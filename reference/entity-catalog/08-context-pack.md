@@ -1,10 +1,10 @@
 # ContextPack — Layer B.1 Cognitive Entity
 
-> Pre-computed context bundles loaded at slice/session start. **Mapped principle: P8 (Platform-Agnostic).**
+> Pre-computed context bundles loaded at slice/session start. **Mapped principle: P11 (Platform-Agnostic).**
 
 ## Purpose
 
-A curated, pre-assembled bundle of the context an agent needs to start a slice without re-deriving it — relevant DECs, applicable patterns, glossary subset, prior outcomes. ContextPacks make SliceOps portable across platforms (P8): the bundle is plain files, readable by any text-based agent, independent of any runtime's retrieval features.
+A curated, pre-assembled bundle of the context an agent needs to start a slice without re-deriving it — relevant DECs, applicable patterns, glossary subset, prior outcomes. ContextPacks make SliceOps portable across platforms (P11): the bundle is plain files, readable by any text-based agent, independent of any runtime's retrieval features.
 
 ## Frontmatter schema
 

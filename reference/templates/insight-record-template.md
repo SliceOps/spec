@@ -1,6 +1,6 @@
 <!--
 InsightRecord template (Layer B.1). Naming: INS-NNN-<slug>.md
-Append-only (P7): never edit to "correct"; append a new record and cross-ref.
+Append-only (P8): never edit to "correct"; append a new record and cross-ref.
 Blameless: describe patterns, never name individuals. Replace all <…>.
 -->
 ---

@@ -9,7 +9,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: internal       # public | internal | restricted | sensitive
-originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P4 provenance
+originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance
 supersedes: []
 superseded-by: null
 conflicts-with: []          # non-empty → "Conflict Resolution" section below

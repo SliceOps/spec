@@ -4,7 +4,7 @@
 - **Date**: 2026-06-15
 - **Topics**: licensing, ip-boundary, governance
 
-> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P4 Decision Integrity). This record publishes the **decision**. The supporting work (context, market comparison, alternatives, and consequences) was carried out and is maintained internally.
+> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the **decision**. The supporting work (context, market comparison, alternatives, and consequences) was carried out and is maintained internally.
 
 ## Decision
 

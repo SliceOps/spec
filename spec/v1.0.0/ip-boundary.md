@@ -16,7 +16,7 @@ SliceOps is articulated in **three IP layers** with a stable top level and exten
 
 ### Layer A — Principles (Framework)
 
-The 12 canonical principles (see `principles.md`). The set is **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendment requires a superseding DEC under an elevated human-in-the-loop gate (P9).
+The 12 canonical principles (see `principles.md`). The set is **non-negotiable**: an implementation that violates any one is not SliceOps-compliant. Amendment requires a superseding DEC under an elevated human-in-the-loop gate (P3).
 
 ### Layer B — Reference Patterns
 
@@ -61,7 +61,7 @@ Future potential: **C.3 — Adopter Compliance Mappings**; **C.4 — Adopter Dom
 4. A sub-layer that grows substantial and qualitatively distinct may be **promoted to a top level** via DEC (e.g., compliance mappings becoming "Layer D").
 5. New top-level Layers (D, E, …) are reserved for dimensions truly orthogonal to the IP/scope axis; require a DEC with strong justification ("why not a sub-layer?").
 6. Default convention: bare "Layer B" = the full layer (all sub-layers); for a specific sub-layer use "B.1" or "B.2".
-7. Cross-references in DECs must use precise sub-numbering when relevant (P10).
+7. Cross-references in DECs must use precise sub-numbering when relevant (P12).
 
 ---
 
@@ -92,7 +92,7 @@ SliceOps is an open framework authored by Andrés Ramírez Sierra; trademark and
 To preserve ecosystem neutrality (a bright line maintained even though one party holds IP across both the framework and a runtime):
 
 - The SliceOps spec does **not** include any runtime-internal artifacts (internal decision IDs, slice IDs, internal filesystem paths, runtime-specific schemas, vendor product internals).
-- Any conforming runtime must honor the SliceOps principles (P8 — Platform-Agnostic). A runtime may extend the catalog with runtime-specific entities under its own IP, but may not capture catalog ownership as a product feature, claim "SliceOps is X-only," or position other implementations as "unofficial/non-compliant" without evidence.
+- Any conforming runtime must honor the SliceOps principles (P11 — Platform-Agnostic). A runtime may extend the catalog with runtime-specific entities under its own IP, but may not capture catalog ownership as a product feature, claim "SliceOps is X-only," or position other implementations as "unofficial/non-compliant" without evidence.
 - Other runtime implementations are architectural peers, not subordinates.
 - SliceOps trademark licensing and any runtime's product licensing operate independently.
 

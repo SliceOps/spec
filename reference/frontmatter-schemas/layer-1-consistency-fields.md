@@ -30,7 +30,7 @@ consistency-check: |                 # mandatory multi-line paragraph
 
 ## The Layer 2 pre-merge checklist (companion)
 
-Layer 1 fields are completed alongside the Layer 2 manual pre-merge checklist (human/HITL gate, P9): searched topic-related DECs · read the top-related ones end-to-end · declared conflicts and resolutions · updated bidirectional cross-references · updated glossary/topics if vocabulary changed · self-application test (this DEC's own frontmatter satisfies this spec).
+Layer 1 fields are completed alongside the Layer 2 manual pre-merge checklist (human/HITL gate, P3): searched topic-related DECs · read the top-related ones end-to-end · declared conflicts and resolutions · updated bidirectional cross-references · updated glossary/topics if vocabulary changed · self-application test (this DEC's own frontmatter satisfies this spec).
 
 ## Self-application
 

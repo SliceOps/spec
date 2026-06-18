@@ -4,7 +4,7 @@ A slice or session is sized on **two orthogonal axes** — never conflated into 
 
 | Axis | Measures | Unit | Governs |
 |---|---|---|---|
-| **Token-band** | Throughput of the slice/session | **billed-equivalent** tokens | Cost (P12), forecast |
+| **Token-band** | Throughput of the slice/session | **billed-equivalent** tokens | Cost (P9), forecast |
 | **Context-band** | Peak context footprint (input and cache in the largest single turn) | tokens | **Model viability** (primary filter of Model Triage) |
 
 A slice can be XL-token / S-context (lots of output, small working set) or S-token / XL-context (little output, must load a large codebase). They are independent.
@@ -23,7 +23,7 @@ A slice can be XL-token / S-context (lots of output, small working set) or S-tok
 | L | 10–20M |
 | XL | > 20M (red flag) |
 
-Token-band governs cost (P12) and forecast. It is the throughput band — independent of how much context the model had to *carry* per turn.
+Token-band governs cost (P9) and forecast. It is the throughput band — independent of how much context the model had to *carry* per turn.
 
 ---
 
@@ -76,7 +76,7 @@ A single composite size axis conflates throughput and footprint and fails honest
 - A local model with a small window may have **plenty** of throughput capacity but cannot fit the slice's footprint, so it fails on **viability**, not cost.
 - A frontier model may have ample window but the slice still costs a lot, so it fails on **cost**, not viability.
 
-Cost and viability are different failure modes; they need different bands. P1 already named "context window finita" in its rationale; only the throughput (cost) had been operationalized as token-band. Context-band closes the missing axis.
+Cost and viability are different failure modes; they need different bands. P4 already named "context window finita" in its rationale; only the throughput (cost) had been operationalized as token-band. Context-band closes the missing axis.
 
 ---
 

@@ -111,7 +111,7 @@ A canonical R-rule (`R-LLM-CI-COST`) captures the four checks — see `../r-rule
 
 ## Mapping to principles
 
-- **P5 (Evidence-by-Construction)** — a cost-ledger row is mandatory per LLM-in-CI workflow at merge time (declared per-run cost estimate and monthly volume estimate; reviewable against real billing).
-- **P7 (Recursive Learning by Capture)** — this pattern IS output of the P7 loop (its formalization came from a recurrence of cost-blowup observations across reference implementations).
-- **P12 (Shared-Resource Pre-flight)** — LLM API budget = finite shared resource across repos / PRs / authors; the P12 pre-flight checklist includes enumerate, cap, alert, and telemeter LLM-API spend.
+- **P6 (Evidence-by-Construction)** — a cost-ledger row is mandatory per LLM-in-CI workflow at merge time (declared per-run cost estimate and monthly volume estimate; reviewable against real billing).
+- **P8 (Recursive Learning by Capture)** — this pattern IS output of the P8 loop (its formalization came from a recurrence of cost-blowup observations across reference implementations).
+- **P9 (Shared-Resource Pre-flight)** — LLM API budget = finite shared resource across repos / PRs / authors; the P9 pre-flight checklist includes enumerate, cap, alert, and telemeter LLM-API spend.
 - **Determinism-over-Regeneration** — Lever B (model-tier) is a direct application: "cheaper deterministic alternative when adequate" extended to "cheaper model tier when adequate".
