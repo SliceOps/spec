@@ -1,6 +1,6 @@
 # Maintainers
 
-SliceOps™ is authored and maintained by Andrés Ramírez Sierra. Trademark and copyright are held personally (pre-incorporation; planned SliceOps LLC).
+SliceOps™ is authored and maintained by [Andrés Ramírez Sierra](https://andres.co). Trademark and copyright are held personally (pre-incorporation; planned SliceOps LLC).
 
 ## Decision authority (P3 — Human-in-the-Loop Authority)
 

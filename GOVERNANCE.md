@@ -4,7 +4,7 @@ SliceOps™ is a founder-stewarded open framework. This document is the top-leve
 
 ## Stewardship
 
-Authored and maintained by Andrés Ramírez Sierra. Trademark and copyright held personally (pre-incorporation; planned SliceOps LLC; eventual foundation governance — precedent: Linux/Torvalds, Python/PSF).
+Authored and maintained by [Andrés Ramírez Sierra](https://andres.co). Trademark and copyright held personally (pre-incorporation; planned SliceOps LLC; eventual foundation governance — precedent: Linux/Torvalds, Python/PSF).
 
 ## Decision-making
 

@@ -18,6 +18,15 @@
 
 - Compliance pattern mappings (ISO 42001 / SOC 2 / EU AI Act / NIST AI RMF)
 - Domain vertical packs
-- Certification / curriculum layer
+- Curriculum / education layer (Class 41 scope)
+
+## Certification and official partners (target: August 2026)
+
+A formal program to let practitioners and vendors demonstrate genuine conformance, and to let the project recognize trusted implementations:
+
+- **SliceOps certification** — a defined conformance assessment so a "SliceOps-compliant" claim can be independently substantiated (today the claim is self-declared and descriptive — see [`../TRADEMARK.md`](../TRADEMARK.md), Section 4).
+- **Official partners** — a vetted program under which a runtime, consultancy, or vendor may use an "official SliceOps partner" designation, together with the trademark terms that govern it.
+
+Until this program launches, no official certification, accreditation, or "official partner" status exists or may be claimed. Its scope, criteria, fees, and governance will be defined in a decision record before launch.
 
 Promotion of new folders to this repo follows explicit criteria defined in the canonical repo-structure decision (grow-into per real need, not imposed top-down).

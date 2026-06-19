@@ -1,6 +1,6 @@
 # SliceOps™ Trademark Policy
 
-> **Status: active (2026-06-15).** This policy governs use of the **SliceOps™** name, logo, and related marks. Like the rest of this repository's prose it is published under [CC BY 4.0](LICENSE), but it is a **statement of trademark policy** — not a grant of trademark rights. The trademark is held personally by Andrés Ramírez Sierra (pre-incorporation of SliceOps LLC).
+> **Status: active (2026-06-15).** This policy governs use of the **SliceOps™** name, logo, and related marks. Like the rest of this repository's prose it is published under [CC BY 4.0](LICENSE), but it is a **statement of trademark policy** — not a grant of trademark rights. The trademark is held personally by [Andrés Ramírez Sierra](https://andres.co) (pre-incorporation of SliceOps LLC).
 
 SliceOps™ is an open framework for AI-first software engineering. The **content** of this project — the spec, reference patterns, templates, and tooling — is openly licensed so anyone can read, use, adapt, and redistribute it. The **name and brand** "SliceOps" are a trademark, and trademarks work differently from copyright: their job is to tell people reliably where something comes from and whether it is what it claims to be. This policy explains how you may — and may not — use the SliceOps name and marks, so that the openness of the content is never mistaken for a license to imply endorsement, affiliation, or official status.
 
@@ -95,6 +95,7 @@ The mark is held by **Andrés Ramírez Sierra**. Requests are handled personally
 - [`LICENSE`](LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`LICENSE-CODE`](LICENSE-CODE) — MIT License (code).
 - [`DISCLOSURE.md`](DISCLOSURE.md) — SliceOps and reference-runtime relationship; framework neutrality.
+- [`DISCLAIMER.md`](DISCLAIMER.md) — no warranty, not professional advice, limitation of liability.
 - Decision record `DR-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 and MIT licensing and the trademark / copyright separation (Decision 6) this policy implements.
 
 ---

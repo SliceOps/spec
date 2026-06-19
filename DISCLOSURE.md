@@ -1,6 +1,6 @@
 # Disclosure — SliceOps and reference runtimes
 
-SliceOps™ is an open framework authored by Andrés Ramírez Sierra. Trademark and copyright are held personally, pre-incorporation of SliceOps LLC. The framework is openly licensed: documentation under **Creative Commons Attribution 4.0 International (CC BY 4.0)** and code under the **MIT License**. These terms are ratified in decision record `DR-2026-06-15-sliceops-license-ratification`; see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md) for the full intellectual-property and contribution policy and [`TRADEMARK.md`](TRADEMARK.md) for trademark usage.
+SliceOps™ is an open framework authored by [Andrés Ramírez Sierra](https://andres.co). Trademark and copyright are held personally, pre-incorporation of SliceOps LLC. The framework is openly licensed: documentation under **Creative Commons Attribution 4.0 International (CC BY 4.0)** and code under the **MIT License**. These terms are ratified in decision record `DR-2026-06-15-sliceops-license-ratification`; see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md) for the full intellectual-property and contribution policy and [`TRADEMARK.md`](TRADEMARK.md) for trademark usage.
 
 ## Author's dual role — disclosed deliberately
 

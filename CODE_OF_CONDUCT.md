@@ -20,6 +20,18 @@ Unacceptable behavior includes harassment, derogatory comments, personal or poli
 
 SliceOps practices blameless postmortems (P8 — Recursive Learning by Capture). Discussion of incidents focuses on patterns and systems, never on assigning personal blame.
 
+## AI responsibility and ethical use
+
+SliceOps exists for AI-first engineering, so responsible use of AI agents is part of how we conduct ourselves here.
+
+- **You are accountable for your agents.** A contributor is fully responsible for the actions and output of any AI agent they operate in this project — agents propose, humans dispose (P3 — Human-in-the-Loop Authority). "The agent did it" is not a defense.
+- **Human oversight is expected.** AI-assisted contributions are reviewed by a human before merge, and critical decisions are never auto-merged — in the spirit of EU AI Act Article 14 (human oversight of higher-risk systems).
+- **Disclose AI-generated content.** Material that is substantially AI-generated should be identifiable as such, in commit or pull-request notes and provenance metadata — in the spirit of EU AI Act Article 50 (transparency).
+- **Build for good.** Use SliceOps to ship software that is honest, safe, and in the interest of the people it affects. Do not use the framework, its name, or this community to build or promote tools whose primary purpose is to deceive, unlawfully surveil, harm, or violate others' rights.
+- **Autonomy raises the bar.** The more autonomous an agent's action, the more care its operator owes — agentic capability never lowers human responsibility.
+
+These are values; how the Code is enforced is set out below.
+
 ## Reporting
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the maintainer (see [`governance/MAINTAINERS.md`](governance/MAINTAINERS.md)). All complaints will be reviewed and investigated promptly and fairly. The maintainer is obligated to respect the privacy and security of the reporter of any incident.

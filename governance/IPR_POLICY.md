@@ -1,6 +1,6 @@
 # Intellectual Property & Contribution Policy
 
-> **Status: ratified 2026-06-15** (decision `DR-2026-06-15-sliceops-license-ratification`). The license terms below are binding. This repository is private pre-launch; it goes public on founder approval (P3 — human-in-the-loop authority).
+> **Status: ratified 2026-06-15** (decision `DR-2026-06-15-sliceops-license-ratification`). The license terms below are binding. This repository is public.
 
 This is the **authoritative** policy for licensing, trademark, and contributions. [`../CONTRIBUTING.md`](../CONTRIBUTING.md) is the practical how-to and defers here for the binding terms.
 

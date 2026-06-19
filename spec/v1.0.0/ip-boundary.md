@@ -87,7 +87,7 @@ Adopters **may not**: remove canonical entities and still claim SliceOps-complia
 
 ## Framework neutrality & disclosure
 
-SliceOps is an open framework authored by Andrés Ramírez Sierra; trademark and copyright held personally. A reference runtime implementation of the SliceOps reference patterns exists, authored by the same IP holder — it is **one** reference implementation: the first, but not exclusive and not "official."
+SliceOps is an open framework authored by [Andrés Ramírez Sierra](https://andres.co); trademark and copyright held personally. A reference runtime implementation of the SliceOps reference patterns exists, authored by the same IP holder — it is **one** reference implementation: the first, but not exclusive and not "official."
 
 To preserve ecosystem neutrality (a bright line maintained even though one party holds IP across both the framework and a runtime):
 
