@@ -53,3 +53,9 @@ jobs:
             --root spec \
             --checks all \
             --topic-taxonomy spec/spec/v1.0.0/topics.md
+      - name: Secrets scan (gitleaks)
+        # P7 Security-by-Construction. Working-tree scan of the spec checkout;
+        # fails the job on any finding. Pinned image for reproducibility.
+        run: |
+          docker run --rm -v "$PWD/spec:/repo" zricethezav/gitleaks:v8.18.4 \
+            detect --source=/repo --no-git --redact -v

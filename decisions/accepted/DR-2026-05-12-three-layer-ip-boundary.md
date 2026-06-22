@@ -1,8 +1,20 @@
-# DR-2026-05-12 — Three-Layer IP Boundary
+---
+entity: DecisionRecord
+status: ratified
+created: 2026-05-12
+updated: 2026-06-22
+owner: Andrés Ramírez Sierra
+sensitivity: public
+supersedes: []
+superseded-by: null
+conflicts-with: []
+related-decs: [DR-2026-06-15-sliceops-license-ratification, DR-2026-05-14-spec-repo-publishing-layout]
+topics: [ip-boundary, foundational, hierarchical-taxonomy]
+vocabulary-changes: []
+consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DR-2026-06-15-sliceops-license-ratification operationalizes it as a dual license; DR-2026-05-14-spec-repo-publishing-layout organizes the Layer B.1 artifacts. No conflicts."
+---
 
-- **Status**: ratified
-- **Date**: 2026-05-12
-- **Topics**: ip-boundary, foundational, governance
+# DR-2026-05-12 — Three-Layer IP Boundary
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the supporting analysis is maintained internally.
 
@@ -18,9 +30,16 @@ SliceOps intellectual property is organized into three layers:
 
 **Boundary.** Adopters may customize Layer B patterns for their context, with attribution (CC BY 4.0), provided they honor the Layer A principles. A conformance claim ("SliceOps-compliant") requires honoring the published spec.
 
+## Alternatives considered
+
+- **A — Two layers (methodology + implementations)**: rejected — collapsing reference patterns into "methodology" leaves no clean home for reusable-but-non-canonical artifacts (templates, schemas, R-rules) and blurs what an adopter may customize versus what defines conformance.
+- **B — Keep everything proprietary to one runtime**: rejected — couples the framework to a single vendor, violates P11 (Platform-Agnostic), and removes the pull-through, ecosystem value of an open spec.
+- **C — Three layers (A principles / B reference patterns / C implementations)**: **selected** — cleanly separates what is canonical and shared (A, B) from what each runtime owns (C), and makes the conformance boundary explicit.
+
 ## References
 
 - [`DISCLOSURE.md`](../../DISCLOSURE.md) — framework and reference-runtime relationship.
 - [`spec/v1.0.0/ip-boundary.md`](../../spec/v1.0.0/ip-boundary.md) — the IP boundary in the versioned spec.
 - [`DR-2026-06-15-sliceops-license-ratification.md`](DR-2026-06-15-sliceops-license-ratification.md) — the license decision.
+- [`DR-2026-05-14-spec-repo-publishing-layout.md`](DR-2026-05-14-spec-repo-publishing-layout.md) — Layer B.1 publishing layout.
 - [`TRADEMARK.md`](../../TRADEMARK.md) — trademark usage policy.
