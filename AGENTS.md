@@ -10,7 +10,7 @@ SliceOps is a **decision-driven framework**, not a spec-first one. Architecture,
 
 The canonical, versioned SliceOps™ framework specification, Layer B reference patterns, and governance. Documentation under CC BY 4.0, code under MIT — ratified (`DR-2026-06-15-sliceops-license-ratification`; see `governance/IPR_POLICY.md`). Public repository; changes land via pull requests with maintainer approval (P3 — Human-in-the-Loop Authority).
 
-The repo's own **publishing layout** is lightweight and industry-aligned (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs), growing folders only when explicit promotion criteria are met. This is deliberately **distinct** from the foundations-first project structure the framework *prescribes* to adopters — see `reference/project-structure/`.
+The repo's own **publishing layout** is lightweight and industry-aligned (precedent: OpenAPI, JSON Schema, Diátaxis, Spec Kit, PEPs), growing folders only when explicit promotion criteria are met — the decision is recorded in [`decisions/accepted/DR-2026-05-14-spec-repo-publishing-layout.md`](decisions/accepted/DR-2026-05-14-spec-repo-publishing-layout.md). This is deliberately **distinct** from the foundations-first project structure the framework *prescribes* to adopters — see `reference/project-structure/`.
 
 ## Canonical core (read before editing spec content)
 
