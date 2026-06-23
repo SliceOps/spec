@@ -25,6 +25,12 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Sub-topics**: specific principles can become sub-topics if extensive DECs emerge (e.g., `p7-recursive-learning-operational`)
 - **Cross-references**: foundational, layer-a-principles-amendment
 
+### audit-plane
+- **Scope**: Decisions about the append-only, governed record of decisions/insights/outcomes — where decision integrity lives (P2 Audit Plane Discipline).
+- **Parent**: foundational
+- **Sub-topics**: decision-record-pattern, supersession-lifecycle
+- **Cross-references**: principles, corpus-integrity, evidence-categories
+
 ### ip-boundary
 - **Scope**: Decisions about the IP/scope axis — Layer A/B/C boundary, ownership, licensing.
 - **Parent**: foundational
