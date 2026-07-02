@@ -55,7 +55,7 @@ The schema enforces the *shape* of completeness (categories present). Whether sp
 
 ## Vendor extensions (Layer C)
 
-The canonical schema deliberately carries **no vendor internals** — no vendor bundle references, no runtime-specific enums, no product schemas (per the neutrality rule in [`spec/v1.0.0/ip-boundary.md`](../../spec/v1.0.0/ip-boundary.md): the spec includes no runtime-specific schemas). Vendors and adopters extend the record through the `extensions` object:
+The canonical schema deliberately carries **no vendor internals** — no vendor bundle references, no runtime-specific enums, no product schemas (per the neutrality rule in [`spec/v1.1.0/ip-boundary.md`](../../spec/v1.1.0/ip-boundary.md): the spec includes no runtime-specific schemas). Vendors and adopters extend the record through the `extensions` object:
 
 - Keys MUST be reverse-DNS-style namespaces (at least one dot, e.g. `dev.example.runtime`), so extension ownership is explicit and collisions are impossible.
 - Extension content is the extension owner's IP (Layer C per the three-layer IP boundary) and is **ignored by canonical validators** — they validate key shape only.

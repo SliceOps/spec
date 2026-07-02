@@ -9,7 +9,7 @@ The consistency-management mechanism has six layers. Layers 1–2 are immediate 
 | `validate-cross-references-bidirectional` | If DEC A lists DEC B in `related-decs`, DEC B's frontmatter should reference DEC A | frontmatter parse and graph traversal; flag asymmetric edges |
 | `validate-no-orphan-decs` | A DEC with empty `related-decs` AND empty `topics` must justify isolation in its body | frontmatter check and body grep for a justification marker |
 | `validate-frontmatter-schema` | Layer 1 fields present and well-formed (`conflicts-with`, `related-decs`, `topics`, `vocabulary-changes`, `consistency-check`) | YAML schema validation |
-| `validate-topic-tags` | Every value in `topics:` exists in the canonical topic taxonomy | set membership against `spec/v1.0.0/topics.md` |
+| `validate-topic-tags` | Every value in `topics:` exists in the canonical topic taxonomy | set membership against `spec/v1.1.0/topics.md` |
 
 ## Phase 2.5 — denormalized-drift and unit/cost coherence
 

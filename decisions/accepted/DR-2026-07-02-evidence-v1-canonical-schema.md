@@ -17,7 +17,7 @@ consistency-check: "Ratifies evidence.v1 as the canonical Layer B.1 evidence rec
 
 # DR-2026-07-02 — evidence.v1 Canonical Evidence Record Format (Layer B.1)
 
-> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This is the **first spec DR to carry the `approver` frontmatter field** introduced alongside [`DR-2026-07-02-author-approver-separation`](../rfcs/DR-2026-07-02-author-approver-separation.md) — per that RFC's single-maintainer rule, self-ratification is recorded explicitly (`approver` == `owner`) rather than left implicit (founder directive, 2026-07-02).
+> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This is the **first spec DR to carry the `approver` frontmatter field** introduced alongside [`DR-2026-07-02-author-approver-separation`](DR-2026-07-02-author-approver-separation.md) — per that RFC's single-maintainer rule, self-ratification is recorded explicitly (`approver` == `owner`) rather than left implicit (founder directive, 2026-07-02).
 
 ## TL;DR
 
@@ -65,6 +65,6 @@ A 2026-07 external red-team audit found (finding #1) that the evidence artifact 
 - [`reference/evidence/evidence.v1.schema.json`](../../reference/evidence/evidence.v1.schema.json), [`reference/evidence/evidence-v1.md`](../../reference/evidence/evidence-v1.md), [`reference/evidence/examples/`](../../reference/evidence/examples/) — the ratified artifacts.
 - [`reference/entity-catalog/03-outcome-record.md`](../../reference/entity-catalog/03-outcome-record.md) — the cognitive entity that anchors evidence categories in the corpus.
 - [`DR-2026-05-12-three-layer-ip-boundary.md`](DR-2026-05-12-three-layer-ip-boundary.md) — the layer taxonomy this DEC applies to the evidence record.
-- [`DR-2026-07-02-author-approver-separation.md`](../rfcs/DR-2026-07-02-author-approver-separation.md) — the `approver` field this DEC is the first spec DR to dogfood.
+- [`DR-2026-07-02-author-approver-separation.md`](DR-2026-07-02-author-approver-separation.md) — the `approver` field this DEC is the first spec DR to dogfood.
 - [`DISCLOSURE.md`](../../DISCLOSURE.md) — the posture for naming the framework↔runtime relationship without naming runtime internals.
 - Origin: 2026-07 external red-team audit (finding #1: the evidence artifact existed only in vendor marketing, absent from the open spec).

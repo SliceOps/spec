@@ -8,7 +8,7 @@
 
 An open framework constituted by **12 canonical principles** (Layer A) — non-negotiable — presented in **Why → How → What** order: *why* agentic construction needs disciplined control (P1–P3), *how* you build under it (P4–P10), and *what* it makes tangible (P11–P12). It runs on any text-based AI agent, git, and atomic-slice scoping; no specific platform or runtime is required (P11 Platform-Agnostic).
 
-[The 12 canonical principles](spec/v1.0.0/principles.md) · [Why a framework, not a methodology?](spec/v1.0.0/framework-not-methodology.md)
+[The 12 canonical principles](spec/v1.1.0/principles.md) · [Why a framework, not a methodology?](spec/v1.1.0/framework-not-methodology.md)
 
 ## Structure
 
@@ -30,7 +30,7 @@ SliceOps is organized in three layers — a stable top level with extensible sub
 - **Layer B — Reference Patterns**: the materializations of the principles — **B.1 Framework Artifacts** (entity catalog, R-rules, frontmatter schemas, file templates, the prescribed project structure) and **B.2 Universal Engineering Patterns** (reaffirmed industry practices plus SliceOps-formalized ones). SliceOps IP.
 - **Layer C — Implementations**: concrete builds — **C.1 Vendor Runtimes** (the runtimes that execute the discipline) and **C.2 Adopter Stack Patterns** (per-stack instantiations). Owned by the vendors and adopters who build them, not by SliceOps.
 
-The IP boundary follows these layers: A and B are SliceOps IP; C belongs to the vendor or adopter. See [`spec/v1.0.0/ip-boundary.md`](spec/v1.0.0/ip-boundary.md).
+The IP boundary follows these layers: A and B are SliceOps IP; C belongs to the vendor or adopter. See [`spec/v1.1.0/ip-boundary.md`](spec/v1.1.0/ip-boundary.md).
 
 ## License
 

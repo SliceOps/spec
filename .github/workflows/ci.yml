@@ -52,7 +52,7 @@ jobs:
           python3 toolkit/templates/consistency-validators/validators.py \
             --root spec \
             --checks all \
-            --topic-taxonomy spec/spec/v1.0.0/topics.md
+            --topic-taxonomy spec/spec/v1.1.0/topics.md
       - name: Secrets scan (gitleaks)
         # P7 Security-by-Construction. Working-tree scan of the spec checkout;
         # fails the job on any finding. Pinned image for reproducibility.
