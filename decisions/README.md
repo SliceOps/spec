@@ -27,4 +27,4 @@ Decisions about specific vendor runtimes (those live in vendor repos). Adopter-i
 
 ## Status
 
-Scaffolding in progress. The framework's own canonical decisions currently live in the maintainers' working brain and will be ported / mirrored here as the spec stabilizes.
+Active. This folder holds the framework's **published** DecisionRecords — ratified decisions in `accepted/` and proposals under deliberation in `rfcs/`. The maintainers' fuller working corpus (drafts, internal analyses, runtime-adjacent decisions) remains private; the DECs published here are the go-public subset, sanitized per the IP boundary (see "What does NOT live here" above).

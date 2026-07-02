@@ -8,6 +8,10 @@ status: proposed            # proposed → ratified → superseded|deprecated
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
+approver: <ratifying human> # OPTIONAL — the human who ratified (P3 human gate); recommended on
+                            # status: ratified. MAY equal owner in single-maintainer contexts:
+                            # the point is recording WHO ratified, making self-ratification
+                            # explicit and auditable instead of implicit.
 sensitivity: internal       # public | internal | restricted | sensitive
 originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance
 supersedes: []
