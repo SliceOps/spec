@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Canonical **evidence.v1** record format (`reference/evidence/`) — the framework's audit-plane evidence record, upstreamed as Layer B.1: JSON Schema draft 2020-12 (`$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`), prose spec (`evidence-v1.md`: P6/P7 category mapping, vendor `extensions` boundary, signing/verification guidance — no embedded signature field in v1), and golden examples (2 valid, 3 invalid). Ratified in [`decisions/accepted/DR-2026-07-02-evidence-v1-canonical-schema.md`](decisions/accepted/DR-2026-07-02-evidence-v1-canonical-schema.md) — the first spec DR to carry the `approver` field. Glossary entry for `evidence.v1` is deferred to the next spec minor version.
 - `CHANGELOG.md` (this file).
 - Optional `approver` field in the DecisionRecord frontmatter reference schemas (`reference/templates/dec-template.md`, `reference/entity-catalog/01-decision-record.md`, `reference/frontmatter-schemas/base-schema.md`) — records the human who ratified a DEC (P3 human gate).
 - RFC [`decisions/rfcs/DR-2026-07-02-author-approver-separation.md`](decisions/rfcs/DR-2026-07-02-author-approver-separation.md) — proposes formalizing author ≠ approver as a P3 implication.
