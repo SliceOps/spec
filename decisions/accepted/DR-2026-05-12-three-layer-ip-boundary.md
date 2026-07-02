@@ -2,16 +2,16 @@
 entity: DecisionRecord
 status: ratified
 created: 2026-05-12
-updated: 2026-06-22
+updated: 2026-07-02
 owner: Andrés Ramírez Sierra
 sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DR-2026-06-15-sliceops-license-ratification, DR-2026-05-14-spec-repo-publishing-layout]
+related-decs: [DR-2026-06-15-sliceops-license-ratification, DR-2026-05-14-spec-repo-publishing-layout, DR-2026-07-02-evidence-v1-canonical-schema]
 topics: [ip-boundary, foundational, hierarchical-taxonomy]
 vocabulary-changes: []
-consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DR-2026-06-15-sliceops-license-ratification operationalizes it as a dual license; DR-2026-05-14-spec-repo-publishing-layout organizes the Layer B.1 artifacts. No conflicts."
+consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DR-2026-06-15-sliceops-license-ratification operationalizes it as a dual license; DR-2026-05-14-spec-repo-publishing-layout organizes the Layer B.1 artifacts; DR-2026-07-02-evidence-v1-canonical-schema applies the boundary to the evidence.v1 record format (canonical core Layer B.1, vendor extensions Layer C). No conflicts."
 ---
 
 # DR-2026-05-12 — Three-Layer IP Boundary

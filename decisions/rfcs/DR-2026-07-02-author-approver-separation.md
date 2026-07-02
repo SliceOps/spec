@@ -8,10 +8,10 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: []
+related-decs: [DR-2026-07-02-evidence-v1-canonical-schema]
 topics: [principles, audit-plane, layer-b-framework-artifact]
 vocabulary-changes: []
-consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) proposes — without amending Layer A here — a P3 implication making the separation normative, to be ratified under the elevated HITL gate P3 itself prescribes. Preserves all existing P3 gates and the DEC lifecycle; no existing public DEC covers ratification-actor semantics, so related-decs is empty. No conflicts."
+consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) proposes — without amending Layer A here — a P3 implication making the separation normative, to be ratified under the elevated HITL gate P3 itself prescribes. Preserves all existing P3 gates and the DEC lifecycle; DR-2026-07-02-evidence-v1-canonical-schema is the first spec DR to record the `approver` field this RFC introduces (explicit self-ratification). No conflicts."
 ---
 
 # DR-2026-07-02 — Author ≠ Approver Separation (P3)
