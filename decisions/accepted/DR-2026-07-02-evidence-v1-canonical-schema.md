@@ -9,7 +9,7 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DR-2026-05-12-three-layer-ip-boundary, DR-2026-07-02-author-approver-separation]
+related-decs: [DR-2026-05-12-three-layer-ip-boundary, DR-2026-07-02-author-approver-separation, DR-2026-06-30-build-complexity-measurement-model]
 topics: [evidence-categories, audit-plane, layer-b-framework-artifact, ip-boundary]
 vocabulary-changes: [evidence.v1]
 consistency-check: "Ratifies evidence.v1 as the canonical Layer B.1 evidence record format — the machine-readable expression of P6 (four evidence categories) and P7 (security gate). Preserves the three-layer boundary of DR-2026-05-12-three-layer-ip-boundary: the canonical schema carries no vendor internals; vendor content extends only through the namespaced extensions object (Layer C). Complements OutcomeRecord (entity catalog #3): evidence.v1 is the per-operation interchange record OutcomeRecords link to, not a new cognitive entity — the entity catalog is unchanged. First spec DR to record the approver field introduced by DR-2026-07-02-author-approver-separation (explicit self-ratification, single-maintainer context). vocabulary-changes lists evidence.v1; the glossary is versioned spec content, so its entry lands with the next spec minor version — a declared deferral (see Consequences), not an omission. No conflicts."

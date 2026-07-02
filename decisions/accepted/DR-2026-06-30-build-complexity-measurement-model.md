@@ -1,28 +1,29 @@
 ---
 entity: DecisionRecord
-status: proposed
+status: ratified
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-02
 owner: Andrés Ramírez Sierra
+approver: Andrés Ramírez Sierra
 sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: []
+related-decs: [DR-2026-07-02-evidence-v1-canonical-schema]
 topics: [evidence-categories, audit-plane, meta-framework, layer-b-framework-artifact]
 vocabulary-changes:
   - "Build-Complexity Profile (new canonical term — a six-axis 0-4 product-difficulty profile, composite as an equal-weighted index /24). Chosen deliberately OFF the bare word 'complexity', which remains reserved for the Model-Triage axis #3 (a model-selection input)."
   - "Build velocity / commit-active hours (proxy) — session-clustered commit time. Distinct from 'velocity' reserved by P5 (Block-level forecast recalibration); the artifact folder is measurement/, not velocity/."
-consistency-check: "Introduces a new Layer B.1 reference artifact (reference/measurement/) for ex-post build measurement — orthogonal to sizing/ (ex-ante slice sizing) and model-triage/ (session routing). Operationalizes P6 (Evidence-by-Construction) and extends P2 (Audit Plane); NOT a new principle (Layer A stays at 12 — INS-005 guard). Resolves two live P12 term collisions by naming (Build-Complexity Profile vs Model-Triage 'complexity'; measurement/ vs P5 'velocity'). related-decs left empty pending ratification, when reciprocal links to the principles/sizing/model-triage records are wired bidirectionally (RFC-PROCESS step 5). No conflicts."
+consistency-check: "Introduces a new Layer B.1 reference artifact (reference/measurement/) for ex-post build measurement — orthogonal to sizing/ (ex-ante slice sizing) and model-triage/ (session routing). Operationalizes P6 (Evidence-by-Construction) and extends P2 (Audit Plane); NOT a new principle (Layer A stays at 12 — INS-005 guard). Resolves two live P12 term collisions by naming (Build-Complexity Profile vs Model-Triage 'complexity'; measurement/ vs P5 'velocity'). At ratification (2026-07-02, founder), related-decs wired bidirectionally to DR-2026-07-02-evidence-v1-canonical-schema (both operationalize P6 on the audit plane; RFC-PROCESS step 5) — no sizing/model-triage DECs exist in the public corpus yet to link. No conflicts."
 ---
 
-# DR-2026-06-30 — Build-Complexity Profile + Build-Velocity Measurement Model (RFC)
+# DR-2026-06-30 — Build-Complexity Profile + Build-Velocity Measurement Model
 
-> RFC (proposed). Originates in andres.co (`DEC-019` / `INS-002`, SL-009), which built
+> **Status: ratified (2026-07-02, founder — `approver` recorded per the P3 rule ratified in spec v1.1.0).** Originates in andres.co (`DEC-019` / `INS-002`, SL-009), which built
 > and dogfooded the model while shipping the `/velocity` proof page and explicitly
-> proposed its elevation into SliceOps. This record proposes adopting it as canon.
+> proposed its elevation into SliceOps. Proposed 2026-06-30 as an RFC; adopted as canon at ratification.
 
-## Decision (proposed)
+## Decision
 
 Adopt the build-velocity + Build-Complexity Profile model as a new **Layer B.1**
 reference artifact at [`reference/measurement/`](../../reference/measurement/) —
