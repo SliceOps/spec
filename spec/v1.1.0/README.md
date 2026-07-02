@@ -1,6 +1,6 @@
-# SliceOps™ Specification v1.0.0
+# SliceOps™ Specification v1.1.0
 
-The canonical SliceOps™ framework specification, version 1.0.0.
+The canonical SliceOps™ framework specification, version 1.1.0.
 
 ## Table of contents
 

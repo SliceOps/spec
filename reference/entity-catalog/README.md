@@ -2,7 +2,7 @@
 
 The canonical SliceOps™ cognitive entity catalog: **13 universal entities**. SliceOps IP, shared across vendors (documentation under CC BY 4.0; final terms pending IP/Legal — see `../../governance/IPR_POLICY.md`).
 
-These 13 entities are **vendor-neutral and runtime-independent** — each carries meaning standalone in markdown. Runtimes may extend the catalog with runtime-specific entities under their own IP; such extensions are NOT part of this canonical catalog (P11 — Platform-Agnostic; see `../../spec/v1.0.0/ip-boundary.md`).
+These 13 entities are **vendor-neutral and runtime-independent** — each carries meaning standalone in markdown. Runtimes may extend the catalog with runtime-specific entities under their own IP; such extensions are NOT part of this canonical catalog (P11 — Platform-Agnostic; see `../../spec/v1.1.0/ip-boundary.md`).
 
 ## The 13 entities
 

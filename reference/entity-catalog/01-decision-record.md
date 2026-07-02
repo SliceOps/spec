@@ -14,6 +14,7 @@ status: proposed | ratified | superseded | deprecated
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
+approver: <ratifying human> | null           # optional; recommended on status: ratified (P3)
 sensitivity: public | internal | restricted | sensitive
 originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance; null only for back-fill
 supersedes: [<DEC id>...]
@@ -29,6 +30,8 @@ consistency-check: |                          # Layer 1 mandatory paragraph
 ## Lifecycle states
 
 `proposed` → `ratified` → (`superseded` | `deprecated`). `superseded` requires a bidirectional edge (new DEC `supersedes`; old DEC `superseded-by`). The supersession graph must be acyclic. DECs are append-only — never deleted, never silently rewritten.
+
+Ratification is a human act (P3 — Human-in-the-Loop Authority): the optional `approver` field records the human who ratified the DEC, and is recommended once `status: ratified`. `approver` MAY equal `owner` in single-maintainer contexts — the point is recording *who* ratified, making self-ratification explicit and auditable instead of implicit.
 
 ## Usage example (generic)
 

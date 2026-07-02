@@ -7,6 +7,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | Folder | Content | Layer |
 |---|---|---|
 | `entity-catalog/` | 13 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**) — each with frontmatter schema, lifecycle, generic examples, and anti-patterns | B.1 |
+| `evidence/` | **evidence.v1** canonical evidence record format — P6/P7 made machine-readable: JSON Schema (draft 2020-12), prose spec (category mapping, vendor extensions, signing/verification), and golden examples. An interchange record format anchored by OutcomeRecord, not a cognitive entity | B.1 |
 | `sessions/` | Session-Type taxonomy (8 canonical Session-Types, Slice-Types level 2, and 2 orthogonal axes) — hierarchical, replaces earlier flat 17-label practice | B.1 |
 | `sizing/` | Bidimensional sizing: **token-band** (throughput, billed-equivalent), **context-band** (peak footprint, model-viability filter), and calibration discipline | B.1 |
 | `model-triage/` | Model Triage artifact: 5 axes (context-band primary filter → sensitivity → complexity → latency → cost), execution-modes, synthesis efficiency, and the consuming/producing distinction | B.1 |
@@ -24,7 +25,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 
 ## Status
 
-Layer B.1 reference core drafted: entity-catalog, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars and adopter onboarding are remaining.
+Layer B.1 reference core drafted: entity-catalog, evidence, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars and adopter onboarding are remaining.
 
 ## Note on "Skill" vs "Capability"
 

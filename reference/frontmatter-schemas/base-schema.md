@@ -8,6 +8,7 @@ status: <lifecycle state>      # valid states are entity-specific (see catalog)
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>     # single accountable human/team/agent (R3)
+approver: <ratifying human>    # OPTIONAL — the human who ratified (P3 gate); recommended on status: ratified
 sensitivity: public | internal | restricted | sensitive   # R11
 ```
 
@@ -19,6 +20,7 @@ sensitivity: public | internal | restricted | sensitive   # R11
 | `status` | R3, R5 | Lifecycle state; transitions are atomic (R5) |
 | `created` / `updated` | R3 | `updated` bumps on every semantic touch (P12 fix-on-touch) |
 | `owner` | R3 | Single accountable party; not an AI handle (P3 — humans accountable) |
+| `approver` | optional | The human who ratified the document (P3 human gate); not an AI handle. Recommended on `status: ratified`. MAY equal `owner` in single-maintainer contexts — the point is recording *who* ratified, making self-ratification explicit and auditable instead of implicit |
 | `sensitivity` | R11 | From the canonical set; adopters may restrict the allowed subset by audience policy |
 
 ## Notes
