@@ -31,7 +31,7 @@ Checks that did not execute are recorded with status `skipped` — enumerated, n
 | `status` | yes | enum `passed\|failed\|inconclusive\|skipped\|stale\|blocked` | Overall outcome. P6 hard gate: merge requires `passed`. |
 | `actor` | yes | `{type: human\|agent\|tool\|system, id}` | Who/what executed the operation — provenance category (agent attribution). |
 | `startedAt` / `finishedAt` | yes | RFC 3339 date-time | Execution window — provenance category (timestamps). |
-| `artifacts[]` | yes | `{kind, id, path?, hash}` | Hash-anchored artifacts the evidence covers (SHA-256 hex recommended; up to SHA-512). What makes the record third-party recomputable. |
+| `artifacts[]` | yes | `{kind, id, path?, hash}` | Hash-anchored artifacts the evidence covers (hex digest: SHA-256 recommended; SHA-384 and SHA-512 accepted). What makes the record third-party recomputable. |
 | `checks[]` | yes | `{id, category, status, severity, message?}` | Categorized gate results. `category` is `functional` or `quality` (P6) or `security` (P7). |
 | `traceRefs[]` | no | `{executionId, traceHash}` | Hash-anchored execution traces — drift tests, eval suites, agentic runs. |
 | `provenance` | conditional | `{sliceId, commitSha, sessionRef?}` | P6 provenance category. Required (with `sliceId` + `commitSha`) on `slice-merge`. `sliceId` uses the canonical pattern `BL-NN[.SEC-NN].SL-NNN[a-z]`. |

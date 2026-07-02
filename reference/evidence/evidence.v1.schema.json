@@ -200,9 +200,9 @@
           "type": "string"
         },
         "hash": {
-          "description": "Lowercase hex digest of the artifact content — SHA-256 (64 chars) through SHA-512 (128 chars). SHA-256 is the recommended default.",
+          "description": "Lowercase hex digest of the artifact content — exactly SHA-256 (64 chars), SHA-384 (96 chars), or SHA-512 (128 chars). SHA-256 is the recommended default.",
           "type": "string",
-          "pattern": "^[a-f0-9]{64,128}$"
+          "pattern": "^([a-f0-9]{64}|[a-f0-9]{96}|[a-f0-9]{128})$"
         }
       }
     },
@@ -243,7 +243,7 @@
         },
         "traceHash": {
           "type": "string",
-          "pattern": "^[a-f0-9]{64,128}$"
+          "pattern": "^([a-f0-9]{64}|[a-f0-9]{96}|[a-f0-9]{128})$"
         }
       }
     },
