@@ -12,7 +12,7 @@ Concrete, copy-pasteable starting points for adopters.
 
 ## Status
 
-Scaffolding in progress. Content pending the Layer B.1 drafting batch.
+Planned — content pending. In the meantime, the fastest hands-on starting point is the SliceOps toolkit quickstart: the "Use it" section of the [toolkit README](https://github.com/SliceOps/toolkit#use-it).
 
 ## Note
 
