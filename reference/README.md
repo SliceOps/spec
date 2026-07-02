@@ -11,6 +11,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `sessions/` | Session-Type taxonomy (8 canonical Session-Types, Slice-Types level 2, and 2 orthogonal axes) — hierarchical, replaces earlier flat 17-label practice | B.1 |
 | `sizing/` | Bidimensional sizing: **token-band** (throughput, billed-equivalent), **context-band** (peak footprint, model-viability filter), and calibration discipline | B.1 |
 | `model-triage/` | Model Triage artifact: 5 axes (context-band primary filter → sensitivity → complexity → latency → cost), execution-modes, synthesis efficiency, and the consuming/producing distinction | B.1 |
+| `measurement/` | Build-Complexity Profile (six axes, 0–4, composite index /24) + build-velocity (commit-active hours, session-clustered) — ex-post product measurement; orthogonal to `sizing/` (ex-ante slice) and `model-triage/` (session routing) | B.1 |
 | `context-router/` | Context Router: selective routing of context-experts (consumption side) — pairs with synthesis efficiency in Model Triage (production side) | B.1 |
 | `development-model/` | Canonical SliceOps development model: decision-driven, style-agnostic, acceptance-first preferred convention | B.1 |
 | `project-structure/` | Prescribed foundations-first project structure (foundations → decisions → architecture → specs → execution → insights) — distinct from this repo's lightweight publishing layout | B.1 |

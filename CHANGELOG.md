@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+
+- Layer B.1 measurement artifact ([`reference/measurement/`](reference/measurement/)): Build-Complexity Profile (six axes, 0–4, composite index /24) + build-velocity (commit-active hours, session-clustered) — ex-post product measurement, orthogonal to `sizing/` (ex-ante) and `model-triage/` (session routing). Ratified in [`decisions/accepted/DR-2026-06-30-build-complexity-measurement-model.md`](decisions/accepted/DR-2026-06-30-build-complexity-measurement-model.md) (proposed 2026-06-30, founder-ratified 2026-07-02).
 
 ## [1.1.0] — 2026-07-02
 
