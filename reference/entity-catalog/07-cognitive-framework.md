@@ -18,7 +18,7 @@ sensitivity: public | internal | restricted | sensitive
 version: <SemVer>
 supersedes: [<CF id>...]
 superseded-by: <CF id> | null
-related-decs: [<DEC id>...]      # DECs that ratified/amended this framework
+related-decs: [<DEC id>...]      # DECs that approved/amended this framework
 topics: [<canonical topic>...]
 ```
 
@@ -33,7 +33,7 @@ CF-canonical-glossary.md
   entity: CognitiveFramework
   status: active
   version: 1.0.0
-  related-decs: [DR-...-consistency-management]
+  related-decs: [DEC-...-consistency-management]
   topics: [vocabulary-discipline, meta-framework]
 Body: purpose · per-item structure · the items · maintenance.
 ```

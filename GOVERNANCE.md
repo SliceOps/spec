@@ -16,13 +16,13 @@ Top-level layers (A/B/C) are stable; sub-numbering (B.1, B.2, C.1, C.2, …) is 
 
 ## Process
 
-- Changes follow `governance/RFC-PROCESS.md`.
+- Changes follow `governance/PROPOSAL-PROCESS.md`.
 - Consistency is managed by a 6-layer mechanism: frontmatter discipline, pre-merge checklist, CI validators, reconciliation, block retrospective, and quarterly curation.
 - Decisions are recorded and traceable (audit plane, P2). Decisions emerge from slices (P1).
 
 ## Pointers
 
 - `governance/MAINTAINERS.md` — authority and how it is exercised
-- `governance/RFC-PROCESS.md` — proposal and ratification flow
+- `governance/PROPOSAL-PROCESS.md` — proposal and approval flow (pending DecisionRecords, `DEC-P-`)
 - `governance/IPR_POLICY.md` — IP and contribution licensing
 - `DISCLOSURE.md` — SliceOps / reference-runtime relationship

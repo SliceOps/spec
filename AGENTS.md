@@ -21,6 +21,12 @@ The repo's own **publishing layout** is lightweight and industry-aligned (preced
 - **Taxonomy**: Layer A (Principles) / Layer B (B.1 Framework Artifacts + B.2 Universal Engineering Patterns) / Layer C (C.1 Vendor Runtimes + C.2 Adopter Stack Patterns). Top-level stable; sub-numbering extensible via DEC.
 - **Cognitive entity #4 is `Capability`** (not "Skill"). "Skill" is reserved for the future vendor-neutral Agent-Skill concept.
 
+## NAMING (canonical — do not improvise names)
+
+Normative source: [`spec/v1.2.0/naming.md`](spec/v1.2.0/naming.md). One entity = one prefix, everywhere:
+`DEC-`/`DEC-P-`/`DEC-D-` (Decision — lifecycle in the prefix) · `INS-` (Insight) · `OUTC-` (Outcome, `kind:` mandatory) · `CAP-` (Capability, components via `kind: standard|runbook|playbook`) · `GOAL-` · `LP-` · `CF-` · `CP-` · `AP-` · `REL-` · `PREF-` · `VAL-` · `SESS-` (Session).
+**Retired (never write)**: `DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`, the term "RFC". DecisionRecord `status:` is `pending|approved|deprecated` and must match the prefix. `decisions/` folders are **flat** — no `rfcs/`/`accepted/`/`superseded/` subfolders. A pre-write hook (`.claude/settings.json` → toolkit naming validator) blocks violations; CI enforces the same gate.
+
 ## Hard rules for spec work (foundations → decisions → execution)
 
 1. **IP boundary (critical)**: this repo is public-bound. NEVER include runtime-internal artifacts — internal decision IDs, slice IDs, internal filesystem paths, vendor product internals, customer data. The spec describes the framework abstractly. Reference runtimes are cited as architectural peers, never copied.

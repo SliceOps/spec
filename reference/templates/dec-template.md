@@ -1,16 +1,20 @@
 <!--
-DecisionRecord template (Layer B.1). Naming: DR-YYYY-MM-DD-<slug>.md
+DecisionRecord template (Layer B.1). Naming: DEC-P-<id>-<slug>.md while pending;
+renamed to DEC-<id>-<slug>.md on approval, DEC-D-<id>-<slug>.md on deprecation
+(id = YYYY-MM-DD in vaults, NNN in counter-based repos — spec/v1.2.0/naming.md).
+The decisions/ folder is FLAT: the prefix carries the state; a state change
+renames the file and rewrites references in the same atomic change (R5).
 Layer 1 consistency fields are mandatory. Replace all <…>.
 -->
 ---
 entity: DecisionRecord
-status: proposed            # proposed → ratified → superseded|deprecated
+status: pending             # pending → approved → deprecated (matches the prefix: DEC-P- / DEC- / DEC-D-)
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
-approver: <ratifying human> # OPTIONAL — the human who ratified (P3 human gate); recommended on
-                            # status: ratified. MAY equal owner in single-maintainer contexts:
-                            # the point is recording WHO ratified, making self-ratification
+approver: <approving human> # OPTIONAL — the human who approved (P3 human gate); recommended on
+                            # status: approved. MAY equal owner in single-maintainer contexts:
+                            # the point is recording WHO approved, making self-approval
                             # explicit and auditable instead of implicit.
 sensitivity: internal       # public | internal | restricted | sensitive
 originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance
@@ -25,7 +29,7 @@ consistency-check: |
   what changes, which conflicts (if any) are resolved and how.
 ---
 
-# DR-YYYY-MM-DD — <title>
+# DEC-P-<id> — <title>
 
 ## TL;DR
 <2–4 sentences: the decision and why it matters.>

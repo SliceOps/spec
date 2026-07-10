@@ -6,13 +6,13 @@ SliceOps™ is authored and maintained by [Andrés Ramírez Sierra](https://andr
 
 - Canonical principle (Layer A) amendments require a ratified DEC with an elevated human-in-the-loop gate (no auto-merge regardless of CI status).
 - Reference pattern (Layer B) changes require a ratified DEC.
-- Routine contributions follow the RFC process and require maintainer approval before merge.
+- Routine contributions follow the proposal process (pending DecisionRecords, `DEC-P-`) and require maintainer approval before merge.
 
 AI agents propose; humans dispose. Critical decisions are never auto-merged.
 
 ## Contributing
 
-See `../CONTRIBUTING.md` and `RFC-PROCESS.md`.
+See `../CONTRIBUTING.md` and `PROPOSAL-PROCESS.md`.
 
 ## Status
 

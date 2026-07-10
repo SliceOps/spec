@@ -22,7 +22,7 @@ topics: [<canonical topic>...]
 
 ## Lifecycle states
 
-`candidate` (≥3 insights clustered, under review) → `canonical` (ratified, drives an R-rule/DEC) → `retired` (superseded by a broader pattern or no longer applicable; retirement is a decision → DEC).
+`candidate` (≥3 insights clustered, under review) → `canonical` (approved, drives an R-rule/DEC) → `retired` (superseded by a broader pattern or no longer applicable; retirement is a decision → DEC).
 
 ## Usage example (generic)
 
@@ -31,7 +31,7 @@ LP-NNN-<pattern-slug>.md
   entity: LearningPattern
   status: canonical
   aggregates-insights: [INS-NNN, INS-NNN, INS-NNN]   # the ≥3 supporting observations
-  triggered-decs: [DR-YYYY-MM-DD-<slug>]
+  triggered-decs: [DEC-YYYY-MM-DD-<slug>]
   topics: [<canonical topic>...]
 Body: pattern statement · evidence (the aggregated insights) · resolution.
 ```

@@ -33,7 +33,7 @@ VAL-002-blameless-culture.md
   status: active
   scope: org
   informs: [P3, postmortems]
-  related-decs: [DR-...-code-of-conduct]
+  related-decs: [DEC-...-code-of-conduct]
 Body: the value · what it means in practice · how it shapes decisions.
 ```
 

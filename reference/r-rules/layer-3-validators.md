@@ -9,7 +9,7 @@ The consistency-management mechanism has six layers. Layers 1–2 are immediate 
 | `validate-cross-references-bidirectional` | If DEC A lists DEC B in `related-decs`, DEC B's frontmatter should reference DEC A | frontmatter parse and graph traversal; flag asymmetric edges |
 | `validate-no-orphan-decs` | A DEC with empty `related-decs` AND empty `topics` must justify isolation in its body | frontmatter check and body grep for a justification marker |
 | `validate-frontmatter-schema` | Layer 1 fields present and well-formed (`conflicts-with`, `related-decs`, `topics`, `vocabulary-changes`, `consistency-check`) | YAML schema validation |
-| `validate-topic-tags` | Every value in `topics:` exists in the canonical topic taxonomy | set membership against `spec/v1.1.0/topics.md` |
+| `validate-topic-tags` | Every value in `topics:` exists in the canonical topic taxonomy | set membership against `spec/v1.2.0/topics.md` |
 
 ## Phase 2.5 — denormalized-drift and unit/cost coherence
 
@@ -39,7 +39,7 @@ A future `detect-semantic-overlap` (embeddings-based near-duplicate DEC detectio
 `validate-counter-atomicity` — enforces the counter-discipline pattern that prevents cross-coordinator numbering collisions (a finite/serialized shared resource per P9). Root cause: parallel agents independently claiming the same `INS-NNN`/`HANDOFF-NNN`/`LP-NNN`.
 
 **Pattern (Layer B.1, vendor-neutral)**:
-- A counter store per numeric prefix (date-based artifacts like `DR-YYYY-MM-DD-slug` need none — date and slug carries uniqueness).
+- A counter store per numeric prefix (date-based artifacts like `DEC-YYYY-MM-DD-slug` need none — date and slug carries uniqueness).
 - Pre-flight: re-scan the **real max** before claiming; never trust a stale "counter currently at" cache (it drifts under parallel work).
 - Claim = increment the counter store **and** create the artifact in the same logical step.
 - Collision rule: the resolved/closed artifact keeps its number; the open/new one renumbers; the human is flagged (P3 HITL).

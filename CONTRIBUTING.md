@@ -46,9 +46,9 @@ Squash-merge keeps `main` history linear; the pull-request description is preser
 
 Contributions follow SliceOps's own discipline (P4 — Slice Atomicity). One atomic, vertical change per pull request, scope declared upfront.
 
-### 2. Changes to the framework go through the RFC process
+### 2. Changes to the framework go through the proposal process
 
-Any change to a principle, reference pattern, or canonical vocabulary is a DecisionRecord. See [`governance/RFC-PROCESS.md`](governance/RFC-PROCESS.md). Decisions are recorded with full audit-plane discipline (P2): context, alternatives considered, rationale, consequences, supersession chain.
+Any change to a principle, reference pattern, or canonical vocabulary is a DecisionRecord. See [`governance/PROPOSAL-PROCESS.md`](governance/PROPOSAL-PROCESS.md). Decisions are recorded with full audit-plane discipline (P2): context, alternatives considered, rationale, consequences, supersession chain.
 
 ### 3. Frontmatter and consistency discipline
 

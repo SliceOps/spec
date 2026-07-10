@@ -10,11 +10,11 @@ The first-class artifact of the audit plane. Every architectural or strategic de
 
 ```yaml
 entity: DecisionRecord
-status: proposed | ratified | superseded | deprecated
+status: pending | approved | deprecated   # legacy proposed/ratified/superseded read-tolerated, prohibited on write
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
-approver: <ratifying human> | null           # optional; recommended on status: ratified (P3)
+approver: <approving human> | null           # optional; recommended on status: approved (P3)
 sensitivity: public | internal | restricted | sensitive
 originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance; null only for back-fill
 supersedes: [<DEC id>...]
@@ -29,18 +29,20 @@ consistency-check: |                          # Layer 1 mandatory paragraph
 
 ## Lifecycle states
 
-`proposed` → `ratified` → (`superseded` | `deprecated`). `superseded` requires a bidirectional edge (new DEC `supersedes`; old DEC `superseded-by`). The supersession graph must be acyclic. DECs are append-only — never deleted, never silently rewritten.
+`pending` → `approved` → `deprecated`. **The state is carried in the filename prefix**: `DEC-P-` (pending) → `DEC-` (approved) → `DEC-D-` (deprecated/superseded). Supersession requires a bidirectional edge (new DEC `supersedes`; old DEC `superseded-by`) and the old record becomes `DEC-D-` with `status: deprecated`. The supersession graph must be acyclic. DECs are append-only — never deleted, never silently rewritten. A state change renames the file and rewrites all references in the same atomic change (R5); decisions folders are **flat** (no `rfcs/`/`accepted/`/`superseded/` subfolders — see `../../spec/v1.2.0/naming.md` §3).
 
-Ratification is a human act (P3 — Human-in-the-Loop Authority): the optional `approver` field records the human who ratified the DEC, and is recommended once `status: ratified`. `approver` MAY equal `owner` in single-maintainer contexts — the point is recording *who* ratified, making self-ratification explicit and auditable instead of implicit.
+Legacy status values (`proposed`/`ratified`/`superseded`) are read-tolerated when parsing archives or non-homologated corpora, and prohibited on write.
+
+Approval is a human act (P3 — Human-in-the-Loop Authority): the optional `approver` field records the human who approved the DEC, and is recommended once `status: approved`. `approver` MAY equal `owner` in single-maintainer contexts — the point is recording *who* approved, making self-approval explicit and auditable instead of implicit.
 
 ## Usage example (generic)
 
 ```
-DR-YYYY-MM-DD-<decision-slug>.md
+DEC-YYYY-MM-DD-<decision-slug>.md      (date-based, vaults · DEC-NNN-<slug>.md counter-based repos)
   entity: DecisionRecord
-  status: ratified
+  status: approved
   originating_slice: BL-XX.SEC-XX.SL-XXX
-  supersedes: [DR-YYYY-MM-DD-<prior-decision-slug>]
+  supersedes: [DEC-D-YYYY-MM-DD-<prior-decision-slug>]
   topics: [<canonical topic>...]
   consistency-check: |
     Supersedes the prior decision. States what is preserved
@@ -63,3 +65,6 @@ Body sections: Context · Decision · Alternatives considered · Consequences ·
 - DEC without "alternatives considered" (false-binary thinking).
 - DEC with no `originating_slice` and no back-fill flag (violates P1).
 - Decisions left in chat/email/meeting notes without a subsequent DEC.
+- The `DR-` prefix or the term "RFC" (retired — see `../../spec/v1.2.0/naming.md`).
+- Lifecycle subfolders (`rfcs/`, `accepted/`, `superseded/`) — the prefix carries the state; folders stay flat.
+- Prefix/status mismatch (e.g., a `DEC-P-` file with `status: approved`).

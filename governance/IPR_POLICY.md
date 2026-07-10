@@ -31,7 +31,7 @@ Contributors additionally certify the **Developer Certificate of Origin 1.1** ([
 
 - **No Contributor License Agreement (CLA) is required for v1.** The Inbound = Outbound license plus DCO sign-off keeps contribution friction low while preserving provenance of every change.
 - **Trademark is not included in the contribution license.** Contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by [`../TRADEMARK.md`](../TRADEMARK.md).
-- Changes to a principle, reference pattern, or canonical vocabulary follow the RFC process. See [`RFC-PROCESS.md`](RFC-PROCESS.md).
+- Changes to a principle, reference pattern, or canonical vocabulary follow the proposal process (pending DecisionRecords, `DEC-P-`). See [`PROPOSAL-PROCESS.md`](PROPOSAL-PROCESS.md).
 
 A formal CLA may still be re-evaluated if the contributor base grows past roughly 50 distinct individuals, a re-licensing need arises, or enterprise adopters require it for due diligence.
 

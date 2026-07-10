@@ -24,15 +24,15 @@ Vendor-neutral, stack-agnostic merge gates. Each is a **hard gate**. The check p
 ### R4 — Decision registry consistency
 - **Statement**: Any inline `DEC <id>` reference must have a corresponding registry entry in the decisions folder. New inline DEC without a registry entry → BLOCK.
 - **Principle**: P2, P1.
-- **Check**: every referenced DEC id exists as an accepted/superseded/deprecated file.
+- **Check**: every referenced DEC id exists as a file in the **flat** `decisions/` folder, under any lifecycle prefix (`DEC-` / `DEC-P-` / `DEC-D-`).
 
 ### R5 — Lifecycle transitions atomic
-- **Statement**: When a DEC moves accepted → superseded/deprecated, the same PR must: move the file, update `status`, set `superseded-by`/`replacement`, ensure the superseding DEC carries `supersedes`, and update any deprecation schedule.
+- **Statement**: When a DEC changes lifecycle state (`DEC-P-` → `DEC-` on approval; `DEC-` → `DEC-D-` on deprecation/supersession), the same PR must: rename the file, update `status` (pending/approved/deprecated), set `superseded-by`/`replacement`, ensure the superseding DEC carries `supersedes`, rewrite all references to the renamed id, and update any deprecation schedule.
 - **Principle**: P2, P1.
-- **Check**: lifecycle move and bidirectional edges present in one atomic change.
+- **Check**: lifecycle rename, reference rewrite, and bidirectional edges present in one atomic change; prefix matches `status`.
 
 ### R6 — No TODO/FIXME/HACK in frozen DECs/specs
-- **Statement**: Ratified DECs and frozen (released) spec versions contain no `TODO|FIXME|HACK|XXX:` markers. Drafts/RFCs may.
+- **Statement**: Approved DECs and frozen (released) spec versions contain no `TODO|FIXME|HACK|XXX:` markers. Pending records (`DEC-P-`) may.
 - **Principle**: P6 (Evidence-by-Construction — frozen means complete).
 - **Allowlist**: `<!-- r6-allowlist: <issue-link> -->`.
 

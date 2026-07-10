@@ -1,26 +1,28 @@
-# Entity Catalog — Layer B.1 (v1.0)
+# Entity Catalog — Layer B.1 (v1.2)
 
-The canonical SliceOps™ cognitive entity catalog: **13 universal entities**. SliceOps IP, shared across vendors (documentation under CC BY 4.0; final terms pending IP/Legal — see `../../governance/IPR_POLICY.md`).
+The canonical SliceOps™ cognitive entity catalog: **13 universal entities**. SliceOps IP, shared across vendors (documentation under CC BY 4.0 — ratified, see `../../governance/IPR_POLICY.md`).
 
 These 13 entities are **vendor-neutral and runtime-independent** — each carries meaning standalone in markdown. Runtimes may extend the catalog with runtime-specific entities under their own IP; such extensions are NOT part of this canonical catalog (P11 — Platform-Agnostic; see `../../spec/v1.1.0/ip-boundary.md`).
 
 ## The 13 entities
 
-| # | Entity | Purpose | Mapped principle |
-|---|---|---|---|
-| 1 | [DecisionRecord](01-decision-record.md) | Architectural/strategic decisions with lifecycle, supersession, rationale | P2, P1 |
-| 2 | [InsightRecord](02-insight-record.md) | Empirical observations from slices; raw material for LearningPatterns | P8 |
-| 3 | [OutcomeRecord](03-outcome-record.md) | Tracked outcomes of slices/blocks — what shipped, what worked | P6 |
-| 4 | [Capability](04-capability.md) | Capabilities accrued by individuals/agents/teams | P8 |
-| 5 | [Goal](05-goal.md) | Forward-looking objectives at various time horizons | universal |
-| 6 | [LearningPattern](06-learning-pattern.md) | Patterns observed ≥3 times across InsightRecords | P8 |
-| 7 | [CognitiveFramework](07-cognitive-framework.md) | Mental models for reasoning and decision-making | universal |
-| 8 | [ContextPack](08-context-pack.md) | Pre-computed bundles loaded at session start (evolves to *routed* per Context Router) | P11 |
-| 9 | [ActivePriority](09-active-priority.md) | Current priorities tracked with status and ownership | universal |
-| 10 | [RelationshipContext](10-relationship-context.md) | Cross-references between entities/people/orgs | universal |
-| 11 | [Preference](11-preference.md) | Stated preferences (style, tooling, approach) | universal |
-| 12 | [Value](12-value.md) | Core values guiding decisions | P3 |
-| 13 | [Session](13-session.md) | The unit of human–AI interaction; the Slice is the DEV Session-Type | P2, P1, P6 |
+Each entity has exactly **one canonical filename prefix**, identical in every store — the normative naming source is [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md).
+
+| # | Entity | Prefix | Purpose | Mapped principle |
+|---|---|---|---|---|
+| 1 | [DecisionRecord](01-decision-record.md) | `DEC-` / `DEC-P-` / `DEC-D-` | Architectural/strategic decisions with lifecycle, supersession, rationale | P2, P1 |
+| 2 | [InsightRecord](02-insight-record.md) | `INS-` | Empirical observations from slices; raw material for LearningPatterns | P8 |
+| 3 | [OutcomeRecord](03-outcome-record.md) | `OUTC-` | Tracked outcomes of slices/blocks — what shipped, what worked | P6 |
+| 4 | [Capability](04-capability.md) | `CAP-` | Capabilities accrued by individuals/agents/teams | P8 |
+| 5 | [Goal](05-goal.md) | `GOAL-` | Forward-looking objectives at various time horizons | universal |
+| 6 | [LearningPattern](06-learning-pattern.md) | `LP-` | Patterns observed ≥3 times across InsightRecords | P8 |
+| 7 | [CognitiveFramework](07-cognitive-framework.md) | `CF-` | Mental models for reasoning and decision-making | universal |
+| 8 | [ContextPack](08-context-pack.md) | `CP-` | Pre-computed bundles loaded at session start (evolves to *routed* per Context Router) | P11 |
+| 9 | [ActivePriority](09-active-priority.md) | `AP-` | Current priorities tracked with status and ownership | universal |
+| 10 | [RelationshipContext](10-relationship-context.md) | `REL-` | Cross-references between entities/people/orgs | universal |
+| 11 | [Preference](11-preference.md) | `PREF-` | Stated preferences (style, tooling, approach) | universal |
+| 12 | [Value](12-value.md) | `VAL-` | Core values guiding decisions | P3 |
+| 13 | [Session](13-session.md) | `SESS-` | The unit of human–AI interaction; the Slice is the DEV Session-Type | P2, P1, P6 |
 
 > **Note on "Skill"**: entity #4 is **Capability** ("capabilities accrued"). The term **"Skill"** is **reserved** for the future *Agent-Skill* concept (a vendor-neutral procedural pack) and must NOT be used for this entity.
 
@@ -41,7 +43,7 @@ The vendor-neutral canonical type key is `entity:` (value = the entity name, e.g
 
 ## Naming
 
-`NN-kebab-name.md` (number = catalog order). The number is for ordering/navigation only; the canonical identifier is the entity name.
+Catalog spec files here: `NN-kebab-name.md` (number = catalog order; ordering/navigation only — the canonical identifier is the entity name). **Artifact instances** follow the canonical prefixes above with a per-store ID scheme (`NNN` counter-based in repos with `.counters`; `YYYY-MM-DD` date-based in vaults) — normative rules and prohibited legacy aliases in [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md).
 
 ## Adopter rules
 

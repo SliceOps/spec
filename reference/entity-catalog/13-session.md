@@ -11,6 +11,7 @@ P1 generalizes accordingly: **decisions emerge from sessions** (not only slices)
 ## Frontmatter schema
 
 ```yaml
+# Canonical filename prefix: SESS- (see ../../spec/v1.2.0/naming.md)
 entity: Session
 session_id: <stable id, e.g. the platform's chat/session identifier>
 session_type: Slice | Artifact | Support | Infra | Meta | Audit | Learning | Orchestrate
@@ -57,7 +58,7 @@ provenance:
 ## Usage example (generic)
 
 ```
-session-2026-XX-XX-<short-slug>.md   (or the platform's id as filename)
+SESS-2026-XX-XX-<short-slug>.md   (canonical prefix SESS-; or SESS-<platform-id>.md)
   entity: Session
   session_type: Meta
   workspace: <project root>
@@ -69,7 +70,7 @@ session-2026-XX-XX-<short-slug>.md   (or the platform's id as filename)
   triage_rationale: large context-band drove model choice
   context_orientation: producing
   lifecycle: active
-  outcome: ratified DR-YYYY-MM-DD-<slug-1>, DR-YYYY-MM-DD-<slug-2>
+  outcome: approved DEC-YYYY-MM-DD-<slug-1>, DEC-YYYY-MM-DD-<slug-2>
 Body: scope · turns summary · decisions produced · evidence references.
 ```
 
