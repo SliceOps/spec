@@ -1,0 +1,16 @@
+{
+  "$comment": "SliceOps naming hook (spec v1.2.0 naming.md §9) — blocks non-homologated names at the point of write. Script + config travel with the repo; source of truth: sliceops-toolkit templates/naming-validator/.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/naming_validator.py\" --hook"
+          }
+        ]
+      }
+    ]
+  }
+}
