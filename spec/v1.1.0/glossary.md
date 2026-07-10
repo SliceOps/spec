@@ -192,7 +192,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### evidence.v1
 - **Definition**: The canonical Layer B.1 evidence record format (JSON Schema draft 2020-12, `$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`). One machine-validatable record per slice merge (mandatory — P6 completeness is machine-enforced) or per gated operation (recommended). Carries the four P6 evidence categories plus the P7 security gate. Records carry no embedded signature — signing is a detached attestation over the artifact bundle containing them. Published in `reference/evidence/`.
-- **Origin**: DR-2026-07-02-evidence-v1-canonical-schema
+- **Origin**: DEC-2026-07-02-evidence-v1-canonical-schema
 - **Cross-references**: P6, P7, Evidence-by-Construction, Layer B.1, OutcomeRecord
 
 ### Entity catalog

@@ -1,21 +1,21 @@
 ---
 entity: DecisionRecord
-status: ratified
+status: approved
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-10
 owner: Andrés Ramírez Sierra
 approver: Andrés Ramírez Sierra
 sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DR-2026-07-02-evidence-v1-canonical-schema]
+related-decs: [DEC-2026-07-02-evidence-v1-canonical-schema]
 topics: [principles, audit-plane, layer-b-framework-artifact]
 vocabulary-changes: []
-consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) the P3 implication making the separation normative — ratified by the founder on 2026-07-02 under the elevated HITL gate P3 itself prescribes, landed in spec/v1.1.0/principles.md with the field-level wording recorded in the Ratification note (spec/v1.0.0 retained unamended). Preserves all existing P3 gates and the DEC lifecycle; DR-2026-07-02-evidence-v1-canonical-schema is the first spec DR to record the `approver` field this RFC introduces (explicit self-ratification). No conflicts."
+consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) the P3 implication making the separation normative — ratified by the founder on 2026-07-02 under the elevated HITL gate P3 itself prescribes, landed in spec/v1.1.0/principles.md with the field-level wording recorded in the Ratification note (spec/v1.0.0 retained unamended). Preserves all existing P3 gates and the DEC lifecycle; DEC-2026-07-02-evidence-v1-canonical-schema is the first spec DR to record the `approver` field this RFC introduces (explicit self-ratification). No conflicts."
 ---
 
-# DR-2026-07-02 — Author ≠ Approver Separation (P3)
+# DEC-2026-07-02 — Author ≠ Approver Separation (P3)
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). **Status: ratified (2026-07-02, founder).** The Layer A portion amended P3 under the elevated human-in-the-loop gate that P3 itself prescribes; the implication landed in `spec/v1.1.0/principles.md`, with `spec/v1.0.0/` retained unamended for audit. See the Ratification note below for the wording adjustment approved at ratification.
 
@@ -29,13 +29,13 @@ A 2026-07 external red-team audit found that the pitch-level claim — *the huma
 
 ## Decision
 
-**Part 1 — recorded (Layer B, effective this slice).** An optional `approver` field is added to the DecisionRecord frontmatter reference schemas: [`reference/templates/dec-template.md`](../../reference/templates/dec-template.md), [`reference/entity-catalog/01-decision-record.md`](../../reference/entity-catalog/01-decision-record.md), and [`reference/frontmatter-schemas/base-schema.md`](../../reference/frontmatter-schemas/base-schema.md). Semantics: `approver` is the human who ratified the DEC (the P3 human gate). Recommended on `status: ratified`. It MAY equal `owner` in single-maintainer contexts — the point is recording WHO ratified, making self-ratification explicit and auditable instead of implicit.
+**Part 1 — recorded (Layer B, effective this slice).** An optional `approver` field is added to the DecisionRecord frontmatter reference schemas: [`reference/templates/dec-template.md`](../reference/templates/dec-template.md), [`reference/entity-catalog/01-decision-record.md`](../reference/entity-catalog/01-decision-record.md), and [`reference/frontmatter-schemas/base-schema.md`](../reference/frontmatter-schemas/base-schema.md). Semantics: `approver` is the human who ratified the DEC (the P3 human gate). Recommended on `status: ratified`. It MAY equal `owner` in single-maintainer contexts — the point is recording WHO ratified, making self-ratification explicit and auditable instead of implicit.
 
 **Part 2 — Layer A implication (proposed here; ratified 2026-07-02, see Ratification note).** Add the following implication to P3 (the current spec version at proposal time was v1.0.0; the amendment landed in `spec/v1.1.0/principles.md`):
 
 > When a project has more than one maintainer, the ratifying human MUST differ from the authoring human. Single-maintainer projects MUST record self-ratification explicitly (`approver` == `owner`) — a disclosed limitation, consistent with DISCLOSURE.md, not a silent one.
 
-Per the amendment rule in the principles document and [`governance/RFC-PROCESS.md`](../../governance/RFC-PROCESS.md), this Layer A change lands only via ratification of this RFC under the elevated HITL gate, with cross-reference impact analysis.
+Per the amendment rule in the principles document and [`governance/RFC-PROCESS.md`](../governance/RFC-PROCESS.md), this Layer A change lands only via ratification of this RFC under the elevated HITL gate, with cross-reference impact analysis.
 
 ## Alternatives considered
 
@@ -58,8 +58,8 @@ The ratified implication landed in `spec/v1.1.0/principles.md` (P3); `spec/v1.0.
 
 ## References
 
-- [`spec/v1.1.0/principles.md`](../../spec/v1.1.0/principles.md) — P3 Human-in-the-Loop Authority (carries the ratified implication; `spec/v1.0.0/` retained unamended).
-- [`reference/frontmatter-schemas/base-schema.md`](../../reference/frontmatter-schemas/base-schema.md), [`reference/entity-catalog/01-decision-record.md`](../../reference/entity-catalog/01-decision-record.md), [`reference/templates/dec-template.md`](../../reference/templates/dec-template.md) — the Layer B schemas carrying the field.
-- [`DISCLOSURE.md`](../../DISCLOSURE.md) — the disclosure posture (concentration of roles disclosed openly, never left implicit) this RFC extends to ratification.
-- [`governance/RFC-PROCESS.md`](../../governance/RFC-PROCESS.md) — the ratification path for this RFC.
+- [`spec/v1.1.0/principles.md`](../spec/v1.1.0/principles.md) — P3 Human-in-the-Loop Authority (carries the ratified implication; `spec/v1.0.0/` retained unamended).
+- [`reference/frontmatter-schemas/base-schema.md`](../reference/frontmatter-schemas/base-schema.md), [`reference/entity-catalog/01-decision-record.md`](../reference/entity-catalog/01-decision-record.md), [`reference/templates/dec-template.md`](../reference/templates/dec-template.md) — the Layer B schemas carrying the field.
+- [`DISCLOSURE.md`](../DISCLOSURE.md) — the disclosure posture (concentration of roles disclosed openly, never left implicit) this RFC extends to ratification.
+- [`governance/RFC-PROCESS.md`](../governance/RFC-PROCESS.md) — the ratification path for this RFC.
 - Origin: 2026-07 external red-team audit (finding: pitch-level author ≠ approver claim unformalized in the open spec).

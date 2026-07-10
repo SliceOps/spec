@@ -1,6 +1,6 @@
 # evidence.v1 — Canonical Evidence Record Format (Layer B.1)
 
-> **P6 Evidence-by-Construction, made machine-readable.** The record every slice merge emits — and every gated operation may emit — so that "auditable" is a property a third party can verify from the record itself, not a claim. Ratified in [`DR-2026-07-02-evidence-v1-canonical-schema`](../../decisions/accepted/DR-2026-07-02-evidence-v1-canonical-schema.md).
+> **P6 Evidence-by-Construction, made machine-readable.** The record every slice merge emits — and every gated operation may emit — so that "auditable" is a property a third party can verify from the record itself, not a claim. Ratified in [`DEC-2026-07-02-evidence-v1-canonical-schema`](../../decisions/DEC-2026-07-02-evidence-v1-canonical-schema.md).
 
 Canonical schema: [`evidence.v1.schema.json`](evidence.v1.schema.json) (JSON Schema draft 2020-12, `$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`). Golden examples: [`examples/`](examples/).
 
@@ -35,7 +35,7 @@ Checks that did not execute are recorded with status `skipped` — enumerated, n
 | `checks[]` | yes | `{id, category, status, severity, message?}` | Categorized gate results. `category` is `functional` or `quality` (P6) or `security` (P7). |
 | `traceRefs[]` | no | `{executionId, traceHash}` | Hash-anchored execution traces — drift tests, eval suites, agentic runs. |
 | `provenance` | conditional | `{sliceId, commitSha, sessionRef?}` | P6 provenance category. Required (with `sliceId` + `commitSha`) on `slice-merge`. `sliceId` uses the canonical pattern `BL-NN[.SEC-NN].SL-NNN[a-z]`. |
-| `decisionRefs[]` | conditional | canonical decision ids | P6 decision category: the DECs / InsightRecords this evidence supports or was produced alongside (`DR-YYYY-MM-DD-slug` or counter ids like `DEC-021`, `INS-014`). Required (min 1) on `slice-merge`. |
+| `decisionRefs[]` | conditional | canonical decision ids | P6 decision category: the DECs / InsightRecords this evidence supports or was produced alongside (`DEC-YYYY-MM-DD-slug` — lifecycle prefixes `DEC-P-`/`DEC-D-` included — or counter ids like `DEC-021`, `INS-014`; legacy `DR-` read-tolerated for archives). Required (min 1) on `slice-merge`. |
 | `redaction` | yes | `{status: applied\|not-needed\|failed, rules[]}` | Secrets-redaction attestation (P7 secrets policy: secrets never enter evidence, logs, or the audit plane). |
 | `extensions` | no | namespaced object | Vendor/adopter extension point — see below. |
 

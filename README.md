@@ -2,7 +2,7 @@
 
 > The open framework and audit plane for AI-first software engineering. Multi-agent teams ship auditable software, not vibe code.
 
-**Status: public.** License ratified 2026-06-15 (`DR-2026-06-15-sliceops-license-ratification`). The canonical principles, governance, and Layer B.1 reference content are in place. Contributions are welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+**Status: public.** License ratified 2026-06-15 (`DEC-2026-06-15-sliceops-license-ratification`). The canonical principles, governance, and Layer B.1 reference content are in place. Contributions are welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## What SliceOps is
 

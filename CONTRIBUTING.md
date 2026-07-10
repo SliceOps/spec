@@ -1,6 +1,6 @@
 # Contributing to SliceOps™
 
-> **Status: contribution terms ratified 2026-06-15** (`DR-2026-06-15-sliceops-license-ratification`). This repository is public and open to contributions; every pull request requires maintainer approval before merge (P3 — Human-in-the-Loop Authority).
+> **Status: contribution terms ratified 2026-06-15** (`DEC-2026-06-15-sliceops-license-ratification`). This repository is public and open to contributions; every pull request requires maintainer approval before merge (P3 — Human-in-the-Loop Authority).
 
 Thank you for your interest in contributing to SliceOps™. This page is the **practical guide** to contributing. The binding legal terms — license scope, trademark separation, and the contribution license — live in [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md).
 

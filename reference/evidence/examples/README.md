@@ -10,4 +10,4 @@ Golden fixtures for [`../evidence.v1.schema.json`](../evidence.v1.schema.json). 
 | `invalid-bad-provenance-commit.evidence.v1.example.json` | invalid | `provenance.commitSha` must be a 7–40 char lowercase hex SHA; `"not-a-valid-sha"` is rejected. |
 | `invalid-unknown-top-level-field.evidence.v1.example.json` | invalid | `additionalProperties: false` at the top level: non-canonical fields (`rawPayload`) are rejected — vendor/adopter data belongs under a namespaced key in `extensions`. |
 
-All identifiers use the canonical patterns: slice IDs `BL-NN[.SEC-NN].SL-NNN[a-z]`, decision refs `DR-YYYY-MM-DD-slug` or counter ids (`DEC-021`, `INS-014`). Hashes are deliberately fake repeated-digit placeholders.
+All identifiers use the canonical patterns: slice IDs `BL-NN[.SEC-NN].SL-NNN[a-z]`, decision refs `DEC-YYYY-MM-DD-slug` (lifecycle prefixes included) or counter ids (`DEC-021`, `INS-014`). Hashes are deliberately fake repeated-digit placeholders.

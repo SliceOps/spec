@@ -13,7 +13,7 @@ The canonical SliceOps™ framework specification, version 1.1.0.
 
 Core spec documents present. The 13-entity catalog, 27 knowledge categories, R1–R14 templates, frontmatter schemas, file templates, agent-skill concept, B.2 patterns, and Layer 3 validator specs are materialized in `../../reference/`. Sizing (token-band plus context-band), Model Triage, Context Router, and the development-model characterization are documented alongside.
 
-Licensing is ratified (`DR-2026-06-15-sliceops-license-ratification`): the spec text is licensed **CC BY 4.0** (`../../LICENSE`) and code/templates **MIT** (`../../LICENSE-CODE`). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`. The repository is public.
+Licensing is ratified (`DEC-2026-06-15-sliceops-license-ratification`): the spec text is licensed **CC BY 4.0** (`../../LICENSE`) and code/templates **MIT** (`../../LICENSE-CODE`). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`. The repository is public.
 
 ## Versioning
 

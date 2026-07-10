@@ -4,18 +4,21 @@ SliceOps uses SliceOps to develop SliceOps. Decisions about the framework are re
 
 This is **process** dogfooding (the framework governs its own evolution), not **schema** dogfooding (this folder layout is not required to match an adopter's codebase layout).
 
-## Lifecycle (ADR-style)
+## Lifecycle — in the prefix, folder flat
 
-| Folder | Meaning |
-|---|---|
-| `accepted/` | Active, ratified decisions |
-| `superseded/` | Replaced by a later decision (`superseded-by:` in frontmatter) |
-| `deprecated/` | No longer applies (`replacement:` in frontmatter) |
-| `rfcs/` | Proposed, under deliberation |
+This folder is **flat** (no lifecycle subfolders): the filename prefix carries the state, per [`spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) §3.
+
+| Prefix | State | `status:` |
+|---|---|---|
+| `DEC-` | approved (in force) | `approved` |
+| `DEC-P-` | pending, under deliberation (the proposal — see `../governance/PROPOSAL-PROCESS.md`) | `pending` |
+| `DEC-D-` | deprecated / superseded (`superseded-by:` set when superseded) | `deprecated` |
+
+A state change **renames the file** (`DEC-P-…` → `DEC-…` → `DEC-D-…`) and rewrites all references in the same atomic change (R5). The optional `approver:` field records the approving human (P3).
 
 ## Naming
 
-`DR-YYYY-MM-DD-slug.md`
+`DEC-YYYY-MM-DD-slug.md` (date-based ID scheme — this corpus has no counter; date + slug carries uniqueness).
 
 ## Frontmatter discipline (Layer 1)
 
@@ -27,4 +30,4 @@ Decisions about specific vendor runtimes (those live in vendor repos). Adopter-i
 
 ## Status
 
-Active. This folder holds the framework's **published** DecisionRecords — ratified decisions in `accepted/` and proposals under deliberation in `rfcs/`. The maintainers' fuller working corpus (drafts, internal analyses, runtime-adjacent decisions) remains private; the DECs published here are the go-public subset, sanitized per the IP boundary (see "What does NOT live here" above).
+Active. This folder holds the framework's **published** DecisionRecords — approved decisions (`DEC-`) and proposals under deliberation (`DEC-P-`), flat. The maintainers' fuller working corpus (drafts, internal analyses, runtime-adjacent decisions) remains private; the DECs published here are the go-public subset, sanitized per the IP boundary (see "What does NOT live here" above).
