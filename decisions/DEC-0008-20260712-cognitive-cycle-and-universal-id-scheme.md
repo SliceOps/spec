@@ -57,19 +57,20 @@ instantiation.
 
 ## Context
 
-The v1.2.0 naming homologation fixed *prefixes*; using it surfaced deeper ontology debt,
-confirmed by a full-ecosystem census (2026-07-12):
+The naming homologation fixed *prefixes*; using it surfaced deeper ontology debt,
+confirmed by a full census of the maintainers' corpora (2026-07-12 — figures live in the
+internal census record, not here: living documents carry no volatile numbers):
 
-- **Goal: 0 instances across all 10 corpora** — every `goals/` folder empty — while
-  ActivePriority overflowed with 13 files of which only 3 are actual priorities (the rest:
-  handoffs, briefs, checklists, drafts). The pyramid was inverted: the urgent was tracked
-  without the important that would justify it. "Priority over *what*?" had no answer.
+- **Goal folders were empty across the maintainers' corpora** while ActivePriority
+  overflowed — and most of what it held were not priorities at all (handoffs, briefs,
+  checklists, drafts). The pyramid was inverted: the urgent was tracked without the
+  important that would justify it. "Priority over *what*?" had no answer.
 - **ActivePriority carries a state in its name** — an "ActivePriority" with
   `status: resolved` is a self-contradiction, the same defect the v1.2.0 lifecycle-in-prefix
   work removed from decisions (state lived in `accepted/` folders). Same principle, same fix.
-- **Two ID schemes** (counter-based repos, date-based vaults) confused the owner of the
-  standard himself — a standard that needs a footnote to explain its own filenames fails
-  its purpose.
+- **Two ID schemes** (counter-based repositories, date-based vaults) confused the owner
+  of the standard himself — a standard that needs a footnote to explain its own filenames
+  fails its purpose.
 - **LearningPattern** is accurate but opaque; the framework must be understandable in
   plain words. What the entity holds are **conclusions**.
 - The dotted Slice ID (`BL-XX.SEC-XX.SL-XXX`) is fragile in exactly the places it lives:
@@ -238,6 +239,13 @@ SLC0034                   simple form — SEC/BL optional (matches existing prac
    every artifact, and headings prefer plain words — the decision template's "TL;DR"
    heading (internet shorthand for *Too Long; Didn't Read*) becomes **"Summary"**. A
    standard sold on clarity does not gate its own documents behind jargon.
+5. **No volatile numbers in living documents**: operational counts change with time and
+   rot where they are written. A number may appear in a living document only if it is
+   (a) a **normative constant** (minimum four digits; three insights to promote), or
+   (b) a **machine-verified literal** reconciled against its source by a count-coherence
+   gate (the entity count is the model). Everything else is stated qualitatively, with
+   the figures living in dated internal records. Dynamic references never live in static
+   content.
 
 ### DEC-0008.8 — Application (on approval): re-issue the unpublished cut as v2.0.0
 
@@ -312,8 +320,9 @@ and the slice coordinate are one interdependent design.
   collision risk that motivated date-based vault IDs is re-covered by mandatory counter
   discipline + the counter-atomicity gate. Uniformity is worth the discipline cost.
 - **C — Fixed-width counters (exactly 4 digits)**: rejected — a ceiling breaks at scale
-  (one corpus reached ~800 decisions in four months). Unpadded free-width: rejected —
-  breaks lexicographic listing immediately. **Minimum-width, unbounded** takes both wins.
+  (high-velocity multi-agent corpora consume ids far faster than human-era estimates).
+  Unpadded free-width: rejected — breaks lexicographic listing immediately.
+  **Minimum-width, unbounded** takes both wins.
 - **D — Keep the dotted slice ID, or hyphenate the composite**: rejected — dots are
   fragile in git refs and `.md` names; inner hyphens would collide with the universal
   grammar's field separator. Letter-anchored components are self-separating and regex-clean.
@@ -342,8 +351,10 @@ rule now fixed as DEC-0008.9 (clauses cite as `DEC-0008.n`, never as bare "Decis
 a number); (b) added the handoff standardization — split out as `DEC-0009` by that same
 rule; (c) raised the corpus-index requirement — first drafted as a ContextPack kind,
 corrected on the owner's objection (an entry point you must search for defeats itself),
-and split out as `DEC-0010`. All applied before publication; the corrections stay visible
-as the audit trail. Per rule 3 of DEC-0008.5 the file was renamed `DEC-P-0008-…` →
+and split out as `DEC-0010`. In the same window the owner added convention 5 (no volatile numbers in living
+documents), and this record's own Context was brought into compliance — census figures
+moved to the internal record. All applied before publication; the corrections stay
+visible as the audit trail. Per rule 3 of DEC-0008.5 the file was renamed `DEC-P-0008-…` →
 `DEC-0008-…` (number and date stable, prefix carries the new state) and all references
 were rewritten atomically (rule R5 — atomic lifecycle transitions). Execution of
 DEC-0008.8 (the v2.0.0 re-issue and single migration) begins immediately.

@@ -38,10 +38,10 @@ definition of ContextPack. The catalog stays at 13.
 
 ## Context
 
-In a single maintainer corpus, handoff volume passed twenty-five records, yet handoffs had no canonical
-definition — the same vacuum that turned the former ActivePriority into a catch-all
-(DEC-0008 context). Unstandardized coordination artifacts are where naming discipline
-goes to die.
+Handoffs were among the highest-volume coordination artifacts in the maintainers'
+corpora, yet they had no canonical definition — the same vacuum that turned the former
+ActivePriority into a catch-all (DEC-0008 context). Unstandardized coordination
+artifacts are where naming discipline goes to die.
 
 ## Decision
 
