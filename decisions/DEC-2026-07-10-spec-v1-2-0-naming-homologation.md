@@ -10,7 +10,7 @@ originating_slice: null   # back-fill: ecosystem-level naming ratification sessi
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-05-12-three-layer-ip-boundary, DEC-2026-05-14-spec-repo-publishing-layout]
+related-decs: [DEC-2026-05-12-three-layer-ip-boundary, DEC-2026-05-14-spec-repo-publishing-layout, DEC-P-0008-20260712-cognitive-cycle-and-universal-id-scheme]
 topics: [vocabulary-discipline, entity-catalog, corpus-integrity, audit-plane]
 vocabulary-changes: ["DEC-P-", "DEC-D-", "OUTC-", "SESS-", "Capability components", "Naming (canonical prefixes)", "RFC (retired term)"]
 consistency-check: |
