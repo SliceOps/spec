@@ -11,14 +11,23 @@ A curated, pre-assembled bundle of the context an agent needs to start a slice w
 ```yaml
 entity: ContextPack
 status: active | stale | archived
+kind: pack | brief | handoff           # DEC-0009 — all three CONTAIN context
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: public | internal | restricted | sensitive
 scope: <topic | block | role | onboarding>
 includes: [<entity id | path>...]      # what the pack bundles
-regenerated-from: <source descriptor>   # how to rebuild deterministically
+regenerated-from: <source descriptor>   # how to rebuild deterministically (kind: pack)
+# handoff-specific (DEC-0009):
+from_session: <SESS id or session reference>
+to: <owner | domain | SESS id> | null
+reason: context-exhausted | spinoff     # the two birth conditions of a handoff
 ```
+
+**Kinds** ([`DEC-0009`](../../decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md)): **pack** — routed or pre-computed corpus context loaded at session start; **brief** — context prepared to *start* a new topic or session; **handoff** — context prepared to *continue or spin off* in-flight work (canonical body: state of work · done · pending · open questions · next steps · counter and resource state), closing the session-provenance loop `SESS-A → CP (handoff) → SESS-B`.
+
+Packs **contain** context; **locating** it is the corpus index's job — `_index.md`, reserved-name infrastructure, not an entity ([`DEC-0010`](../../decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)).
 
 ## Lifecycle states
 

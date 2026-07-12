@@ -35,6 +35,21 @@ Legacy status values (`proposed`/`ratified`/`superseded`) are read-tolerated whe
 
 Approval is a human act (P3 — Human-in-the-Loop Authority): the optional `approver` field records the human who approved the DEC, and is recommended once `status: approved`. `approver` MAY equal `owner` in single-maintainer contexts — the point is recording *who* approved, making self-approval explicit and auditable instead of implicit.
 
+## Kind axis and goal edges (clause DEC-0008.3)
+
+```yaml
+kind: constitutive | strategic | tactical
+defines-goal: [<GOAL id>…]   # REQUIRED when strategic — the decision creates/kills/reframes goals
+serves-goal: <GOAL id>       # REQUIRED when tactical — the decision selects means within a goal
+serves-value: <VAL id>       # the recursion's base case: strategic decisions with no goal above
+```
+
+**Constitutive** decisions change the rules of the system itself (principles, naming, licensing, governance) and REQUIRE `approver:` under the elevated human-in-the-loop gate. **Strategic** decisions change the goal tree; **tactical** decisions move within it. Operational test: *does this decision change the goal tree, or move inside it?* The boundary is fractal — a record may carry both edges (tactical toward its parent goal, strategic toward the sub-goals it creates); strategic at level n is tactical at level n+1. `kind:` is mandatory for records created on or after 2026-07-13; earlier records are back-filled fix-on-touch.
+
+## Clause identifiers (clause DEC-0008.9)
+
+Resolutions inside a record are **clauses**, cited `DEC-NNNN.n` — never "Decision n" bare. Clause identifiers are valid supersession targets (`supersedes: [DEC-0008.3]`). The independence test decides clause versus standalone record: *could you reject this part and approve the rest without breaking the design?* No → clause; yes → its own record.
+
 ## Usage example (generic)
 
 ```
