@@ -105,7 +105,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Capability components (standard / runbook / playbook)
 - **Definition**: The three component kinds that describe a Capability, carried in `kind:` frontmatter — **standard** = how the result must look · **runbook** = how it is executed step by step · **playbook** = what to do depending on the situation. Components are **siblings of each other, not nested**, and they are NOT catalog entities: a small capability is one `CAP-` file with sections; a large one is a `CAP-` mother file plus component files with `capability: <mother-slug>` and `kind:`.
-- **Origin**: Naming homologation (v1.2.0) — Capability model refinement
+- **Origin**: Naming homologation — Capability model refinement
 - **Aliases prohibited**: "runbook entity" / "standard entity" / "playbook entity" (they are components of Capability, not entities); `RUN-` as a prefix
 - **Cross-references**: Capability, Naming (canonical prefixes), Cognitive entity
 

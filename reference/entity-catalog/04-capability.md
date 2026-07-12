@@ -8,7 +8,7 @@
 
 Tracks what an individual, agent, or team *can now do that it could not before* — capability accrued through slices, retrospectives, and learning. **The Capability is the capacity itself, the WHAT** (e.g., "we know how to parse financial PDFs into structured databases"). Distinct from a Goal (an objective) and from a LearningPattern (a recurring framework-level pattern): a Capability is an accrued competence held by an actor. Supports P8 by making the growth of the system's actors a first-class, auditable artifact.
 
-## The component model (since v1.2.0)
+## The component model
 
 A capability is *described* by up to three **component kinds** — siblings of each other, never nested, and NOT separate catalog entities:
 

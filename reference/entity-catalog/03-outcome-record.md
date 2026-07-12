@@ -11,7 +11,7 @@ The factual record of what a slice or Block actually produced and how it perform
 ```yaml
 entity: OutcomeRecord
 status: open | closed
-kind: retrospective | postmortem | result   # mandatory since v1.2.0 — what kind of outcome this records
+kind: retrospective | postmortem | result   # mandatory — what kind of outcome this records
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: <accountable party>
@@ -28,7 +28,7 @@ related-decs: [<DEC id>...]
 
 `open` (slice/block in flight) → `closed` (merged and evidence complete). A `closed` OutcomeRecord is immutable; corrections append a new record citing the original.
 
-## `kind:` (since v1.2.0)
+## `kind:`
 
 | `kind` | Records |
 |---|---|
@@ -64,5 +64,5 @@ Body: shipped scope · forecast vs actual narrative · evidence links · carry-f
 - "We'll record the outcome later" — outcome is a per-slice/Block byproduct, not deferred.
 - Editing a closed OutcomeRecord instead of appending a correction.
 - Forecast/actual omitted (breaks velocity recalibration input).
-- Omitting `kind:` (retrospective/postmortem/result — mandatory since v1.2.0).
+- Omitting `kind:` (retrospective/postmortem/result — mandatory).
 - The `OC-` or `BR-` prefixes (retired — see `../../spec/v2.0.0/naming.md`).

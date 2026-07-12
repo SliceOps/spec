@@ -2,7 +2,7 @@
 
 How a proposed change to the SliceOps™ framework becomes canonical.
 
-> Formerly the "RFC process". The term **"RFC" is retired** from the SliceOps vocabulary (v1.2.0 naming homologation): a proposal IS a **pending DecisionRecord** (`DEC-P-`, `status: pending`) — the lifecycle lives in the prefix, not in a folder or a separate artifact type. See `../spec/v2.0.0/naming.md`.
+> Formerly the "RFC process". The term **"RFC" is retired** from the SliceOps vocabulary (naming homologation, re-issued as v2.0.0): a proposal IS a **pending DecisionRecord** (`DEC-P-`, `status: pending`) — the lifecycle lives in the prefix, not in a folder or a separate artifact type. See `../spec/v2.0.0/naming.md`.
 
 ## Flow
 

@@ -5,7 +5,7 @@ How the SliceOps™ framework evolves and who stewards it.
 | Document | Purpose |
 |---|---|
 | `ROADMAP.md` | Forward direction of the framework (revised quarterly) |
-| `PROPOSAL-PROCESS.md` | How a pending DecisionRecord (`DEC-P-`) becomes an approved DEC (formerly "RFC process" — term retired in v1.2.0) |
+| `PROPOSAL-PROCESS.md` | How a pending DecisionRecord (`DEC-P-`) becomes an approved DEC (formerly "RFC process" — term retired by the naming homologation) |
 | `MAINTAINERS.md` | Who has decision authority and how it is exercised (HITL — P3) |
 | `IPR_POLICY.md` | Intellectual-property and contribution licensing terms |
 
