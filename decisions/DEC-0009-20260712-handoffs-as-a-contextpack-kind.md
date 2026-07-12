@@ -11,7 +11,7 @@ originating_slice: null   # back-fill: ratification conversation of DEC-0008, 20
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure]
 topics: [entity-catalog, vocabulary-discipline, session-management]
 vocabulary-changes: ["pack (ContextPack kind)", "brief (ContextPack kind)", "handoff (ContextPack kind)"]
 consistency-check: |

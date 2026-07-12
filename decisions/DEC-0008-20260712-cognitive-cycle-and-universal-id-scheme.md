@@ -36,7 +36,7 @@ consistency-check: |
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 — Audit Plane Discipline, P1 — Decision Integrity by Construction). This
 > record is **born under the naming it proposes** (`DEC-P-NNNN-YYYYMMDD-slug`, number from
 > the counter pre-flight of principle P9 — Shared-Resource Pre-flight: 7 prior decisions → 0008). If approved, it is renamed
-> `DEC-0008-20260712-…` — same number, same date, new prefix (DEC-0008.5.3).
+> `DEC-0008-20260712-…` — same number, same date, new prefix (rule 3 of DEC-0008.5).
 
 ## Summary
 
@@ -336,16 +336,17 @@ old format (alias map covers it).
 
 ## Ratification note
 
-**Approved by the owner on 2026-07-12.** At approval the owner added the handoff
-standardization, incorporated as DEC-0008.9 in the same act. In the same ratification conversation the
-owner (a) required internal section references written out in full ("Decision N", never
-"DN"), and (b) raised the corpus-index requirement — first drafted as a ContextPack kind,
-then **corrected on the owner's objection** (an entry point you must search for defeats
-itself) into Decision 10: `_index.md` as reserved-name corpus infrastructure. All applied
-before publication; the correction is kept visible here as the audit trail. Per its own DEC-0008.5.3 the file was renamed
-`DEC-P-0008-…` → `DEC-0008-…` (number and date stable, prefix carries the new state) and
-all references were rewritten atomically (rule R5 — atomic lifecycle transitions).
-Execution of DEC-0008.8 (the v2.0.0 re-issue and single migration) begins immediately.
+**Approved by the owner on 2026-07-12.** In the same ratification conversation the owner:
+(a) required internal references written out in full — which surfaced the clause-notation
+rule now fixed as DEC-0008.9 (clauses cite as `DEC-0008.n`, never as bare "Decision" plus
+a number); (b) added the handoff standardization — split out as `DEC-0009` by that same
+rule; (c) raised the corpus-index requirement — first drafted as a ContextPack kind,
+corrected on the owner's objection (an entry point you must search for defeats itself),
+and split out as `DEC-0010`. All applied before publication; the corrections stay visible
+as the audit trail. Per rule 3 of DEC-0008.5 the file was renamed `DEC-P-0008-…` →
+`DEC-0008-…` (number and date stable, prefix carries the new state) and all references
+were rewritten atomically (rule R5 — atomic lifecycle transitions). Execution of
+DEC-0008.8 (the v2.0.0 re-issue and single migration) begins immediately.
 
 ## References
 
