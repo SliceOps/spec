@@ -2,10 +2,10 @@
 
 The authoritative SliceOps™ framework specification, versioned with SemVer.
 
-- `v1.2.0/` — **current version** — naming homologation: canonical prefix per entity (`naming.md`), DEC lifecycle in the prefix (`DEC-`/`DEC-P-`/`DEC-D-`), flat `decisions/` folders, "RFC" term retired, Capability component model, OutcomeRecord `kind:`
+- `v2.0.0/` — **current version** — the cognition cycle + the universal identifier grammar (`PREFIX-NNNN-YYYYMMDD-slug`), Frame/Conclusion/Priority renames, decision kind axis + clause identifiers, mandatory pyramid, `SLC` slice coordinate, handoffs as ContextPack kind, reserved-name `_index.md` (absorbs the never-published v1.2.0 naming homologation)
 - `v1.1.0/` — evidence.v1 canonical record format, P3 author ≠ approver (`approver` field) (frozen — retained for audit)
 - `v1.0.0/` — first published spec version (frozen — retained for audit)
-- `latest` → symlink to the current version (`v1.2.0`)
+- `latest` → symlink to the current version (`v2.0.0`)
 
 ## What lives here
 
@@ -13,7 +13,7 @@ The authoritative SliceOps™ framework specification, versioned with SemVer.
 |---|---|
 | `principles.md` | The 12 canonical principles (Layer A) — non-negotiable framework core |
 | `glossary.md` | Canonical vocabulary (P12 substrate) |
-| `naming.md` | Canonical naming — one entity = one prefix; ID schemes; alias tables (since v1.2.0) |
+| `naming.md` | Canonical naming — one entity = one prefix = one grammar; alias tables (normative since v2.0.0) |
 | `topics.md` | Canonical topic taxonomy |
 | `ip-boundary.md` | Layer A/B/C three-layer IP boundary and sub-numbering taxonomy |
 | `framework-not-methodology.md` | Why SliceOps is a framework, not a "methodology" |

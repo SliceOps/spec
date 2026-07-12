@@ -23,15 +23,19 @@ sensitivity: public | internal | restricted | sensitive   # R11
 | `approver` | optional | The human who approved the document (P3 human gate); not an AI handle. Recommended on `status: approved`. MAY equal `owner` in single-maintainer contexts — the point is recording *who* approved, making self-approval explicit and auditable instead of implicit |
 | `sensitivity` | R11 | From the canonical set; adopters may restrict the allowed subset by audience policy |
 
-## Canonical enums homologated in v1.2.0
+## Canonical enums and required edges (v2.0.0)
 
-Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). The per-entity enums the naming validator enforces on write:
+Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). What the naming validator enforces on write:
 
-| Entity | Field | Canonical values | Read tolerance (write-prohibited) |
+| Entity | Field | Canonical values / rule | Read tolerance (write-prohibited) |
 |---|---|---|---|
 | DecisionRecord | `status` | `pending` / `approved` / `deprecated` (must match the `DEC-P-`/`DEC-`/`DEC-D-` prefix) | `proposed`→pending · `ratified`/`active`/`accepted`→approved · `superseded`→deprecated |
+| DecisionRecord | `kind` | `constitutive` / `strategic` / `tactical` — strategic requires `defines-goal:`, tactical requires `serves-goal:`, constitutive requires `approver:` (mandatory for records created ≥ 2026-07-13) | earlier records back-filled fix-on-touch |
 | OutcomeRecord | `kind` | `retrospective` / `postmortem` / `result` (mandatory) | — |
 | Capability (component files) | `kind` + `capability` | `standard` / `runbook` / `playbook`, with `capability: <mother-slug>` | — |
+| Goal | `decided-by` | REQUIRED — the decision that created the goal | — |
+| Priority | `serves-goal` + `rank` | REQUIRED — goal edge + integer rank unique within (owner, horizon) | `priority: high\|medium\|low` retired |
+| ContextPack | `kind` | `pack` / `brief` / `handoff` (handoff: `reason: context-exhausted\|spinoff`) | — |
 
 ## Notes
 

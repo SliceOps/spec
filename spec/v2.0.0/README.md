@@ -1,8 +1,8 @@
-# SliceOps™ Specification v1.2.0
+# SliceOps™ Specification v2.0.0
 
-The canonical SliceOps™ framework specification, version 1.2.0.
+The canonical SliceOps™ framework specification, version 2.0.0.
 
-**What's new in v1.2.0 — naming homologation** (governed by `DEC-2026-07-10-spec-v1-2-0-naming-homologation`): canonical prefix per entity ([`naming.md`](naming.md)), DecisionRecord lifecycle carried in the prefix (`DEC-` / `DEC-P-` / `DEC-D-`) with flat `decisions/` folders and `status: pending|approved|deprecated`, the term "RFC" retired, Capability component model (`standard`/`runbook`/`playbook` via `kind:`), OutcomeRecord `kind:`, and the migration alias tables. Backward-compatible addition (SemVer minor): entity names and catalog semantics are unchanged; pre-v1.2.0 names are read-tolerated and mapped by the alias tables. The v1.1.0 additions (evidence.v1, `approver` field, measurement artifact) are carried forward unchanged.
+**What's new in v2.0.0 — the cognition cycle and the universal identifier scheme** (governed by `DEC-0008`, with `DEC-0009` and `DEC-0010`; absorbs the naming homologation of `DEC-2026-07-10`, whose v1.2.0 cut was never published): the catalog presented on the cognition cycle; three entities renamed to plain words (**Frame**, **Conclusion**, **Priority**); the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` for every artifact in every store; the decision kind axis with goal edges and clause identifiers `DEC-NNNN.n`; the mandatory pyramid (`Goal.decided-by`, `Priority.serves-goal` + `rank`); the slice coordinate `SLC[n]SEC[n]BL[n]`; handoffs as a ContextPack kind; and the reserved-name corpus index `_index.md`. **Major version**: catalog renames, new required fields and the grammar are breaking changes — pre-v2 names are read-tolerated and mapped by the alias tables in [`naming.md`](naming.md) §8. The v1.1.0 additions (evidence.v1, `approver` field, measurement artifact) are carried forward unchanged.
 
 ## Table of contents
 
@@ -21,4 +21,4 @@ Licensing is ratified (`DEC-2026-06-15-sliceops-license-ratification`): the spec
 
 ## Versioning
 
-SemVer. Breaking changes to the framework contract lead to a new major. Backward-compatible additions lead to a minor. Clarifications/typos lead to a patch. A new `vX.Y.Z/` directory is created for any major/minor; prior versions (`../v1.1.0/`, `../v1.0.0/`) are retained frozen for audit. `latest →` symlink points at the current version.
+SemVer. Breaking changes to the framework contract lead to a new major. Backward-compatible additions lead to a minor. Clarifications/typos lead to a patch. A new `vX.Y.Z/` directory is created for any major/minor; prior versions (`../v1.1.0/`, `../v1.0.0/`) are retained frozen for audit; v1.2.0 was a working cut that never published (re-issued as this version). `latest →` symlink points at the current version.
