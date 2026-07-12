@@ -1,125 +1,124 @@
 # SliceOps™ Canonical Naming — v2.0.0
 
-The canonical naming standard for SliceOps artifacts: **one concept = one name = one prefix, across every layer**. This document is the **single normative source** for artifact naming; every other document (reference patterns, adopter corpora, vendor docs) points here and never copies the tables (copies drift — P12 Context Discipline).
+The canonical naming standard for SliceOps artifacts: **one concept = one name = one prefix = one grammar, across every layer and every store**. This document is the **single normative source** for artifact naming; every other document points here and never copies the tables (copies drift — principle P12, Context Discipline).
 
-Introduced in v1.2.0 by `DEC-2026-07-10-spec-v1-2-0-naming-homologation` (see `../../decisions/`).
+Governed by [`DEC-0008`](../../decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (the cognition cycle and the universal identifier scheme), with [`DEC-0009`](../../decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) (handoffs) and [`DEC-0010`](../../decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md) (the corpus index). The complete catalog table with definitions is clause DEC-0008.2.1 — the entity catalog (`../../reference/entity-catalog/`) is rewritten from it.
 
 ---
 
 ## 1. Canonical prefix per entity
 
-Every Layer B.1 cognitive entity has exactly **one** canonical filename prefix. The prefix and the entity name are identical in every store — engineering repos, knowledge vaults, runtime exports.
+Every catalog entity has exactly **one** canonical filename prefix, identical in every store — engineering repositories, knowledge vaults, runtime exports.
 
-| # | Entity (Layer B.1) | Prefix | Retired aliases (prohibited) |
+| # | Entity | Prefix | Retired aliases (prohibited) |
 |---|---|---|---|
-| 1 | DecisionRecord | `DEC-` · `DEC-P-` · `DEC-D-` (lifecycle, §3) | `DR-`, the term "RFC" |
-| 2 | InsightRecord | `INS-` | `IN-`, `IR-` |
-| 3 | OutcomeRecord | `OUTC-` (`kind:` — §6) | `OC-`, `BR-` |
-| 4 | Capability | `CAP-` (components — §5) | `SKILL-`, `RUN-`, `REF-` |
-| 5 | Goal | `GOAL-` | — |
-| 6 | LearningPattern | `LP-` | `REF-` (patterns misuse) |
-| 7 | CognitiveFramework | `CF-` | — |
-| 8 | ContextPack | `CP-` | — |
-| 9 | ActivePriority | `AP-` | — |
+| 01 | DecisionRecord | `DEC-` · `DEC-P-` · `DEC-D-` (lifecycle, §3) | `DR-`, the term "RFC" |
+| 02 | InsightRecord | `INS-` | `IN-`, `IR-` |
+| 03 | OutcomeRecord | `OUTC-` (`kind:` mandatory) | `OC-`, `BR-` |
+| 04 | Capability | `CAP-` (components via `kind:`) | `SKILL-`, `RUN-`, `REF-` |
+| 05 | Goal | `GOAL-` (`decided-by:` mandatory) | — |
+| 06 | Conclusion | `CONC-` | `LP-` (former LearningPattern) |
+| 07 | Frame | `FRAME-` | `CF-` (former CognitiveFramework) |
+| 08 | ContextPack | `CP-` (`kind: pack / brief / handoff`) | `HANDOFF-` (folk counter, migrates into `CP-`) |
+| 09 | Priority | `PRI-` (`serves-goal:` + `rank:` mandatory) | `AP-` (former ActivePriority — names never carry states) |
 | 10 | RelationshipContext | `REL-` | — |
 | 11 | Preference | `PREF-` | — |
 | 12 | Value | `VAL-` | — |
 | 13 | Session | `SESS-` | — |
+| — | *slice coordinate* (not an entity) | `SLC[n]SEC[n]BL[n]` (§5) | `BL-XX.SEC-XX.SL-XXX` (dotted form) |
 
-`REF-` is retired as a prefix entirely: it was a catch-all hiding three distinct entities (coding standards → `CAP-`, patterns → `LP-`, third-party integrations → vendor connector entities). A prefix that maps to more than one entity is the anti-pattern this standard exists to prevent.
+`REF-` remains retired as a catch-all (coding standards → `CAP-`, patterns → `CONC-`, third-party integrations → vendor connector entities). A prefix that maps to more than one entity is the anti-pattern this standard exists to prevent.
 
-## 2. ID schemes: local per store, prefix global
+## 2. The universal identifier grammar
 
-The **prefix is global; the ID scheme is local** to the store type:
+One grammar for every entity artifact, in every store type (clause DEC-0008.5):
 
-| Store type | ID scheme | Example |
-|---|---|---|
-| Engineering repos / corpora with `.counters` | sequential `NNN` (counter discipline, Layer B.1) | `DEC-041-slug.md`, `INS-013-slug.md` |
-| Knowledge vaults (date-natural corpora) | `YYYY-MM-DD` (date + slug carries uniqueness) | `DEC-2026-07-10-slug.md`, `CF-2026-05-14-slug.md` |
+```
+PREFIX-NNNN-YYYYMMDD-slug-in-kebab-case.md
+```
 
-Both schemes are canonical. What is **not** allowed: changing the prefix or the entity name per store. `DEC-041` (repo) and `DEC-2026-07-10-slug` (vault) are the same entity with the same prefix under two ID schemes.
-
-## 3. DecisionRecord lifecycle — carried in the prefix
-
-The lifecycle state of a decision is visible in its filename:
-
-| Prefix | State | `status:` frontmatter |
-|---|---|---|
-| `DEC-` | approved (in force) | `approved` |
-| `DEC-P-` | pending (proposed, under deliberation) | `pending` |
-| `DEC-D-` | deprecated / superseded (requires `superseded-by:` when superseded) | `deprecated` |
-
-**Flat `decisions/` folder.** Because the prefix carries the state, lifecycle folders (`rfcs/`, `accepted/`, `superseded/`, `deprecated/`) are retired: every decisions folder is **flat**. A state change renames the file (`DEC-P-…` → `DEC-…`) and rewrites all references in the same atomic change (R5).
-
-**The term "RFC" is retired** from the SliceOps vocabulary (confusing: it named both a process and a folder and collided with IETF usage). A proposal is a **pending DecisionRecord** (`DEC-P-`). The governance process formerly called "RFC process" is the **proposal process** (`governance/PROPOSAL-PROCESS.md`).
-
-### `status:` values and read tolerance
-
-Canonical DecisionRecord `status:` values are exactly `pending` / `approved` / `deprecated`. Legacy values `proposed`, `ratified`, `superseded` (and adopter variants such as `active` / `accepted` on decision artifacts) are **read-tolerated**: a conforming parser MAY map them (`proposed`→`pending`, `ratified`/`active`/`accepted`→`approved`, `superseded`→`deprecated`) when reading archives or third-party corpora, but a conforming validator MUST reject them on write in a homologated corpus.
-
-The `approver:` field (optional since v1.1.0 — the human who approved, P3) is unchanged; its recommendation now reads "recommended on `status: approved`".
-
-## 4. Immutable archives
-
-`99-archive/` folders (R10 immutability) are **never renamed**. Historical names inside archives are covered by each corpus's **alias map** (old → new), emitted by the migration tooling. Everything outside archives is renamed retroactively — homologation is total, not forward-only.
-
-## 5. Capability model: one entity, components by `kind:`
-
-**Capability is the capacity** — the WHAT ("we know how to parse financial PDFs into structured databases"). It is the mother entity. Three **component kinds** describe it (siblings of each other, never nested):
-
-| `kind:` | Answers |
+| Part | Rule |
 |---|---|
-| `standard` | how the result must look (acceptance shape) |
-| `runbook` | how it is executed, step by step |
-| `playbook` | what to do depending on the situation |
+| `NNNN` | Per-corpus, per-entity counter. **Minimum 4 digits, zero-padded, unbounded** (`0001 … 9999 → 10000 → …`). One counter per entity, shared across lifecycle prefixes (`DEC-P-0007` and `DEC-0007` are the same record; a *new* `DEC-0007` colliding with an existing `DEC-D-0007` is an error). |
+| `YYYYMMDD` | The creation date, compact, **immutable** — taken from frontmatter `created:` (migrations fall back to the first git commit date). The compact form also keeps v2 names visually distinct from legacy date-based names. |
+| slug | Kebab-case, lowercase only — case-insensitive-filesystem safety, web-address convention, shell and pattern-matching safety. |
 
-Implementation: a **small** capability is one `CAP-` file with sections; a **large** one is a `CAP-` mother file plus component files carrying `capability: <mother-slug>` and `kind: standard|runbook|playbook` in frontmatter. The catalog does **not** grow — Capability remains one entity (#4).
+- **Number and date are stable across the lifecycle**: on approval `DEC-P-0008-…` renames to `DEC-0008-…` — the prefix carries the state, the identity never changes.
+- **Counters are finite, serialized, shared resources** (principle P9, Shared-Resource Pre-flight): every corpus carries `.counters/`, and every claim re-scans the real maximum before writing. The toolkit ships `templates/counter-discipline/claim_id.py` to make the discipline one command.
+- **Short citations** (`DEC-0008`) are unambiguous *within* a corpus; cross-corpus citations carry corpus context or the full filename.
 
-**"Skill" stays reserved** for the executable agent artifact (execution plane, Agent-Skills style). It is not a catalog entity. Knowledge plane (Capability: what the org can do) and execution plane (Skill: what an agent runs) remain distinct.
+## 3. DecisionRecord: lifecycle in the prefix, kind in the frontmatter, clauses by sub-number
 
-## 6. OutcomeRecord `kind:`
+**Lifecycle** (unchanged from the naming homologation): `DEC-P-` pending → `DEC-` approved → `DEC-D-` deprecated/superseded, with `status: pending | approved | deprecated` matching the prefix, **flat `decisions/` folders** (lifecycle subfolders `rfcs/`, `accepted/`, `superseded/`, `deprecated/` are retired), and every state change renaming the file plus rewriting references in the same atomic change (rule R5). Legacy status values (`proposed`, `ratified`, `superseded`, adopter variants `active`/`accepted`) are read-tolerated, write-prohibited. The optional `approver:` field (P3 — Human-in-the-Loop Authority) records the approving human.
 
-Every OutcomeRecord declares `kind: retrospective | postmortem | result`. Block Retrospectives are OutcomeRecords with `kind: retrospective` (the former standalone `BR-` prefix is retired into this).
+**Kind** (clause DEC-0008.3): `kind: constitutive | strategic | tactical`, with the truth carried by goal edges — `strategic` requires `defines-goal:`, `tactical` requires `serves-goal:`, `constitutive` requires `approver:`. Mandatory for records created on or after 2026-07-13; earlier records are back-filled fix-on-touch.
 
-## 7. Alias table — pre-v1.2.0 → v1.2.0 migration
+**Clauses** (clause DEC-0008.9): resolutions inside a record are cited **`DEC-NNNN.n`** (e.g. `DEC-0008.5`), never "Decision n" bare. Clause identifiers are valid supersession targets: a future record may declare `supersedes: [DEC-0008.3]` without touching sibling clauses. The independence test decides clause versus standalone record: *could you reject this part and approve the rest without breaking the design?* No → clause; yes → its own record, immediately.
 
-Scheme-level renames a migrating corpus applies (per-file alias maps are emitted per corpus by the migration tooling):
+## 4. The pyramid edges (naming-visible fields)
 
-| Pre-v1.2.0 (or wild) | v1.2.0 canonical | Rule |
+The provenance chain is machine-checkable end to end (clause DEC-0008.4): every **Goal** carries `decided-by: <DEC id>` (the decision that created it — mirror of `defines-goal`); every **Priority** carries `serves-goal: <GOAL id>` and an integer `rank` unique within its `(owner, horizon)` scope — the three-bucket `priority: high|medium|low` field is retired.
+
+## 5. The slice coordinate
+
+Work coordinates (clause DEC-0008.6) replace the dotted Slice ID. **Letters are the separators** — no dots (fragile in git references and `.md` filenames), no inner hyphens (the hyphen is the grammar's field separator):
+
+```
+SLC0012SEC03BL02        full coordinate (slice ∈ section ∈ block)
+SLC0034                 simple form — SEC and BL are optional qualifiers
+```
+
+Minimum widths: `SLC` 4 digits, `SEC`/`BL` 2 — all unbounded per §2. In frontmatter: `originating_slice: SLC0012SEC03BL02`. In branches, commits and pull-request titles: the bare coordinate. As a materialized file it joins the universal grammar: `SLC0012SEC03BL02-20260712-slug.md`. Slice coordinates inside **merged git history are immutable** (same standing as archives) — alias maps cover them; trackers, ledgers, frontmatter and living documents are rewritten.
+
+## 6. Reserved infrastructure names
+
+The universal grammar governs *entity artifacts*. Infrastructure files are exempt and their names are **reserved** (DEC-0010.5): `README.md`, `CLAUDE.md`/`AGENTS.md`, `MEMORY.md`, `_organization.md`, **`_index.md`**, `*-ledger.md`, and the `.counters/` directory. Anything else must be an entity artifact under the grammar.
+
+**`_index.md` is mandatory at every corpus root** (DEC-0010): the map of where to look for what — the loading chain is *agent-context file → `_index.md` → exact files or ContextPacks*. It points, never copies; the validator enforces that it exists and that every route resolves. Large corpora may add per-folder `_index.md` files; the root index routes to them.
+
+## 7. Immutable zones
+
+`99-archive/` folders (rule R10) are **never renamed**; merged git history is never rewritten. Historical names in both are covered by each corpus's **alias map**, emitted by the migration tooling. Everything else is renamed retroactively — homologation is total, not forward-only.
+
+## 8. Alias tables
+
+### Migration to v2.0.0 (scheme level; per-file maps are emitted per corpus)
+
+| Pre-v2 form | v2.0.0 canonical | Rule |
 |---|---|---|
-| `DR-<id>` | `DEC-<id>` / `DEC-P-<id>` / `DEC-D-<id>` (by state) | lifecycle in prefix |
-| `decisions/rfcs/<file>` | `decisions/DEC-P-<file>` | flatten |
-| `decisions/accepted/<file>` | `decisions/DEC-<file>` | flatten |
-| `decisions/superseded|deprecated/<file>` | `decisions/DEC-D-<file>` | flatten |
-| `IN-<id>`, `IR-<id>` | `INS-<id>` | one Insight prefix |
-| `OC-<id>`, `BR-<id>` | `OUTC-<id>` (+ `kind:`) | one Outcome prefix |
-| `SKILL-<id>`, `RUN-<id>` | `CAP-<id>` | one Capability prefix |
-| `REF-<id>` (coding standards) | `CAP-<id>` | REF- split |
-| `REF-<id>` (patterns) | `LP-<id>` | REF- split |
-| `status: proposed/ratified/superseded` | `pending/approved/deprecated` | status homologation |
-| term "RFC" | "pending DecisionRecord" / `DEC-P-` | vocabulary retirement |
+| `PREFIX-YYYY-MM-DD-slug.md` (date-based) | `PREFIX-NNNN-YYYYMMDD-slug.md` | universal grammar: number assigned chronologically by `created:` |
+| `PREFIX-NNN-slug.md` (3-digit counter) | `PREFIX-NNNN-YYYYMMDD-slug.md` | renumber to 4-digit minimum + date inserted |
+| `LP-<id>` | `CONC-<id>` | Conclusion rename |
+| `CF-<id>` | `FRAME-<id>` | Frame rename |
+| `AP-<id>` | `PRI-<id>` | Priority rename (or reclassification where the file was never a priority) |
+| `HANDOFF-NNN` (folk counter) | `CP-NNNN-…` with `kind: handoff` | DEC-0009 |
+| `BL-XX.SEC-XX.SL-XXX` | `SLC…SEC…BL…` | slice coordinate (§5) |
+| `priority: high\|medium\|low` | `rank: <int>` within `(owner, horizon)` | pyramid (§4) |
+| `DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`, lifecycle subfolders, `status: proposed/ratified/superseded`, term "RFC" | as in §1/§3 | carried over from the earlier naming homologation |
 
-## 8. Implementation aliases (vendor runtimes)
+### Implementation aliases (vendor runtimes — the canonical name always wins in portable form, principle P11)
 
-Known Layer C.1 runtime names that map to canonical B.1 entities. Runtimes migrating to the canonical names use this table; the **canonical name always wins** in shared/portable form (P11):
-
-| Runtime name (implementation alias) | Canonical B.1 entity |
+| Runtime name | Canonical entity |
 |---|---|
 | AgentContextPack | ContextPack |
 | AgentSkill | Capability |
 | GoalObjective | Goal |
 | ValuePrinciple | Value |
 | AgentPreference | Preference |
+| LearningPattern *(pre-v2 canonical name)* | Conclusion |
+| CognitiveFramework *(pre-v2 canonical name)* | Frame |
+| ActivePriority *(pre-v2 canonical name)* | Priority |
 
-Runtime-**proprietary** entities (entities whose meaning depends on that runtime to operate) are NOT in the canonical catalog and are not renamed by this standard — they follow the vendor-extension mechanism in [`ip-boundary.md`](ip-boundary.md) (Layer C).
+Runtime-**proprietary** entities are NOT in the canonical catalog and are not renamed by this standard — they follow the vendor-extension mechanism in [`ip-boundary.md`](ip-boundary.md).
 
 ## 9. Enforcement
 
-The standard self-imposes at the point of write (published-not-enforced is the failure mode this section closes):
+The standard self-imposes at the point of write (published-not-enforced is the failure mode this closes):
 
-1. **Norm without copies** — naming lives only here; other docs link.
-2. **Agent context** — each corpus's agent-context file (`AGENTS.md` / `CLAUDE.md`) carries a short NAMING block pointing here.
-3. **Write hook** — the toolkit **naming validator** runs as an agent pre-write hook and blocks non-homologated names, indicating the correct one.
-4. **CI gate + sweeper** — the same validator runs as a merge gate in repos with CI and as a periodic sweep over vaults without CI.
+1. **Norm without copies** — naming lives only here; other documents link.
+2. **Agent context** — each corpus's `AGENTS.md`/`CLAUDE.md` carries a short NAMING block pointing here, and points to the corpus `_index.md`.
+3. **Write hook** — the toolkit naming validator blocks non-homologated names at write time, indicating the correct form.
+4. **Continuous-integration gate + sweeper** — the same validator as a merge gate in repositories and as a periodic sweep over vaults; it also verifies `_index.md` presence and route resolution.
+5. **Counter discipline** — `claim_id.py` makes the pre-flight one command; the counter-atomicity check detects collisions.
 
-Reference implementation: `sliceops-toolkit/templates/naming-validator/`.
+Reference implementation: `sliceops-toolkit/templates/naming-validator/` and `sliceops-toolkit/templates/counter-discipline/`.
