@@ -13,7 +13,7 @@ superseded-by: null
 conflicts-with: []
 related-decs: [DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-2026-05-12-three-layer-ip-boundary]
 topics: [entity-catalog, vocabulary-discipline, corpus-integrity, foundational]
-vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)", "handoff (ContextPack kind)", "brief (ContextPack kind)", "index (ContextPack kind)"]
+vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)", "handoff (ContextPack kind)", "brief (ContextPack kind)", "_index.md (corpus index — reserved-name infrastructure)", "reserved infrastructure names"]
 consistency-check: |
   Extends DEC-2026-07-10-spec-v1-2-0-naming-homologation before its publication. The
   v1.2.0 cut exists only on an unmerged branch, so on approval the unpublished cut is
@@ -49,7 +49,8 @@ goal edges, closing the "what comes first, a decision or a goal?" question: *the
 decision creates the goal; the goal disciplines the tactical decisions that follow.* All
 artifact IDs unify into **one grammar**: `PREFIX-NNNN-YYYYMMDD-slug`, including slices
 (`SLC…SEC…BL…`); handoffs — the most-used coordination artifact — are standardized as a
-ContextPack kind (Decision 9). These are breaking changes to the framework contract, so this ships as
+ContextPack kind (Decision 9), and every corpus carries a reserved-name index
+(`_index.md`) so agents know where to look without ever searching wholesale (Decision 10). These are breaking changes to the framework contract, so this ships as
 **SliceOps v2.0.0** (the unpublished v1.2.0 cut is re-issued; v1.1.0 remains the last
 published 1.x). SliceOps is a framework for building anything; software is its first
 instantiation.
@@ -139,7 +140,7 @@ teaching order of Decision 1. Lifecycle values live in `status:` — never in na
 | 05 | **Goal** | `GOAL-` | A measurable objective with a stated `horizon` (now / quarter / year / multi-year) and a `measure`. REQUIRES `decided-by:` — the decision that created it (Decision 4). Vision is a multi-year Goal with a narrative body (Decision 7.1). | Aim | `proposed → active → achieved / abandoned` (abandonment requires rationale) |
 | 06 | **Conclusion** *(was LearningPattern)* | `CONC-` | What we now believe: a generalization promoted from repeated insights (three or more supporting observations to become canonical) or reached by explicit reasoning (stays candidate until evidenced). Conclusions change beliefs; decisions change actions. | Conclude | `candidate → canonical → retired` |
 | 07 | **Frame** *(was CognitiveFramework)* | `FRAME-` | A mental model or lens the corpus reasons with: glossaries, taxonomies, worldview documents, architectural frames. The framework has frames the way a body has cells. | Why — the worldview ring | `active → superseded` |
-| 08 | **ContextPack** | `CP-` | Packaged, routable context for sessions, with `kind: pack / brief / handoff / index` (Decision 9) — pre-computed corpus context, topic briefs, session handoffs, and the **corpus index** (the map loaded first: where to look for what; points, never copies; routes must resolve). | Transversal infrastructure (feeds every stage) | `active → superseded` |
+| 08 | **ContextPack** | `CP-` | Packaged, routable context for sessions, with `kind: pack / brief / handoff` (Decision 9) — pre-computed corpus context, topic briefs, and session handoffs. Packs **contain** context; **locating** it is the corpus index's job (`_index.md`, reserved-name infrastructure — Decision 10, not an entity). | Transversal infrastructure (feeds every stage) | `active → superseded` |
 | 09 | **Priority** *(was ActivePriority)* | `PRI-` | A ranked commitment of focus: what is being worked now/next and in which order. REQUIRES `serves-goal:` and an integer `rank` unique within `(owner, horizon)` (Decision 4) — buckets do not order; ranks do. The name carries no state: `status:` does. | Focus | `open → in-progress → blocked / resolved` |
 | 10 | **RelationshipContext** | `REL-` | The relationship fabric: people, organizations and entities, and how they relate — the edges that condition every other stage. | Transversal infrastructure | `active → archived` |
 | 11 | **Preference** | `PREF-` | A stated taste or working choice (style, tooling, approach) — softer than a Value, still worth recording so agents stop re-asking. | Why — the worldview ring | `active → superseded` |
@@ -289,16 +290,11 @@ session* — the literal definition of ContextPack. So, by the same discipline a
 
 ```yaml
 entity: ContextPack
-kind: pack | brief | handoff | index
-# handoff-specific fields:
-from_session: <SESS id or session reference>
-to: <owner | domain | SESS id> | null     # who receives the work
-reason: context-exhausted | spinoff       # the two birth conditions
-# index-specific fields:
-scope: corpus | domain | topic            # what this index maps
-routes:                                    # the map itself — points, never copies
-  - match: <topic | entity | question pattern>
-    load: [<paths or ContextPack ids to open>]
+kind: pack | brief | handoff              # all three CONTAIN context (locating it is
+                                          # the corpus index's job — Decision 10)
+from_session: <SESS id or session reference>   # handoff-specific
+to: <owner | domain | SESS id> | null          # handoff-specific: who receives the work
+reason: context-exhausted | spinoff            # handoff-specific: the two birth conditions
 ```
 
 - **pack** — routed or pre-computed corpus context loaded at session start (brain-pack style).
@@ -306,22 +302,44 @@ routes:                                    # the map itself — points, never co
 - **handoff** — context prepared to *continue or spin off* in-flight work. Canonical body
   sections: state of work · done · pending · open questions · next steps · counter and
   resource state.
-- **index** — **the pack an agent loads FIRST**: the map of where to look for what, so no
-  agent (or human) ever searches a whole vault or project. Routes topics, entities and
-  question patterns to the exact locations or packs to open. It **points, never copies**
-  (copies drift — P12); one per corpus at minimum, referenced from the corpus
-  agent-context file. This is the original purpose of ContextPack made first-class and
-  kept central: the index is the **materialized routing table of the Context Router**
-  (the router is the mechanism; the index is its artifact). Enforcement: the validator
-  checks that every route target resolves — a stale index is a build failure, not a
-  suggestion. Context engineering is a first-class concern of the framework: it is
-  optimized for agentic and human work, and finding context cheaply is the foundation.
 - Files follow the universal grammar (`CP-0028-20260712-slug.md`). Legacy `HANDOFF-NNN`
   identifiers migrate into the ContextPack counter (alias map covers them); handoff
   *ledgers* remain operational index files, not entities.
 - Handoffs close the session-provenance loop: the emitting session records the handoff in
   its `outcome`; the receiving session loads it — `SESS-A → CP (handoff) → SESS-B` is
   fully auditable. The catalog stays at 13; a `handoff-template` ships with the templates.
+
+### Decision 10 — The corpus index: reserved-name infrastructure (`_index.md`), not an entity
+
+Added in the ratification conversation, correcting Decision 9's first draft: the index
+was initially modeled as a ContextPack kind, and the owner rejected it — an agent would
+have to open ContextPacks to discover which ones are indexes, and **an entry point you
+must search for defeats itself**. The root distinction: a pack *contains* context; an
+index *locates* it. Locating is not containing, so the index is not a cognitive entity
+at all — it is **corpus infrastructure**, the same class as `.counters/` (which the
+framework already keeps outside the catalog, without frontmatter).
+
+1. **Reserved name, zero discovery**: every corpus carries **`_index.md` at its root**.
+   Any agent or human finds it without searching, in every corpus, always — the same
+   guarantee `CLAUDE.md`/`AGENTS.md` and `README.md` already give. The underscore sorts
+   it first in any listing. Large corpora MAY add per-folder `_index.md` files; the root
+   index routes to them (recursive routing, zero discovery at every level).
+2. **The loading chain of context engineering**: agent-context file (thin, always
+   loaded) → `_index.md` (small, says WHERE) → the exact files or ContextPacks needed.
+   No agent reads a corpus wholesale; finding context cheaply is a first-class concern
+   of the framework — it is optimized for agentic and human work.
+3. **Content**: route tables — topic / entity / question pattern → exact paths or
+   ContextPack ids to open. It **points, never copies** (copies drift — P12). It is the
+   **materialized routing table of the Context Router**: the router is the mechanism,
+   `_index.md` is its artifact. A template ships with the spec templates.
+4. **Enforcement**: the validator checks (a) the root `_index.md` exists in every
+   homologated corpus, (b) every route target resolves — a stale index is a build
+   failure, not a suggestion.
+5. **Reserved infrastructure names, formalized**: the universal grammar (Decision 5)
+   governs *entity artifacts*; infrastructure files are exempt and their names are
+   reserved: `README.md`, `CLAUDE.md`/`AGENTS.md`, `MEMORY.md`, `_organization.md`,
+   `_index.md`, `*-ledger.md`, and the `.counters/` directory. This list lives in
+   naming.md; anything else must be an entity artifact under the grammar.
 
 ## Alternatives considered
 
@@ -359,11 +377,12 @@ old format (alias map covers it).
 ## Ratification note
 
 **Approved by the owner on 2026-07-12.** At approval the owner added the handoff
-standardization, incorporated as Decision 9 in the same act; in the same ratification
-conversation the owner added the **index** kind (the context-engineering requirement:
-agents must know where to look, never search whole corpora) and required internal
-section references to be written out in full ("Decision N", never "DN") — both applied
-before publication, recorded here. Per its own Decision 5.3 the file was renamed
+standardization, incorporated as Decision 9 in the same act. In the same ratification conversation the
+owner (a) required internal section references written out in full ("Decision N", never
+"DN"), and (b) raised the corpus-index requirement — first drafted as a ContextPack kind,
+then **corrected on the owner's objection** (an entry point you must search for defeats
+itself) into Decision 10: `_index.md` as reserved-name corpus infrastructure. All applied
+before publication; the correction is kept visible here as the audit trail. Per its own Decision 5.3 the file was renamed
 `DEC-P-0008-…` → `DEC-0008-…` (number and date stable, prefix carries the new state) and
 all references were rewritten atomically (rule R5 — atomic lifecycle transitions).
 Execution of Decision 8 (the v2.0.0 re-issue and single migration) begins immediately.
