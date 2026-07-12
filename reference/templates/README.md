@@ -2,7 +2,7 @@
 
 Copy-to-start file skeletons. SliceOps IP (Layer B.1); documentation under CC BY 4.0, templates usable under MIT (ratified — see `../../governance/IPR_POLICY.md`).
 
-All templates are born homologated: canonical prefixes and frontmatter per [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md).
+All templates are born homologated: canonical prefixes and frontmatter per [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md).
 
 ## Files
 

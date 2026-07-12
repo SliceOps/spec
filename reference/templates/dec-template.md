@@ -1,7 +1,7 @@
 <!--
 DecisionRecord template (Layer B.1). Naming: DEC-P-<id>-<slug>.md while pending;
 renamed to DEC-<id>-<slug>.md on approval, DEC-D-<id>-<slug>.md on deprecation
-(id = YYYY-MM-DD in vaults, NNN in counter-based repos — spec/v1.2.0/naming.md).
+(id = YYYY-MM-DD in vaults, NNN in counter-based repos — spec/v2.0.0/naming.md).
 The decisions/ folder is FLAT: the prefix carries the state; a state change
 renames the file and rewrites references in the same atomic change (R5).
 Layer 1 consistency fields are mandatory. Replace all <…>.

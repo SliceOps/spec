@@ -1,6 +1,6 @@
 <!--
 Capability template (Layer B.1). Naming: CAP-<id>-<slug>.md
-(id = NNN counter-based repos, YYYY-MM-DD vaults — spec/v1.2.0/naming.md).
+(id = NNN counter-based repos, YYYY-MM-DD vaults — spec/v2.0.0/naming.md).
 The Capability is the CAPACITY (the WHAT). Small capability: one file with the
 Standard / Runbook / Playbook sections below. Large capability: this file is the
 mother; components split into their own CAP- files carrying `capability:` and

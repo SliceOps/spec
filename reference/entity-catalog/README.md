@@ -6,7 +6,7 @@ These 13 entities are **vendor-neutral and runtime-independent** — each carrie
 
 ## The 13 entities
 
-Each entity has exactly **one canonical filename prefix**, identical in every store — the normative naming source is [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md).
+Each entity has exactly **one canonical filename prefix**, identical in every store — the normative naming source is [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md).
 
 | # | Entity | Prefix | Purpose | Mapped principle |
 |---|---|---|---|---|
@@ -43,7 +43,7 @@ The vendor-neutral canonical type key is `entity:` (value = the entity name, e.g
 
 ## Naming
 
-Catalog spec files here: `NN-kebab-name.md` (number = catalog order; ordering/navigation only — the canonical identifier is the entity name). **Artifact instances** follow the canonical prefixes above with a per-store ID scheme (`NNN` counter-based in repos with `.counters`; `YYYY-MM-DD` date-based in vaults) — normative rules and prohibited legacy aliases in [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md).
+Catalog spec files here: `NN-kebab-name.md` (number = catalog order; ordering/navigation only — the canonical identifier is the entity name). **Artifact instances** follow the canonical prefixes above with a per-store ID scheme (`NNN` counter-based in repos with `.counters`; `YYYY-MM-DD` date-based in vaults) — normative rules and prohibited legacy aliases in [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md).
 
 ## Adopter rules
 

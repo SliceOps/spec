@@ -1,4 +1,4 @@
-# SliceOps™ Canonical Principles (Layer A) — v1.2.0
+# SliceOps™ Canonical Principles (Layer A) — v2.0.0
 
 SliceOps™ is a **decision-driven framework** constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**.
 

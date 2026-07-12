@@ -1,4 +1,4 @@
-# SliceOps™ Canonical Glossary — v1.2.0
+# SliceOps™ Canonical Glossary — v2.0.0
 
 Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Context Discipline, vocabulary facet). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
 

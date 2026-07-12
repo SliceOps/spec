@@ -1,4 +1,4 @@
-# SliceOps™ IP Boundary & Layer Taxonomy — v1.2.0
+# SliceOps™ IP Boundary & Layer Taxonomy — v2.0.0
 
 SliceOps is articulated in **three IP layers** with a stable top level and extensible sub-numbering. This document is the canonical statement of what is SliceOps IP, what is reference pattern, and what belongs to vendors/adopters.
 

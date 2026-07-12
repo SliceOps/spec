@@ -32,11 +32,16 @@ consistency-check: |
 
 # DEC-2026-07-10 — Spec v1.2.0: Total Naming Homologation
 
+> **Amended by `DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme`** before
+> publication: the cut this record introduced was re-issued as **v2.0.0** (breaking scope
+> added — catalog renames, required fields, universal identifier grammar). Its "v1.2.0"
+> mentions read as that re-issued cut; v1.2.0 was never published.
+
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the ecosystem-level ratification and inventory that motivated it (decision id `DEC-P-2026-07-10`, holding level) are maintained internally by the IP holder.
 
 ## TL;DR
 
-One concept = one name = one prefix, in every layer and every store. Spec v1.2.0 makes naming **normative** (`spec/v1.2.0/naming.md`), carries the DecisionRecord lifecycle in the filename prefix (`DEC-` / `DEC-P-` / `DEC-D-`), flattens `decisions/` folders, retires the term "RFC" and the legacy prefixes (`DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`), and ships the enforcement so the standard **self-imposes** at the point of write.
+One concept = one name = one prefix, in every layer and every store. Spec v1.2.0 makes naming **normative** (`spec/v2.0.0/naming.md`), carries the DecisionRecord lifecycle in the filename prefix (`DEC-` / `DEC-P-` / `DEC-D-`), flattens `decisions/` folders, retires the term "RFC" and the legacy prefixes (`DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`), and ships the enforcement so the standard **self-imposes** at the point of write.
 
 ## Context
 
@@ -44,7 +49,7 @@ An ecosystem-wide inventory (2026-07-10) of 18 corpora implementing SliceOps fou
 
 ## Decision
 
-1. **Canonical prefix per entity** (normative table in [`naming.md`](../spec/v1.2.0/naming.md)): `DEC-`(±`P`/`D`), `INS-`, `OUTC-`, `CAP-`, `GOAL-`, `LP-`, `CF-`, `CP-`, `AP-`, `REL-`, `PREF-`, `VAL-`, `SESS-`. ID schemes are local per store (`NNN` counter-based / `YYYY-MM-DD` date-based); prefix and entity name are global.
+1. **Canonical prefix per entity** (normative table in [`naming.md`](../spec/v2.0.0/naming.md)): `DEC-`(±`P`/`D`), `INS-`, `OUTC-`, `CAP-`, `GOAL-`, `LP-`, `CF-`, `CP-`, `AP-`, `REL-`, `PREF-`, `VAL-`, `SESS-`. ID schemes are local per store (`NNN` counter-based / `YYYY-MM-DD` date-based); prefix and entity name are global.
 2. **DecisionRecord lifecycle in the prefix**: `DEC-P-` pending → `DEC-` approved → `DEC-D-` deprecated/superseded; `status: pending|approved|deprecated` must match; `decisions/` folders are **flat**; a state change renames the file and rewrites references atomically (R5). Legacy status values are read-tolerated, write-prohibited.
 3. **The term "RFC" is retired**; a proposal is a pending DecisionRecord. The governance flow is renamed the **proposal process** (`governance/PROPOSAL-PROCESS.md`).
 4. **Capability component model**: Capability is the capacity (the WHAT); `standard`/`runbook`/`playbook` are sibling **components** via `kind:` (+ `capability:` back-reference in component files). The catalog does not grow.
@@ -66,8 +71,8 @@ An ecosystem-wide inventory (2026-07-10) of 18 corpora implementing SliceOps fou
 
 ## References
 
-- [`spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) — the normative naming standard this DEC introduces.
-- [`spec/v1.2.0/glossary.md`](../spec/v1.2.0/glossary.md) — glossary v1.2.0 (aliases prohibited updated).
+- [`spec/v2.0.0/naming.md`](../spec/v2.0.0/naming.md) — the normative naming standard this DEC introduces.
+- [`spec/v2.0.0/glossary.md`](../spec/v2.0.0/glossary.md) — glossary v1.2.0 (aliases prohibited updated).
 - [`governance/PROPOSAL-PROCESS.md`](../governance/PROPOSAL-PROCESS.md) — renamed proposal process.
 - [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the B.1 catalog this homologation preserves.
 - [`DEC-2026-05-14-spec-repo-publishing-layout.md`](DEC-2026-05-14-spec-repo-publishing-layout.md) — publishing layout (decisions/ flatten amendment).

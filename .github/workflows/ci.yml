@@ -83,9 +83,9 @@ jobs:
           python3 toolkit/templates/consistency-validators/validators.py \
             --root spec \
             --checks all \
-            --topic-taxonomy spec/spec/v1.2.0/topics.md
+            --topic-taxonomy spec/spec/v2.0.0/topics.md
       - name: Naming validator (v1.2.0 homologation — merge gate)
-        # One entity = one prefix (spec/v1.2.0/naming.md). Blocks retired
+        # One entity = one prefix (spec/v2.0.0/naming.md). Blocks retired
         # prefixes (DR-, IN-, OC-, BR-, SKILL-, RUN-, REF-…), lifecycle
         # subfolders under decisions/, and prefix/status mismatches.
         run: |

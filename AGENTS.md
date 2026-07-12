@@ -23,7 +23,7 @@ The repo's own **publishing layout** is lightweight and industry-aligned (preced
 
 ## NAMING (canonical — do not improvise names)
 
-Normative source: [`spec/v1.2.0/naming.md`](spec/v1.2.0/naming.md). One entity = one prefix, everywhere:
+Normative source: [`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md). One entity = one prefix, everywhere:
 `DEC-`/`DEC-P-`/`DEC-D-` (Decision — lifecycle in the prefix) · `INS-` (Insight) · `OUTC-` (Outcome, `kind:` mandatory) · `CAP-` (Capability, components via `kind: standard|runbook|playbook`) · `GOAL-` · `LP-` · `CF-` · `CP-` · `AP-` · `REL-` · `PREF-` · `VAL-` · `SESS-` (Session).
 **Retired (never write)**: `DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`, the term "RFC". DecisionRecord `status:` is `pending|approved|deprecated` and must match the prefix. `decisions/` folders are **flat** — no `rfcs/`/`accepted/`/`superseded/` subfolders. A pre-write hook (`.claude/settings.json` → toolkit naming validator) blocks violations; CI enforces the same gate.
 

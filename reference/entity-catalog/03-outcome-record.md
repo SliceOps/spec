@@ -39,7 +39,7 @@ related-decs: [<DEC id>...]
 ## Usage example (generic)
 
 ```
-OUTC-BL05-block-outcome.md             (canonical prefix OUTC- — legacy OC-/BR- retired, see ../../spec/v1.2.0/naming.md)
+OUTC-BL05-block-outcome.md             (canonical prefix OUTC- — legacy OC-/BR- retired, see ../../spec/v2.0.0/naming.md)
   entity: OutcomeRecord
   status: closed
   kind: retrospective
@@ -65,4 +65,4 @@ Body: shipped scope · forecast vs actual narrative · evidence links · carry-f
 - Editing a closed OutcomeRecord instead of appending a correction.
 - Forecast/actual omitted (breaks velocity recalibration input).
 - Omitting `kind:` (retrospective/postmortem/result — mandatory since v1.2.0).
-- The `OC-` or `BR-` prefixes (retired — see `../../spec/v1.2.0/naming.md`).
+- The `OC-` or `BR-` prefixes (retired — see `../../spec/v2.0.0/naming.md`).

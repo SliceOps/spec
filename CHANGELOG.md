@@ -8,11 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [1.2.0] — 2026-07-10
 
-Total naming homologation: one entity = one prefix in every layer and every store, the DecisionRecord lifecycle carried in the filename prefix, and the enforcement that makes the standard self-impose at the point of write. Governed by [`decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md). `spec/v1.2.0/` created; `spec/v1.1.0/` retained for audit.
+Total naming homologation: one entity = one prefix in every layer and every store, the DecisionRecord lifecycle carried in the filename prefix, and the enforcement that makes the standard self-impose at the point of write. Governed by [`decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md). `spec/v2.0.0/` created; `spec/v1.1.0/` retained for audit.
 
 ### Added
 
-- **Canonical naming standard** ([`spec/v1.2.0/naming.md`](spec/v1.2.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (13-entity table), per-store ID schemes (`NNN` counter-based / `YYYY-MM-DD` date-based), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
+- **Canonical naming standard** ([`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (13-entity table), per-store ID schemes (`NNN` counter-based / `YYYY-MM-DD` date-based), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
 - Glossary entries: *Naming (canonical prefixes)*, *OutcomeRecord* (with mandatory `kind: retrospective|postmortem|result`), *Capability components (standard/runbook/playbook)*, *RFC (retired term)*.
 - Capability **component model** (`reference/entity-catalog/04-capability.md`): `standard`/`runbook`/`playbook` as sibling components via `kind:` + `capability:` back-reference — the catalog does not grow.
 - Templates born homologated: [`capability-template.md`](reference/templates/capability-template.md), [`outcome-record-template.md`](reference/templates/outcome-record-template.md); `dec-template.md` rewritten to the lifecycle-prefix form.
@@ -24,7 +24,7 @@ Total naming homologation: one entity = one prefix in every layer and every stor
 - **The term "RFC" is retired**; a proposal is a pending DecisionRecord (`DEC-P-`). `governance/RFC-PROCESS.md` → [`governance/PROPOSAL-PROCESS.md`](governance/PROPOSAL-PROCESS.md).
 - **`decisions/` flattened** (this repo, dogfooding): `accepted/` files renamed `DR-*` → `DEC-*` with `status: approved`; lifecycle subfolders retired; every reference rewritten in the same change (R5). The publishing-layout DEC carries the amendment annotation.
 - DecisionRecord `status` enum homologated to `pending|approved|deprecated` (legacy `proposed`/`ratified`/`superseded` read-tolerated, write-prohibited); `approver` recommendation now reads "on `status: approved`".
-- Living references updated from `spec/v1.1.0/` to `spec/v1.2.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v1.2.0`. Historical documents keep their original version links.
+- Living references updated from `spec/v1.1.0/` to `spec/v2.0.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v1.2.0`. Historical documents keep their original version links.
 - `spec/README.md` version index brought up to date (was still describing v1.0.0 as current — stale-copy fix).
 - ip-boundary licensing note: the stale "No `LICENSE` file is published…" line (pre-dating the 2026-06-15 license ratification) now states the published CC BY 4.0 + MIT reality. No licensing terms changed.
 

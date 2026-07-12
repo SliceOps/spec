@@ -6,7 +6,7 @@ This is **process** dogfooding (the framework governs its own evolution), not **
 
 ## Lifecycle — in the prefix, folder flat
 
-This folder is **flat** (no lifecycle subfolders): the filename prefix carries the state, per [`spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) §3.
+This folder is **flat** (no lifecycle subfolders): the filename prefix carries the state, per [`spec/v2.0.0/naming.md`](../spec/v2.0.0/naming.md) §3.
 
 | Prefix | State | `status:` |
 |---|---|---|

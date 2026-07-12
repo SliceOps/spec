@@ -249,7 +249,7 @@ of selling a standard.
 
 Mechanics — the v1.2.0 branch was never pushed, so nothing public is rewritten:
 
-1. `spec/v1.2.0/` → `spec/v2.0.0/` (directory re-cut; `latest` → `v2.0.0`); v1.0.0 and
+1. `spec/v2.0.0/` → `spec/v2.0.0/` (directory re-cut; `latest` → `v2.0.0`); v1.0.0 and
    v1.1.0 remain frozen; **v1.2.0 is never published** (it existed only as a working cut —
    the changelog records [2.0.0] as the successor of [1.1.0]).
 2. `naming.md`, glossary, entity catalog and templates rewritten from the D2.1 table
@@ -353,7 +353,7 @@ Execution of D8 (the v2.0.0 re-issue and single migration) begins immediately.
 
 - [`DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the homologation this extends (absorbed into the same unpublished cut).
 - [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the 13-entity B.1 catalog this preserves (renames, no growth).
-- [`../spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) — §2 (dual ID schemes) superseded by D5; the whole cut re-issues as `spec/v2.0.0/` per D8.
+- [`../spec/v2.0.0/naming.md`](../spec/v2.0.0/naming.md) — §2 (dual ID schemes) superseded by D5; the whole cut re-issues as `spec/v2.0.0/` per D8.
 - [`../spec/README.md`](../spec/README.md) — the versioning policy whose "breaking → major" rule D8 applies.
 - [`../reference/entity-catalog/`](../reference/entity-catalog/) — entries 05/06/07/09 and 01 amended per D2–D4.
 - Principle P5 (Stage as DAG-Derived View) — reaffirmed by alternative E and D7: plans are derived, never decreed.

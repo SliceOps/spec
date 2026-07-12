@@ -25,7 +25,7 @@ sensitivity: public | internal | restricted | sensitive   # R11
 
 ## Canonical enums homologated in v1.2.0
 
-Normative source: [`spec/v1.2.0/naming.md`](../../spec/v1.2.0/naming.md). The per-entity enums the naming validator enforces on write:
+Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). The per-entity enums the naming validator enforces on write:
 
 | Entity | Field | Canonical values | Read tolerance (write-prohibited) |
 |---|---|---|---|
