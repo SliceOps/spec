@@ -35,7 +35,7 @@ A 2026-07 external red-team audit found that the pitch-level claim — *the huma
 
 > When a project has more than one maintainer, the ratifying human MUST differ from the authoring human. Single-maintainer projects MUST record self-ratification explicitly (`approver` == `owner`) — a disclosed limitation, consistent with DISCLOSURE.md, not a silent one.
 
-Per the amendment rule in the principles document and [`governance/RFC-PROCESS.md`](../governance/RFC-PROCESS.md), this Layer A change lands only via ratification of this RFC under the elevated HITL gate, with cross-reference impact analysis.
+Per the amendment rule in the principles document and [`governance/PROPOSAL-PROCESS.md`](../governance/PROPOSAL-PROCESS.md), this Layer A change lands only via ratification of this RFC under the elevated HITL gate, with cross-reference impact analysis.
 
 ## Alternatives considered
 
@@ -61,5 +61,5 @@ The ratified implication landed in `spec/v1.1.0/principles.md` (P3); `spec/v1.0.
 - [`spec/v1.1.0/principles.md`](../spec/v1.1.0/principles.md) — P3 Human-in-the-Loop Authority (carries the ratified implication; `spec/v1.0.0/` retained unamended).
 - [`reference/frontmatter-schemas/base-schema.md`](../reference/frontmatter-schemas/base-schema.md), [`reference/entity-catalog/01-decision-record.md`](../reference/entity-catalog/01-decision-record.md), [`reference/templates/dec-template.md`](../reference/templates/dec-template.md) — the Layer B schemas carrying the field.
 - [`DISCLOSURE.md`](../DISCLOSURE.md) — the disclosure posture (concentration of roles disclosed openly, never left implicit) this RFC extends to ratification.
-- [`governance/RFC-PROCESS.md`](../governance/RFC-PROCESS.md) — the ratification path for this RFC.
+- [`governance/PROPOSAL-PROCESS.md`](../governance/PROPOSAL-PROCESS.md) — the ratification path for this RFC.
 - Origin: 2026-07 external red-team audit (finding: pitch-level author ≠ approver claim unformalized in the open spec).

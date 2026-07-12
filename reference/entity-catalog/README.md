@@ -35,6 +35,8 @@ The catalog numbers are stable identifiers (never re-ordered); the **cycle** bel
 
 DecisionRecord appears **twice** by design — one entity, two moments (strategic decisions create goals; tactical decisions select means within them). `REL-` and `CP-` are not stages: they are transversal infrastructure feeding every box. Locating context is the job of the corpus index `_index.md` (reserved-name infrastructure, [`DEC-0010`](../../decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md) — not an entity).
 
+**The whole cycle runs ON the audit plane** — auditing is not a stage, it is the property every stage has by construction: every box leaves evidence (P6 — Evidence-by-Construction, machine-validatable as evidence.v1), every arrow is traceable (P2 — Audit Plane Discipline: provenance, append-only, supersession edges), machine gates verify at write and merge time (hooks, continuous-integration validators, the vault sweeper), and the human examination cadence is first-class (the **Audit** Session-Type, Block Retrospectives as `OUTC-` `kind: retrospective` with the Cross-DEC Consistency Check, and quarterly curation). The Record stage is where a cycle *examines itself*; the plane is what makes the examination possible at every point.
+
 ## The 13 entities
 
 Every entity has exactly **one canonical filename prefix** under the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` — normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md).
