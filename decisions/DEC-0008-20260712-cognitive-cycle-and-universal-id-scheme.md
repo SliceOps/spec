@@ -1,11 +1,11 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive          # proposed by this very DEC (D3) — dogfooding
 created: 2026-07-12
 updated: 2026-07-12
 owner: Andrés Ramírez Sierra
-approver: null              # set on approval (P3)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-12 (P3)
 sensitivity: public
 originating_slice: null     # back-fill: framework design session with the owner, 2026-07-12
 supersedes: []
@@ -13,7 +13,7 @@ superseded-by: null
 conflicts-with: []
 related-decs: [DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-2026-05-12-three-layer-ip-boundary]
 topics: [entity-catalog, vocabulary-discipline, corpus-integrity, foundational]
-vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)"]
+vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)", "handoff (ContextPack kind)", "brief (ContextPack kind)"]
 consistency-check: |
   Extends DEC-2026-07-10-spec-v1-2-0-naming-homologation before its publication. The
   v1.2.0 cut exists only on an unmerged branch, so on approval the unpublished cut is
@@ -31,7 +31,7 @@ consistency-check: |
   reaffirmed, not amended. No conflicts with licensing or the IP boundary.
 ---
 
-# DEC-P-0008 — The Cognition Cycle and the Universal ID Scheme
+# DEC-0008 — The Cognition Cycle and the Universal ID Scheme
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 — Audit Plane Discipline, P1 — Decision Integrity by Construction). This
 > record is **born under the naming it proposes** (`DEC-P-NNNN-YYYYMMDD-slug`, number from
@@ -48,7 +48,8 @@ gains a **kind** axis (constitutive / strategic / tactical) whose truth is carri
 goal edges, closing the "what comes first, a decision or a goal?" question: *the strategic
 decision creates the goal; the goal disciplines the tactical decisions that follow.* All
 artifact IDs unify into **one grammar**: `PREFIX-NNNN-YYYYMMDD-slug`, including slices
-(`SLC…SEC…BL…`). These are breaking changes to the framework contract, so this ships as
+(`SLC…SEC…BL…`); handoffs — the most-used coordination artifact — are standardized as a
+ContextPack kind (D9). These are breaking changes to the framework contract, so this ships as
 **SliceOps v2.0.0** (the unpublished v1.2.0 cut is re-issued; v1.1.0 remains the last
 published 1.x). SliceOps is a framework for building anything; software is its first
 instantiation.
@@ -138,7 +139,7 @@ teaching order of D1. Lifecycle values live in `status:` — never in names (D2'
 | 05 | **Goal** | `GOAL-` | A measurable objective with a stated `horizon` (now / quarter / year / multi-year) and a `measure`. REQUIRES `decided-by:` — the decision that created it (D4). Vision is a multi-year Goal with a narrative body (D7.1). | Aim | `proposed → active → achieved / abandoned` (abandonment requires rationale) |
 | 06 | **Conclusion** *(was LearningPattern)* | `CONC-` | What we now believe: a generalization promoted from repeated insights (three or more supporting observations to become canonical) or reached by explicit reasoning (stays candidate until evidenced). Conclusions change beliefs; decisions change actions. | Conclude | `candidate → canonical → retired` |
 | 07 | **Frame** *(was CognitiveFramework)* | `FRAME-` | A mental model or lens the corpus reasons with: glossaries, taxonomies, worldview documents, architectural frames. The framework has frames the way a body has cells. | Why — the worldview ring | `active → superseded` |
-| 08 | **ContextPack** | `CP-` | Packaged, routable context loaded at session start — the portable bundle that lets any agent begin already knowing. Briefs prepared for another session belong here. | Transversal infrastructure (feeds every stage) | `active → superseded` |
+| 08 | **ContextPack** | `CP-` | Packaged, routable context for sessions, with `kind: pack / brief / handoff` (D9) — pre-computed corpus context, topic briefs, and session handoffs (born when context is exhausted or a topic spins off). | Transversal infrastructure (feeds every stage) | `active → superseded` |
 | 09 | **Priority** *(was ActivePriority)* | `PRI-` | A ranked commitment of focus: what is being worked now/next and in which order. REQUIRES `serves-goal:` and an integer `rank` unique within `(owner, horizon)` (D4) — buckets do not order; ranks do. The name carries no state: `status:` does. | Focus | `open → in-progress → blocked / resolved` |
 | 10 | **RelationshipContext** | `REL-` | The relationship fabric: people, organizations and entities, and how they relate — the edges that condition every other stage. | Transversal infrastructure | `active → archived` |
 | 11 | **Preference** | `PREF-` | A stated taste or working choice (style, tooling, approach) — softer than a Value, still worth recording so agents stop re-asking. | Why — the worldview ring | `active → superseded` |
@@ -274,6 +275,39 @@ are rewritten from it, never copied by hand). Retired additionally on approval: 
 `CF-`, `AP-`, `BL-XX.SEC-XX.SL-XXX`, `priority: high|medium|low`, and the "TL;DR"
 template heading (D7.4).
 
+### D9 — Handoffs standardized as a ContextPack kind (added at approval)
+
+Requested by the owner in the ratification message: handoffs are among the most-used
+coordination artifacts in practice (one vault's handoff counter alone reached 027), and
+they were unstandardized — exactly the vacuum that turned ActivePriority into a catch-all.
+
+A handoff is born in two situations (the owner's definition): **(a) the session's context
+is exhausted** and the work must continue elsewhere, or **(b) a specific topic is spun
+off** for another session to develop. Both are *packaged context prepared for another
+session* — the literal definition of ContextPack. So, by the same discipline as D3
+(kinds, never new entities), ContextPack gains a kind axis:
+
+```yaml
+entity: ContextPack
+kind: pack | brief | handoff
+# handoff-specific fields:
+from_session: <SESS id or session reference>
+to: <owner | domain | SESS id> | null     # who receives the work
+reason: context-exhausted | spinoff       # the two birth conditions
+```
+
+- **pack** — routed or pre-computed corpus context loaded at session start (brain-pack style).
+- **brief** — context prepared to *start* a new topic or session.
+- **handoff** — context prepared to *continue or spin off* in-flight work. Canonical body
+  sections: state of work · done · pending · open questions · next steps · counter and
+  resource state.
+- Files follow the universal grammar (`CP-0028-20260712-slug.md`). Legacy `HANDOFF-NNN`
+  identifiers migrate into the ContextPack counter (alias map covers them); handoff
+  *ledgers* remain operational index files, not entities.
+- Handoffs close the session-provenance loop: the emitting session records the handoff in
+  its `outcome`; the receiving session loads it — `SESS-A → CP (handoff) → SESS-B` is
+  fully auditable. The catalog stays at 13; a `handoff-template` ships with the templates.
+
 ## Alternatives considered
 
 - **A — Split DecisionRecord into Strategic/Tactical entities**: rejected — the audit
@@ -309,8 +343,11 @@ old format (alias map covers it).
 
 ## Ratification note
 
-Pending the owner's approval. On approval: set `approver:`, rename this file
-`DEC-P-0008-…` → `DEC-0008-…`, rewrite references atomically (rule R5 — atomic lifecycle transitions), and execute D8.
+**Approved by the owner on 2026-07-12.** At approval the owner added the handoff
+standardization, incorporated as D9 in the same act. Per its own D5.3 the file was renamed
+`DEC-P-0008-…` → `DEC-0008-…` (number and date stable, prefix carries the new state) and
+all references were rewritten atomically (rule R5 — atomic lifecycle transitions).
+Execution of D8 (the v2.0.0 re-issue and single migration) begins immediately.
 
 ## References
 

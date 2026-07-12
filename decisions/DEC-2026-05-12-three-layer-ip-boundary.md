@@ -8,7 +8,7 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-06-15-sliceops-license-ratification, DEC-2026-05-14-spec-repo-publishing-layout, DEC-2026-07-02-evidence-v1-canonical-schema, DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-P-0008-20260712-cognitive-cycle-and-universal-id-scheme]
+related-decs: [DEC-2026-06-15-sliceops-license-ratification, DEC-2026-05-14-spec-repo-publishing-layout, DEC-2026-07-02-evidence-v1-canonical-schema, DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
 topics: [ip-boundary, foundational, hierarchical-taxonomy]
 vocabulary-changes: []
 consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DEC-2026-06-15-sliceops-license-ratification operationalizes it as a dual license; DEC-2026-05-14-spec-repo-publishing-layout organizes the Layer B.1 artifacts; DEC-2026-07-02-evidence-v1-canonical-schema applies the boundary to the evidence.v1 record format (canonical core Layer B.1, vendor extensions Layer C). No conflicts."
