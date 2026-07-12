@@ -15,9 +15,12 @@ related-decs: [DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-2026-05-12-th
 topics: [entity-catalog, vocabulary-discipline, corpus-integrity, foundational]
 vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)"]
 consistency-check: |
-  Extends DEC-2026-07-10-spec-v1-2-0-naming-homologation before its publication: the
-  v1.2.0 cut exists only on an unmerged branch, so on approval this proposal is absorbed
-  into the same cut (one migration, not two). Preserves the 13-entity catalog of
+  Extends DEC-2026-07-10-spec-v1-2-0-naming-homologation before its publication. The
+  v1.2.0 cut exists only on an unmerged branch, so on approval the unpublished cut is
+  re-issued as **v2.0.0** — per the repository's own versioning policy this is a major
+  version: catalog entity renames, new required fields and the universal identifier
+  grammar are breaking changes to the framework contract (a corpus valid under v1.x
+  requires migration). One migration, not two; the ecosystem jumps v1.1.0 → v2.0.0. Preserves the 13-entity catalog of
   DEC-2026-05-12-three-layer-ip-boundary — no entity is added or removed; three are
   renamed for plain-language clarity (Frame, Conclusion, Priority) and DecisionRecord
   gains a kind axis with goal edges. Replaces naming.md §2 (dual ID schemes) with one
@@ -45,7 +48,9 @@ gains a **kind** axis (constitutive / strategic / tactical) whose truth is carri
 goal edges, closing the "what comes first, a decision or a goal?" question: *the strategic
 decision creates the goal; the goal disciplines the tactical decisions that follow.* All
 artifact IDs unify into **one grammar**: `PREFIX-NNNN-YYYYMMDD-slug`, including slices
-(`SLC…SEC…BL…`). SliceOps is a framework for building anything; software is its first
+(`SLC…SEC…BL…`). These are breaking changes to the framework contract, so this ships as
+**SliceOps v2.0.0** (the unpublished v1.2.0 cut is re-issued; v1.1.0 remains the last
+published 1.x). SliceOps is a framework for building anything; software is its first
 instantiation.
 
 ## Context
@@ -232,14 +237,37 @@ SLC0034                   simple form — SEC/BL optional (matches existing prac
    heading (internet shorthand for *Too Long; Didn't Read*) becomes **"Summary"**. A
    standard sold on clarity does not gate its own documents behind jargon.
 
-### D8 — Application (on approval)
+### D8 — Application (on approval): re-issue the unpublished cut as v2.0.0
 
-Absorbed into the **unpublished v1.2.0 cut** (the branch has never been pushed): naming.md
-§1–§3 rewritten (new table below), glossary/catalog/templates/validator updated, and the
-migration re-run **once** across the SliceOps corpora with the final rules — so Etapa 2
-reaches the other corpora with one stable standard. The Datta runtime enumeration rename (before general
-availability, "pre-GA") extends to Frame, Conclusion, Priority. If the owner prefers a separate version
-cut instead of absorption, this ships as v1.3.0 with identical content.
+**Version verdict — major, by the repository's own policy** ("breaking changes to the
+framework contract lead to a new major"): renaming catalog entities changes the
+inter-layer contract (the schema IS the contract), the new required fields fail
+previously-valid documents, and the universal grammar renames every artifact file. A
+minor number would misrepresent the migration cost to adopters; version honesty is part
+of selling a standard.
+
+Mechanics — the v1.2.0 branch was never pushed, so nothing public is rewritten:
+
+1. `spec/v1.2.0/` → `spec/v2.0.0/` (directory re-cut; `latest` → `v2.0.0`); v1.0.0 and
+   v1.1.0 remain frozen; **v1.2.0 is never published** (it existed only as a working cut —
+   the changelog records [2.0.0] as the successor of [1.1.0]).
+2. `naming.md`, glossary, entity catalog and templates rewritten from the D2.1 table
+   (single source); frontmatter schemas gain the D3/D4 fields; the decision template's
+   heading becomes "Summary" (D7.4).
+3. The spec's own decisions are renumbered under the universal grammar (chronological per
+   the counter pre-flight), and DEC-2026-07-10-spec-v1-2-0-naming-homologation receives an
+   amendment annotation (its "v1.2.0" references read as "the cut re-issued as v2.0.0 by
+   DEC-0008"); its slug is cleaned to `naming-homologation` in the same rename — a
+   one-time liberty available only because the file was never published, recorded in the
+   alias map.
+4. Validator, hooks, and continuous-integration gates updated to the v2 rules; the
+   migration re-runs **once** across the four SliceOps corpora with final rules, so
+   Etapa 2 reaches the remaining corpora with one stable standard.
+5. The Datta runtime enumeration rename (before general availability, "pre-GA") extends
+   to Frame, Conclusion, Priority, plus the new fields (kind, defines-goal, serves-goal,
+   decided-by, rank).
+6. The evidence.v1 `decisionRefs` pattern is extended additively to accept the universal
+   form (`DEC-0008-20260712-slug`); all previously accepted forms remain read-tolerated.
 
 The canonical catalog table is D2.1 (single source — naming.md and the entity catalog
 are rewritten from it, never copied by hand). Retired additionally on approval: `LP-`,
@@ -288,6 +316,7 @@ Pending the owner's approval. On approval: set `approver:`, rename this file
 
 - [`DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the homologation this extends (absorbed into the same unpublished cut).
 - [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the 13-entity B.1 catalog this preserves (renames, no growth).
-- [`../spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) — §2 (dual ID schemes) superseded by D5; tables rewritten per D8.
+- [`../spec/v1.2.0/naming.md`](../spec/v1.2.0/naming.md) — §2 (dual ID schemes) superseded by D5; the whole cut re-issues as `spec/v2.0.0/` per D8.
+- [`../spec/README.md`](../spec/README.md) — the versioning policy whose "breaking → major" rule D8 applies.
 - [`../reference/entity-catalog/`](../reference/entity-catalog/) — entries 05/06/07/09 and 01 amended per D2–D4.
 - Principle P5 (Stage as DAG-Derived View) — reaffirmed by alternative E and D7: plans are derived, never decreed.
