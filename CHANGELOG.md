@@ -6,9 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-## [1.2.0] — 2026-07-10
+## [2.0.0] — 2026-07-12
 
-Total naming homologation: one entity = one prefix in every layer and every store, the DecisionRecord lifecycle carried in the filename prefix, and the enforcement that makes the standard self-impose at the point of write. Governed by [`decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md). `spec/v2.0.0/` created; `spec/v1.1.0/` retained for audit.
+The cognition cycle and the universal identifier scheme. Governed by [`decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (with [`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) and [`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)), absorbing the total naming homologation of [`DEC-2026-07-10`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the v1.2.0 cut those changes were first drafted into was **never published**; it re-issues here as a major version because catalog renames, new required fields and the universal grammar are breaking changes to the framework contract. `spec/v2.0.0/` created; `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit.
+
+### Added (v2.0.0 scope — the cognition cycle)
+
+- **The catalog presented on the cognition cycle** (clause DEC-0008.1): philosophize → observe → conclude → decide (strategic) → aim → focus → decide (tactical) → act → record → learn again. Stable numbers; DecisionRecord appears at two moments by design.
+- **Universal identifier grammar** (clause DEC-0008.5): `PREFIX-NNNN-YYYYMMDD-slug.md` for every entity artifact in every store — counters minimum 4 digits, unbounded, per corpus per entity, lifecycle-stable; compact immutable creation date; kebab-case slugs. Mechanized by the toolkit's `claim_id.py`.
+- **Decision kind axis + goal edges** (clause DEC-0008.3): `kind: constitutive | strategic | tactical`; `defines-goal` / `serves-goal` / `serves-value`; machine-checkable coherence. **Clause identifiers** `DEC-NNNN.n` with the independence test (clause DEC-0008.9).
+- **The pyramid, mandatory** (clause DEC-0008.4): `Goal.decided-by`, `Priority.serves-goal` + integer `rank` (buckets retired).
+- **Slice coordinate** `SLC[n]SEC[n]BL[n]` (clause DEC-0008.6) — letters as separators; dotted `BL-XX.SEC-XX.SL-XXX` retired (git-reference and filename safety).
+- **Handoffs standardized** as ContextPack `kind: handoff` ([`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md)): the two birth conditions (context-exhausted, spinoff), canonical body sections, session-provenance loop.
+- **The corpus index** `_index.md` as reserved-name infrastructure ([`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)): mandatory at every corpus root, zero-discovery, points-never-copies, routes must resolve; reserved infrastructure names formalized.
+- Plain-language rule (clause DEC-0008.7): acronyms defined at first use; template heading "TL;DR" → "Summary".
+
+### Changed (v2.0.0 scope)
+
+- **Three entities renamed to plain words** (clause DEC-0008.2): CognitiveFramework → **Frame** (`FRAME-`), LearningPattern → **Conclusion** (`CONC-`), ActivePriority → **Priority** (`PRI-`) — semantics preserved; old names become implementation aliases; `LP-`/`CF-`/`AP-` retired.
+- Entity catalog, glossary and naming.md rewritten from the single-source table (clause DEC-0008.2.1).
+
+### Added (absorbed naming homologation, first drafted as v1.2.0 — never published)
 
 ### Added
 
@@ -64,6 +82,7 @@ First public release — the open framework and audit plane for AI-first softwar
 
 Decision-first and platform-agnostic — runs on any text-based AI agent plus git, no specific runtime required (P11). SliceOps™ trademark pending (EUIPO #019381071) — see `TRADEMARK.md`.
 
-[Unreleased]: https://github.com/SliceOps/spec/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/SliceOps/spec/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/SliceOps/spec/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/SliceOps/spec/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/SliceOps/spec/releases/tag/v1.0.0

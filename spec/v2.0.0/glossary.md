@@ -2,7 +2,7 @@
 
 Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Context Discipline, vocabulary facet). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
 
-> **v1.2.0 — naming homologation** (`DEC-2026-07-10-spec-v1-2-0-naming-homologation`): one entity = one prefix across all layers; DecisionRecord lifecycle carried in the prefix (`DEC-` / `DEC-P-` / `DEC-D-`) with flat `decisions/` folders; the term "RFC" retired; `DR-` and other legacy prefixes moved to *Aliases prohibited*. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
+> **v2.0.0 — the cognition cycle and the universal identifier scheme** (`DEC-0008`, with `DEC-0009` handoffs and `DEC-0010` the corpus index; carries forward the naming homologation of `DEC-2026-07-10-spec-v1-2-0-naming-homologation`): one entity = one prefix = one grammar in every store; three entities renamed to plain words (**Frame**, **Conclusion**, **Priority**); DecisionRecord gains the kind axis; the catalog is presented on the cognition cycle. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
 
 **Living document**: new terms emerge via decisions with non-empty `vocabulary-changes`; updates are part of the slice that produces the decision. Major restructure leads to a version bump.
 
@@ -93,9 +93,15 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Capability
 - **Definition**: Cognitive entity #4 in the Layer B.1 catalog. **The capacity itself** — the WHAT an individual/agent/team can now do (e.g., "we know how to parse financial PDFs into structured databases"). Naming: `CAP-<id>-slug.md`. **Renamed from "Skill"** ("capabilities accrued" describes Capability, not Skill; the rename improves precision and frees the term "Skill"). A capability is described by **components** — `standard` / `runbook` / `playbook` (siblings, never nested; see *Capability components*). The catalog does not grow: Capability remains one entity.
-- **Origin**: Catalog split (entity #4), Determinism-over-Regeneration (rename), naming homologation (component model, v1.2.0)
+- **Origin**: Catalog split (entity #4), Determinism-over-Regeneration (rename), naming homologation (component model)
 - **Aliases prohibited**: "Skill" (former name, now reserved for a distinct concept — do NOT use for this entity), `SKILL-` / `RUN-` / `REF-` (retired prefixes)
 - **Cross-references**: Cognitive entity, Layer B.1, P8, Skill (reserved — distinct concept), Capability components, Naming (canonical prefixes)
+
+### Conclusion
+- **Definition**: Cognitive entity 06. **What we now believe** — a generalization promoted from repeated insights (three or more supporting observations to become `canonical`) or reached by explicit reasoning (stays `candidate` until evidenced). A Conclusion changes beliefs; a DecisionRecord changes actions. Naming: `CONC-<id>-slug.md`. Renamed from "LearningPattern" (plain words, clause DEC-0008.2); the promotion discipline is unchanged.
+- **Origin**: Catalog split; P8; naming homologation (v2.0.0)
+- **Aliases prohibited**: "LearningPattern", `LP-`, `REF-` for pattern files (retired)
+- **Cross-references**: P8, InsightRecord, DEC (DecisionRecord), Naming (canonical prefixes)
 
 ### Capability components (standard / runbook / playbook)
 - **Definition**: The three component kinds that describe a Capability, carried in `kind:` frontmatter — **standard** = how the result must look · **runbook** = how it is executed step by step · **playbook** = what to do depending on the situation. Components are **siblings of each other, not nested**, and they are NOT catalog entities: a small capability is one `CAP-` file with sections; a large one is a `CAP-` mother file plus component files with `capability: <mother-slug>` and `kind:`.
@@ -120,10 +126,11 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Aliases prohibited**: "entity type" (ambiguous with database entities), "metadata record" (under-specified)
 - **Cross-references**: Layer B.1, Entity catalog, DecisionRecord, InsightRecord, Session
 
-### CognitiveFramework
-- **Definition**: Cognitive entity. A mental model or reference structure for reasoning and decision-making (e.g., this glossary, the topic taxonomy).
-- **Origin**: Catalog split
-- **Cross-references**: Cognitive entity
+### CognitiveFramework (retired name)
+- **Definition**: **Renamed to Frame** in v2.0.0 (clause DEC-0008.2) — see *Frame*. The `CF-` prefix is retired.
+- **Origin**: Naming homologation (v2.0.0)
+- **Aliases prohibited**: "CognitiveFramework" and `CF-` for new artifacts
+- **Cross-references**: Frame
 
 ### consistency-check (frontmatter field)
 - **Definition**: Mandatory DEC frontmatter field (Layer 1). A multi-line paragraph declaring how the DEC relates to the existing corpus.
@@ -151,6 +158,22 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Origin**: IP boundary (canonicalized)
 - **Cross-references**: R-rules, P9, DEC numbering
 
+### cognition cycle
+- **Definition**: The presentation order of the catalog and the natural order in which anything gets built (clause DEC-0008.1): philosophize (Values, Preferences, Frames) → observe (InsightRecords) → conclude (Conclusions) → decide (DecisionRecords — strategic moment) → aim (Goals) → focus (Priorities) → decide (tactical moment) → act (Sessions, slices; Capabilities accrue) → record (OutcomeRecords) → learn again (P8). Catalog numbers stay stable identifiers; the cycle is the teaching order. RelationshipContext and ContextPack are transversal infrastructure, not stages.
+- **Origin**: DEC-0008 (v2.0.0)
+- **Cross-references**: Cognitive entity, Entity catalog, DEC (DecisionRecord), Goal, Priority
+
+### clause identifier (DEC-NNNN.n)
+- **Definition**: The citation form for a resolution inside a DecisionRecord (e.g., `DEC-0008.5`), never "Decision n" bare. Clause identifiers are valid supersession targets. The **independence test** decides clause versus standalone record: could you reject this part and approve the rest without breaking the design? No → clause; yes → its own record.
+- **Origin**: Clause DEC-0008.9
+- **Cross-references**: DEC (DecisionRecord), Supersession
+
+### corpus index (`_index.md`)
+- **Definition**: Reserved-name **infrastructure** (not an entity) at every corpus root: the map of where to look for what, so no agent or human searches a corpus wholesale. Loading chain: agent-context file → `_index.md` → exact files or ContextPacks. Points, never copies; the validator enforces existence and that every route resolves. A pack *contains* context; the index *locates* it.
+- **Origin**: DEC-0010 (v2.0.0)
+- **Aliases prohibited**: modeling the index as a ContextPack kind or as a catalog entity (rejected designs — see DEC-0010 alternatives)
+- **Cross-references**: ContextPack, Context Router, reserved infrastructure names
+
 ## D
 
 ### DAG (Directed Acyclic Graph)
@@ -160,7 +183,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### DEC (DecisionRecord)
 - **Definition**: Cognitive entity. An architectural/strategic decision recorded with lifecycle (pending → approved → deprecated), supersession edges, alternatives considered, consequences. **The lifecycle is carried in the prefix**: `DEC-` = approved · `DEC-P-` = pending · `DEC-D-` = deprecated/superseded (with `superseded-by:`). Naming: `DEC-YYYY-MM-DD-slug.md` (date-based, vaults) or `DEC-NNN-slug.md` (counter-based repos) — see `naming.md` §2–3. Decisions folders are **flat** (no lifecycle subfolders); a state change renames the file and rewrites references atomically. The optional `approver:` field (P3, since v1.1.0) is unchanged.
-- **Origin**: Catalog split; P2/P1; naming homologation (v1.2.0)
+- **Origin**: Catalog split; P2/P1; naming homologation; kind axis and clause identifiers (`DEC-0008.3`/`DEC-0008.9`: `kind: constitutive | strategic | tactical` with goal edges; clauses cited `DEC-NNNN.n`)
 - **Aliases prohibited**: "ADR" (predecessor, DECs are evolved), "decision doc", "note", **`DR-` (retired prefix)**, **"RFC" (retired term — a proposal is a pending DecisionRecord, `DEC-P-`)**
 - **Cross-references**: ADR, P2, P1, Naming (canonical prefixes), RFC (retired term)
 
@@ -231,6 +254,12 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Origin**: Consistency-management mechanism
 - **Cross-references**: Layer 1, consistency-check, conflicts-with
 
+### Frame
+- **Definition**: Cognitive entity 07. A mental model or lens the corpus reasons with — glossaries, taxonomies, worldview documents, architectural lenses. Lives in the **Why ring** of the cognition cycle with Values and Preferences; only constitutive decisions rewrite that ring. Naming: `FRAME-<id>-slug.md`. Renamed from "CognitiveFramework" (clause DEC-0008.2); no collision with "framework" — the framework has frames the way a body has cells. A Frame points at canonical sources, never copies them.
+- **Origin**: Catalog split; naming homologation (v2.0.0)
+- **Aliases prohibited**: "CognitiveFramework", `CF-` (retired)
+- **Cross-references**: Cognitive entity, Value, Preference, cognition cycle
+
 ## G
 
 ### Glossary
@@ -239,6 +268,12 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P12, Vocabulary discipline, Layer 1
 
 ## H
+
+### handoff (ContextPack kind)
+- **Definition**: A ContextPack (`kind: handoff`) carrying in-flight work to another session. Born in exactly two situations: the session's **context is exhausted**, or a **topic is spun off**. Canonical body: state of work · done · pending · open questions · next steps · counter and resource state. Closes the session-provenance loop: `SESS-A → CP (handoff) → SESS-B`.
+- **Origin**: DEC-0009 (v2.0.0)
+- **Aliases prohibited**: `HANDOFF-` as a standalone prefix (folk counter — migrates into `CP-`)
+- **Cross-references**: ContextPack, Session, corpus index (`_index.md`)
 
 ### Hierarchical Layer Taxonomy
 - **Definition**: The meta-decision on the naming structure of Layer A/B/C. Top-level Layer A/B/C are stable; sub-numbering (B.1, B.2, C.1, C.2) accommodates new dimensions without renaming.
@@ -276,11 +311,11 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Aliases prohibited**: "LLM cost optimization" (generic), "CI LLM tuning" (under-specified)
 - **Cross-references**: P9, Layer B.2, CI/Pipeline Cost Economy (parent), Determinism-over-Regeneration, model-tier discipline, prompt-caching discipline
 
-### LearningPattern
-- **Definition**: Cognitive entity. A pattern observed ≥3 times across InsightRecords; promoted as a canonical pattern. Naming: `LP-<id>-slug.md` (canonical prefix `LP-`). Triggers a DEC for R-rule amendments.
-- **Origin**: Catalog split; P8
-- **Aliases prohibited**: `REF-` for pattern files (retired catch-all prefix — see `naming.md` §1)
-- **Cross-references**: P8, InsightRecord, R-rules, Naming (canonical prefixes)
+### LearningPattern (retired name)
+- **Definition**: **Renamed to Conclusion** in v2.0.0 (clause DEC-0008.2) — see *Conclusion*. The `LP-` prefix is retired.
+- **Origin**: Naming homologation (v2.0.0)
+- **Aliases prohibited**: "LearningPattern" and `LP-` for new artifacts
+- **Cross-references**: Conclusion
 
 ## M
 
@@ -309,7 +344,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Naming (canonical prefixes)
 - **Definition**: The one-entity = one-name = one-prefix standard: every Layer B.1 entity has exactly one canonical filename prefix, identical across every store (repos, vaults, runtime exports); ID schemes are local per store type (`NNN` counter-based, `YYYY-MM-DD` date-based). Normative source: [`naming.md`](naming.md) — other documents point to it and never copy the tables.
-- **Origin**: Naming homologation (v1.2.0); P12 Context Discipline
+- **Origin**: Naming homologation; universal grammar (clause DEC-0008.5); P12 Context Discipline
 - **Aliases prohibited**: per-store prefixes or per-layer entity renames (the anti-pattern this standard retires)
 - **Cross-references**: DEC (DecisionRecord), Cognitive entity, P12, Glossary
 
@@ -317,7 +352,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### OutcomeRecord
 - **Definition**: Cognitive entity #3 in the Layer B.1 catalog. The factual record of *what happened* — shipped scope, forecast vs actual, evidence references. Naming: `OUTC-<id>-slug.md`, with mandatory `kind: retrospective | postmortem | result`. Block Retrospectives are OutcomeRecords with `kind: retrospective`.
-- **Origin**: Catalog split; P6; naming homologation (prefix + `kind:`, v1.2.0)
+- **Origin**: Catalog split; P6; naming homologation (prefix + `kind:`)
 - **Aliases prohibited**: `OC-`, `BR-` (retired prefixes), "Block Retrospective" as a separate artifact type (it is an OutcomeRecord kind)
 - **Cross-references**: Block Retrospective, P6, Evidence-by-Construction, evidence.v1, Naming (canonical prefixes)
 
@@ -328,6 +363,12 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Session-Type, Session, P12
 
 ## P
+
+### Priority
+- **Definition**: Cognitive entity 09. A **ranked commitment of focus toward a goal**: `serves-goal:` and an integer `rank` (unique within owner and horizon) are mandatory — "priority over what" is only answerable as an ordering of focus toward Goals. Naming: `PRI-<id>-slug.md`. Renamed from "ActivePriority" (clause DEC-0008.2): an entity name must never contain a state. Briefs, handoffs, checklists and drafts are NOT priorities (they are ContextPacks, Capability components, or knowledge-layer content).
+- **Origin**: Naming homologation (v2.0.0); pyramid edges (clause DEC-0008.4)
+- **Aliases prohibited**: "ActivePriority", `AP-`, `priority: high|medium|low` (retired — ranks order, buckets do not)
+- **Cross-references**: Goal, DEC (DecisionRecord), cognition cycle, Naming (canonical prefixes)
 
 ### Principle
 - **Definition**: One of the 12 canonical SliceOps principles (P1–P12). Layer A. Immutable except by superseding DEC under an elevated HITL gate.
@@ -342,8 +383,8 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 ## R
 
 ### RFC (retired term)
-- **Definition**: **Retired from the SliceOps vocabulary** (v1.2.0). What was called an "RFC" is a **pending DecisionRecord** (`DEC-P-`, `status: pending`); `rfcs/` folders are flattened into the flat `decisions/` folder. Rationale: the term named both a process and a folder, collided with IETF RFC usage, and duplicated a state the DEC lifecycle already carries. The governance process is the **proposal process** (`governance/PROPOSAL-PROCESS.md`).
-- **Origin**: Naming homologation (v1.2.0)
+- **Definition**: **Retired from the SliceOps vocabulary**. What was called an "RFC" is a **pending DecisionRecord** (`DEC-P-`, `status: pending`); `rfcs/` folders are flattened into the flat `decisions/` folder. Rationale: the term named both a process and a folder, collided with IETF RFC usage, and duplicated a state the DEC lifecycle already carries. The governance process is the **proposal process** (`governance/PROPOSAL-PROCESS.md`).
+- **Origin**: Naming homologation
 - **Aliases prohibited**: "RFC" for any SliceOps artifact or folder (use "pending DecisionRecord" / `DEC-P-`)
 - **Cross-references**: DEC (DecisionRecord), Naming (canonical prefixes)
 
@@ -378,7 +419,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### Session
 - **Definition**: Cognitive entity #13 in the Layer B.1 catalog. The unit of human–AI interaction (one conversation/chat with an AI agent). Every AI interaction is a Session, identifiable and auditable. Naming: `SESS-<id>-slug.md` (canonical prefix `SESS-`). **The Slice is the DEV Session-Type** — every slice is a session; not every session is a slice (Meta, Audit, Learning, Support, Infra, Artifact, Orchestrate are valid Session-Types that do not produce a PR). Decisions emerge from sessions (P1 generalized).
-- **Origin**: Session as first-class unit; naming homologation (prefix, v1.2.0)
+- **Origin**: Session as first-class unit; naming homologation (prefix)
 - **Aliases prohibited**: "chat" (under-specified), "conversation" (informal), "interaction" (ambiguous)
 - **Cross-references**: Slice, Session-Type, P2, P1, P6, Cognitive entity, Naming (canonical prefixes)
 

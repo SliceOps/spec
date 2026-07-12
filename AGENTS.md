@@ -23,9 +23,9 @@ The repo's own **publishing layout** is lightweight and industry-aligned (preced
 
 ## NAMING (canonical — do not improvise names)
 
-Normative source: [`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md). One entity = one prefix, everywhere:
-`DEC-`/`DEC-P-`/`DEC-D-` (Decision — lifecycle in the prefix) · `INS-` (Insight) · `OUTC-` (Outcome, `kind:` mandatory) · `CAP-` (Capability, components via `kind: standard|runbook|playbook`) · `GOAL-` · `LP-` · `CF-` · `CP-` · `AP-` · `REL-` · `PREF-` · `VAL-` · `SESS-` (Session).
-**Retired (never write)**: `DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`, the term "RFC". DecisionRecord `status:` is `pending|approved|deprecated` and must match the prefix. `decisions/` folders are **flat** — no `rfcs/`/`accepted/`/`superseded/` subfolders. A pre-write hook (`.claude/settings.json` → toolkit naming validator) blocks violations; CI enforces the same gate.
+Normative source: [`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md). Universal grammar for every entity artifact: **`PREFIX-NNNN-YYYYMMDD-slug-kebab.md`** (counter min 4 digits unbounded, per corpus per entity — claim it with the toolkit's `claim_id.py`; date = creation, immutable). One entity = one prefix:
+`DEC-`/`DEC-P-`/`DEC-D-` (Decision — lifecycle in the prefix; `kind: constitutive|strategic|tactical` + goal edges; clauses cite `DEC-NNNN.n`) · `INS-` · `OUTC-` (`kind:` mandatory) · `CAP-` (components via `kind:`) · `GOAL-` (`decided-by:` mandatory) · `CONC-` (Conclusion) · `FRAME-` (Frame) · `CP-` (`kind: pack|brief|handoff`) · `PRI-` (Priority — `serves-goal:` + `rank:` mandatory) · `REL-` · `PREF-` · `VAL-` · `SESS-`. Slice coordinate: `SLC[n]SEC[n]BL[n]` (no dots).
+**Retired (never write)**: `DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`, `LP-`, `CF-`, `AP-`, dotted slice ids, the term "RFC". `decisions/` folders are **flat**. Reserved infrastructure names (exempt from the grammar): README, CLAUDE/AGENTS, MEMORY, `_organization.md`, **`_index.md`** (mandatory at the corpus root — load it before searching anything), `*-ledger.md`, `.counters/`. A pre-write hook (`.claude/settings.json` → toolkit naming validator) blocks violations; CI enforces the same gate.
 
 ## Hard rules for spec work (foundations → decisions → execution)
 
