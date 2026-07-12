@@ -38,7 +38,7 @@ definition of ContextPack. The catalog stays at 13.
 
 ## Context
 
-One vault's handoff counter alone reached `HANDOFF-027`, yet handoffs had no canonical
+In a single maintainer corpus, handoff volume passed twenty-five records, yet handoffs had no canonical
 definition — the same vacuum that turned the former ActivePriority into a catch-all
 (DEC-0008 context). Unstandardized coordination artifacts are where naming discipline
 goes to die.

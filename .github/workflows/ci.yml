@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: MIT
-# Recursive dogfooding — now REAL (per DR-2026-06-19 dogfooding-enforcement-mandate,
-# INS-012, LP-003): the SliceOps spec repo RUNS the consistency validators it
-# publishes, fetched from the toolkit (no vendored copy → no drift, per LP-002
-# / audit §2.5). A prescribed gate that does not run is a build failure, not a
-# header comment.
+# Recursive dogfooding — REAL: the SliceOps spec repo RUNS the consistency
+# validators it publishes, fetched from the toolkit (no vendored copy → no
+# drift). A prescribed gate that does not run is a build failure, not a
+# header comment. (Mandate and supporting insights maintained internally.)
 name: ci
 
 on:
