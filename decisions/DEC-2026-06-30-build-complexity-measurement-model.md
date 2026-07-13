@@ -62,7 +62,7 @@ number.
   velocity number is still SliceOps; it is a capability, not constitutive).
 - **Place under `sizing/`** — rejected (conflates ex-ante slice sizing with ex-post build
   measurement; different unit and time orientation).
-- **Ship the Insttantt baseline as canon** — rejected (a personal datapoint baked into
+- **Ship the first measured project baseline as canon** — rejected (a personal datapoint baked into
   vendor-neutral canon is non-reproducible for other adopters; P11). It ships only as a
   linked adopter worked example.
 - **Single T1–T3 tier / LOC-as-complexity / 0–10 scale / composite-as-measurement** —

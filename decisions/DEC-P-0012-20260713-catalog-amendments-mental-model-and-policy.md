@@ -35,8 +35,8 @@ consistency-check: |
 
 Two amendments to the canonical entity catalog. **First**: the entity renamed by
 DEC-0008 from CognitiveFramework to Frame is renamed once more — final name
-**MentalModel**, prefix `MM-` — because "mental model" is self-explanatory across every
-audience the ecosystem serves, while "frame" both collides with "framework" and
+**MentalModel**, prefix `MM-` — because "mental model" is self-explanatory to any
+audience, while "frame" both collides with "framework" and
 under-communicates. **Second**: **Policy** enters the catalog as a canonical entity
 (prefix `POL-`): an operating rule with scope and enforcement — how an environment, an
 agent, a corpus or a session must operate — stored one record per policy, with

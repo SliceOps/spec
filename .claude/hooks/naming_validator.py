@@ -6,7 +6,7 @@
 #
 #   1. CHECK / CI merge gate:   python3 naming_validator.py --check <path> [<path>...]
 #   2. Agent pre-write hook:    python3 naming_validator.py --hook   (PreToolUse JSON on stdin)
-#   3. Vault sweeper (no CI):   python3 naming_validator.py --check <vault-root>   (cron/systemd/launchd)
+#   3. Corpus sweeper (no CI):  python3 naming_validator.py --check <corpus-root>  (cron/systemd/launchd)
 #
 # Exit codes: 0 = clean · 1 = violations (--check) · 2 = block write (--hook).
 # Every violation message names the CORRECT form. Stdlib only (3.9+), no deps,
@@ -95,7 +95,7 @@ SKIP_BASENAMES = {"README.md", "CLAUDE.md", "AGENTS.md", "MEMORY.md", "GEMINI.md
                   "DISCLAIMER.md", "DISCLOSURE.md", "TRADEMARK.md", "LEGAL-REVIEW.md",
                   "ATTRIBUTIONS.md", "STATS-PROVENANCE.md"}
 # DEC-0010.5 gives the glob "*-ledger.md"; the real-world precedent artifact
-# (brain/slices/ledger.md) is the bare basename with no hyphenated prefix, so
+# (slices/ledger.md) is the bare basename with no hyphenated prefix, so
 # this also accepts the exact "ledger.md" — the intent (ledgers are reserved
 # operational infrastructure, never entity artifacts) covers both.
 LEDGER_SUFFIX = re.compile(r"(^|-)ledger\.md$", re.I)
@@ -105,7 +105,7 @@ LEDGER_SUFFIX = re.compile(r"(^|-)ledger\.md$", re.I)
 #  ASCII enum-only class: this key set mixes enum-like fields (status, kind)
 #  with free-text ones (approver, decided-by). Strict enum SHAPE is validated
 #  separately, downstream, against the specific canonical value sets.
-FM_KEY = re.compile(r'^\s*(entity|datta_entity|primary-entity|status|kind|capability|'
+FM_KEY = re.compile(r'^\s*(entity|[a-z][a-z0-9]*_entity|primary-entity|status|kind|capability|'
                      r'originating_slice|serves-goal|defines-goal|decided-by|rank|priority|'
                      r'reason|approver|created):\s*"?([^"#\n]+?)"?\s*(?:#.*)?$')
 # defines-goal / serves-value / etc. can be list-valued (`[GOAL-..., ...]`); the
@@ -160,7 +160,11 @@ def frontmatter(text):
 
 
 def entity_of(fm):
-    return fm.get("entity") or fm.get("datta_entity") or fm.get("primary-entity")
+    # `entity` is the portable canonical key; a runtime MAY map it to its own
+    # `<runtime>_entity` key (Layer C.1) — any `*_entity` key is honored without
+    # the vendor-neutral tooling naming a specific vendor.
+    mapped = next((v for k, v in fm.items() if k.endswith("_entity")), None)
+    return fm.get("entity") or mapped or fm.get("primary-entity")
 
 
 def is_reserved_name(base):

@@ -135,6 +135,13 @@ is a `DEC-` or a `GOAL-` · `64-fleet-agents/` — one file per executing agent
 (description + full configuration); the FLEET, distinct from `_agents.md` (the corpus
 behavior contract) · `65-in-flight/` — live sessions, slice ledgers, `SLC` coordinates.
 
+Boundary: the framework reserves the **folders and the derived-only discipline** — that
+you prioritize, that plans are computed from the dependency graph, that slices follow the
+slice rules (all already public in P5 and DEC-0008.6). The **machinery** that produces
+and runs them — planning pipelines, the format of fleet-agent definitions, orchestration —
+is vendor Layer C: contents beyond the canonical frontmatter are adopter/vendor-defined
+and specified in their own corpora.
+
 ### DEC-0011.5 — The reserved underscore family
 
 Extends the reserved infrastructure names of DEC-0010.5. Each carries one verb:
@@ -213,7 +220,7 @@ semantics, index routes resolve).
 
 ## Consequences
 
-**Enables**: ecosystem-wide detection and scaffolding; a directory listing that teaches
+**Enables**: detection and scaffolding across adopting projects; a directory listing that teaches
 the cycle; a single migration path (directory ↔ repository isomorphism); Layer C
 runtimes interoperate through the shared serialization. **Constrains**: every corpus
 migrates once, staged per homologation plan; validators, scaffolds and runtime parsers

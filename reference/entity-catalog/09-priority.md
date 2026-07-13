@@ -32,10 +32,10 @@ The former `priority: high | medium | low` field is **retired** — three bucket
 ## Usage example (generic)
 
 ```
-PRI-0001-20260401-datta-mvp-50-beta-users.md
+PRI-0001-20260401-product-mvp-first-beta-users.md
   entity: Priority
   status: in-progress
-  serves-goal: GOAL-0001-20260315-datta-launch
+  serves-goal: GOAL-0001-20260315-product-launch
   rank: 1
   horizon: quarter
 Body: what · why now · acceptance · resolution (filled on close).

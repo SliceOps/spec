@@ -6,7 +6,7 @@ updated: 2026-07-10
 owner: Andrés Ramírez Sierra
 approver: Andrés Ramírez Sierra
 sensitivity: public
-originating_slice: null   # back-fill: ecosystem-level naming ratification session, 2026-07-10
+originating_slice: null   # back-fill: cross-corpus naming ratification session, 2026-07-10
 supersedes: []
 superseded-by: null
 conflicts-with: []
@@ -37,15 +37,15 @@ consistency-check: |
 > added — catalog renames, required fields, universal identifier grammar). Its "v1.2.0"
 > mentions read as that re-issued cut; v1.2.0 was never published.
 
-> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the ecosystem-level ratification and inventory that motivated it (decision id `DEC-P-2026-07-10`, holding level) are maintained internally by the IP holder.
+> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the cross-corpus ratification and inventory that motivated it (decision id `DEC-P-2026-07-10`, holding level) are maintained internally by the IP holder.
 
-## TL;DR
+## Summary
 
 One concept = one name = one prefix, in every layer and every store. Spec v1.2.0 makes naming **normative** (`spec/v2.0.0/naming.md`), carries the DecisionRecord lifecycle in the filename prefix (`DEC-` / `DEC-P-` / `DEC-D-`), flattens `decisions/` folders, retires the term "RFC" and the legacy prefixes (`DR-`, `IN-`, `IR-`, `OC-`, `BR-`, `SKILL-`, `RUN-`, `REF-`), and ships the enforcement so the standard **self-imposes** at the point of write.
 
 ## Context
 
-An ecosystem-wide inventory (2026-07-10) of 18 corpora implementing SliceOps found: four coexisting Insight schemes (`INS-`/`IN-`/`IR-`/none), `DR-` and `DEC-` simultaneously blessed by the glossary for the same entity (~700 artifacts affected ecosystem-wide), a `REF-` catch-all prefix hiding three distinct entities, and agent-context files missing the naming rules entirely. Root cause: the standard was **published but not enforced** — naming lived in docs one had to remember to read, with copies that drifted and no write-time gate. The framework's owner ratified total, retroactive homologation: *"I'm selling a standard — not being homologated is not an option."*
+A cross-corpus inventory (2026-07-10) of the maintainer's corpora implementing SliceOps found: four coexisting Insight schemes (`INS-`/`IN-`/`IR-`/none), `DR-` and `DEC-` simultaneously blessed by the glossary for the same entity (hundreds of artifacts affected across corpora), a `REF-` catch-all prefix hiding three distinct entities, and agent-context files missing the naming rules entirely. Root cause: the standard was **published but not enforced** — naming lived in docs one had to remember to read, with copies that drifted and no write-time gate. The framework's owner ratified total, retroactive homologation: *"I'm selling a standard — not being homologated is not an option."*
 
 ## Decision
 

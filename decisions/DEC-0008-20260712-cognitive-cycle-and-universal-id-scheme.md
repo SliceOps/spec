@@ -20,7 +20,7 @@ consistency-check: |
   re-issued as **v2.0.0** — per the repository's own versioning policy this is a major
   version: catalog entity renames, new required fields and the universal identifier
   grammar are breaking changes to the framework contract (a corpus valid under v1.x
-  requires migration). One migration, not two; the ecosystem jumps v1.1.0 → v2.0.0. Preserves the 13-entity catalog of
+  requires migration). One migration, not two; adopting corpora jump v1.1.0 → v2.0.0. Preserves the 13-entity catalog of
   DEC-2026-05-12-three-layer-ip-boundary — no entity is added or removed; three are
   renamed for plain-language clarity (Frame, Conclusion, Priority) and DecisionRecord
   gains a kind axis with goal edges. Replaces naming.md §2 (dual ID schemes) with one
@@ -273,7 +273,7 @@ Mechanics — the v1.2.0 branch was never pushed, so nothing public is rewritten
 4. Validator, hooks, and continuous-integration gates updated to the v2 rules; the
    migration re-runs **once** across the four SliceOps corpora with final rules, so
    Etapa 2 reaches the remaining corpora with one stable standard.
-5. The Datta runtime enumeration rename (before general availability, "pre-GA") extends
+5. A vendor runtime's enumeration rename (before general availability, "pre-GA") extends
    to Frame, Conclusion, Priority, plus the new fields (kind, defines-goal, serves-goal,
    decided-by, rank).
 6. The evidence.v1 `decisionRefs` pattern is extended additively to accept the universal
@@ -340,7 +340,7 @@ DEC, no priority without a goal, no strategic decision without the goal it creat
 runs counter discipline (`.counters/` + P9 pre-flight + collision gate); constitutive
 decisions cannot ship without a named approver. **Costs**: one full re-rename of the
 just-migrated SliceOps corpora *before* publication (single migration, branches never
-pushed); Datta enum rename widened by three; slice-ID history in git remains under the
+pushed); the vendor-runtime enum rename set widened by three; slice-ID history in git remains under the
 old format (alias map covers it).
 
 ## Ratification note
