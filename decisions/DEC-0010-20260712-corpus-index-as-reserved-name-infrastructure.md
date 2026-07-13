@@ -34,7 +34,7 @@ consistency-check: |
 ## Summary
 
 Every corpus carries **`_index.md` at its root**: the map of where to look for what, so
-no agent or human ever searches a vault or project wholesale. The index is **not a
+no agent or human ever searches a corpus wholesale. The index is **not a
 cognitive entity** — a pack *contains* context, an index *locates* it — so it lives in
 the reserved-name infrastructure class (like `.counters/` and `CLAUDE.md`/`AGENTS.md`),
 findable with **zero discovery cost** because its name and place never vary. Context

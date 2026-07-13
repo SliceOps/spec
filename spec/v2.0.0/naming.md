@@ -8,7 +8,7 @@ Governed by [`DEC-0008`](../../decisions/DEC-0008-20260712-cognitive-cycle-and-u
 
 ## 1. Canonical prefix per entity
 
-Every catalog entity has exactly **one** canonical filename prefix, identical in every store — engineering repositories, knowledge vaults, runtime exports.
+Every catalog entity has exactly **one** canonical filename prefix, identical in every store — code repositories, knowledge corpora, runtime exports.
 
 | # | Entity | Prefix | Retired aliases (prohibited) |
 |---|---|---|---|
@@ -118,7 +118,7 @@ The standard self-imposes at the point of write (published-not-enforced is the f
 1. **Norm without copies** — naming lives only here; other documents link.
 2. **Agent context** — each corpus's `AGENTS.md`/`CLAUDE.md` carries a short NAMING block pointing here, and points to the corpus `_index.md`.
 3. **Write hook** — the toolkit naming validator blocks non-homologated names at write time, indicating the correct form.
-4. **Continuous-integration gate + sweeper** — the same validator as a merge gate in repositories and as a periodic sweep over vaults; it also verifies `_index.md` presence and route resolution.
+4. **Continuous-integration gate + sweeper** — the same validator as a merge gate in repositories and as a periodic sweep over document corpora; it also verifies `_index.md` presence and route resolution.
 5. **Counter discipline** — `claim_id.py` makes the pre-flight one command; the counter-atomicity check detects collisions.
 
 Reference implementation: `sliceops-toolkit/templates/naming-validator/` and `sliceops-toolkit/templates/counter-discipline/`.

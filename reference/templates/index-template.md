@@ -24,8 +24,8 @@ _index.md → exact files or ContextPacks. Replace all <…>.
 
 | Area | Index |
 |---|---|
-| <brain/> | `<brain/_index.md>` |
-| <knowledge/> | `<knowledge/_index.md>` |
+| <folder-a/> | `<folder-a/_index.md>` |
+| <folder-b/> | `<folder-b/_index.md>` |
 
 ## Maintenance
 

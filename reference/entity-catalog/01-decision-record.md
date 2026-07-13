@@ -53,10 +53,10 @@ Resolutions inside a record are **clauses**, cited `DEC-NNNN.n` — never "Decis
 ## Usage example (generic)
 
 ```
-DEC-YYYY-MM-DD-<decision-slug>.md      (date-based, vaults · DEC-NNN-<slug>.md counter-based repos)
+DEC-NNNN-YYYYMMDD-<decision-slug>.md      (universal grammar — spec/v2.0.0/naming.md)
   entity: DecisionRecord
   status: approved
-  originating_slice: BL-XX.SEC-XX.SL-XXX
+  originating_slice: SLC<n>SEC<n>BL<n>
   supersedes: [DEC-D-YYYY-MM-DD-<prior-decision-slug>]
   topics: [<canonical topic>...]
   consistency-check: |

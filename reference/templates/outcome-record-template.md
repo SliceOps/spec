@@ -1,6 +1,6 @@
 <!--
-OutcomeRecord template (Layer B.1). Naming: OUTC-<id>-<slug>.md
-(id = NNN counter-based repos, YYYY-MM-DD vaults — spec/v2.0.0/naming.md).
+OutcomeRecord template (Layer B.1). Naming: OUTC-NNNN-YYYYMMDD-<slug>.md
+(universal grammar — spec/v2.0.0/naming.md).
 kind: is mandatory — retrospective (Block Retrospective) | postmortem | result.
 A closed OutcomeRecord is immutable; corrections append a new record. Replace all <…>.
 -->

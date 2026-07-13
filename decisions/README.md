@@ -26,7 +26,7 @@ Every DEC carries: `conflicts-with`, `related-decs`, `topics`, `vocabulary-chang
 
 ## What does NOT live here
 
-Decisions about specific vendor runtimes (those live in vendor repos). Adopter-internal decisions (those live in the adopter's own brain).
+Decisions about specific vendor runtimes (those live in vendor repos). Adopter-internal decisions (those live in the adopter's own corpus).
 
 ## Status
 

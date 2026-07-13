@@ -25,7 +25,7 @@ consistency-check: |
   renamed for plain-language clarity (Frame, Conclusion, Priority) and DecisionRecord
   gains a kind axis with goal edges. Replaces naming.md §2 (dual ID schemes) with one
   universal grammar, superseding that section's rationale: the collision-avoidance that
-  motivated date-based vault IDs is re-provided by mandatory counter discipline plus the
+  motivated date-based knowledge-corpus IDs is re-provided by mandatory counter discipline plus the
   counter-atomicity validator. The Slice ID format in the glossary (BL-XX.SEC-XX.SL-XXX)
   is replaced by the SLC coordinate (DEC-0008.6). P5 (plans as derived views) is deliberately
   reaffirmed, not amended. No conflicts with licensing or the IP boundary.
@@ -68,7 +68,7 @@ internal census record, not here: living documents carry no volatile numbers):
 - **ActivePriority carries a state in its name** — an "ActivePriority" with
   `status: resolved` is a self-contradiction, the same defect the v1.2.0 lifecycle-in-prefix
   work removed from decisions (state lived in `accepted/` folders). Same principle, same fix.
-- **Two ID schemes** (counter-based repositories, date-based vaults) confused the owner
+- **Two ID schemes** (counter-based repositories, date-based knowledge corpora) confused the owner
   of the standard himself — a standard that needs a footnote to explain its own filenames
   fails its purpose.
 - **LearningPattern** is accurate but opaque; the framework must be understandable in
@@ -315,9 +315,9 @@ and the slice coordinate are one interdependent design.
   plane's power is uniformity (one lifecycle, one supersession graph, one validator);
   the boundary is fractal, so a split turns every real decision into a filing debate.
   Kinds + edges give the distinction machine-checkable truth without the split.
-- **B — Keep the dual ID scheme** (counters in repos, dates in vaults): rejected by the
+- **B — Keep the dual ID scheme** (counters in repos, dates in knowledge corpora): rejected by the
   owner — a standard whose own filenames need a footnote is failing at being simple. The
-  collision risk that motivated date-based vault IDs is re-covered by mandatory counter
+  collision risk that motivated date-based knowledge-corpus IDs is re-covered by mandatory counter
   discipline + the counter-atomicity gate. Uniformity is worth the discipline cost.
 - **C — Fixed-width counters (exactly 4 digits)**: rejected — a ceiling breaks at scale
   (high-velocity multi-agent corpora consume ids far faster than human-era estimates).

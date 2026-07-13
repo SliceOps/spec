@@ -20,7 +20,7 @@ The authoritative SliceOps™ framework specification, versioned with SemVer.
 
 ## What does NOT live here
 
-Working drafts (those live in `decisions/` as pending `DEC-P-` records), adopter-specific customizations (those live in the adopter's own brain), vendor runtime implementation details.
+Working drafts (those live in `decisions/` as pending `DEC-P-` records), adopter-specific customizations (those live in the adopter's own corpus), vendor runtime implementation details.
 
 ## Versioning
 

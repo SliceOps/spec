@@ -48,7 +48,7 @@ Body: when to load · contents summary · regeneration command.
 ## Cross-reference patterns
 
 - Bundles → `includes` (entities/paths).
-- Loaded by → slices/sessions at start (brain-pack injection mechanism).
+- Loaded by → slices/sessions at start (context-pack injection mechanism).
 - Rebuilt by → a deterministic generator (B.2 Determinism-over-Regeneration).
 
 ## Anti-patterns
@@ -56,4 +56,4 @@ Body: when to load · contents summary · regeneration command.
 - Hand-editing a ContextPack instead of regenerating from sources (drift; violates determinism).
 - Stale pack served as active (sources moved; pack not regenerated).
 - Pack so large it defeats its purpose (curate, don't dump).
-- Adopter-specific context placed in a shared spec pack (belongs in the adopter's own brain).
+- Adopter-specific context placed in a shared spec pack (belongs in the adopter's own corpus).

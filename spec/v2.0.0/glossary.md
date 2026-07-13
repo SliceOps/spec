@@ -47,8 +47,8 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Origin**: P5, P8
 - **Cross-references**: Block, Velocity, Consistency check, OutcomeRecord
 
-### Brain pack injection
-- **Definition**: A mechanism that injects relevant context at the start of each slice (including applicable Layer C.2 stack patterns for the repo in scope).
+### Context-pack injection
+- **Definition**: A mechanism that injects relevant context at the start of each slice (including applicable Layer C.2 stack patterns for the repo in scope). Retired name: *brain pack injection*.
 - **Origin**: Layer C.2 stack-patterns
 - **Cross-references**: Layer C.2, Stack pattern, ContextPack
 
@@ -82,14 +82,14 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Layer C.1, Layer C.2
 
 ### Layer C.1 — Vendor Runtimes
-- **Definition**: Sub-layer of Layer C. Vendor-owned runtime products implementing the SliceOps Layer B catalog — e.g., hosted knowledge-graph products, third-party tool adapters, custom homegrown brains. A reference runtime is one runtime, not the runtime (P11).
+- **Definition**: Sub-layer of Layer C. Vendor-owned runtime products implementing the SliceOps Layer B catalog — e.g., hosted knowledge-graph products, third-party tool adapters, custom homegrown runtimes. A reference runtime is one runtime, not the runtime (P11).
 - **Origin**: IP boundary and hierarchical taxonomy
 - **Cross-references**: Vendor, Adapter, P11
 
 ### Layer C.2 — Adopter Stack Patterns
 - **Definition**: Sub-layer of Layer C. Adopter-defined patterns instantiable per technology stack — e.g., Repository pattern (.NET), FluentValidation, Riverpod state management (Flutter). Each adopter defines its own Layer C.2 with enforcement tooling (analyzers / lint rules / CI gates).
 - **Origin**: Stack-patterns and hierarchical taxonomy
-- **Cross-references**: Adopter, Stack pattern, Brain pack injection
+- **Cross-references**: Adopter, Stack pattern, Context-pack injection
 
 ### Capability
 - **Definition**: Cognitive entity #4 in the Layer B.1 catalog. **The capacity itself** — the WHAT an individual/agent/team can now do (e.g., "we know how to parse financial PDFs into structured databases"). Naming: `CAP-<id>-slug.md`. **Renamed from "Skill"** ("capabilities accrued" describes Capability, not Skill; the rename improves precision and frees the term "Skill"). A capability is described by **components** — `standard` / `runbook` / `playbook` (siblings, never nested; see *Capability components*). The catalog does not grow: Capability remains one entity.
@@ -145,7 +145,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 ### ContextPack
 - **Definition**: Cognitive entity. A pre-computed bundle of context loaded at slice/session start. Enables P11 platform-agnosticism (bundles portable cross-tools). **Evolves from static to routed/dynamic** per the Context Router (selection of relevant context-experts by topic/dependency at session start, rather than loading the whole corpus).
 - **Origin**: Catalog split and Context Router
-- **Cross-references**: Brain pack injection, P11, Context Router, context-expert
+- **Cross-references**: Context-pack injection, P11, Context Router, context-expert
 
 ### Calibration discipline
 - **Definition**: The discipline of deriving the sizing bands (token-band, context-band) from **real data and the vigent model landscape**, NOT axiomatically. Reproducible (a versioned deterministic script parses real session corpus → percentiles → bands), quarterly cadence (hooks into the Quarterly Curation Ritual — Layer 6), and versioned (each calibration records date, script-version, dataset, model landscape, and resulting bands so band drift is auditable over time).
@@ -182,7 +182,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P5, Stage, Slice
 
 ### DEC (DecisionRecord)
-- **Definition**: Cognitive entity. An architectural/strategic decision recorded with lifecycle (pending → approved → deprecated), supersession edges, alternatives considered, consequences. **The lifecycle is carried in the prefix**: `DEC-` = approved · `DEC-P-` = pending · `DEC-D-` = deprecated/superseded (with `superseded-by:`). Naming: `DEC-YYYY-MM-DD-slug.md` (date-based, vaults) or `DEC-NNN-slug.md` (counter-based repos) — see `naming.md` §2–3. Decisions folders are **flat** (no lifecycle subfolders); a state change renames the file and rewrites references atomically. The optional `approver:` field (P3, since v1.1.0) is unchanged.
+- **Definition**: Cognitive entity. An architectural/strategic decision recorded with lifecycle (pending → approved → deprecated), supersession edges, alternatives considered, consequences. **The lifecycle is carried in the prefix**: `DEC-` = approved · `DEC-P-` = pending · `DEC-D-` = deprecated/superseded (with `superseded-by:`). Naming: universal grammar `DEC-NNNN-YYYYMMDD-slug.md` (`DEC-P-` pending · `DEC-D-` deprecated) — see `naming.md`. Decisions folders are **flat** (no lifecycle subfolders); a state change renames the file and rewrites references atomically. The optional `approver:` field (P3, since v1.1.0) is unchanged.
 - **Origin**: Catalog split; P2/P1; naming homologation; kind axis and clause identifiers (`DEC-0008.3`/`DEC-0008.9`: `kind: constitutive | strategic | tactical` with goal edges; clauses cited `DEC-NNNN.n`)
 - **Aliases prohibited**: "ADR" (predecessor, DECs are evolved), "decision doc", "note", **`DR-` (retired prefix)**, **"RFC" (retired term — a proposal is a pending DecisionRecord, `DEC-P-`)**
 - **Cross-references**: ADR, P2, P1, Naming (canonical prefixes), RFC (retired term)
@@ -343,7 +343,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 ## N
 
 ### Naming (canonical prefixes)
-- **Definition**: The one-entity = one-name = one-prefix standard: every Layer B.1 entity has exactly one canonical filename prefix, identical across every store (repos, vaults, runtime exports); ID schemes are local per store type (`NNN` counter-based, `YYYY-MM-DD` date-based). Normative source: [`naming.md`](naming.md) — other documents point to it and never copy the tables.
+- **Definition**: The one-entity = one-name = one-prefix standard: every Layer B.1 entity has exactly one canonical filename prefix, identical across every store (code repositories, knowledge corpora, runtime exports); one universal ID grammar (`PREFIX-NNNN-YYYYMMDD-slug`, DEC-0008.5). Normative source: [`naming.md`](naming.md) — other documents point to it and never copy the tables.
 - **Origin**: Naming homologation; universal grammar (clause DEC-0008.5); P12 Context Discipline
 - **Aliases prohibited**: per-store prefixes or per-layer entity renames (the anti-pattern this standard retires)
 - **Cross-references**: DEC (DecisionRecord), Cognitive entity, P12, Glossary
@@ -459,7 +459,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 ### Stack pattern
 - **Definition**: A Layer C.2 pattern. An architectural pattern concrete to a technology stack, instantiable, enforced via tooling (analyzer / lint rule / CI gate), documented in the adopter's own cross-cutting architecture docs.
 - **Origin**: Stack-patterns
-- **Cross-references**: Layer C.2, Brain pack injection, Adopter
+- **Cross-references**: Layer C.2, Context-pack injection, Adopter
 
 ### spec-anchored
 - **Definition**: How SliceOps uses specs: the spec **anchors** the slice scope (prevents drift, declares the outcome upfront) but is **co-equal** with decision and evidence, NOT sovereign. Distinct from "spec-driven" (where the spec is the driver and source of truth). The framework itself has a versioned spec (this document and siblings) — but that is the spec of the framework, not spec-driven-development per project.

@@ -54,7 +54,7 @@ to: <owner | domain | SESS id> | null          # handoff-specific: who receives 
 reason: context-exhausted | spinoff            # handoff-specific: the two birth conditions
 ```
 
-- **pack** — routed or pre-computed corpus context loaded at session start (brain-pack style).
+- **pack** — routed or pre-computed corpus context loaded at session start.
 - **brief** — context prepared to *start* a new topic or session.
 - **handoff** — context prepared to *continue or spin off* in-flight work. Canonical body
   sections: state of work · done · pending · open questions · next steps · counter and
