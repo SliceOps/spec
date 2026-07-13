@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-13
 updated: 2026-07-13
 owner: Andrés Ramírez Sierra
-approver: null   # pending ratification (P3 — author ≠ approver)
+approver: Andrés Ramírez Sierra
 sensitivity: public
 originating_slice: null   # back-fill: layout-design conversation, 2026-07-12/13
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure, DEC-P-0012-20260713-catalog-amendments-mental-model-and-policy]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure, DEC-0012-20260713-catalog-amendments-mental-model-and-policy]
 topics: [folder-structure, corpus-integrity, context-discipline, naming, adoption]
 vocabulary-changes: ["_sliceops (container)", "unit of work", "canonical decade / free decade", "presence activation", "sliceops.json (adoption manifest)", "_agents.md", "_policies.md", "_metrics/", "_meta/", "fleet agents"]
 consistency-check: |
@@ -29,11 +29,11 @@ consistency-check: |
   No conflicts.
 ---
 
-# DEC-P-0011 — The Canonical Corpus Container and Layout (`_sliceops/`)
+# DEC-0011 — The Canonical Corpus Container and Layout (`_sliceops/`)
 
 > A SliceOps DecisionRecord about SliceOps itself. Designed and ratified iteratively with
-> the owner across working drafts (2026-07-12/13); becomes `DEC-0011` on approval.
-> Clause identifiers use the final number per DEC-0008.9.
+> the owner across working drafts (2026-07-12/13); approved 2026-07-13 (born `DEC-P-0011`,
+> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008.9.
 
 ## Summary
 
@@ -236,12 +236,15 @@ Designed and ratified iteratively with the owner (2026-07-12/13) across seven wo
 drafts, with the owner's corrections preserved where they re-founded the design — most
 notably the complete-WHAT rule of clause .3, rejecting the technical-siblings draft
 (Alternative C). The drafts are superseded by this record; the audit plane keeps its
-graveyard (DEC-0008.7).
+graveyard (DEC-0008.7). **Approved by the owner on 2026-07-13** after two boundary
+adjustments requested in review: the clause .4 machinery boundary (framework keeps the
+folders and the derived-only discipline; the producing machinery is vendor Layer C) and
+the removal of runtime-domain content from this record entirely.
 
 ## References
 
 - [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — the cycle (schema this storage follows), universal grammar and exemptions, conventions, clause rule.
 - [`DEC-0009-20260712-handoffs-as-a-contextpack-kind.md`](DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) — ContextPack kinds.
 - [`DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md`](DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md) — the index; reserved-name class extended by clause .5.
-- [`DEC-P-0012-20260713-catalog-amendments-mental-model-and-policy.md`](DEC-P-0012-20260713-catalog-amendments-mental-model-and-policy.md) — MentalModel and Policy, which clauses .2 and .5 rely on.
+- [`DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md`](DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md) — MentalModel and Policy, which clauses .2 and .5 rely on.
 - `spec/v2.0.0/principles.md` — P5 (clause .4), P9 (clause .5), P11/P12 (clause .7).

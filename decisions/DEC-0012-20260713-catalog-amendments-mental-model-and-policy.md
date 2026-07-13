@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-13
 updated: 2026-07-13
 owner: Andrés Ramírez Sierra
-approver: null   # pending ratification (P3 — author ≠ approver)
+approver: Andrés Ramírez Sierra
 sensitivity: public
 originating_slice: null   # back-fill: layout-design conversation, 2026-07-12/13
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0011-20260713-canonical-corpus-container-and-layout]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0011-20260713-canonical-corpus-container-and-layout]
 topics: [naming, entity-catalog, glossary, enforcement]
 vocabulary-changes: ["MentalModel (entity — was Frame, was CognitiveFramework)", "MM- prefix", "FRAME- retired", "Policy (entity)", "POL- prefix", "policy scope", "_policies.md (derived view)"]
 consistency-check: |
@@ -25,11 +25,11 @@ consistency-check: |
   every literal that states the catalog size.
 ---
 
-# DEC-P-0012 — Catalog Amendments: MentalModel and the Policy Entity
+# DEC-0012 — Catalog Amendments: MentalModel and the Policy Entity
 
 > A SliceOps DecisionRecord about SliceOps itself. Ratified with the owner in the
-> layout-design conversation (2026-07-12/13); becomes `DEC-0012` on approval. Clause
-> identifiers use the final number per DEC-0008.9.
+> layout-design conversation (2026-07-12/13); approved 2026-07-13 (born `DEC-P-0012`,
+> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008.9.
 
 ## Summary
 
@@ -150,11 +150,13 @@ Both amendments ratified by the owner in the layout-design conversation (2026-07
 MentalModel elected over keeping Frame after an alternatives review with costs stated;
 the Policy entity proposed by the owner ("each policy deserves to be seen the way
 decisions are seen") and formalized here. Split from DEC-0011 per the independence test
-(DEC-0008.9).
+(DEC-0008.9). **Approved by the owner on 2026-07-13**, together with DEC-0011, after the
+vendor-vocabulary review (no runtime names in canonical text; scope values extensible in
+Layer C).
 
 ## References
 
 - [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — the amended single-source table (DEC-0008.2.1), the retired-prefix discipline, the clause rule (DEC-0008.9).
-- [`DEC-P-0011-20260713-canonical-corpus-container-and-layout.md`](DEC-P-0011-20260713-canonical-corpus-container-and-layout.md) — folder homes (`03-mental-models/`, `07-policies/`), `_policies.md` in the underscore family.
+- [`DEC-0011-20260713-canonical-corpus-container-and-layout.md`](DEC-0011-20260713-canonical-corpus-container-and-layout.md) — folder homes (`03-mental-models/`, `07-policies/`), `_policies.md` in the underscore family.
 - `reference/entity-catalog/` — the catalog these clauses amend.
 - `spec/v2.0.0/naming.md` — prefix table, retired list and alias tables receiving the amendment.
