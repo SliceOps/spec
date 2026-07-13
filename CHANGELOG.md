@@ -44,6 +44,7 @@ The cognition cycle and the universal identifier scheme. Governed by [`decisions
 - **The term "RFC" is retired**; a proposal is a pending DecisionRecord (`DEC-P-`). `governance/RFC-PROCESS.md` → [`governance/PROPOSAL-PROCESS.md`](governance/PROPOSAL-PROCESS.md).
 - **`decisions/` flattened** (this repo, dogfooding): `accepted/` files renamed `DR-*` → `DEC-*` with `status: approved`; lifecycle subfolders retired; every reference rewritten in the same change (R5). The publishing-layout DEC carries the amendment annotation.
 - DecisionRecord `status` enum homologated to `pending|approved|deprecated` (legacy `proposed`/`ratified`/`superseded` read-tolerated, write-prohibited); `approver` recommendation now reads "on `status: approved`".
+- evidence.v1 reference patterns brought to the universal grammar: `sliceId` accepts the `SLC` coordinate and `decisionRef` the `PREFIX-NNNN-YYYYMMDD-slug` form (pre-v2 forms read-tolerated for immutable history) — fold-in of clauses DEC-0008.5/.6; golden examples updated.
 - Living references updated from `spec/v1.1.0/` to `spec/v2.0.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v2.0.0`. Historical documents keep their original version links.
 - `spec/README.md` version index brought up to date (was still describing v1.0.0 as current — stale-copy fix).
 - ip-boundary licensing note: the stale "No `LICENSE` file is published…" line (pre-dating the 2026-06-15 license ratification) now states the published CC BY 4.0 + MIT reality. No licensing terms changed.
