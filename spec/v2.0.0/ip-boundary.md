@@ -39,7 +39,7 @@ Currently none; P1–P12 are monolithic. Future principle dimensions (e.g., comp
 
 | Sub-layer | Content |
 |---|---|
-| **B.1 — Framework Artifacts** | The 13-entity cognitive catalog, repo folder structure, R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism, sizing artifacts, model triage. SliceOps-originated. |
+| **B.1 — Framework Artifacts** | The 14-entity cognitive catalog, repo folder structure, R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism, sizing artifacts, model triage. SliceOps-originated. |
 | **B.2 — Universal Engineering Patterns** | SOLID, ACID, Outbox, Fail-Fast, Idempotency, Defense in Depth, CI/Pipeline Cost Economy, Determinism-over-Regeneration. Industry-canonical, reaffirmed; vendor-agnostic, stack-agnostic. |
 
 Future potential: **B.3 — Compliance Pattern Mappings**; **B.4 — Domain Pattern Libraries**.
@@ -48,7 +48,7 @@ Future potential: **B.3 — Compliance Pattern Mappings**; **B.4 — Domain Patt
 
 | Sub-layer | Content | Ownership |
 |---|---|---|
-| **C.1 — Vendor Runtimes** | Runtime products implementing the SliceOps catalog (hosted knowledge-graph products, third-party tool adapters, custom homegrown brains). | Per vendor |
+| **C.1 — Vendor Runtimes** | Runtime products implementing the SliceOps catalog (hosted knowledge-graph products, third-party tool adapters, custom homegrown runtimes). | Per vendor |
 | **C.2 — Adopter Stack Patterns** | Adopter-defined patterns instantiable per technology stack, enforced via tooling (analyzers / lint rules / CI gates). | Per adopter |
 
 Future potential: **C.3 — Adopter Compliance Mappings**; **C.4 — Adopter Domain Specializations**.
@@ -65,7 +65,7 @@ Future potential: **C.3 — Adopter Compliance Mappings**; **C.4 — Adopter Dom
 
 ---
 
-## The 13-entity catalog (Layer B.1)
+## The 14-entity catalog (Layer B.1)
 
 The canonical cognitive entity catalog is **SliceOps IP, shared across vendors** (CC BY 4.0): DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**. Each entity has a frontmatter schema, lifecycle, cross-reference patterns, and anti-patterns (see `../../reference/entity-catalog/`).
 
@@ -79,7 +79,7 @@ Operating analogy: a public production methodology (Lean / Toyota Production Sys
 
 ### Adopter customization rules
 
-Adopters **may**: use the catalog as-is (recommended — preserves cross-adopter interop); add adopter-specific entities (extends the catalog; lives in the adopter's own brain, NOT in the SliceOps spec); fork with renames/extensions (requires attribution and documenting the customization in adopter DECs).
+Adopters **may**: use the catalog as-is (recommended — preserves cross-adopter interop); add adopter-specific entities (extends the catalog; lives in the adopter's own corpus, NOT in the SliceOps spec); fork with renames/extensions (requires attribution and documenting the customization in adopter DECs).
 
 Adopters **may not**: remove canonical entities and still claim SliceOps-compliance (breaks interop); conflict canonical entity semantics (e.g., redefine DecisionRecord to mean "user preferences").
 

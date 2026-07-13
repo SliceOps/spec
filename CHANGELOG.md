@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-## [2.0.0] — 2026-07-12
+## [2.0.0] — 2026-07-13
 
 The cognition cycle and the universal identifier scheme. Governed by [`decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (with [`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) and [`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)), absorbing the total naming homologation of [`DEC-2026-07-10`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the v1.2.0 cut those changes were first drafted into was **never published**; it re-issues here as a major version because catalog renames, new required fields and the universal grammar are breaking changes to the framework contract. `spec/v2.0.0/` created; `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit.
 
@@ -20,17 +20,19 @@ The cognition cycle and the universal identifier scheme. Governed by [`decisions
 - **Handoffs standardized** as ContextPack `kind: handoff` ([`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md)): the two birth conditions (context-exhausted, spinoff), canonical body sections, session-provenance loop.
 - **The corpus index** `_index.md` as reserved-name infrastructure ([`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)): mandatory at every corpus root, zero-discovery, points-never-copies, routes must resolve; reserved infrastructure names formalized.
 - Plain-language rule (clause DEC-0008.7): acronyms defined at first use; template heading "TL;DR" → "Summary".
+- **The canonical corpus container and layout** `_sliceops/` ([`DEC-0011`](decisions/DEC-0011-20260713-canonical-corpus-container-and-layout.md)): the unit-of-work rule (directory / repository named `_sliceops` / pointer manifest), cycle-ordered decades with reserved semantics and presence activation, the complete WHAT under `50-products/`, the reserved underscore family (`_agents.md` · `_policies.md` derived · `_metrics/` · `_meta/`), the adoption manifest `sliceops.json`; the former "-engineering" numbered profile retired.
+- **Catalog amendments** ([`DEC-0012`](decisions/DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md)): the entity's final name **MentalModel** (`MM-`), and **Policy** (`POL-`) as the fourteenth canonical entity — operating rules with `scope` / `enforced-by` / `severity`, `_policies.md` demoted to a derived summary. New templates: `policy-template.md`, `sliceops-json-template.md`.
 
 ### Changed (v2.0.0 scope)
 
-- **Three entities renamed to plain words** (clause DEC-0008.2): CognitiveFramework → **Frame** (`FRAME-`), LearningPattern → **Conclusion** (`CONC-`), ActivePriority → **Priority** (`PRI-`) — semantics preserved; old names become implementation aliases; `LP-`/`CF-`/`AP-` retired.
+- **Three entities renamed to plain words** (clause DEC-0008.2): CognitiveFramework → **MentalModel** (`MM-`; interim design name "Frame"/`FRAME-` also retired — clause DEC-0012.1), LearningPattern → **Conclusion** (`CONC-`), ActivePriority → **Priority** (`PRI-`) — semantics preserved; old names become implementation aliases; `LP-`/`CF-`/`FRAME-`/`AP-` retired.
 - Entity catalog, glossary and naming.md rewritten from the single-source table (clause DEC-0008.2.1).
 
 ### Added (absorbed naming homologation, first drafted as v1.2.0 — never published)
 
 ### Added
 
-- **Canonical naming standard** ([`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (13-entity table), per-store ID schemes (`NNN` counter-based / `YYYY-MM-DD` date-based), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
+- **Canonical naming standard** ([`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (14-entity table since DEC-0012), the universal identifier grammar (the interim per-store ID schemes were retired by DEC-0008.5 within this same release), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
 - Glossary entries: *Naming (canonical prefixes)*, *OutcomeRecord* (with mandatory `kind: retrospective|postmortem|result`), *Capability components (standard/runbook/playbook)*, *RFC (retired term)*.
 - Capability **component model** (`reference/entity-catalog/04-capability.md`): `standard`/`runbook`/`playbook` as sibling components via `kind:` + `capability:` back-reference — the catalog does not grow.
 - Templates born homologated: [`capability-template.md`](reference/templates/capability-template.md), [`outcome-record-template.md`](reference/templates/outcome-record-template.md); `dec-template.md` rewritten to the lifecycle-prefix form.
@@ -42,7 +44,7 @@ The cognition cycle and the universal identifier scheme. Governed by [`decisions
 - **The term "RFC" is retired**; a proposal is a pending DecisionRecord (`DEC-P-`). `governance/RFC-PROCESS.md` → [`governance/PROPOSAL-PROCESS.md`](governance/PROPOSAL-PROCESS.md).
 - **`decisions/` flattened** (this repo, dogfooding): `accepted/` files renamed `DR-*` → `DEC-*` with `status: approved`; lifecycle subfolders retired; every reference rewritten in the same change (R5). The publishing-layout DEC carries the amendment annotation.
 - DecisionRecord `status` enum homologated to `pending|approved|deprecated` (legacy `proposed`/`ratified`/`superseded` read-tolerated, write-prohibited); `approver` recommendation now reads "on `status: approved`".
-- Living references updated from `spec/v1.1.0/` to `spec/v2.0.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v1.2.0`. Historical documents keep their original version links.
+- Living references updated from `spec/v1.1.0/` to `spec/v2.0.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v2.0.0`. Historical documents keep their original version links.
 - `spec/README.md` version index brought up to date (was still describing v1.0.0 as current — stale-copy fix).
 - ip-boundary licensing note: the stale "No `LICENSE` file is published…" line (pre-dating the 2026-06-15 license ratification) now states the published CC BY 4.0 + MIT reality. No licensing terms changed.
 

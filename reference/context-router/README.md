@@ -60,7 +60,7 @@ Only the **hot** context of the current turn lives in the working set. Prune col
 SliceOps already has several primitives that act as partial routers:
 
 - **ContextPack (entity #8)** — currently static; evolves to routed under this artifact.
-- **Brain-pack injection** — routes by repo / workspace (partial: not by topic).
+- **Context-pack injection** — routes by repo / workspace (partial: not by topic).
 - **Coordinator summaries** — informal compression in Orchestrate sessions.
 - **Topic taxonomy** — already supports routing by theme (a routing primitive).
 

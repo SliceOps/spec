@@ -6,7 +6,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 
 | Folder | Content | Layer |
 |---|---|---|
-| `entity-catalog/` | 13 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**) — each with frontmatter schema, lifecycle, generic examples, and anti-patterns | B.1 |
+| `entity-catalog/` | 14 canonical cognitive entity specs (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, Conclusion, MentalModel, ContextPack, Priority, RelationshipContext, Preference, Value, Session, **Policy**) — each with frontmatter schema, lifecycle, generic examples, and anti-patterns | B.1 |
 | `evidence/` | **evidence.v1** canonical evidence record format — P6/P7 made machine-readable: JSON Schema (draft 2020-12), prose spec (category mapping, vendor extensions, signing/verification), and golden examples. An interchange record format anchored by OutcomeRecord, not a cognitive entity | B.1 |
 | `sessions/` | Session-Type taxonomy (8 canonical Session-Types, Slice-Types level 2, and 2 orthogonal axes) — hierarchical, replaces earlier flat 17-label practice | B.1 |
 | `sizing/` | Bidimensional sizing: **token-band** (throughput, billed-equivalent), **context-band** (peak footprint, model-viability filter), and calibration discipline | B.1 |
@@ -15,9 +15,8 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `context-router/` | Context Router: selective routing of context-experts (consumption side) — pairs with synthesis efficiency in Model Triage (production side) | B.1 |
 | `development-model/` | Canonical SliceOps development model: decision-driven, style-agnostic, acceptance-first preferred convention | B.1 |
 | `project-structure/` | Prescribed foundations-first project structure (foundations → decisions → architecture → specs → execution → insights) — distinct from this repo's lightweight publishing layout | B.1 |
-| `knowledge-categories/` | 27 canonical knowledge categories (reference taxonomy v1.0) | B.1 |
 | `r-rules/` | R1–R14 starter templates (regex vendor-agnostic, adopter-instantiable) | B.1 |
-| `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, LearningPattern, CognitiveFramework) including Layer 1 consistency-management fields | B.1 |
+| `frontmatter-schemas/` | Abstract frontmatter schemas (DEC, InsightRecord, Conclusion, MentalModel, Policy) including Layer 1 consistency-management fields | B.1 |
 | `templates/` | File templates (slice, DEC, InsightRecord) | B.1 |
 | `agent-skill/` | Agent-Skill concept spec (vendor-neutral procedural-pack concept; distinct from the Capability cognitive entity) | B.1 |
 | `patterns/` | Layer B.2 Universal Engineering Patterns — reaffirmed industry-canonical and SliceOps-formalized (Determinism-over-Regeneration, CI/Pipeline Cost Economy) | B.2 |
@@ -25,7 +24,7 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 
 ## Status
 
-Layer B.1 reference core drafted: entity-catalog, evidence, knowledge-categories, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars and adopter onboarding are remaining.
+Layer B.1 reference core drafted: entity-catalog, evidence, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars and adopter onboarding are remaining.
 
 ## Note on "Skill" vs "Capability"
 

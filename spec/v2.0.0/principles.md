@@ -272,7 +272,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Mode M unlocks Wedge B (parallelism); Mode S unlocks Wedge A (audit) without Wedge B
 - Minimum declared prerequisites: text-based AI agent, git, file system, atomic-slice scoping capability
 - Capability matrix per platform (Layer B pattern): which platforms unlock which features
-- **A reference runtime is one runtime, not the runtime.** Substrate options (third-party tool adapters, custom homegrown brains) are valid and are architectural peers
+- **A reference runtime is one runtime, not the runtime.** Substrate options (third-party tool adapters, custom homegrown runtimes) are valid and are architectural peers
 
 **Anti-pattern**:
 - Claiming SliceOps requires a specific AI coding tool

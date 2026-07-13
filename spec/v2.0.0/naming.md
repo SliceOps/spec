@@ -2,7 +2,7 @@
 
 The canonical naming standard for SliceOps artifacts: **one concept = one name = one prefix = one grammar, across every layer and every store**. This document is the **single normative source** for artifact naming; every other document points here and never copies the tables (copies drift — principle P12, Context Discipline).
 
-Governed by [`DEC-0008`](../../decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (the cognition cycle and the universal identifier scheme), with [`DEC-0009`](../../decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) (handoffs) and [`DEC-0010`](../../decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md) (the corpus index). The complete catalog table with definitions is clause DEC-0008.2.1 — the entity catalog (`../../reference/entity-catalog/`) is rewritten from it.
+Governed by [`DEC-0008`](../../decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (the cognition cycle and the universal identifier scheme), with [`DEC-0009`](../../decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) (handoffs), [`DEC-0010`](../../decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md) (the corpus index), [`DEC-0011`](../../decisions/DEC-0011-20260713-canonical-corpus-container-and-layout.md) (the canonical container and layout, §7) and [`DEC-0012`](../../decisions/DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md) (MentalModel + Policy catalog amendments). The complete catalog table with definitions is clause DEC-0008.2.1 as amended by DEC-0012 — the entity catalog (`../../reference/entity-catalog/`) is rewritten from it.
 
 ---
 
@@ -18,13 +18,14 @@ Every catalog entity has exactly **one** canonical filename prefix, identical in
 | 04 | Capability | `CAP-` (components via `kind:`) | `SKILL-`, `RUN-`, `REF-` |
 | 05 | Goal | `GOAL-` (`decided-by:` mandatory) | — |
 | 06 | Conclusion | `CONC-` | `LP-` (former LearningPattern) |
-| 07 | Frame | `FRAME-` | `CF-` (former CognitiveFramework) |
+| 07 | MentalModel | `MM-` | `CF-` (former CognitiveFramework), `FRAME-` (interim v2 design name — DEC-0012.1) |
 | 08 | ContextPack | `CP-` (`kind: pack / brief / handoff`) | `HANDOFF-` (folk counter, migrates into `CP-`) |
 | 09 | Priority | `PRI-` (`serves-goal:` + `rank:` mandatory) | `AP-` (former ActivePriority — names never carry states) |
 | 10 | RelationshipContext | `REL-` | — |
 | 11 | Preference | `PREF-` | — |
 | 12 | Value | `VAL-` | — |
 | 13 | Session | `SESS-` | — |
+| 14 | Policy | `POL-` (`scope:` mandatory; `enforced-by:` + `severity:`) — DEC-0012.2 | — |
 | — | *slice coordinate* (not an entity) | `SLC[n]SEC[n]BL[n]` (§5) | `BL-XX.SEC-XX.SL-XXX` (dotted form) |
 
 `REF-` remains retired as a catch-all (coding standards → `CAP-`, patterns → `CONC-`, third-party integrations → vendor connector entities). A prefix that maps to more than one entity is the anti-pattern this standard exists to prevent.
@@ -72,15 +73,44 @@ Minimum widths: `SLC` 4 digits, `SEC`/`BL` 2 — all unbounded per §2. In front
 
 ## 6. Reserved infrastructure names
 
-The universal grammar governs *entity artifacts*. Infrastructure files are exempt and their names are **reserved** (DEC-0010.5): `README.md`, `CLAUDE.md`/`AGENTS.md`, `MEMORY.md`, `_organization.md`, **`_index.md`**, `*-ledger.md`, and the `.counters/` directory. Anything else must be an entity artifact under the grammar.
+The universal grammar governs *entity artifacts*. Infrastructure files are exempt and their names are **reserved** (DEC-0010.5, extended by DEC-0011.5): `README.md`, `CLAUDE.md`/`AGENTS.md` (thin pointers at the repo root), `MEMORY.md`, `_organization.md`, **`_index.md`**, **`_agents.md`** (the corpus behavior contract), **`_policies.md`** (DERIVED summary of the active Policy records — DEC-0012.3, never hand-edited), `*-ledger.md`, the **`_metrics/`** and **`_meta/`** directories, the `.counters/` directory (inside `_metrics/` in container corpora), and the adoption manifest **`sliceops.json`** (§7). Anything else must be an entity artifact under the grammar. Numbers are cognition; underscores are infrastructure.
 
 **`_index.md` is mandatory at every corpus root** (DEC-0010): the map of where to look for what — the loading chain is *agent-context file → `_index.md` → exact files or ContextPacks*. It points, never copies; the validator enforces that it exists and that every route resolves. Large corpora may add per-folder `_index.md` files; the root index routes to them.
 
-## 7. Immutable zones
+## 7. The canonical container and layout (`_sliceops/`)
+
+Folder names are names too (DEC-0011). **`_sliceops` is always the container at the root
+of the unit of work**: a *directory* in a single repository; a *git repository named
+`_sliceops`* in a multi-repo product workspace (replacing the former "-engineering"
+repo); a *pointer* `sliceops.json` (`{"ref": …, "remote": …}`) in code repositories. The
+LOCAL name detects; the remote name is free. One product = one corpus = one set of
+counters.
+
+Inside, the decades are numbered in cognition-cycle order and their semantics are
+**reserved forever** — presence activates (a corpus materializes only what its work
+needs):
+
+```
+_sliceops/
+  sliceops.json · _index.md · _agents.md · _policies.md (derived) · _metrics/ · _meta/
+  00-context/    01-values 02-preferences 03-mental-models 04-context-packs
+                 05-relations 06-capabilities 07-policies 10-custom-context
+                 (08–09 reserved to the framework)
+  10-insights/   20-conclusions/   30-decisions/ (flat)   40-goals/
+  50-products/   the complete WHAT: definition + architecture + specs + reference
+  60-execution/  61-priorities 62-plans 63-dags (derived only, P5)
+                 64-fleet-agents 65-in-flight
+  70-outcomes/   99-archive/ (immutable, R10)
+```
+
+Decades **80 and 90 are free** adopter/vendor space, declared in the manifest's
+`extensions`. Normative source for every rule above: DEC-0011 (clauses .1–.8).
+
+## 8. Immutable zones
 
 `99-archive/` folders (rule R10) are **never renamed**; merged git history is never rewritten. Historical names in both are covered by each corpus's **alias map**, emitted by the migration tooling. Everything else is renamed retroactively — homologation is total, not forward-only.
 
-## 8. Alias tables
+## 9. Alias tables
 
 ### Migration to v2.0.0 (scheme level; per-file maps are emitted per corpus)
 
@@ -89,7 +119,8 @@ The universal grammar governs *entity artifacts*. Infrastructure files are exemp
 | `PREFIX-YYYY-MM-DD-slug.md` (date-based) | `PREFIX-NNNN-YYYYMMDD-slug.md` | universal grammar: number assigned chronologically by `created:` |
 | `PREFIX-NNN-slug.md` (3-digit counter) | `PREFIX-NNNN-YYYYMMDD-slug.md` | renumber to 4-digit minimum + date inserted |
 | `LP-<id>` | `CONC-<id>` | Conclusion rename |
-| `CF-<id>` | `FRAME-<id>` | Frame rename |
+| `CF-<id>` | `MM-<id>` | MentalModel rename (DEC-0012.1) |
+| `FRAME-<id>` (interim v2 design name) | `MM-<id>` | MentalModel rename (DEC-0012.1) |
 | `AP-<id>` | `PRI-<id>` | Priority rename (or reclassification where the file was never a priority) |
 | `HANDOFF-NNN` (folk counter) | `CP-NNNN-…` with `kind: handoff` | DEC-0009 |
 | `BL-XX.SEC-XX.SL-XXX` | `SLC…SEC…BL…` | slice coordinate (§5) |
@@ -106,19 +137,20 @@ The universal grammar governs *entity artifacts*. Infrastructure files are exemp
 | ValuePrinciple | Value |
 | AgentPreference | Preference |
 | LearningPattern *(pre-v2 canonical name)* | Conclusion |
-| CognitiveFramework *(pre-v2 canonical name)* | Frame |
+| CognitiveFramework *(pre-v2 canonical name)* | MentalModel |
+| Frame *(interim v2 design name)* | MentalModel |
 | ActivePriority *(pre-v2 canonical name)* | Priority |
 
 Runtime-**proprietary** entities are NOT in the canonical catalog and are not renamed by this standard — they follow the vendor-extension mechanism in [`ip-boundary.md`](ip-boundary.md).
 
-## 9. Enforcement
+## 10. Enforcement
 
 The standard self-imposes at the point of write (published-not-enforced is the failure mode this closes):
 
 1. **Norm without copies** — naming lives only here; other documents link.
 2. **Agent context** — each corpus's `AGENTS.md`/`CLAUDE.md` carries a short NAMING block pointing here, and points to the corpus `_index.md`.
 3. **Write hook** — the toolkit naming validator blocks non-homologated names at write time, indicating the correct form.
-4. **Continuous-integration gate + sweeper** — the same validator as a merge gate in repositories and as a periodic sweep over document corpora; it also verifies `_index.md` presence and route resolution.
+4. **Continuous-integration gate + sweeper** — the same validator as a merge gate in repositories and as a periodic sweep over document corpora; it also verifies `_index.md` presence and route resolution, and — in container corpora — the adoption manifest's presence and coherence (DEC-0011.8).
 5. **Counter discipline** — `claim_id.py` makes the pre-flight one command; the counter-atomicity check detects collisions.
 
 Reference implementation: `sliceops-toolkit/templates/naming-validator/` and `sliceops-toolkit/templates/counter-discipline/`.

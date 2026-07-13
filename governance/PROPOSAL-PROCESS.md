@@ -11,7 +11,7 @@ How a proposed change to the SliceOps™ framework becomes canonical.
 3. **Pre-merge consistency checklist (Layer 2)** — search topic-related DECs, read the most-related ones end-to-end, declare conflicts and resolutions, update bidirectional cross-references, update glossary/topics if vocabulary changes.
 4. **Deliberate** — discussion on the pending record. Alternatives considered must be explicit (no false-binary).
 5. **Approve or reject** — on approval the record is **renamed** `DEC-P-…` → `DEC-…`, `status: approved`, and the `approver:` field records the approving human (P3); all references to the old id are rewritten in the same atomic change (R5); supersession of any prior DEC is explicit and bidirectional (the superseded record becomes `DEC-D-…`, `status: deprecated`, `superseded-by:` set).
-6. **Propagate** — downstream docs/templates updated fix-on-touch (P12); cross-vault references handed off, not edited directly.
+6. **Propagate** — downstream docs/templates updated fix-on-touch (P12); cross-corpus references handed off, not edited directly.
 
 ## Principle amendments
 

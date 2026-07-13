@@ -36,6 +36,8 @@ Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). What t
 | Goal | `decided-by` | REQUIRED — the decision that created the goal | — |
 | Priority | `serves-goal` + `rank` | REQUIRED — goal edge + integer rank unique within (owner, horizon) | `priority: high\|medium\|low` retired |
 | ContextPack | `kind` | `pack` / `brief` / `handoff` (handoff: `reason: context-exhausted\|spinoff`) | — |
+| Policy | `scope` | REQUIRED — `environment` / `agent` / `corpus` / `session` (vendors MAY extend the values in their own runtimes, Layer C) | — |
+| Policy | `severity` + `enforced-by` + `status` | `block` / `warn` · enforcement surfaces (`hook`/`validator`/`runtime`/`human`) · `active` / `deprecated`; the corpus `_policies.md` is DERIVED from active records (DEC-0012.3) | — |
 
 ## Notes
 

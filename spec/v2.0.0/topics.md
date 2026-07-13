@@ -67,10 +67,10 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Scope**: Layer C.2 — adopter-defined stack-specific instantiable patterns.
 - **Parent**: ip-boundary > layer-c-implementations
 - **Sub-topics**: dotnet-stack, nodejs-stack, flutter-stack, python-stack, rust-stack, go-stack (added as adopters publish)
-- **Cross-references**: layer-b-engineering-universal, adopter, brain-pack-injection
+- **Cross-references**: layer-b-engineering-universal, adopter, context-pack-injection
 
 ### entity-catalog
-- **Scope**: Decisions about the 13 canonical cognitive entity types.
+- **Scope**: Decisions about the 14 canonical cognitive entity types.
 - **Parent**: layer-b-framework-artifact
 - **Sub-topics**: decision-record-pattern, insight-record-pattern, learning-pattern, session-management, etc.
 - **Cross-references**: vocabulary-discipline, layer-b-framework-artifact, session-management
@@ -218,7 +218,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Sub-topics**: retroactive-adoption, born-on-sliceops (per-adopter sub-topics added as adopters publish)
 - **Cross-references**: layer-c-adopter-stack
 
-### brain-pack-injection
+### context-pack-injection (was: context-pack-injection)
 - **Scope**: The mechanism for injecting applicable Layer C.2 stack patterns at the start of each slice.
 - **Parent**: layer-c-adopter-stack
 - **Cross-references**: layer-c-adopter-stack, context-pack
@@ -227,7 +227,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 
 ## Slot extension
 
-Adopters may extend this taxonomy with domain-specific topics in their own brain. Canonical SliceOps topics here are reserved — do not redefine semantics; only extend with sub-topics or add adopter-specific top-levels.
+Adopters may extend this taxonomy with domain-specific topics in their own corpus. Canonical SliceOps topics here are reserved — do not redefine semantics; only extend with sub-topics or add adopter-specific top-levels.
 
 ## Maintenance
 
@@ -245,7 +245,7 @@ Major restructure leads to a version bump.
 | Domain vertical packs | `banking-vertical`, `healthcare-vertical`, `gov-vertical` |
 | Certification program | `certification-tier`, `practitioner`, `architect` |
 | Education / curriculum | `curriculum`, `onboarding-tier`, `tutorial` |
-| Multi-org coordination | `cross-vault-references`, `org-boundary`, `consent-grant` |
+| Multi-org coordination | `cross-corpus-references`, `org-boundary`, `consent-grant` |
 | Conformance testing | `conformance-suite`, `compliance-test-vector` |
 
 Hypothetical — added only when concrete DECs emerge.

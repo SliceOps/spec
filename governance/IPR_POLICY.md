@@ -8,7 +8,7 @@ This is the **authoritative** policy for licensing, trademark, and contributions
 
 SliceOps is a documentation-first framework with mixed-scope content, licensed under two licenses by content type:
 
-- **Documentation** — prose, spec, governance, decisions, examples, READMEs, R-rule narrative, entity-catalog and knowledge-category descriptions — is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See [`../LICENSE`](../LICENSE).
+- **Documentation** — prose, spec, governance, decisions, examples, READMEs, R-rule narrative, and entity-catalog descriptions — is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See [`../LICENSE`](../LICENSE).
 - **Code** — templates, workflow YAMLs, JSON schemas, validator scripts, CI workflows, executable scripts — is licensed under the **MIT License**. See [`../LICENSE-CODE`](../LICENSE-CODE).
 
 Code files carry an `SPDX-License-Identifier: MIT` header so per-file scope is unambiguous. When a file carries no SPDX header, scope resolves in this order: first the SPDX header, then the folder's README, then the disambiguation rule (code-shaped content, or any file under a templates, scripts, or workflows path, is MIT; prose and docs are CC BY 4.0; when in doubt, CC BY 4.0, since SliceOps is primarily a documentation framework).

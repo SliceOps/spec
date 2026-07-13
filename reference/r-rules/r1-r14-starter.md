@@ -72,7 +72,7 @@ Vendor-neutral, stack-agnostic merge gates. Each is a **hard gate**. The check p
 - **Check**: slice-closing PR diff modifies both ledgers, or carries `[skip-ledger-update]` and rationale.
 
 ### R14 — Scope boundary enforcement
-- **Statement**: No PR adds content outside the repo's declared scope. Out-of-scope content lives in the appropriate domain's own brain. The specific out-of-scope categories are adopter-declared (e.g., a technical spec repo rejects commercial/HR/strategic content).
+- **Statement**: No PR adds content outside the repo's declared scope. Out-of-scope content lives in the appropriate domain's own corpus. The specific out-of-scope categories are adopter-declared (e.g., a technical spec repo rejects commercial/HR/strategic content).
 - **Principle**: P2, P12.
 - **Check**: scope-boundary scan with adopter-defined category patterns; allowlist marker `<!-- r14-allowlist: <reason ≥10 non-hyphen chars> -->` for legitimate matches (glossary/archive/opaque cross-refs).
 

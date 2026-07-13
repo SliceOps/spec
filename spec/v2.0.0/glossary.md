@@ -2,7 +2,7 @@
 
 Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Context Discipline, vocabulary facet). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
 
-> **v2.0.0 — the cognition cycle and the universal identifier scheme** (`DEC-0008`, with `DEC-0009` handoffs and `DEC-0010` the corpus index; carries forward the naming homologation of `DEC-2026-07-10-spec-v1-2-0-naming-homologation`): one entity = one prefix = one grammar in every store; three entities renamed to plain words (**Frame**, **Conclusion**, **Priority**); DecisionRecord gains the kind axis; the catalog is presented on the cognition cycle. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
+> **v2.0.0 — the cognition cycle and the universal identifier scheme** (`DEC-0008`, with `DEC-0009` handoffs and `DEC-0010` the corpus index; carries forward the naming homologation of `DEC-2026-07-10-spec-v1-2-0-naming-homologation`): one entity = one prefix = one grammar in every store; three entities renamed to plain words (**MentalModel** — final name by `DEC-0012` —, **Conclusion**, **Priority**); DecisionRecord gains the kind axis; the catalog (fourteen entities since `DEC-0012` added **Policy**) is presented on the cognition cycle; `DEC-0011` fixes the canonical container **`_sliceops/`** and layout. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
 
 **Living document**: new terms emerge via decisions with non-empty `vocabulary-changes`; updates are part of the slice that produces the decision. Major restructure leads to a version bump.
 
@@ -66,7 +66,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Layer B.1, Layer B.2
 
 ### Layer B.1 — Framework Artifacts
-- **Definition**: Sub-layer of Layer B. SliceOps-originated patterns: entity catalog (13 cognitive entities), repo folder structure, R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism.
+- **Definition**: Sub-layer of Layer B. SliceOps-originated patterns: entity catalog (14 cognitive entities), the canonical corpus container and layout (`_sliceops/`, DEC-0011), R-rules system, counter discipline, frontmatter schemas, file templates, vocabulary discipline mechanism.
 - **Origin**: Hierarchical taxonomy
 - **Cross-references**: Cognitive entity, Folder structure, R-rules
 
@@ -121,16 +121,16 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: CI/Pipeline Cost Economy, change-scoped job gating
 
 ### Cognitive entity
-- **Definition**: One of the 13 canonical entity types of SliceOps Layer B.1 (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, LearningPattern, CognitiveFramework, ContextPack, ActivePriority, RelationshipContext, Preference, Value, **Session**). Each has a frontmatter schema and lifecycle.
+- **Definition**: One of the 14 canonical entity types of SliceOps Layer B.1 (DecisionRecord, InsightRecord, OutcomeRecord, Capability, Goal, Conclusion, MentalModel, ContextPack, Priority, RelationshipContext, Preference, Value, Session, **Policy**). Each has a frontmatter schema and lifecycle.
 - **Origin**: Catalog split and Session as first-class unit
 - **Aliases prohibited**: "entity type" (ambiguous with database entities), "metadata record" (under-specified)
 - **Cross-references**: Layer B.1, Entity catalog, DecisionRecord, InsightRecord, Session
 
 ### CognitiveFramework (retired name)
-- **Definition**: **Renamed to Frame** in v2.0.0 (clause DEC-0008.2) — see *Frame*. The `CF-` prefix is retired.
+- **Definition**: **Renamed to MentalModel** in v2.0.0 (clause DEC-0008.2 as amended by clause DEC-0012.1) — see *MentalModel*. The `CF-` prefix is retired.
 - **Origin**: Naming homologation (v2.0.0)
 - **Aliases prohibited**: "CognitiveFramework" and `CF-` for new artifacts
-- **Cross-references**: Frame
+- **Cross-references**: MentalModel
 
 ### consistency-check (frontmatter field)
 - **Definition**: Mandatory DEC frontmatter field (Layer 1). A multi-line paragraph declaring how the DEC relates to the existing corpus.
@@ -159,7 +159,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: R-rules, P9, DEC numbering
 
 ### cognition cycle
-- **Definition**: The presentation order of the catalog and the natural order in which anything gets built (clause DEC-0008.1): philosophize (Values, Preferences, Frames) → observe (InsightRecords) → conclude (Conclusions) → decide (DecisionRecords — strategic moment) → aim (Goals) → focus (Priorities) → decide (tactical moment) → act (Sessions, slices; Capabilities accrue) → record (OutcomeRecords) → learn again (P8). Catalog numbers stay stable identifiers; the cycle is the teaching order. RelationshipContext and ContextPack are transversal infrastructure, not stages.
+- **Definition**: The presentation order of the catalog and the natural order in which anything gets built (clause DEC-0008.1): philosophize (Values, Preferences, MentalModels) → observe (InsightRecords) → conclude (Conclusions) → decide (DecisionRecords — strategic moment) → aim (Goals) → focus (Priorities) → decide (tactical moment) → act (Sessions, slices; Capabilities accrue) → record (OutcomeRecords) → learn again (P8). Catalog numbers stay stable identifiers; the cycle is the teaching order. RelationshipContext, ContextPack and Policy are transversal (infrastructure and enforced rules), not stages.
 - **Origin**: DEC-0008 (v2.0.0)
 - **Cross-references**: Cognitive entity, Entity catalog, DEC (DecisionRecord), Goal, Priority
 
@@ -227,7 +227,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: P6, P7, Evidence-by-Construction, Layer B.1, OutcomeRecord
 
 ### Entity catalog
-- **Definition**: The canonical set of 13 cognitive entity types of SliceOps Layer B.1. Each entity has a frontmatter schema, lifecycle, cross-reference patterns, and anti-patterns. Published in `reference/entity-catalog/`.
+- **Definition**: The canonical set of 14 cognitive entity types of SliceOps Layer B.1. Each entity has a frontmatter schema, lifecycle, cross-reference patterns, and anti-patterns. Published in `reference/entity-catalog/`.
 - **Origin**: Catalog split and Session as first-class unit
 - **Cross-references**: Cognitive entity, Layer B.1, Session
 
@@ -254,10 +254,10 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Origin**: Consistency-management mechanism
 - **Cross-references**: Layer 1, consistency-check, conflicts-with
 
-### Frame
-- **Definition**: Cognitive entity 07. A mental model or lens the corpus reasons with — glossaries, taxonomies, worldview documents, architectural lenses. Lives in the **Why ring** of the cognition cycle with Values and Preferences; only constitutive decisions rewrite that ring. Naming: `FRAME-<id>-slug.md`. Renamed from "CognitiveFramework" (clause DEC-0008.2); no collision with "framework" — the framework has frames the way a body has cells. A Frame points at canonical sources, never copies them.
+### Frame (interim name, retired)
+- **Definition**: **Renamed to MentalModel** by clause DEC-0012.1 — see *MentalModel*. "Frame" was the interim v2.0.0 design name (clause DEC-0008.2, between CognitiveFramework and the final name); the `FRAME-` prefix is retired alongside `CF-`.
 - **Origin**: Catalog split; naming homologation (v2.0.0)
-- **Aliases prohibited**: "CognitiveFramework", `CF-` (retired)
+- **Aliases prohibited**: "CognitiveFramework", "Frame", `CF-`, `FRAME-` (retired)
 - **Cross-references**: Cognitive entity, Value, Preference, cognition cycle
 
 ## G
@@ -319,6 +319,12 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ## M
 
+### MentalModel
+- **Definition**: Cognitive entity 07. A mental model or lens the corpus reasons with — chosen per problem and applied deliberately (first principles, inversion, the vital few); glossaries, taxonomies, worldview documents, architectural lenses. Lives in the **Why ring** of the cognition cycle with Values and Preferences; only constitutive decisions rewrite that ring. Naming: `MM-NNNN-YYYYMMDD-slug.md`. Was CognitiveFramework (pre-v2), briefly Frame during the v2 design; final name by clause DEC-0012.1. A MentalModel points at canonical sources, never copies them.
+- **Origin**: DEC-0012.1
+- **Aliases prohibited**: "CognitiveFramework", "Frame", `CF-`, `FRAME-` (retired)
+- **Cross-references**: Value, Preference, cognition cycle
+
 ### Mode S / Mode M
 - **Definition**: P11 operation modes. Mode S = single-agent sequential (one slice at a time, Wedge A only); Mode M = multi-agent parallel (N simultaneous slices with a coordinator, both wedges).
 - **Origin**: P11
@@ -364,6 +370,11 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ## P
 
+### Policy
+- **Definition**: Cognitive entity 14 (clause DEC-0012.2). An operating rule with scope and enforcement — how an environment, an agent, a corpus or a session MUST operate; verifiable, blockable. One record per policy (`POL-NNNN-YYYYMMDD-slug.md`) with `scope: environment | agent | corpus | session` (vendors MAY extend the values, Layer C), `enforced-by:` and `severity: block | warn`. Transversal: policies are what the audit plane's machine gates enforce. The corpus `_policies.md` is the DERIVED summary of the active records (clause DEC-0012.3) — never hand-edited. Boundary: a Value is a terminal criterion, a Preference is a taste, a **Policy is enforceable**.
+- **Origin**: DEC-0012.2
+- **Cross-references**: Value, Preference, Audit plane
+
 ### Priority
 - **Definition**: Cognitive entity 09. A **ranked commitment of focus toward a goal**: `serves-goal:` and an integer `rank` (unique within owner and horizon) are mandatory — "priority over what" is only answerable as an ordering of focus toward Goals. Naming: `PRI-<id>-slug.md`. Renamed from "ActivePriority" (clause DEC-0008.2): an entity name must never contain a state. Briefs, handoffs, checklists and drafts are NOT priorities (they are ContextPacks, Capability components, or knowledge-layer content).
 - **Origin**: Naming homologation (v2.0.0); pyramid edges (clause DEC-0008.4)
@@ -405,6 +416,21 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Block Retrospective, Quarterly Curation
 
 ## S
+
+### _sliceops (canonical container)
+- **Definition**: The reserved, visible container at the root of every unit of work (DEC-0011.1) — a directory in a single repository; a git repository named `_sliceops` in a multi-repo product workspace (replacing the former "-engineering" repo); a pointer manifest in code repositories. Decades numbered in cognition-cycle order, semantics reserved forever, presence-activated; `50-products/` holds the complete WHAT; underscores are infrastructure, numbers are cognition. Normative layout: [`naming.md` §7](naming.md).
+- **Origin**: DEC-0011
+- **Cross-references**: unit of work, sliceops.json (adoption manifest), cognition cycle
+
+### sliceops.json (adoption manifest)
+- **Definition**: The machine-readable adoption marker at the container root (DEC-0011.6): spec version pin, corpus type, vendor-extension declaration — detection, validation target and conformance claim in one file. Pointer form (`{"ref", "remote"}`) in code repositories. Written by scaffolding and migrations, read by validators and runtimes — never a hand-maintained document.
+- **Origin**: DEC-0011.6
+- **Cross-references**: _sliceops (canonical container)
+
+### unit of work
+- **Definition**: The scope one container governs (DEC-0011.1): a single repository or a multi-repo product workspace. One product = one corpus = one set of counters; code repositories never carry their own container — they point home. Directory and repository forms are isomorphic.
+- **Origin**: DEC-0011.1
+- **Cross-references**: _sliceops (canonical container)
 
 ### Shared-Resource Pre-flight (P9)
 - **Definition**: The 12th canonical principle (Layer A). Before scaling any parallelism lever beyond the baseline calibrated in the last Block Retrospective, enumerate, cap, alert, and telemeter every finite/serialized shared resource that lever consumes. Operating theorem: "the success of a parallelism lever is the source of the next bottleneck."

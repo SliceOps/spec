@@ -15,5 +15,7 @@ All templates are born homologated: universal grammar `PREFIX-NNNN-YYYYMMDD-slug
 - [`priority-template.md`](priority-template.md) — a Priority skeleton with mandatory `serves-goal:` + integer `rank`
 - [`handoff-template.md`](handoff-template.md) — a ContextPack `kind: handoff` skeleton (DEC-0009: state of work, pending, open questions, counter state)
 - [`index-template.md`](index-template.md) — the reserved-name corpus index `_index.md` (DEC-0010: routes that must resolve; not an entity)
+- [`policy-template.md`](policy-template.md) — a Policy skeleton with mandatory `scope:` + `enforced-by:` + `severity:` (DEC-0012.2; `_policies.md` is derived, never hand-edited)
+- [`sliceops-json-template.md`](sliceops-json-template.md) — the adoption manifest `sliceops.json`, container and pointer forms (DEC-0011.6)
 
 Templates for the remaining entities follow the per-entity schemas in `../entity-catalog/`. Adopters may extend these with stack-specific sections (Layer C.2) but must preserve the canonical fields for cross-adopter interoperability.
