@@ -127,7 +127,7 @@ two moments, like water appearing as vapor and rain in the water cycle.
 | LearningPattern | **Conclusion** | `CONC-` | lifecycle `candidate → canonical → retired` unchanged; **≥3 supporting insights remains the promotion rule to `canonical`** (empirical conclusions); single-chain reasoned conclusions may exist as `candidate` |
 | ActivePriority | **Priority** | `PRI-` | state moves fully to `status:` (`open → in-progress → blocked → resolved`); an entity name must never contain a state |
 
-### DEC-0008.2.1 — The complete catalog as it will read (13 entities, definitions included)
+### DEC-0008.2.1 — The complete catalog as it will read (thirteen entities at this record's moment; DEC-0012.2 amends the single-source table to fourteen — MentalModel rename + Policy)
 
 Stable numbers are identifiers, never re-ordered; the **Cycle stage** column is the
 teaching order of DEC-0008.1. Lifecycle values live in `status:` — never in names (DEC-0008.2's rule).

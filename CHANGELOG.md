@@ -77,7 +77,7 @@ First public release — the open framework and audit plane for AI-first softwar
 ### Added
 
 - Canonical spec (`spec/v1.0.0/`): the 12 canonical principles (Layer A) in Why→How→What order (`principles.md`), glossary, canonical topic taxonomy, and the three-layer IP boundary.
-- Layer B reference: entity catalog (13 entities), R-rules, frontmatter schemas, file templates, sessions, sizing, model-triage, context-router, development-model, patterns, and project-structure.
+- Layer B reference: entity catalog (thirteen entities), R-rules, frontmatter schemas, file templates, sessions, sizing, model-triage, context-router, development-model, patterns, and project-structure.
 - Governance: roadmap, RFC process, IPR policy, code of conduct, DCO, plus sanitized public DecisionRecords.
 - Licensing: documentation **CC BY 4.0**, code **MIT** (`DEC-0003-20260615-sliceops-license-ratification`).
 - Recursive dogfooding CI: the repo runs the consistency validators it publishes on every pull request, on a protected `main`.

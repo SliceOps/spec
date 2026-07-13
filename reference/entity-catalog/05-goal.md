@@ -36,8 +36,8 @@ GOAL-2026-q1-publish-spec-v1.md
   entity: Goal
   status: active
   horizon: quarter
-  measure: spec v1.0.0 published with the 13 entity specs and R-rules
-  parent-goal: GOAL-2026-framework-adoption
+  measure: first spec version published with the full entity specs and R-rules
+  parent-goal: GOAL-0001-20260315-framework-adoption
 Body: objective · why now · measure of done · dependencies.
 ```
 
