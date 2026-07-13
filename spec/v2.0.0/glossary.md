@@ -48,7 +48,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Cross-references**: Block, Velocity, Consistency check, OutcomeRecord
 
 ### Context-pack injection
-- **Definition**: A mechanism that injects relevant context at the start of each slice (including applicable Layer C.2 stack patterns for the repo in scope). Retired name: *brain pack injection*.
+- **Definition**: A mechanism that injects relevant context at the start of each slice (including applicable Layer C.2 stack patterns for the repo in scope).
 - **Origin**: Layer C.2 stack-patterns
 - **Cross-references**: Layer C.2, Stack pattern, ContextPack
 
