@@ -2,7 +2,7 @@
 
 The canonical SliceOps™ framework specification, version 2.0.0.
 
-**What's new in v2.0.0 — the cognition cycle and the universal identifier scheme** (governed by `DEC-0008`, with `DEC-0009`–`DEC-0012`; absorbs the naming homologation of `DEC-2026-07-10`, whose v1.2.0 cut was never published): the catalog presented on the cognition cycle; three entities renamed to plain words (**MentalModel**, **Conclusion**, **Priority**); the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` for every artifact in every store; the decision kind axis with goal edges and clause identifiers `DEC-NNNN.n`; the mandatory pyramid (`Goal.decided-by`, `Priority.serves-goal` + `rank`); the slice coordinate `SLC[n]SEC[n]BL[n]`; handoffs as a ContextPack kind; the reserved-name corpus index `_index.md`; the canonical corpus container `_sliceops/` and layout (DEC-0011); and the Policy entity with the MentalModel final name (fourteen entities, DEC-0012). **Major version**: catalog renames, new required fields and the grammar are breaking changes — pre-v2 names are read-tolerated and mapped by the alias tables in [`naming.md`](naming.md) §9. The v1.1.0 additions (evidence.v1, `approver` field, measurement artifact) are carried forward unchanged.
+**What's new in v2.0.0 — the cognition cycle and the universal identifier scheme** (governed by `DEC-0008`, with `DEC-0009`–`DEC-0012`; absorbs the naming homologation of `DEC-0007`, whose v1.2.0 cut was never published): the catalog presented on the cognition cycle; three entities renamed to plain words (**MentalModel**, **Conclusion**, **Priority**); the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` for every artifact in every store; the decision kind axis with goal edges and clause identifiers `DEC-NNNN.n`; the mandatory pyramid (`Goal.decided-by`, `Priority.serves-goal` + `rank`); the slice coordinate `SLC[n]SEC[n]BL[n]`; handoffs as a ContextPack kind; the reserved-name corpus index `_index.md`; the canonical corpus container `_sliceops/` and layout (DEC-0011); and the Policy entity with the MentalModel final name (fourteen entities, DEC-0012). **Major version**: catalog renames, new required fields and the grammar are breaking changes — pre-v2 names are read-tolerated and mapped by the alias tables in [`naming.md`](naming.md) §9. The v1.1.0 additions (evidence.v1, `approver` field, measurement artifact) are carried forward unchanged.
 
 ## Table of contents
 
@@ -17,7 +17,7 @@ The canonical SliceOps™ framework specification, version 2.0.0.
 
 Core spec documents present. The 14-entity catalog, the R-rule starter templates, frontmatter schemas, file templates, agent-skill concept, B.2 patterns, evidence.v1, measurement, and Layer 3 validator specs are materialized in `../../reference/`. Sizing (token-band plus context-band), Model Triage, Context Router, and the development-model characterization are documented alongside.
 
-Licensing is ratified (`DEC-2026-06-15-sliceops-license-ratification`): the spec text is licensed **CC BY 4.0** (`../../LICENSE`) and code/templates **MIT** (`../../LICENSE-CODE`). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`. The repository is public.
+Licensing is ratified (`DEC-0003-20260615-sliceops-license-ratification`): the spec text is licensed **CC BY 4.0** (`../../LICENSE`) and code/templates **MIT** (`../../LICENSE-CODE`). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`. The repository is public.
 
 ## Versioning
 

@@ -10,7 +10,7 @@ The policy is deliberately permissive about honest, descriptive, and nominative 
 
 The SliceOps content is licensed under **CC BY 4.0** (documentation) and the **MIT License** (code), as set out in [`LICENSE`](LICENSE), [`LICENSE-CODE`](LICENSE-CODE), and [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md). Those licenses govern **copying, modifying, and redistributing the content**. They do **not** grant any right to use the **SliceOps™ trademark**.
 
-This restates Decision 6 of the ratified license decision `DEC-2026-06-15-sliceops-license-ratification`:
+This restates Decision 6 of the ratified license decision `DEC-0003-20260615-sliceops-license-ratification`:
 
 - **Copyright license** — governs the **content** (use, copy, redistribute, adapt).
 - **Trademark policy** (this file) — governs the **name "SliceOps™"** in commerce, marketing, and product identity.
@@ -96,7 +96,7 @@ The mark is held by **Andrés Ramírez Sierra**. Requests are handled personally
 - [`LICENSE-CODE`](LICENSE-CODE) — MIT License (code).
 - [`DISCLOSURE.md`](DISCLOSURE.md) — SliceOps and reference-runtime relationship; framework neutrality.
 - [`DISCLAIMER.md`](DISCLAIMER.md) — no warranty, not professional advice, limitation of liability.
-- Decision record `DEC-2026-06-15-sliceops-license-ratification` — ratifies the CC BY 4.0 and MIT licensing and the trademark / copyright separation (Decision 6) this policy implements.
+- Decision record `DEC-0003-20260615-sliceops-license-ratification` — ratifies the CC BY 4.0 and MIT licensing and the trademark / copyright separation (Decision 6) this policy implements.
 
 ---
 

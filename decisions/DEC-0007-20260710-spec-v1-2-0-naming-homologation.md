@@ -10,27 +10,27 @@ originating_slice: null   # back-fill: cross-corpus naming ratification session,
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-05-12-three-layer-ip-boundary, DEC-2026-05-14-spec-repo-publishing-layout, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
+related-decs: [DEC-0001-20260512-three-layer-ip-boundary, DEC-0002-20260514-spec-repo-publishing-layout, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
 topics: [vocabulary-discipline, entity-catalog, corpus-integrity, audit-plane]
 vocabulary-changes: ["DEC-P-", "DEC-D-", "OUTC-", "SESS-", "Capability components", "Naming (canonical prefixes)", "RFC (retired term)"]
 consistency-check: |
   Introduces spec v1.2.0 (SemVer minor): canonical naming (naming.md), lifecycle-in-prefix
   for DecisionRecord, flat decisions/ folders, OutcomeRecord kind:, Capability component
   model, and retirement of the "RFC" term and legacy prefixes. Entity names and catalog
-  semantics from DEC-2026-05-12-three-layer-ip-boundary are preserved unchanged (the
+  semantics from DEC-0001-20260512-three-layer-ip-boundary are preserved unchanged (the
   13-entity B.1 catalog does not grow). The v1.1.0 additions — evidence.v1
-  (DEC-2026-07-02-evidence-v1-canonical-schema), the approver field
-  (DEC-2026-07-02-author-approver-separation) and the measurement artifact
-  (DEC-2026-06-30-build-complexity-measurement-model) — are carried forward unchanged;
+  (DEC-0006-20260702-evidence-v1-canonical-schema), the approver field
+  (DEC-0005-20260702-author-approver-separation) and the measurement artifact
+  (DEC-0004-20260630-build-complexity-measurement-model) — are carried forward unchanged;
   the evidence.v1 decisionRefs pattern is extended additively (DEC lifecycle ids accepted,
-  legacy DR- read-tolerated). Amends one aspect of DEC-2026-05-14-spec-repo-publishing-layout:
+  legacy DR- read-tolerated). Amends one aspect of DEC-0002-20260514-spec-repo-publishing-layout:
   the decisions/ folder becomes flat (the 5-folder layout itself is untouched; amendment
   annotated there bidirectionally). v1.0.0 and v1.1.0 remain frozen; the alias tables in
-  naming.md map old names to new. No other conflicts: licensing (DEC-2026-06-15) untouched
+  naming.md map old names to new. No other conflicts: licensing (DEC-0003) untouched
   except correcting the stale "no LICENSE published" line that predated its ratification.
 ---
 
-# DEC-2026-07-10 — Spec v1.2.0: Total Naming Homologation
+# DEC-0007 — Spec v1.2.0: Total Naming Homologation
 
 > **Amended by `DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme`** before
 > publication: the cut this record introduced was re-issued as **v2.0.0** (breaking scope
@@ -74,6 +74,6 @@ A cross-corpus inventory (2026-07-10) of the maintainer's corpora implementing S
 - [`spec/v2.0.0/naming.md`](../spec/v2.0.0/naming.md) — the normative naming standard this DEC introduces.
 - [`spec/v2.0.0/glossary.md`](../spec/v2.0.0/glossary.md) — glossary v1.2.0 (aliases prohibited updated).
 - [`governance/PROPOSAL-PROCESS.md`](../governance/PROPOSAL-PROCESS.md) — renamed proposal process.
-- [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the B.1 catalog this homologation preserves.
-- [`DEC-2026-05-14-spec-repo-publishing-layout.md`](DEC-2026-05-14-spec-repo-publishing-layout.md) — publishing layout (decisions/ flatten amendment).
+- [`DEC-0001-20260512-three-layer-ip-boundary.md`](DEC-0001-20260512-three-layer-ip-boundary.md) — the B.1 catalog this homologation preserves.
+- [`DEC-0002-20260514-spec-repo-publishing-layout.md`](DEC-0002-20260514-spec-repo-publishing-layout.md) — publishing layout (decisions/ flatten amendment).
 - SliceOps toolkit `templates/naming-validator/` — the enforcement reference implementation.

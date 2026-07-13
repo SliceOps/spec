@@ -1,6 +1,6 @@
 # evidence.v1 — Canonical Evidence Record Format (Layer B.1)
 
-> **P6 Evidence-by-Construction, made machine-readable.** The record every slice merge emits — and every gated operation may emit — so that "auditable" is a property a third party can verify from the record itself, not a claim. Ratified in [`DEC-2026-07-02-evidence-v1-canonical-schema`](../../decisions/DEC-2026-07-02-evidence-v1-canonical-schema.md).
+> **P6 Evidence-by-Construction, made machine-readable.** The record every slice merge emits — and every gated operation may emit — so that "auditable" is a property a third party can verify from the record itself, not a claim. Ratified in [`DEC-0006-20260702-evidence-v1-canonical-schema`](../../decisions/DEC-0006-20260702-evidence-v1-canonical-schema.md).
 
 Canonical schema: [`evidence.v1.schema.json`](evidence.v1.schema.json) (JSON Schema draft 2020-12, `$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`). Golden examples: [`examples/`](examples/).
 

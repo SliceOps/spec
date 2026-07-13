@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [2.0.0] — 2026-07-13
 
-The cognition cycle and the universal identifier scheme. Governed by [`decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (with [`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) and [`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)), absorbing the total naming homologation of [`DEC-2026-07-10`](decisions/DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the v1.2.0 cut those changes were first drafted into was **never published**; it re-issues here as a major version because catalog renames, new required fields and the universal grammar are breaking changes to the framework contract. `spec/v2.0.0/` created; `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit.
+The cognition cycle and the universal identifier scheme. Governed by [`decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (with [`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) and [`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)), absorbing the total naming homologation of [`DEC-0007`](decisions/DEC-0007-20260710-spec-v1-2-0-naming-homologation.md) — the v1.2.0 cut those changes were first drafted into was **never published**; it re-issues here as a major version because catalog renames, new required fields and the universal grammar are breaking changes to the framework contract. `spec/v2.0.0/` created; `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit.
 
 ### Added (v2.0.0 scope — the cognition cycle)
 
@@ -37,7 +37,7 @@ The cognition cycle and the universal identifier scheme. Governed by [`decisions
 - Capability **component model** (`reference/entity-catalog/04-capability.md`): `standard`/`runbook`/`playbook` as sibling components via `kind:` + `capability:` back-reference — the catalog does not grow.
 - Templates born homologated: [`capability-template.md`](reference/templates/capability-template.md), [`outcome-record-template.md`](reference/templates/outcome-record-template.md); `dec-template.md` rewritten to the lifecycle-prefix form.
 - Naming enforcement (spec `naming.md` §9): CI **naming-validator merge gate** (`.github/workflows/ci.yml`, fetched from the toolkit) + pre-write agent hook (`.claude/settings.json` → `.claude/hooks/naming_validator.py`). Reference implementation: `sliceops-toolkit/templates/naming-validator/`.
-- Layer B.1 measurement artifact ([`reference/measurement/`](reference/measurement/)): Build-Complexity Profile (six axes, 0–4, composite index /24) + build-velocity (commit-active hours, session-clustered) — ex-post product measurement, orthogonal to `sizing/` (ex-ante) and `model-triage/` (session routing). Approved in [`decisions/DEC-2026-06-30-build-complexity-measurement-model.md`](decisions/DEC-2026-06-30-build-complexity-measurement-model.md) (proposed 2026-06-30, founder-approved 2026-07-02).
+- Layer B.1 measurement artifact ([`reference/measurement/`](reference/measurement/)): Build-Complexity Profile (six axes, 0–4, composite index /24) + build-velocity (commit-active hours, session-clustered) — ex-post product measurement, orthogonal to `sizing/` (ex-ante) and `model-triage/` (session routing). Approved in [`decisions/DEC-0004-20260630-build-complexity-measurement-model.md`](decisions/DEC-0004-20260630-build-complexity-measurement-model.md) (proposed 2026-06-30, founder-approved 2026-07-02).
 
 ### Changed
 
@@ -54,10 +54,10 @@ P3 author ≠ approver ratified, evidence.v1 canonical, and the version cut: `sp
 
 ### Added
 
-- Canonical **evidence.v1** record format (`reference/evidence/`) — the framework's audit-plane evidence record, upstreamed as Layer B.1: JSON Schema draft 2020-12 (`$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`), prose spec (`evidence-v1.md`: P6/P7 category mapping, vendor `extensions` boundary, signing/verification guidance — no embedded signature field in v1), and golden examples (2 valid, 3 invalid). Ratified in [`decisions/DEC-2026-07-02-evidence-v1-canonical-schema.md`](decisions/DEC-2026-07-02-evidence-v1-canonical-schema.md) — the first spec DR to carry the `approver` field. The glossary entry lands in this release (`spec/v1.1.0/glossary.md`).
+- Canonical **evidence.v1** record format (`reference/evidence/`) — the framework's audit-plane evidence record, upstreamed as Layer B.1: JSON Schema draft 2020-12 (`$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`), prose spec (`evidence-v1.md`: P6/P7 category mapping, vendor `extensions` boundary, signing/verification guidance — no embedded signature field in v1), and golden examples (2 valid, 3 invalid). Ratified in [`decisions/DEC-0006-20260702-evidence-v1-canonical-schema.md`](decisions/DEC-0006-20260702-evidence-v1-canonical-schema.md) — the first spec DR to carry the `approver` field. The glossary entry lands in this release (`spec/v1.1.0/glossary.md`).
 - `CHANGELOG.md` (this file).
 - Optional `approver` field in the DecisionRecord frontmatter reference schemas (`reference/templates/dec-template.md`, `reference/entity-catalog/01-decision-record.md`, `reference/frontmatter-schemas/base-schema.md`) — records the human who ratified a DEC (P3 human gate).
-- RFC [`decisions/DEC-2026-07-02-author-approver-separation.md`](decisions/DEC-2026-07-02-author-approver-separation.md) — proposes formalizing author ≠ approver as a P3 implication (ratified in this release — see Changed).
+- RFC [`decisions/DEC-0005-20260702-author-approver-separation.md`](decisions/DEC-0005-20260702-author-approver-separation.md) — proposes formalizing author ≠ approver as a P3 implication (ratified in this release — see Changed).
 - `spec/v1.1.0/` version directory per the versioning policy (`spec/v1.0.0/` retained for audit), plus the `spec/latest` symlink the policy prescribed at first public release.
 - Glossary (`spec/v1.1.0/glossary.md`): `evidence.v1` entry, plus a canonical-record-format cross-reference in the Evidence-by-Construction entry.
 
@@ -79,7 +79,7 @@ First public release — the open framework and audit plane for AI-first softwar
 - Canonical spec (`spec/v1.0.0/`): the 12 canonical principles (Layer A) in Why→How→What order (`principles.md`), glossary, canonical topic taxonomy, and the three-layer IP boundary.
 - Layer B reference: entity catalog (13 entities), R-rules, frontmatter schemas, file templates, sessions, sizing, model-triage, context-router, development-model, patterns, and project-structure.
 - Governance: roadmap, RFC process, IPR policy, code of conduct, DCO, plus sanitized public DecisionRecords.
-- Licensing: documentation **CC BY 4.0**, code **MIT** (`DEC-2026-06-15-sliceops-license-ratification`).
+- Licensing: documentation **CC BY 4.0**, code **MIT** (`DEC-0003-20260615-sliceops-license-ratification`).
 - Recursive dogfooding CI: the repo runs the consistency validators it publishes on every pull request, on a protected `main`.
 
 Decision-first and platform-agnostic — runs on any text-based AI agent plus git, no specific runtime required (P11). SliceOps™ trademark pending (EUIPO #019381071) — see `TRADEMARK.md`.

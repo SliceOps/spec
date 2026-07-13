@@ -9,15 +9,15 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-05-12-three-layer-ip-boundary, DEC-2026-07-02-author-approver-separation, DEC-2026-06-30-build-complexity-measurement-model]
+related-decs: [DEC-0001-20260512-three-layer-ip-boundary, DEC-0005-20260702-author-approver-separation, DEC-0004-20260630-build-complexity-measurement-model]
 topics: [evidence-categories, audit-plane, layer-b-framework-artifact, ip-boundary]
 vocabulary-changes: [evidence.v1]
-consistency-check: "Ratifies evidence.v1 as the canonical Layer B.1 evidence record format — the machine-readable expression of P6 (four evidence categories) and P7 (security gate). Preserves the three-layer boundary of DEC-2026-05-12-three-layer-ip-boundary: the canonical schema carries no vendor internals; vendor content extends only through the namespaced extensions object (Layer C). Complements OutcomeRecord (entity catalog #3): evidence.v1 is the per-operation interchange record OutcomeRecords link to, not a new cognitive entity — the entity catalog is unchanged. First spec DR to record the approver field introduced by DEC-2026-07-02-author-approver-separation (explicit self-ratification, single-maintainer context). vocabulary-changes lists evidence.v1; the glossary is versioned spec content, so its entry lands with the next spec minor version — a declared deferral (see Consequences), not an omission. No conflicts."
+consistency-check: "Ratifies evidence.v1 as the canonical Layer B.1 evidence record format — the machine-readable expression of P6 (four evidence categories) and P7 (security gate). Preserves the three-layer boundary of DEC-0001-20260512-three-layer-ip-boundary: the canonical schema carries no vendor internals; vendor content extends only through the namespaced extensions object (Layer C). Complements OutcomeRecord (entity catalog #3): evidence.v1 is the per-operation interchange record OutcomeRecords link to, not a new cognitive entity — the entity catalog is unchanged. First spec DR to record the approver field introduced by DEC-0005-20260702-author-approver-separation (explicit self-ratification, single-maintainer context). vocabulary-changes lists evidence.v1; the glossary is versioned spec content, so its entry lands with the next spec minor version — a declared deferral (see Consequences), not an omission. No conflicts."
 ---
 
-# DEC-2026-07-02 — evidence.v1 Canonical Evidence Record Format (Layer B.1)
+# DEC-0006 — evidence.v1 Canonical Evidence Record Format (Layer B.1)
 
-> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This is the **first spec DR to carry the `approver` frontmatter field** introduced alongside [`DEC-2026-07-02-author-approver-separation`](DEC-2026-07-02-author-approver-separation.md) — per that RFC's single-maintainer rule, self-ratification is recorded explicitly (`approver` == `owner`) rather than left implicit (founder directive, 2026-07-02).
+> A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This is the **first spec DR to carry the `approver` frontmatter field** introduced alongside [`DEC-0005-20260702-author-approver-separation`](DEC-0005-20260702-author-approver-separation.md) — per that RFC's single-maintainer rule, self-ratification is recorded explicitly (`approver` == `owner`) rather than left implicit (founder directive, 2026-07-02).
 
 ## TL;DR
 
@@ -64,7 +64,7 @@ A 2026-07 external red-team audit found (finding #1) that the evidence artifact 
 - [`spec/v1.0.0/ip-boundary.md`](../spec/v1.0.0/ip-boundary.md) — Layer B.1 (framework artifacts) and Layer C (vendor extensions); the neutrality rule excluding runtime-specific schemas.
 - [`reference/evidence/evidence.v1.schema.json`](../reference/evidence/evidence.v1.schema.json), [`reference/evidence/evidence-v1.md`](../reference/evidence/evidence-v1.md), [`reference/evidence/examples/`](../reference/evidence/examples/) — the ratified artifacts.
 - [`reference/entity-catalog/03-outcome-record.md`](../reference/entity-catalog/03-outcome-record.md) — the cognitive entity that anchors evidence categories in the corpus.
-- [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the layer taxonomy this DEC applies to the evidence record.
-- [`DEC-2026-07-02-author-approver-separation.md`](DEC-2026-07-02-author-approver-separation.md) — the `approver` field this DEC is the first spec DR to dogfood.
+- [`DEC-0001-20260512-three-layer-ip-boundary.md`](DEC-0001-20260512-three-layer-ip-boundary.md) — the layer taxonomy this DEC applies to the evidence record.
+- [`DEC-0005-20260702-author-approver-separation.md`](DEC-0005-20260702-author-approver-separation.md) — the `approver` field this DEC is the first spec DR to dogfood.
 - [`DISCLOSURE.md`](../DISCLOSURE.md) — the posture for naming the framework↔runtime relationship without naming runtime internals.
 - Origin: 2026-07 external red-team audit (finding #1: the evidence artifact existed only in vendor marketing, absent from the open spec).

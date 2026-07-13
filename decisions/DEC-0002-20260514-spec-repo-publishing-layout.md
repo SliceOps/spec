@@ -8,13 +8,13 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-05-12-three-layer-ip-boundary, DEC-2026-07-10-spec-v1-2-0-naming-homologation]
+related-decs: [DEC-0001-20260512-three-layer-ip-boundary, DEC-0007-20260710-spec-v1-2-0-naming-homologation]
 topics: [folder-structure, meta-framework, layer-b-framework-artifact]
 vocabulary-changes: []
-consistency-check: "Records the publishing layout of this repo (5 folders + 7 root files) and its folder-promotion criteria; preserves the Layer B.1 frame from DEC-2026-05-12-three-layer-ip-boundary (folder structure is framework IP); deliberately distinct from the prescribed adopter project structure in reference/project-structure/. No conflicts."
+consistency-check: "Records the publishing layout of this repo (5 folders + 7 root files) and its folder-promotion criteria; preserves the Layer B.1 frame from DEC-0001-20260512-three-layer-ip-boundary (folder structure is framework IP); deliberately distinct from the prescribed adopter project structure in reference/project-structure/. No conflicts."
 ---
 
-# DEC-2026-05-14 — Spec Repo Publishing Layout
+# DEC-0002 — Spec Repo Publishing Layout
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the supporting industry survey and analysis are maintained internally.
 
@@ -36,7 +36,7 @@ governance/  ← roadmap, proposal process, maintainers, IPR policy
   CODE_OF_CONDUCT, GOVERNANCE (plus the thin agent-context pointer)
 ```
 
-> *Amended by `DEC-2026-07-10-spec-v1-2-0-naming-homologation`: `decisions/` originally used
+> *Amended by `DEC-0007-20260710-spec-v1-2-0-naming-homologation`: `decisions/` originally used
 > `accepted/superseded/deprecated/rfcs` subfolders; v1.2.0 flattens it — the `DEC-`/`DEC-P-`/`DEC-D-`
 > prefix carries the lifecycle state. The 5-folder layout itself is unchanged.
 
@@ -56,6 +56,6 @@ governance/  ← roadmap, proposal process, maintainers, IPR policy
 
 ## References
 
-- [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the Layer B.1 frame (folder structure is framework IP).
+- [`DEC-0001-20260512-three-layer-ip-boundary.md`](DEC-0001-20260512-three-layer-ip-boundary.md) — the Layer B.1 frame (folder structure is framework IP).
 - [`reference/project-structure/`](../reference/project-structure/) — the *prescribed* foundations-first adopter structure, deliberately distinct from this publishing layout.
 - Industry precedent: OpenAPI Specification, JSON Schema, Diátaxis, GitHub Spec Kit, the Twelve-Factor App, PEPs.

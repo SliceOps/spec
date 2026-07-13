@@ -8,13 +8,13 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-05-12-three-layer-ip-boundary]
+related-decs: [DEC-0001-20260512-three-layer-ip-boundary]
 topics: [licensing, ip-boundary, trademark]
 vocabulary-changes: []
-consistency-check: "Ratifies the dual license (CC BY 4.0 for documentation + MIT for code) that operationalizes the IP boundary in DEC-2026-05-12-three-layer-ip-boundary; the trademark is handled separately in TRADEMARK.md; contributions follow Inbound = Outbound with DCO sign-off. No conflicts."
+consistency-check: "Ratifies the dual license (CC BY 4.0 for documentation + MIT for code) that operationalizes the IP boundary in DEC-0001-20260512-three-layer-ip-boundary; the trademark is handled separately in TRADEMARK.md; contributions follow Inbound = Outbound with DCO sign-off. No conflicts."
 ---
 
-# DEC-2026-06-15 — SliceOps License
+# DEC-0003 — SliceOps License
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the **decision**. The supporting work (context, market comparison, alternatives, and consequences) was carried out and is maintained internally.
 
@@ -45,12 +45,12 @@ SPDX header by file type:
 
 - **A — A single permissive license for everything (e.g. MIT or Apache-2.0 across docs and code)**: rejected — a code license is a poor fit for prose; CC BY 4.0 is the recognized standard for documentation and makes the attribution expectation explicit.
 - **B — A copyleft / share-alike documentation license (CC BY-SA) or public domain (CC0)**: rejected — BY-SA's viral terms deter commercial adoption and downstream reuse; CC0 abandons the attribution that sustains the framework's provenance and trademark story.
-- **C — Dual CC BY 4.0 (docs) + MIT (code), resolved per file by SPDX/README/path**: **selected** — each artifact type gets the right instrument, reuse stays unambiguous, and the boundary aligns with DEC-2026-05-12-three-layer-ip-boundary.
+- **C — Dual CC BY 4.0 (docs) + MIT (code), resolved per file by SPDX/README/path**: **selected** — each artifact type gets the right instrument, reuse stays unambiguous, and the boundary aligns with DEC-0001-20260512-three-layer-ip-boundary.
 
 ## References
 
 - [`TRADEMARK.md`](../TRADEMARK.md) — trademark usage policy.
 - [`DISCLOSURE.md`](../DISCLOSURE.md) — framework and reference-runtime relationship.
 - [`governance/IPR_POLICY.md`](../governance/IPR_POLICY.md) — intellectual-property and contribution policy.
-- [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the IP boundary this license operationalizes.
+- [`DEC-0001-20260512-three-layer-ip-boundary.md`](DEC-0001-20260512-three-layer-ip-boundary.md) — the IP boundary this license operationalizes.
 - [`LICENSE`](../LICENSE) — Creative Commons Attribution 4.0 International. [`LICENSE-CODE`](../LICENSE-CODE) — MIT License. [`DCO`](../DCO) — Developer Certificate of Origin 1.1.

@@ -9,13 +9,13 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-07-02-evidence-v1-canonical-schema]
+related-decs: [DEC-0006-20260702-evidence-v1-canonical-schema]
 topics: [principles, audit-plane, layer-b-framework-artifact]
 vocabulary-changes: []
-consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) the P3 implication making the separation normative — ratified by the founder on 2026-07-02 under the elevated HITL gate P3 itself prescribes, landed in spec/v1.1.0/principles.md with the field-level wording recorded in the Ratification note (spec/v1.0.0 retained unamended). Preserves all existing P3 gates and the DEC lifecycle; DEC-2026-07-02-evidence-v1-canonical-schema is the first spec DR to record the `approver` field this RFC introduces (explicit self-ratification). No conflicts."
+consistency-check: "Formalizes the author-vs-approver separation already implicit in P3 (Human-in-the-Loop Authority). Two parts: (1) records the optional `approver` field added to the Layer B reference schemas (dec-template, entity catalog 01-decision-record, base frontmatter schema) in the same slice; (2) the P3 implication making the separation normative — ratified by the founder on 2026-07-02 under the elevated HITL gate P3 itself prescribes, landed in spec/v1.1.0/principles.md with the field-level wording recorded in the Ratification note (spec/v1.0.0 retained unamended). Preserves all existing P3 gates and the DEC lifecycle; DEC-0006-20260702-evidence-v1-canonical-schema is the first spec DR to record the `approver` field this RFC introduces (explicit self-ratification). No conflicts."
 ---
 
-# DEC-2026-07-02 — Author ≠ Approver Separation (P3)
+# DEC-0005 — Author ≠ Approver Separation (P3)
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). **Status: ratified (2026-07-02, founder).** The Layer A portion amended P3 under the elevated human-in-the-loop gate that P3 itself prescribes; the implication landed in `spec/v1.1.0/principles.md`, with `spec/v1.0.0/` retained unamended for audit. See the Ratification note below for the wording adjustment approved at ratification.
 

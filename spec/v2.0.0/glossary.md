@@ -2,7 +2,7 @@
 
 Canonical glossary of SliceOps terms. Each term here has a **canonical meaning** (per P12 Context Discipline, vocabulary facet). Terms not listed here are not canonical SliceOps; adopters may extend with domain-specific terms in their own glossaries (extend, never redefine).
 
-> **v2.0.0 — the cognition cycle and the universal identifier scheme** (`DEC-0008`, with `DEC-0009` handoffs and `DEC-0010` the corpus index; carries forward the naming homologation of `DEC-2026-07-10-spec-v1-2-0-naming-homologation`): one entity = one prefix = one grammar in every store; three entities renamed to plain words (**MentalModel** — final name by `DEC-0012` —, **Conclusion**, **Priority**); DecisionRecord gains the kind axis; the catalog (fourteen entities since `DEC-0012` added **Policy**) is presented on the cognition cycle; `DEC-0011` fixes the canonical container **`_sliceops/`** and layout. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
+> **v2.0.0 — the cognition cycle and the universal identifier scheme** (`DEC-0008`, with `DEC-0009` handoffs and `DEC-0010` the corpus index; carries forward the naming homologation of `DEC-0007-20260710-spec-v1-2-0-naming-homologation`): one entity = one prefix = one grammar in every store; three entities renamed to plain words (**MentalModel** — final name by `DEC-0012` —, **Conclusion**, **Priority**); DecisionRecord gains the kind axis; the catalog (fourteen entities since `DEC-0012` added **Policy**) is presented on the cognition cycle; `DEC-0011` fixes the canonical container **`_sliceops/`** and layout. The normative tables live in [`naming.md`](naming.md) — this glossary points, never copies.
 
 **Living document**: new terms emerge via decisions with non-empty `vocabulary-changes`; updates are part of the slice that produces the decision. Major restructure leads to a version bump.
 
@@ -223,7 +223,7 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 
 ### evidence.v1
 - **Definition**: The canonical Layer B.1 evidence record format (JSON Schema draft 2020-12, `$id` `https://sliceops.org/schemas/evidence/evidence.v1.schema.json`). One machine-validatable record per slice merge (mandatory — P6 completeness is machine-enforced) or per gated operation (recommended). Carries the four P6 evidence categories plus the P7 security gate. Records carry no embedded signature — signing is a detached attestation over the artifact bundle containing them. Published in `reference/evidence/`.
-- **Origin**: DEC-2026-07-02-evidence-v1-canonical-schema
+- **Origin**: DEC-0006-20260702-evidence-v1-canonical-schema
 - **Cross-references**: P6, P7, Evidence-by-Construction, Layer B.1, OutcomeRecord
 
 ### Entity catalog

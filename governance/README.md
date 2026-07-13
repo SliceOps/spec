@@ -11,4 +11,4 @@ How the SliceOps™ framework evolves and who stewards it.
 
 ## Status
 
-Documents are initial skeletons, refined as the contributor base grows. License terms are ratified (`DEC-2026-06-15-sliceops-license-ratification`): CC BY 4.0 for documentation, MIT for code.
+Documents are initial skeletons, refined as the contributor base grows. License terms are ratified (`DEC-0003-20260615-sliceops-license-ratification`): CC BY 4.0 for documentation, MIT for code.

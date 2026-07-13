@@ -11,17 +11,17 @@ originating_slice: null     # back-fill: framework design session with the owner
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-2026-05-12-three-layer-ip-boundary, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure]
+related-decs: [DEC-0007-20260710-spec-v1-2-0-naming-homologation, DEC-0001-20260512-three-layer-ip-boundary, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure]
 topics: [entity-catalog, vocabulary-discipline, corpus-integrity, foundational]
 vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)", "clause identifier (DEC-NNNN.n)"]
 consistency-check: |
-  Extends DEC-2026-07-10-spec-v1-2-0-naming-homologation before its publication. The
+  Extends DEC-0007-20260710-spec-v1-2-0-naming-homologation before its publication. The
   v1.2.0 cut exists only on an unmerged branch, so on approval the unpublished cut is
   re-issued as **v2.0.0** — per the repository's own versioning policy this is a major
   version: catalog entity renames, new required fields and the universal identifier
   grammar are breaking changes to the framework contract (a corpus valid under v1.x
   requires migration). One migration, not two; adopting corpora jump v1.1.0 → v2.0.0. Preserves the 13-entity catalog of
-  DEC-2026-05-12-three-layer-ip-boundary — no entity is added or removed; three are
+  DEC-0001-20260512-three-layer-ip-boundary — no entity is added or removed; three are
   renamed for plain-language clarity (Frame, Conclusion, Priority) and DecisionRecord
   gains a kind axis with goal edges. Replaces naming.md §2 (dual ID schemes) with one
   universal grammar, superseding that section's rationale: the collision-avoidance that
@@ -265,7 +265,7 @@ Mechanics — the v1.2.0 branch was never pushed, so nothing public is rewritten
    (single source); frontmatter schemas gain the DEC-0008.3/DEC-0008.4 fields; the decision template's
    heading becomes "Summary" (DEC-0008.7.4).
 3. The spec's own decisions are renumbered under the universal grammar (chronological per
-   the counter pre-flight), and DEC-2026-07-10-spec-v1-2-0-naming-homologation receives an
+   the counter pre-flight), and DEC-0007-20260710-spec-v1-2-0-naming-homologation receives an
    amendment annotation (its "v1.2.0" references read as "the cut re-issued as v2.0.0 by
    DEC-0008"); its slug is cleaned to `naming-homologation` in the same rename — a
    one-time liberty available only because the file was never published, recorded in the
@@ -361,8 +361,8 @@ DEC-0008.8 (the v2.0.0 re-issue and single migration) begins immediately.
 
 ## References
 
-- [`DEC-2026-07-10-spec-v1-2-0-naming-homologation.md`](DEC-2026-07-10-spec-v1-2-0-naming-homologation.md) — the homologation this extends (absorbed into the same unpublished cut).
-- [`DEC-2026-05-12-three-layer-ip-boundary.md`](DEC-2026-05-12-three-layer-ip-boundary.md) — the 13-entity B.1 catalog this preserves (renames, no growth).
+- [`DEC-0007-20260710-spec-v1-2-0-naming-homologation.md`](DEC-0007-20260710-spec-v1-2-0-naming-homologation.md) — the homologation this extends (absorbed into the same unpublished cut).
+- [`DEC-0001-20260512-three-layer-ip-boundary.md`](DEC-0001-20260512-three-layer-ip-boundary.md) — the 13-entity B.1 catalog this preserves (renames, no growth).
 - [`../spec/v2.0.0/naming.md`](../spec/v2.0.0/naming.md) — §2 (dual ID schemes) superseded by DEC-0008.5; the whole cut re-issues as `spec/v2.0.0/` per DEC-0008.8.
 - [`../spec/README.md`](../spec/README.md) — the versioning policy whose "breaking → major" rule DEC-0008.8 applies.
 - [`../reference/entity-catalog/`](../reference/entity-catalog/) — entries 05/06/07/09 and 01 amended per DEC-0008.2–DEC-0008.4.

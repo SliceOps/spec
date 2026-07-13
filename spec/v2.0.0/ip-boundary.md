@@ -12,7 +12,7 @@ SliceOps is articulated in **three IP layers** with a stable top level and exten
 | **Layer B — Reference Patterns** | Patterns that materialize the principles and reaffirmed universal engineering practices. | SliceOps IP | CC BY 4.0 (docs) and MIT (code templates) |
 | **Layer C — Implementations** | Specific implementations — vendor runtimes and adopter stack patterns. | Per vendor / adopter | Vendor / adopter choice |
 
-> **Licensing status**: ratified 2026-06-15 (`DEC-2026-06-15-sliceops-license-ratification`) and published in this repository — root `LICENSE` (CC BY 4.0, documentation) and `LICENSE-CODE` (MIT, code). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`.
+> **Licensing status**: ratified 2026-06-15 (`DEC-0003-20260615-sliceops-license-ratification`) and published in this repository — root `LICENSE` (CC BY 4.0, documentation) and `LICENSE-CODE` (MIT, code). See `../../governance/IPR_POLICY.md` and `../../DISCLOSURE.md`.
 
 ### Layer A — Principles (Framework)
 

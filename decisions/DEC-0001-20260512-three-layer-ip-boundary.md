@@ -8,13 +8,13 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-2026-06-15-sliceops-license-ratification, DEC-2026-05-14-spec-repo-publishing-layout, DEC-2026-07-02-evidence-v1-canonical-schema, DEC-2026-07-10-spec-v1-2-0-naming-homologation, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
+related-decs: [DEC-0003-20260615-sliceops-license-ratification, DEC-0002-20260514-spec-repo-publishing-layout, DEC-0006-20260702-evidence-v1-canonical-schema, DEC-0007-20260710-spec-v1-2-0-naming-homologation, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
 topics: [ip-boundary, foundational, hierarchical-taxonomy]
 vocabulary-changes: []
-consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DEC-2026-06-15-sliceops-license-ratification operationalizes it as a dual license; DEC-2026-05-14-spec-repo-publishing-layout organizes the Layer B.1 artifacts; DEC-2026-07-02-evidence-v1-canonical-schema applies the boundary to the evidence.v1 record format (canonical core Layer B.1, vendor extensions Layer C). No conflicts."
+consistency-check: "Establishes the three-layer IP boundary (A principles, B reference patterns, C implementations); DEC-0003-20260615-sliceops-license-ratification operationalizes it as a dual license; DEC-0002-20260514-spec-repo-publishing-layout organizes the Layer B.1 artifacts; DEC-0006-20260702-evidence-v1-canonical-schema applies the boundary to the evidence.v1 record format (canonical core Layer B.1, vendor extensions Layer C). No conflicts."
 ---
 
-# DEC-2026-05-12 — Three-Layer IP Boundary
+# DEC-0001 — Three-Layer IP Boundary
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P2 Audit Plane, P1 Decision Integrity). This record publishes the decision; the supporting analysis is maintained internally.
 
@@ -40,6 +40,6 @@ SliceOps intellectual property is organized into three layers:
 
 - [`DISCLOSURE.md`](../DISCLOSURE.md) — framework and reference-runtime relationship.
 - [`spec/v1.0.0/ip-boundary.md`](../spec/v1.0.0/ip-boundary.md) — the IP boundary in the versioned spec.
-- [`DEC-2026-06-15-sliceops-license-ratification.md`](DEC-2026-06-15-sliceops-license-ratification.md) — the license decision.
-- [`DEC-2026-05-14-spec-repo-publishing-layout.md`](DEC-2026-05-14-spec-repo-publishing-layout.md) — Layer B.1 publishing layout.
+- [`DEC-0003-20260615-sliceops-license-ratification.md`](DEC-0003-20260615-sliceops-license-ratification.md) — the license decision.
+- [`DEC-0002-20260514-spec-repo-publishing-layout.md`](DEC-0002-20260514-spec-repo-publishing-layout.md) — Layer B.1 publishing layout.
 - [`TRADEMARK.md`](../TRADEMARK.md) — trademark usage policy.

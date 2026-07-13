@@ -1,6 +1,6 @@
 # Intellectual Property & Contribution Policy
 
-> **Status: ratified 2026-06-15** (decision `DEC-2026-06-15-sliceops-license-ratification`). The license terms below are binding. This repository is public.
+> **Status: ratified 2026-06-15** (decision `DEC-0003-20260615-sliceops-license-ratification`). The license terms below are binding. This repository is public.
 
 This is the **authoritative** policy for licensing, trademark, and contributions. [`../CONTRIBUTING.md`](../CONTRIBUTING.md) is the practical how-to and defers here for the binding terms.
 
@@ -41,7 +41,7 @@ SliceOps is an open framework. Vendor runtime implementations (including the fir
 
 ## References
 
-- Decision record: `DEC-2026-06-15-sliceops-license-ratification` — the ratified SliceOps license decision: CC BY 4.0 for documentation, MIT for code, SPDX convention, Inbound = Outbound, trademark and copyright separation.
+- Decision record: `DEC-0003-20260615-sliceops-license-ratification` — the ratified SliceOps license decision: CC BY 4.0 for documentation, MIT for code, SPDX convention, Inbound = Outbound, trademark and copyright separation.
 - [`../LICENSE`](../LICENSE) — Creative Commons Attribution 4.0 International (documentation).
 - [`../LICENSE-CODE`](../LICENSE-CODE) — MIT License (code).
 - [`../DCO`](../DCO) — Developer Certificate of Origin 1.1.
