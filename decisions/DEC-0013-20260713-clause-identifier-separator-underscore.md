@@ -13,7 +13,7 @@ superseded-by: null
 conflicts-with: []
 related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
 topics: [naming, meta-framework]
-vocabulary-changes: ["clause identifier DEC-NNNN_n (was DEC-NNNN_n)"]
+vocabulary-changes: ["clause identifier DEC-NNNN_n (was DEC-NNNN.n)"]
 consistency-check: |
   Amends the citation NOTATION of DEC-0008_9 only — the clause mechanism itself
   (sub-resolutions as supersession targets, the independence test) is unchanged, and no
