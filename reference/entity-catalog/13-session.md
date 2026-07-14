@@ -11,7 +11,7 @@ P1 generalizes accordingly: **decisions emerge from sessions** (not only slices)
 ## Frontmatter schema
 
 ```yaml
-# Canonical filename prefix: SESS- (see ../../spec/v2.0.0/naming.md)
+# Canonical filename prefix: SESS- (see ../../spec/v2.0.1/naming.md)
 entity: Session
 session_id: <stable id, e.g. the platform's chat/session identifier>
 session_type: Slice | Artifact | Support | Infra | Meta | Audit | Learning | Orchestrate

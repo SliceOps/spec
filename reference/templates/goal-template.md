@@ -1,8 +1,8 @@
 <!--
-Goal template (Layer B.1). Naming (DEC-0008.5): GOAL-NNNN-YYYYMMDD-slug.md
-(claim the number with claim_id.py). decided-by is REQUIRED (DEC-0008.4):
+Goal template (Layer B.1). Naming (DEC-0008_5): GOAL-NNNN-YYYYMMDD-slug.md
+(claim the number with claim_id.py). decided-by is REQUIRED (DEC-0008_4):
 a goal without an originating decision is unaccountable ambition.
-Vision = a Goal with horizon: multi-year and a narrative body (DEC-0008.7).
+Vision = a Goal with horizon: multi-year and a narrative body (DEC-0008_7).
 Replace all <…>.
 -->
 ---

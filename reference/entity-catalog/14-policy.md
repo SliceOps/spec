@@ -1,10 +1,10 @@
 # Policy — Layer B.1 Cognitive Entity
 
-> An operating rule with scope and enforcement. **Mapped principles: P2 (Audit Plane Discipline), P6 (Evidence-by-Construction).** Canonical filename prefix: `POL-` (see `../../spec/v2.0.0/naming.md`). Entity added by clause DEC-0012.2.
+> An operating rule with scope and enforcement. **Mapped principles: P2 (Audit Plane Discipline), P6 (Evidence-by-Construction).** Canonical filename prefix: `POL-` (see `../../spec/v2.0.1/naming.md`). Entity added by clause DEC-0012_2.
 
 ## Purpose
 
-Holds the rules an environment, an agent, a corpus or a session MUST or MUST NOT follow — verifiable, blockable, one record per policy. Boundary with its Why-ring neighbors: a **Value** is a terminal criterion (where justification stops); a **Preference** is a taste or working choice; a **Policy is enforceable** — it has scope and an enforcement surface. Policies are **transversal**, not a cycle stage: they are what the machine gates of the audit plane enforce. The container's `_policies.md` is a **derived summary** generated from the active Policy records (clause DEC-0012.3) — truth lives in the records; the summary is regenerable.
+Holds the rules an environment, an agent, a corpus or a session MUST or MUST NOT follow — verifiable, blockable, one record per policy. Boundary with its Why-ring neighbors: a **Value** is a terminal criterion (where justification stops); a **Preference** is a taste or working choice; a **Policy is enforceable** — it has scope and an enforcement surface. Policies are **transversal**, not a cycle stage: they are what the machine gates of the audit plane enforce. The container's `_policies.md` is a **derived summary** generated from the active Policy records (clause DEC-0012_3) — truth lives in the records; the summary is regenerable.
 
 ## Frontmatter schema
 
@@ -52,6 +52,6 @@ enforcement surfaces (which gate runs where) · anti-patterns.
 ## Anti-patterns
 
 - Flattening many policies into one file (kills per-record lifecycle, provenance and supersession — the reason this entity exists).
-- Hand-editing `_policies.md` instead of regenerating it from the records (DEC-0012.3).
+- Hand-editing `_policies.md` instead of regenerating it from the records (DEC-0012_3).
 - A `severity: block` policy with no machine surface in `enforced-by` (unenforceable MUST — either wire a gate or set `warn`).
 - Restating a Value or Preference as a Policy (if it has no enforcement, it is not a policy).

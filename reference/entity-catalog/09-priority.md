@@ -1,12 +1,12 @@
 # Priority — Layer B.1 Cognitive Entity
 
-> A ranked commitment of focus toward a goal. **Mapped principle: universal.** Canonical filename prefix: `PRI-` (see `../../spec/v2.0.0/naming.md`).
+> A ranked commitment of focus toward a goal. **Mapped principle: universal.** Canonical filename prefix: `PRI-` (see `../../spec/v2.0.1/naming.md`).
 
-> **Naming**: this entity was **ActivePriority** before v2.0.0 (renamed by clause DEC-0008.2). **An entity name must never contain a state** — "active" is a `status:` value, and an "ActivePriority" with `status: resolved` was a contradiction in the name. The `AP-` prefix is retired.
+> **Naming**: this entity was **ActivePriority** before v2.0.0 (renamed by clause DEC-0008_2). **An entity name must never contain a state** — "active" is a `status:` value, and an "ActivePriority" with `status: resolved` was a contradiction in the name. The `AP-` prefix is retired.
 
 ## Purpose
 
-The Focus stage of the cognition cycle: *what is being worked now/next, and in which order*. A Priority is only meaningful relative to the goal it serves — "priority over **what**" is answerable exclusively as an ordering of focus toward Goals, which is why the pyramid edges are mandatory (clause DEC-0008.4). Distinct from a Goal (the objective), a slice (the atomic unit of work), and a ContextPack handoff (packaged context between sessions — DEC-0009): coordination documents, briefs, checklists and drafts are **not** priorities.
+The Focus stage of the cognition cycle: *what is being worked now/next, and in which order*. A Priority is only meaningful relative to the goal it serves — "priority over **what**" is answerable exclusively as an ordering of focus toward Goals, which is why the pyramid edges are mandatory (clause DEC-0008_4). Distinct from a Goal (the objective), a slice (the atomic unit of work), and a ContextPack handoff (packaged context between sessions — DEC-0009): coordination documents, briefs, checklists and drafts are **not** priorities.
 
 ## Frontmatter schema
 
@@ -53,4 +53,4 @@ Body: what · why now · acceptance · resolution (filled on close).
 - `rank` collisions within the same `(owner, horizon)` scope (ranks order; buckets do not).
 - Using Priority as a catch-all for briefs, handoffs, checklists or drafts (the pre-v2 failure this rename closes — those are ContextPacks, Capability components, or knowledge-layer content).
 - A permanent backlog dumping ground (a Priority tracks *current* focus; the backlog lives in Goals).
-- The `AP-` prefix, the name "ActivePriority", or `priority: high|medium|low` (retired — clauses DEC-0008.2 and DEC-0008.4).
+- The `AP-` prefix, the name "ActivePriority", or `priority: high|medium|low` (retired — clauses DEC-0008_2 and DEC-0008_4).

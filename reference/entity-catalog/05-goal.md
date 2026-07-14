@@ -16,14 +16,14 @@ updated: YYYY-MM-DD
 owner: <accountable party>
 sensitivity: public | internal | restricted | sensitive
 decided-by: <DEC id>                     # REQUIRED — the decision that created this goal
-                                          # (mirror edge of the DEC's defines-goal; clause DEC-0008.4)
+                                          # (mirror edge of the DEC's defines-goal; clause DEC-0008_4)
 horizon: now | quarter | year | multi-year
 measure: <how achievement is verified>
 parent-goal: <Goal id> | null            # goal hierarchy
 related-priorities: [<Priority id>...]
 ```
 
-A goal without an originating decision is unaccountable ambition — `decided-by:` closes the provenance chain `VAL → INS/CONC → DEC → GOAL → PRI → SESS → OUTC` end to end. **Vision** lives here too (clause DEC-0008.7): a Goal with `horizon: multi-year` and a narrative body, its `measure` qualitative.
+A goal without an originating decision is unaccountable ambition — `decided-by:` closes the provenance chain `VAL → INS/CONC → DEC → GOAL → PRI → SESS → OUTC` end to end. **Vision** lives here too (clause DEC-0008_7): a Goal with `horizon: multi-year` and a narrative body, its `measure` qualitative.
 
 ## Lifecycle states
 

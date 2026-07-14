@@ -18,9 +18,9 @@ consistency-check: |
   DEC-0008 fixed WHAT artifacts are called (one concept = one name = one grammar); this
   record fixes WHERE they live — the same drift disease at the folder level, evidenced by
   sibling engineering corpora sharing concepts under different numbers. Storage follows
-  the cognition cycle of DEC-0008.1; the cycle remains SCHEMA and this record is STORAGE
+  the cognition cycle of DEC-0008_1; the cycle remains SCHEMA and this record is STORAGE
   (folder placement never alters entity semantics or edges). Extends the reserved-name
-  list of DEC-0010.5 with the underscore family. Clause .4 operationalizes P5 (plans and
+  list of DEC-0010_5 with the underscore family. Clause .4 operationalizes P5 (plans and
   dependency graphs as derived artifacts only). Clause .5 houses the id counters as P9
   telemetry. Clause .7 preserves P11 (the file corpus as the portable canonical
   serialization) and P12 (points-never-copies routing). Vendor runtime applications of
@@ -33,7 +33,7 @@ consistency-check: |
 
 > A SliceOps DecisionRecord about SliceOps itself. Designed and ratified iteratively with
 > the owner across working drafts (2026-07-12/13); approved 2026-07-13 (born `DEC-P-0011`,
-> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008.9.
+> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008_9.
 
 ## Summary
 
@@ -60,7 +60,7 @@ clause with the owner; the temporary working drafts are superseded by this recor
 
 ## Decision (clauses)
 
-### DEC-0011.1 — The container and the unit-of-work rule
+### DEC-0011_1 — The container and the unit-of-work rule
 
 `_sliceops` is ALWAYS the container at the root of the unit of work; only its physical
 form varies with the unit:
@@ -78,24 +78,24 @@ repository per name — the remote may be `<product>-sliceops`, cloned locally a
 `_sliceops`). Directory and repository forms are isomorphic: consolidating or splitting
 repos moves the container unchanged.
 
-### DEC-0011.2 — Canonical decades, presence-activated
+### DEC-0011_2 — Canonical decades, presence-activated
 
 ```
 _sliceops/
   sliceops.json          adoption manifest (clause .6)
   _index.md              locates (DEC-0010)
   _agents.md             behaves — corpus behavior contract (clause .5)
-  _policies.md           regulates — DERIVED from 07-policies (DEC-0012.3)
+  _policies.md           regulates — DERIVED from 07-policies (DEC-0012_3)
   _metrics/              measures (clause .5)
   _meta/                 maintains (clause .5)
   00-context/
     01-values/           VAL-
     02-preferences/      PREF-
-    03-mental-models/    MM-   (DEC-0012.1)
+    03-mental-models/    MM-   (DEC-0012_1)
     04-context-packs/    CP-   (pack | brief | handoff — DEC-0009)
     05-relations/        REL-
     06-capabilities/     CAP-  (accrues in Act, consumed as context)
-    07-policies/         POL-  (DEC-0012.2)
+    07-policies/         POL-  (DEC-0012_2)
     10-custom-context/   the adopter's free context space beyond the framework
   10-insights/           INS-
   20-conclusions/        CONC-
@@ -115,7 +115,7 @@ and the adopter's space is always 10. **Presence activates**: a corpus materiali
 the decades its work needs; the validator validates what exists. Numbers are stable
 identifiers; the listing order is the cycle's teaching order.
 
-### DEC-0011.3 — `50-products/` holds the COMPLETE what
+### DEC-0011_3 — `50-products/` holds the COMPLETE what
 
 Per product, `50-products/<product>/` contains `definition/` (product definition,
 manifesto), `architecture/`, `specs/` (versioned contracts), and `reference/`.
@@ -126,7 +126,7 @@ organization-level corpus MAY hold the what at portfolio zoom (which products ex
 why) and **point, never copy**, at each product corpus's `50-products/` (construction
 zoom). Same reserved semantics, different zoom per corpus.
 
-### DEC-0011.4 — `60-execution/` internals
+### DEC-0011_4 — `60-execution/` internals
 
 `61-priorities/` (PRI-) · `62-plans/` and `63-dags/` hold **derived artifacts only** —
 per P5 the plan is computed from the slice dependency graph (`depends_on` metadata made
@@ -137,27 +137,27 @@ behavior contract) · `65-in-flight/` — live sessions, slice ledgers, `SLC` co
 
 Boundary: the framework reserves the **folders and the derived-only discipline** — that
 you prioritize, that plans are computed from the dependency graph, that slices follow the
-slice rules (all already public in P5 and DEC-0008.6). The **machinery** that produces
+slice rules (all already public in P5 and DEC-0008_6). The **machinery** that produces
 and runs them — planning pipelines, the format of fleet-agent definitions, orchestration —
 is vendor Layer C: contents beyond the canonical frontmatter are adopter/vendor-defined
 and specified in their own corpora.
 
-### DEC-0011.5 — The reserved underscore family
+### DEC-0011_5 — The reserved underscore family
 
-Extends the reserved infrastructure names of DEC-0010.5. Each carries one verb:
+Extends the reserved infrastructure names of DEC-0010_5. Each carries one verb:
 
 | Reserved | Verb | Contents |
 |---|---|---|
 | `_index.md` | locates | the corpus map (DEC-0010) |
 | `_agents.md` | behaves | the behavior contract for any agent working the corpus; the root `CLAUDE.md`/`AGENTS.md` remain as thin pointers (harnesses look at the root) |
-| `_policies.md` | regulates | DERIVED summary of the active Policy records (DEC-0012.3) |
+| `_policies.md` | regulates | DERIVED summary of the active Policy records (DEC-0012_3) |
 | `_metrics/` | measures | id `counters/` (P9 telemetry of a finite shared resource), the cost ledger across its dimensions, the metrics manifest, sizing-band calibration, measurement results |
 | `_meta/` | maintains | dated migration operations, alias maps (the archive resolves old names against them), one-off maintenance mandates |
 
 Numbers are cognition; underscores are infrastructure. Nothing normative lives in
 `_meta/` — norms live in decisions and the spec; `_meta/` is the corpus's works log.
 
-### DEC-0011.6 — The adoption manifest `sliceops.json`
+### DEC-0011_6 — The adoption manifest `sliceops.json`
 
 Container form:
 
@@ -179,20 +179,20 @@ declared spec), **extension declaration** (which free slots and vendor layers ex
 verifiable conformance claim). Written by scaffolding and migrations; read by validators
 and runtimes; never a hand-maintained document surface.
 
-### DEC-0011.7 — Surfaces, runtimes and the file serialization
+### DEC-0011_7 — Surfaces, runtimes and the file serialization
 
 On disk there is ONE vocabulary — this record's. Products name their **surfaces**
 freely: a console-type product may render its own sections over the corpus; any Layer C
 runtime maps the folders to whatever its users see. Runtime storage may be a database:
 the file corpus is the **canonical interchange serialization**, and the universal
-grammar (DEC-0008.5) makes filename ↔ primary-key conversion bijective — a compliant
+grammar (DEC-0008_5) makes filename ↔ primary-key conversion bijective — a compliant
 runtime must always be able to materialize the file corpus, round-trip, without loss
 (exports, agent workspaces, sync, integrations). `00-context/10-custom-context/` MAY
 route (points-never-copies, DEC-0010) to an external, vendor-defined data layer; such
 layers are entirely the vendor's intellectual property — the framework reserves only the
 route.
 
-### DEC-0011.8 — Application
+### DEC-0011_8 — Application
 
 The former engineering profile (`00-foundation` … `80-operations`, including its
 renumbered variants) is **retired**. Existing corpora migrate at their next homologation
@@ -236,7 +236,7 @@ Designed and ratified iteratively with the owner (2026-07-12/13) across seven wo
 drafts, with the owner's corrections preserved where they re-founded the design — most
 notably the complete-WHAT rule of clause .3, rejecting the technical-siblings draft
 (Alternative C). The drafts are superseded by this record; the audit plane keeps its
-graveyard (DEC-0008.7). **Approved by the owner on 2026-07-13** after two boundary
+graveyard (DEC-0008_7). **Approved by the owner on 2026-07-13** after two boundary
 adjustments requested in review: the clause .4 machinery boundary (framework keeps the
 folders and the derived-only discipline; the producing machinery is vendor Layer C) and
 the removal of runtime-domain content from this record entirely.

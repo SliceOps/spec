@@ -6,33 +6,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [2.0.1] — 2026-07-13
+
+Clause-citation separator amendment, raised by the owner reviewing the published v2.0.0.
+
+### Changed
+
+- **Clause identifiers are cited `DEC-NNNN_n`** (sub-clauses `DEC-NNNN_n_m`) — underscore, not dot ([`DEC-0013`](decisions/DEC-0013-20260713-clause-identifier-separator-underscore.md), superseding the notation of DEC-0008_9): dots are fragile wherever an identifier may materialize as a filename, the same rationale that retired the dotted slice coordinate. Living corpora swept; `spec/v2.0.1/` cut (v2.0.0 frozen keeps its dotted citations — DEC-0013 is their alias note); validator messages updated.
+
 ## [2.0.0] — 2026-07-13
 
 The cognition cycle and the universal identifier scheme. Governed by [`decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) (with [`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) and [`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)), absorbing the total naming homologation of [`DEC-0007`](decisions/DEC-0007-20260710-spec-v1-2-0-naming-homologation.md) — the v1.2.0 cut those changes were first drafted into was **never published**; it re-issues here as a major version because catalog renames, new required fields and the universal grammar are breaking changes to the framework contract. `spec/v2.0.0/` created; `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit.
 
 ### Added (v2.0.0 scope — the cognition cycle)
 
-- **The catalog presented on the cognition cycle** (clause DEC-0008.1): philosophize → observe → conclude → decide (strategic) → aim → focus → decide (tactical) → act → record → learn again. Stable numbers; DecisionRecord appears at two moments by design.
-- **Universal identifier grammar** (clause DEC-0008.5): `PREFIX-NNNN-YYYYMMDD-slug.md` for every entity artifact in every store — counters minimum 4 digits, unbounded, per corpus per entity, lifecycle-stable; compact immutable creation date; kebab-case slugs. Mechanized by the toolkit's `claim_id.py`.
-- **Decision kind axis + goal edges** (clause DEC-0008.3): `kind: constitutive | strategic | tactical`; `defines-goal` / `serves-goal` / `serves-value`; machine-checkable coherence. **Clause identifiers** `DEC-NNNN.n` with the independence test (clause DEC-0008.9).
-- **The pyramid, mandatory** (clause DEC-0008.4): `Goal.decided-by`, `Priority.serves-goal` + integer `rank` (buckets retired).
-- **Slice coordinate** `SLC[n]SEC[n]BL[n]` (clause DEC-0008.6) — letters as separators; dotted `BL-XX.SEC-XX.SL-XXX` retired (git-reference and filename safety).
+- **The catalog presented on the cognition cycle** (clause DEC-0008_1): philosophize → observe → conclude → decide (strategic) → aim → focus → decide (tactical) → act → record → learn again. Stable numbers; DecisionRecord appears at two moments by design.
+- **Universal identifier grammar** (clause DEC-0008_5): `PREFIX-NNNN-YYYYMMDD-slug.md` for every entity artifact in every store — counters minimum 4 digits, unbounded, per corpus per entity, lifecycle-stable; compact immutable creation date; kebab-case slugs. Mechanized by the toolkit's `claim_id.py`.
+- **Decision kind axis + goal edges** (clause DEC-0008_3): `kind: constitutive | strategic | tactical`; `defines-goal` / `serves-goal` / `serves-value`; machine-checkable coherence. **Clause identifiers** `DEC-NNNN_n` with the independence test (clause DEC-0008_9).
+- **The pyramid, mandatory** (clause DEC-0008_4): `Goal.decided-by`, `Priority.serves-goal` + integer `rank` (buckets retired).
+- **Slice coordinate** `SLC[n]SEC[n]BL[n]` (clause DEC-0008_6) — letters as separators; dotted `BL-XX.SEC-XX.SL-XXX` retired (git-reference and filename safety).
 - **Handoffs standardized** as ContextPack `kind: handoff` ([`DEC-0009`](decisions/DEC-0009-20260712-handoffs-as-a-contextpack-kind.md)): the two birth conditions (context-exhausted, spinoff), canonical body sections, session-provenance loop.
 - **The corpus index** `_index.md` as reserved-name infrastructure ([`DEC-0010`](decisions/DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure.md)): mandatory at every corpus root, zero-discovery, points-never-copies, routes must resolve; reserved infrastructure names formalized.
-- Plain-language rule (clause DEC-0008.7): acronyms defined at first use; template heading "TL;DR" → "Summary".
+- Plain-language rule (clause DEC-0008_7): acronyms defined at first use; template heading "TL;DR" → "Summary".
 - **The canonical corpus container and layout** `_sliceops/` ([`DEC-0011`](decisions/DEC-0011-20260713-canonical-corpus-container-and-layout.md)): the unit-of-work rule (directory / repository named `_sliceops` / pointer manifest), cycle-ordered decades with reserved semantics and presence activation, the complete WHAT under `50-products/`, the reserved underscore family (`_agents.md` · `_policies.md` derived · `_metrics/` · `_meta/`), the adoption manifest `sliceops.json`; the former "-engineering" numbered profile retired.
 - **Catalog amendments** ([`DEC-0012`](decisions/DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md)): the entity's final name **MentalModel** (`MM-`), and **Policy** (`POL-`) as the fourteenth canonical entity — operating rules with `scope` / `enforced-by` / `severity`, `_policies.md` demoted to a derived summary. New templates: `policy-template.md`, `sliceops-json-template.md`.
 
 ### Changed (v2.0.0 scope)
 
-- **Three entities renamed to plain words** (clause DEC-0008.2): CognitiveFramework → **MentalModel** (`MM-`; interim design name "Frame"/`FRAME-` also retired — clause DEC-0012.1), LearningPattern → **Conclusion** (`CONC-`), ActivePriority → **Priority** (`PRI-`) — semantics preserved; old names become implementation aliases; `LP-`/`CF-`/`FRAME-`/`AP-` retired.
-- Entity catalog, glossary and naming.md rewritten from the single-source table (clause DEC-0008.2.1).
+- **Three entities renamed to plain words** (clause DEC-0008_2): CognitiveFramework → **MentalModel** (`MM-`; interim design name "Frame"/`FRAME-` also retired — clause DEC-0012_1), LearningPattern → **Conclusion** (`CONC-`), ActivePriority → **Priority** (`PRI-`) — semantics preserved; old names become implementation aliases; `LP-`/`CF-`/`FRAME-`/`AP-` retired.
+- Entity catalog, glossary and naming.md rewritten from the single-source table (clause DEC-0008_2_1).
 
 ### Added (absorbed naming homologation, first drafted as v1.2.0 — never published)
 
 ### Added
 
-- **Canonical naming standard** ([`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (14-entity table since DEC-0012), the universal identifier grammar (the interim per-store ID schemes were retired by DEC-0008.5 within this same release), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
+- **Canonical naming standard** ([`spec/v2.0.0/naming.md`](spec/v2.0.0/naming.md)) — the single normative source for artifact naming: canonical prefix per entity (14-entity table since DEC-0012), the universal identifier grammar (the interim per-store ID schemes were retired by DEC-0008_5 within this same release), DecisionRecord lifecycle in the prefix (`DEC-` / `DEC-P-` / `DEC-D-` with `status: pending|approved|deprecated`), flat `decisions/` folders, migration alias tables (pre-v1.2.0 → v1.2.0) and vendor implementation-alias table.
 - Glossary entries: *Naming (canonical prefixes)*, *OutcomeRecord* (with mandatory `kind: retrospective|postmortem|result`), *Capability components (standard/runbook/playbook)*, *RFC (retired term)*.
 - Capability **component model** (`reference/entity-catalog/04-capability.md`): `standard`/`runbook`/`playbook` as sibling components via `kind:` + `capability:` back-reference — the catalog does not grow.
 - Templates born homologated: [`capability-template.md`](reference/templates/capability-template.md), [`outcome-record-template.md`](reference/templates/outcome-record-template.md); `dec-template.md` rewritten to the lifecycle-prefix form.
@@ -44,7 +52,7 @@ The cognition cycle and the universal identifier scheme. Governed by [`decisions
 - **The term "RFC" is retired**; a proposal is a pending DecisionRecord (`DEC-P-`). `governance/RFC-PROCESS.md` → [`governance/PROPOSAL-PROCESS.md`](governance/PROPOSAL-PROCESS.md).
 - **`decisions/` flattened** (this repo, dogfooding): `accepted/` files renamed `DR-*` → `DEC-*` with `status: approved`; lifecycle subfolders retired; every reference rewritten in the same change (R5). The publishing-layout DEC carries the amendment annotation.
 - DecisionRecord `status` enum homologated to `pending|approved|deprecated` (legacy `proposed`/`ratified`/`superseded` read-tolerated, write-prohibited); `approver` recommendation now reads "on `status: approved`".
-- evidence.v1 reference patterns brought to the universal grammar: `sliceId` accepts the `SLC` coordinate and `decisionRef` the `PREFIX-NNNN-YYYYMMDD-slug` form (pre-v2 forms read-tolerated for immutable history) — fold-in of clauses DEC-0008.5/.6; golden examples updated.
+- evidence.v1 reference patterns brought to the universal grammar: `sliceId` accepts the `SLC` coordinate and `decisionRef` the `PREFIX-NNNN-YYYYMMDD-slug` form (pre-v2 forms read-tolerated for immutable history) — fold-in of clauses DEC-0008_5/.6; golden examples updated.
 - Living references updated from `spec/v1.1.0/` to `spec/v2.0.0/` (root README, `reference/`, CI taxonomy path); `spec/latest` → `v2.0.0`. Historical documents keep their original version links.
 - `spec/README.md` version index brought up to date (was still describing v1.0.0 as current — stale-copy fix).
 - ip-boundary licensing note: the stale "No `LICENSE` file is published…" line (pre-dating the 2026-06-15 license ratification) now states the published CC BY 4.0 + MIT reality. No licensing terms changed.
@@ -85,7 +93,8 @@ First public release — the open framework and audit plane for AI-first softwar
 
 Decision-first and platform-agnostic — runs on any text-based AI agent plus git, no specific runtime required (P11). SliceOps™ trademark pending (EUIPO #019381071) — see `TRADEMARK.md`.
 
-[Unreleased]: https://github.com/SliceOps/spec/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/SliceOps/spec/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/SliceOps/spec/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/SliceOps/spec/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/SliceOps/spec/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/SliceOps/spec/releases/tag/v1.0.0

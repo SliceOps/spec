@@ -28,7 +28,7 @@ promoted-to: <LP id> | null          # set when this insight contributes to a Le
 ## Usage example (generic)
 
 ```
-INS-NNN-<observation-slug>.md          (canonical prefix INS- — legacy IN-/IR- retired, see ../../spec/v2.0.0/naming.md)
+INS-NNN-<observation-slug>.md          (canonical prefix INS- — legacy IN-/IR- retired, see ../../spec/v2.0.1/naming.md)
   entity: InsightRecord
   status: active
   originating_slice: BL-XX.SEC-XX.SL-XXX

@@ -15,9 +15,9 @@ related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-00
 topics: [naming, entity-catalog, glossary, enforcement]
 vocabulary-changes: ["MentalModel (entity — was Frame, was CognitiveFramework)", "MM- prefix", "FRAME- retired", "Policy (entity)", "POL- prefix", "policy scope", "_policies.md (derived view)"]
 consistency-check: |
-  Amends the single-source entity table of DEC-0008.2.1 — folded into v2.0.0 before any
+  Amends the single-source entity table of DEC-0008_2_1 — folded into v2.0.0 before any
   publication, so the amendment leaves no alias debt beyond the migration map. Split from
-  DEC-0011 per the independence test (DEC-0008.9): the layout can be ratified without
+  DEC-0011 per the independence test (DEC-0008_9): the layout can be ratified without
   these catalog changes and vice versa; DEC-0011 references the folder homes these
   entities take. FRAME- joins the retired-prefix list next to CF- (one concept keeps one
   current name). Policy lands in the transversal plane, not a cycle stage: policies are
@@ -29,7 +29,7 @@ consistency-check: |
 
 > A SliceOps DecisionRecord about SliceOps itself. Ratified with the owner in the
 > layout-design conversation (2026-07-12/13); approved 2026-07-13 (born `DEC-P-0012`,
-> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008.9.
+> renamed on approval — the prefix carries the state). Clause identifiers per DEC-0008_9.
 
 ## Summary
 
@@ -59,25 +59,25 @@ been published.
 
 ## Decision (clauses)
 
-### DEC-0012.1 — Frame → MentalModel (`MM-`)
+### DEC-0012_1 — Frame → MentalModel (`MM-`)
 
 The entity's final name is **MentalModel**; filename prefix **`MM-`** under the
-universal grammar; container folder `00-context/03-mental-models/` (DEC-0011.2). A
+universal grammar; container folder `00-context/03-mental-models/` (DEC-0011_2). A
 MentalModel is an instrument chosen per problem — first principles, inversion, the vital
 few — you hold MANY and apply them deliberately; that is exactly this entity's
 semantics, and the name says so unaided. **`FRAME-` joins the retired prefixes** (never
 write) alongside `CF-`; the glossary keeps Frame and CognitiveFramework as retired-name
 pointers. The Why ring reads **`VAL- / PREF- / MM-`**. This clause amends the
-DEC-0008.2.1 table entry; the amendment folds into v2.0.0 (nothing published — the only
+DEC-0008_2_1 table entry; the amendment folds into v2.0.0 (nothing published — the only
 trace is the migration alias map).
 
-### DEC-0012.2 — Policy: a canonical entity (`POL-`)
+### DEC-0012_2 — Policy: a canonical entity (`POL-`)
 
 A **Policy** is an **operating rule with scope and enforcement** — MUST / MUST-NOT,
 verifiable, blockable. Boundary with its neighbors in the Why ring: a **Value** is a
 terminal criterion (where justification stops); a **Preference** is a taste or working
 choice; a **Policy** is enforceable and scoped. Prefix `POL-`, universal grammar, stored
-`00-context/07-policies/` — a slot DEC-0011.2 reserves for exactly this class of
+`00-context/07-policies/` — a slot DEC-0011_2 reserves for exactly this class of
 addition. Frontmatter schema:
 
 ```yaml
@@ -98,18 +98,18 @@ runtime's session-permission grants are Policies with `scope: session` — a ven
 specialization of the canonical entity; vendors MAY extend the scope values in their
 own runtimes (Layer C).
 
-### DEC-0012.3 — `_policies.md` is a derived view
+### DEC-0012_3 — `_policies.md` is a derived view
 
-The container's `_policies.md` (DEC-0011.5) is **generated** from the active `POL-`
+The container's `_policies.md` (DEC-0011_5) is **generated** from the active `POL-`
 records: the fast summary every agent loads at session start. Truth lives in the
 records; the summary is regenerable on change (Determinism-over-Regeneration — the same
 discipline P5 applies to plans). Hand-editing the summary instead of its sources is the
 anti-pattern.
 
-### DEC-0012.4 — Application
+### DEC-0012_4 — Application
 
 The catalog grows by one entity and every dependent surface updates, folded into
-v2.0.0: the catalog README and cycle table (single source, DEC-0008.2.1 as amended),
+v2.0.0: the catalog README and cycle table (single source, DEC-0008_2_1 as amended),
 entity spec files (the frame spec renamed to mental-model; a new policy spec), the
 glossary (MentalModel, Policy, policy scope; Frame as retired pointer), naming.md
 (prefix table, retired list, alias table), base-schema enums, templates (mental-model
@@ -150,13 +150,13 @@ Both amendments ratified by the owner in the layout-design conversation (2026-07
 MentalModel elected over keeping Frame after an alternatives review with costs stated;
 the Policy entity proposed by the owner ("each policy deserves to be seen the way
 decisions are seen") and formalized here. Split from DEC-0011 per the independence test
-(DEC-0008.9). **Approved by the owner on 2026-07-13**, together with DEC-0011, after the
+(DEC-0008_9). **Approved by the owner on 2026-07-13**, together with DEC-0011, after the
 vendor-vocabulary review (no runtime names in canonical text; scope values extensible in
 Layer C).
 
 ## References
 
-- [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — the amended single-source table (DEC-0008.2.1), the retired-prefix discipline, the clause rule (DEC-0008.9).
+- [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — the amended single-source table (DEC-0008_2_1), the retired-prefix discipline, the clause rule (DEC-0008_9).
 - [`DEC-0011-20260713-canonical-corpus-container-and-layout.md`](DEC-0011-20260713-canonical-corpus-container-and-layout.md) — folder homes (`03-mental-models/`, `07-policies/`), `_policies.md` in the underscore family.
 - `reference/entity-catalog/` — the catalog these clauses amend.
 - `spec/v2.0.0/naming.md` — prefix table, retired list and alias tables receiving the amendment.

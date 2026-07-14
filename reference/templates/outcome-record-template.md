@@ -1,6 +1,6 @@
 <!--
 OutcomeRecord template (Layer B.1). Naming: OUTC-NNNN-YYYYMMDD-<slug>.md
-(universal grammar — spec/v2.0.0/naming.md).
+(universal grammar — spec/v2.0.1/naming.md).
 kind: is mandatory — retrospective (Block Retrospective) | postmortem | result.
 A closed OutcomeRecord is immutable; corrections append a new record. Replace all <…>.
 -->

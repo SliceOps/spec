@@ -1,8 +1,8 @@
 # Conclusion — Layer B.1 Cognitive Entity
 
-> What we now believe: a generalization promoted from repeated insights, or reached by explicit reasoning. **Mapped principle: P8 (Recursive Learning by Capture).** Canonical filename prefix: `CONC-` (see `../../spec/v2.0.0/naming.md`).
+> What we now believe: a generalization promoted from repeated insights, or reached by explicit reasoning. **Mapped principle: P8 (Recursive Learning by Capture).** Canonical filename prefix: `CONC-` (see `../../spec/v2.0.1/naming.md`).
 
-> **Naming**: this entity was **LearningPattern** before v2.0.0 (renamed by clause DEC-0008.2 — the framework must be understandable in plain words, and what this entity holds are conclusions). The `LP-` prefix is retired.
+> **Naming**: this entity was **LearningPattern** before v2.0.0 (renamed by clause DEC-0008_2 — the framework must be understandable in plain words, and what this entity holds are conclusions). The `LP-` prefix is retired.
 
 ## Purpose
 
@@ -50,4 +50,4 @@ Body: conclusion statement · evidence (the aggregated insights) · resolution.
 - A rule amended without a Conclusion as cited evidence.
 - A Conclusion that never triggers a decision or rule (belief without consequence).
 - Editing aggregated insights to fit the conclusion (corrupts the evidence chain).
-- The `LP-` prefix or the name "LearningPattern" (retired — clause DEC-0008.2).
+- The `LP-` prefix or the name "LearningPattern" (retired — clause DEC-0008_2).

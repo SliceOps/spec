@@ -21,15 +21,15 @@ consistency-check: |
   name, outside the entity catalog — the same class as .counters/ and the agent-context
   files. Materializes the routing mechanism the Context Router already specifies (the
   router is the mechanism; _index.md is its artifact). Formalizes the reserved
-  infrastructure-name list that the universal grammar of DEC-0008.5 exempts. Split out
-  as standalone per DEC-0008.9. No conflicts; ContextPack (DEC-0009) explicitly does NOT
+  infrastructure-name list that the universal grammar of DEC-0008_5 exempts. Split out
+  as standalone per DEC-0008_9. No conflicts; ContextPack (DEC-0009) explicitly does NOT
   cover locating.
 ---
 
 # DEC-0010 — The Corpus Index as Reserved-Name Infrastructure
 
 > A SliceOps DecisionRecord about SliceOps itself. Ratified in the DEC-0008 conversation
-> (2026-07-12); split out as an independent record per DEC-0008.9.
+> (2026-07-12); split out as an independent record per DEC-0008_9.
 
 ## Summary
 
@@ -65,7 +65,7 @@ documentation, memory-index files. Evidence of a missing standard.
 4. **Enforcement**: the naming validator checks (a) the root `_index.md` exists in every
    homologated corpus, and (b) every route target resolves — a stale index is a build
    failure, not a suggestion.
-5. **Reserved infrastructure names, formalized** (the universal grammar of DEC-0008.5
+5. **Reserved infrastructure names, formalized** (the universal grammar of DEC-0008_5
    governs *entity artifacts*; these are exempt and reserved): `README.md`,
    `CLAUDE.md`/`AGENTS.md`, `MEMORY.md`, `_organization.md`, `_index.md`, `*-ledger.md`,
    and the `.counters/` directory. The list lives in naming.md; anything else must be an
@@ -95,10 +95,10 @@ failure instead of silent drift.
 Approved by the owner on 2026-07-12 in the DEC-0008 ratification conversation, **as the
 correction** of the first draft (ContextPack kind) after the owner's objection. The
 correction is part of the record: the rejected design is preserved under Alternatives —
-the audit plane keeps its graveyard (DEC-0008.7).
+the audit plane keeps its graveyard (DEC-0008_7).
 
 ## References
 
-- [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — parent conversation; universal grammar and exemptions (DEC-0008.5), conventions (DEC-0008.7), clause rule (DEC-0008.9).
+- [`DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md`](DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) — parent conversation; universal grammar and exemptions (DEC-0008_5), conventions (DEC-0008_7), clause rule (DEC-0008_9).
 - [`DEC-0009-20260712-handoffs-as-a-contextpack-kind.md`](DEC-0009-20260712-handoffs-as-a-contextpack-kind.md) — ContextPack kinds (containing, not locating).
 - `reference/context-router/` — the routing mechanism this record materializes.

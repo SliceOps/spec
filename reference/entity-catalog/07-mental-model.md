@@ -1,12 +1,12 @@
 # MentalModel — Layer B.1 Cognitive Entity
 
-> A mental model or lens the corpus reasons with. **Mapped principle: universal.** Canonical filename prefix: `MM-` (see `../../spec/v2.0.0/naming.md`).
+> A mental model or lens the corpus reasons with. **Mapped principle: universal.** Canonical filename prefix: `MM-` (see `../../spec/v2.0.1/naming.md`).
 
-> **Naming**: this entity was **CognitiveFramework** before v2.0.0, briefly **Frame** during the v2.0.0 design (clause DEC-0008.2), and takes its final name **MentalModel** by clause DEC-0012.1 — self-explanatory to any audience, no collision with "framework". The `CF-` and `FRAME-` prefixes are retired.
+> **Naming**: this entity was **CognitiveFramework** before v2.0.0, briefly **Frame** during the v2.0.0 design (clause DEC-0008_2), and takes its final name **MentalModel** by clause DEC-0012_1 — self-explanatory to any audience, no collision with "framework". The `CF-` and `FRAME-` prefixes are retired.
 
 ## Purpose
 
-Holds the reference structures thinking happens *through*: glossaries, taxonomies, worldview documents, architectural lenses, evaluation grids — the instruments you pick per problem (first principles, inversion, the vital few) and apply deliberately. MentalModels live in the **Why ring** of the cognition cycle (clause DEC-0008.1) together with Values and Preferences — they condition every downstream stage without being stages themselves. Constitutive decisions are the only path that rewrites this ring.
+Holds the reference structures thinking happens *through*: glossaries, taxonomies, worldview documents, architectural lenses, evaluation grids — the instruments you pick per problem (first principles, inversion, the vital few) and apply deliberately. MentalModels live in the **Why ring** of the cognition cycle (clause DEC-0008_1) together with Values and Preferences — they condition every downstream stage without being stages themselves. Constitutive decisions are the only path that rewrites this ring.
 
 ## Frontmatter schema
 
@@ -50,4 +50,4 @@ Body: purpose · what this mental model is FOR · the lens itself (or the pointe
 
 - A MentalModel that copies a canonical source instead of pointing to it (the glossary-mirror failure).
 - Editing a superseded MentalModel (frozen audit trail).
-- The `CF-`/`FRAME-` prefixes or the names "CognitiveFramework"/"Frame" (retired — clauses DEC-0008.2, DEC-0012.1).
+- The `CF-`/`FRAME-` prefixes or the names "CognitiveFramework"/"Frame" (retired — clauses DEC-0008_2, DEC-0012_1).

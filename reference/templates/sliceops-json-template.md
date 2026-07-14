@@ -1,8 +1,8 @@
-# `sliceops.json` — adoption manifest templates (DEC-0011.6)
+# `sliceops.json` — adoption manifest templates (DEC-0011_6)
 
 Written by scaffolding and migrations; read by validators and runtimes. Never a
 hand-maintained document surface. The local `_sliceops` name is what detects
-(DEC-0011.1); this manifest pins the spec version and declares extensions.
+(DEC-0011_1); this manifest pins the spec version and declares extensions.
 
 ## Container form (at the `_sliceops` root)
 

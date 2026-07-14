@@ -25,7 +25,7 @@ sensitivity: public | internal | restricted | sensitive   # R11
 
 ## Canonical enums and required edges (v2.0.0)
 
-Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). What the naming validator enforces on write:
+Normative source: [`spec/v2.0.1/naming.md`](../../spec/v2.0.1/naming.md). What the naming validator enforces on write:
 
 | Entity | Field | Canonical values / rule | Read tolerance (write-prohibited) |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Normative source: [`spec/v2.0.0/naming.md`](../../spec/v2.0.0/naming.md). What t
 | Priority | `serves-goal` + `rank` | REQUIRED — goal edge + integer rank unique within (owner, horizon) | `priority: high\|medium\|low` retired |
 | ContextPack | `kind` | `pack` / `brief` / `handoff` (handoff: `reason: context-exhausted\|spinoff`) | — |
 | Policy | `scope` | REQUIRED — `environment` / `agent` / `corpus` / `session` (vendors MAY extend the values in their own runtimes, Layer C) | — |
-| Policy | `severity` + `enforced-by` + `status` | `block` / `warn` · enforcement surfaces (`hook`/`validator`/`runtime`/`human`) · `active` / `deprecated`; the corpus `_policies.md` is DERIVED from active records (DEC-0012.3) | — |
+| Policy | `severity` + `enforced-by` + `status` | `block` / `warn` · enforcement surfaces (`hook`/`validator`/`runtime`/`human`) · `active` / `deprecated`; the corpus `_policies.md` is DERIVED from active records (DEC-0012_3) | — |
 
 ## Notes
 

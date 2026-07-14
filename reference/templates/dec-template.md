@@ -1,15 +1,15 @@
 <!--
-DecisionRecord template (Layer B.1). Universal grammar (DEC-0008.5):
+DecisionRecord template (Layer B.1). Universal grammar (DEC-0008_5):
 DEC-P-NNNN-YYYYMMDD-slug.md while pending; renamed DEC-NNNN-… on approval,
 DEC-D-NNNN-… on deprecation — number and date never change. Claim the number
 with the toolkit's claim_id.py (P9 pre-flight). The decisions/ folder is FLAT.
-Clauses inside this record are cited DEC-NNNN.n (DEC-0008.9).
+Clauses inside this record are cited DEC-NNNN_n (DEC-0008_9).
 Layer 1 consistency fields are mandatory. Replace all <…>.
 -->
 ---
 entity: DecisionRecord
 status: pending             # pending → approved → deprecated (matches the prefix: DEC-P- / DEC- / DEC-D-)
-kind: tactical              # constitutive | strategic | tactical (DEC-0008.3)
+kind: tactical              # constitutive | strategic | tactical (DEC-0008_3)
 defines-goal: []            # REQUIRED when strategic — the goal(s) this decision creates
 serves-goal: null           # REQUIRED when tactical — the goal this decision advances
 serves-value: null          # strategic decisions with no goal above terminate in a value

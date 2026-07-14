@@ -75,4 +75,4 @@ CAP-009-financial-pdf-parsing-runbook.md           (component)
 - Conflating Capability (accrued competence) with Goal (objective) or LearningPattern (framework pattern).
 - Capability that never updates `level`/`status` despite repeated demonstration (stale record).
 - Treating `standard`/`runbook`/`playbook` as entities or nesting them (they are sibling **components** of one Capability).
-- The `SKILL-`, `RUN-` or `REF-` prefixes (retired — see `../../spec/v2.0.0/naming.md`).
+- The `SKILL-`, `RUN-` or `REF-` prefixes (retired — see `../../spec/v2.0.1/naming.md`).

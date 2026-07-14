@@ -1,5 +1,5 @@
 <!--
-Handoff template (ContextPack kind: handoff — DEC-0009). Naming (DEC-0008.5):
+Handoff template (ContextPack kind: handoff — DEC-0009). Naming (DEC-0008_5):
 CP-NNNN-YYYYMMDD-slug.md (claim the number with claim_id.py). A handoff is born
 when the session's context is exhausted, or a topic spins off to another
 session. It CONTAINS context; locating context is _index.md's job (DEC-0010).

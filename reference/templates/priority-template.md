@@ -1,7 +1,7 @@
 <!--
-Priority template (Layer B.1). Naming (DEC-0008.5): PRI-NNNN-YYYYMMDD-slug.md
+Priority template (Layer B.1). Naming (DEC-0008_5): PRI-NNNN-YYYYMMDD-slug.md
 (claim the number with claim_id.py). serves-goal and rank are REQUIRED
-(DEC-0008.4): "priority over what" is only answerable as an ordering of focus
+(DEC-0008_4): "priority over what" is only answerable as an ordering of focus
 toward goals. Briefs/handoffs/checklists/drafts are NOT priorities.
 Replace all <…>.
 -->

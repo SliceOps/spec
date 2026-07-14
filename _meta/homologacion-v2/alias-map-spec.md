@@ -19,4 +19,4 @@ deterministic, recorded here. Catalog-entity renames and the container layout
 have their own alias tables in `spec/v2.0.0/naming.md` §9.
 
 Counter state after renumbering: `.counters/dec.txt = 12` (DEC-0012 is the
-maximum claimed number; the counter is per-corpus, per-entity — DEC-0008.5).
+maximum claimed number; the counter is per-corpus, per-entity — DEC-0008_5).

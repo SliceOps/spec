@@ -323,7 +323,7 @@
       }
     },
     "sliceId": {
-      "description": "Canonical SliceOps slice coordinate SLC[n]SEC[n]BL[n] (spec v2.0.0, DEC-0008.6). The dotted pre-v2 form is read-tolerated for records in immutable history.",
+      "description": "Canonical SliceOps slice coordinate SLC[n]SEC[n]BL[n] (spec v2.0.0, DEC-0008_6). The dotted pre-v2 form is read-tolerated for records in immutable history.",
       "type": "string",
       "pattern": "^(SLC[0-9]{4,}(SEC[0-9]{2,})?(BL[0-9]{2,})?|BL-[0-9]{2,}(\\.SEC-[0-9]{2,})?\\.SL-[0-9]{3}[a-z]?)$"
     },

@@ -1,9 +1,9 @@
 <!--
 Policy template (Layer B.1). Naming: POL-NNNN-YYYYMMDD-<slug>.md
-(universal grammar — spec/v2.0.0/naming.md; entity added by DEC-0012.2).
-Home: 00-context/07-policies/ in container corpora (DEC-0011.2).
+(universal grammar — spec/v2.0.1/naming.md; entity added by DEC-0012_2).
+Home: 00-context/07-policies/ in container corpora (DEC-0011_2).
 One record per policy. The corpus _policies.md is a DERIVED summary of the
-active records (DEC-0012.3) — regenerate it; never hand-edit it.
+active records (DEC-0012_3) — regenerate it; never hand-edit it.
 A severity: block policy names at least one machine surface in enforced-by.
 Replace all <…>.
 -->
