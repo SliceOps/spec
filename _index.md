@@ -5,11 +5,11 @@ copies. Load this before searching anything.
 
 | Looking for | Go to |
 |---|---|
-| The 12 principles (Layer A) | `spec/v2.0.1/principles.md` |
-| Canonical naming — prefixes, universal grammar, container layout, aliases | `spec/v2.0.1/naming.md` |
-| Canonical vocabulary | `spec/v2.0.1/glossary.md` |
-| Topic taxonomy | `spec/v2.0.1/topics.md` |
-| Layer A/B/C IP boundary | `spec/v2.0.1/ip-boundary.md` |
+| The 12 principles (Layer A) | `spec/v2.1.0/principles.md` |
+| Canonical naming — prefixes, universal grammar, container layout, aliases | `spec/v2.1.0/naming.md` |
+| Canonical vocabulary | `spec/v2.1.0/glossary.md` |
+| Topic taxonomy | `spec/v2.1.0/topics.md` |
+| Layer A/B/C IP boundary | `spec/v2.1.0/ip-boundary.md` |
 | Version index (which spec version is current) | `spec/README.md` |
 | The 14-entity catalog | `reference/entity-catalog/README.md` |
 | Frontmatter schemas | `reference/frontmatter-schemas/base-schema.md` |
