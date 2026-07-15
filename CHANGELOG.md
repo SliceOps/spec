@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [2.1.0] — 2026-07-15
+
+Slice-coordinate grammar extension, raised by the maintainer after using the SLC coordinate against real corpora. **Backwards-compatible minor** — every slice coordinate valid under v2.0.1 stays valid — the first minor of the v2 line. `spec/v2.1.0/` created; `spec/v2.0.1/`, `spec/v2.0.0/`, `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit; `spec/latest` → `v2.1.0`.
+
+### Added
+
+- **Sub-slice suffix on the slice coordinate** ([`DEC-0014`](decisions/DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections.md), clause DEC-0014_1, amending DEC-0008_6): an *optional one-letter lowercase* suffix after the slice number (`SLC0010b`) marks a slice that split off an existing one mid-implementation without renumbering its neighbours — restoring the `[a-z]` tail the legacy dotted `BL-NN[.SEC-NN].SL-NNN[a-z]` already carried (its absence from the SLC coordinate was a regression against that precedent; the evidence `sliceId` pattern kept the suffix on its dotted side).
+- **Alphabetic section codes** (clause DEC-0014_2): a `SEC` code may be all-uppercase-letters (`SECDOC`, `SECAPI`) as well as all-digits (`SEC03`), each code *pure* (digits xor letters, never mixed — `SECA1` is invalid). The single normative constraint: an alphabetic code **must not contain the substring `BL`** (the one parse-ambiguity source against the block qualifier), rejected at write time — e.g. `SECTABLE`. The block qualifier `BL` stays **numeric**.
+- New canonical examples in `naming.md` §5 and the glossary: `SLC0010b`, `SLC0010bSECAPIBL02`, `SLC0001bSEC21BL06`, `SLC0034SECDOC` (alongside the unchanged `SLC0012SEC03BL02`, `SLC0034`). The coordinate grammar is now `SLC\d{4,}[a-z]?(SEC(\d{2,}|[A-Z]{2,}))?(BL\d{2,})?`.
+
+### Changed
+
+- **Dotted-recognizer retirement made pin-governed** (clause DEC-0014_3): the retirement of the dotted coordinate (DEC-0008_6) binds a corpus only once it adopts a spec version ≥2.0.1; a corpus whose `sliceops.json` still pins 2.0.0 is not in violation and migrates when it raises its pin.
+- **Legacy dotted recognizer widened** to see the sub-slice and alphabetic-section forms in old coordinates (previously invisible to migration tooling): `^BL-?\d+\.SEC-?(\d+|[A-Z]+)\.SL-?\d+[a-z]?$`.
+- Naming validator (`.claude/hooks/naming_validator.py`): `SLC_COORD`, `SLC_FILENAME` and `SLC_LEGACY_DOTTED` updated to the extended grammars, plus a write-time check rejecting the substring `BL` inside an alphabetic section code (both the filename and `originating_slice:` frontmatter forms).
+- evidence.v1 `sliceId` pattern (`reference/evidence/evidence.v1.schema.json`) extended on **both** sides — the SLC coordinate gains the sub-slice suffix and alphabetic section codes; the dotted alternative gains the alphabetic section (it already carried the `[a-z]` suffix). Additive: every previously accepted `sliceId` stays valid.
+- `spec/latest` → `v2.1.0`; the version index in `spec/README.md` and the root `_index.md` routes updated to v2.1.0.
+
 ## [2.0.1] — 2026-07-13
 
 Clause-citation separator amendment, raised by the owner reviewing the published v2.0.0.
@@ -93,7 +111,8 @@ First public release — the open framework and audit plane for AI-first softwar
 
 Decision-first and platform-agnostic — runs on any text-based AI agent plus git, no specific runtime required (P11). SliceOps™ trademark pending (EUIPO #019381071) — see `TRADEMARK.md`.
 
-[Unreleased]: https://github.com/SliceOps/spec/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/SliceOps/spec/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/SliceOps/spec/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/SliceOps/spec/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/SliceOps/spec/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/SliceOps/spec/compare/v1.0.0...v1.1.0
