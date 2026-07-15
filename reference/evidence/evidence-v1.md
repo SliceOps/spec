@@ -34,8 +34,8 @@ Checks that did not execute are recorded with status `skipped` — enumerated, n
 | `artifacts[]` | yes | `{kind, id, path?, hash}` | Hash-anchored artifacts the evidence covers (hex digest: SHA-256 recommended; SHA-384 and SHA-512 accepted). What makes the record third-party recomputable. |
 | `checks[]` | yes | `{id, category, status, severity, message?}` | Categorized gate results. `category` is `functional` or `quality` (P6) or `security` (P7). |
 | `traceRefs[]` | no | `{executionId, traceHash}` | Hash-anchored execution traces — drift tests, eval suites, agentic runs. |
-| `provenance` | conditional | `{sliceId, commitSha, sessionRef?}` | P6 provenance category. Required (with `sliceId` + `commitSha`) on `slice-merge`. `sliceId` uses the canonical pattern `BL-NN[.SEC-NN].SL-NNN[a-z]`. |
-| `decisionRefs[]` | conditional | canonical decision ids | P6 decision category: the DECs / InsightRecords this evidence supports or was produced alongside (`DEC-YYYY-MM-DD-slug` — lifecycle prefixes `DEC-P-`/`DEC-D-` included — or counter ids like `DEC-021`, `INS-014`; legacy `DR-` read-tolerated for archives). Required (min 1) on `slice-merge`. |
+| `provenance` | conditional | `{sliceId, commitSha, sessionRef?}` | P6 provenance category. Required (with `sliceId` + `commitSha`) on `slice-merge`. `sliceId` uses the canonical SLC coordinate (`SLC0012SEC03BL02`, `SLC0010bSECAPIBL02` — DEC-0014); the legacy dotted pattern `BL-NN[.SEC-NN].SL-NNN[a-z]` is read-tolerated for archives. |
+| `decisionRefs[]` | conditional | canonical decision ids | P6 decision category: the DECs / InsightRecords this evidence supports or was produced alongside (`DEC-NNNN-YYYYMMDD-slug` — lifecycle prefixes `DEC-P-`/`DEC-D-` included — or counter ids like `DEC-0021`, `INS-0014`; legacy `DR-` and date-first forms read-tolerated for archives). Required (min 1) on `slice-merge`. |
 | `redaction` | yes | `{status: applied\|not-needed\|failed, rules[]}` | Secrets-redaction attestation (P7 secrets policy: secrets never enter evidence, logs, or the audit plane). |
 | `extensions` | no | namespaced object | Vendor/adopter extension point — see below. |
 

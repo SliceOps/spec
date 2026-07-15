@@ -70,7 +70,7 @@ SESS-2026-XX-XX-<short-slug>.md   (canonical prefix SESS-; or SESS-<platform-id>
   triage_rationale: large context-band drove model choice
   context_orientation: producing
   lifecycle: active
-  outcome: approved DEC-YYYY-MM-DD-<slug-1>, DEC-YYYY-MM-DD-<slug-2>
+  outcome: approved DEC-NNNN-YYYYMMDD-<slug-1>, DEC-NNNN-YYYYMMDD-<slug-2>
 Body: scope · turns summary · decisions produced · evidence references.
 ```
 

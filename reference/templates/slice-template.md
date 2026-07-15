@@ -28,7 +28,7 @@ Prose form (override permitted): a numbered list of testable statements. Maps to
 
 ## Decisions produced (P2/P1)
 
-- DEC-YYYY-MM-DD-<slug> — <one line> (or "none")
+- DEC-NNNN-YYYYMMDD-<slug> — <one line> (or "none")
 
 ## Evidence plan (P6/P7)
 
