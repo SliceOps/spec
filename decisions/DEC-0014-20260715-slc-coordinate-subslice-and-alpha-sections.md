@@ -133,6 +133,31 @@ same release, so migration tooling can SEE the sub-slice and alphabetic-section 
 old dotted coordinates that were previously invisible to it:
 `^BL-?\d+\.SEC-?(\d+|[A-Z]+)\.SL-?\d+[a-z]?$`.)
 
+### DEC-0014_4 — The sub-slice as instrument: rate is a health signal
+
+The sub-slice suffix (DEC-0014_1) is not merely permitted syntax; it carries a meaning the
+framework reads. A sub-slice is **the plan correcting itself against reality** — a unit of
+granularity that emerged *in execution* after its parent's coordinate was already claimed
+(coordinates are monotonic and merged history is immutable, so the child takes a suffix, not
+an inserted number). A plan is a hypothesis stated at one altitude; the true granularity of
+the work is discovered only by doing it, which is why a slice sometimes subdivides after the
+fact rather than being enumerated up front. Two consequences bind:
+
+1. **Emergent, not batch.** The suffix is for work that *emerged* bound to a parent slice —
+   a necessary adjacent fix, a discovered reconciliation. Foreseeable fan-out (a batch whose
+   leaves are enumerable before work begins) is planned as numbered **sibling** slices, not
+   sub-sliced after the fact. Using the suffix to enumerate a known batch is misuse that
+   inflates the signal below.
+2. **Rate is observable and read as health.** The proportion of a corpus's slices carrying a
+   sub-slice suffix is a signal about its planning altitude: low and concentrated in
+   inherently-emergent work (tooling, cleanup, meta) is healthy; rising, or spreading into
+   the plannable core of the build, means slices are being cut too coarse. Corpora keep this
+   rate **observable** — a sweeper metric, not a hard gate (announced, not cut, per P9).
+
+The principle-level statement of this lives in [`../spec/v2.1.0/principles.md`](../spec/v2.1.0/principles.md)
+P4 (atomicity under emergence) and P5 (the plan is a hypothesis; leaves are discovered in
+execution). This clause is the decision that binds the concept to the coordinate.
+
 ## Alternatives considered
 
 - **Leave the SLC coordinate as-is and tell authors to renumber sub-slices**: rejected —
@@ -154,9 +179,14 @@ old dotted coordinates that were previously invisible to it:
 
 ## Consequences
 
-**Enables**: sub-slices addressable without renumbering (the regression is closed);
-section codes that read as what they mean; migration tooling that can finally see the
-sub-slice and alphabetic-section shapes inside legacy dotted coordinates. **Constrains**:
+**Establishes**: the sub-slice as a first-class concept the framework reads, not just
+tolerated syntax — emergent-granularity notation (a leaf discovered in execution after the
+parent's coordinate was spent) whose *rate* is a health signal for planning altitude, with
+the emergent-vs-batch rule that keeps the signal honest (clause DEC-0014_4; principle
+statement in principles.md P4/P5). **Enables**: sub-slices addressable without renumbering
+(the regression is closed); section codes that read as what they mean; migration tooling
+that can finally see the sub-slice and alphabetic-section shapes inside legacy dotted
+coordinates. **Constrains**:
 section codes stay pure (digits xor uppercase letters) and alphabetic ones may not spell
 `BL`; sub-slice suffixes are a single lowercase letter; `BL` stays numeric — the validator
 enforces all of this at write time. **Costs**: a one-time validator + evidence-schema

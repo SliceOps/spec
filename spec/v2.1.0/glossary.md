@@ -477,6 +477,17 @@ Canonical glossary of SliceOps terms. Each term here has a **canonical meaning**
 - **Aliases prohibited**: the retired dotted **Slice ID** `BL-XX.SEC-XX.SL-XXX[a-z]` (Block-Section-Slice) — read-tolerated for immutable history and corpora still pinned to spec 2.0.0 (clause DEC-0014_3), write-prohibited from spec ≥2.0.1
 - **Cross-references**: P1, Provenance, Block, Slice, Naming (canonical prefixes)
 
+### Sub-slice
+- **Definition**: A slice that split off an existing slice **mid-implementation**, addressed by a one-letter lowercase suffix on the coordinate (`SLC0010b`; naming §5, clause DEC-0014_1). It earns its own atomic identity (evidence, merge, DAG node) while staying bound to its parent — the notation for a unit of granularity **discovered in execution** after the parent's coordinate was already claimed (coordinates are monotonic and merged history immutable, so the child takes a suffix, never a renumber). Reserved for **emergent** work bound to a parent; foreseeable batches are planned as numbered **siblings**, not sub-sliced after the fact (clause DEC-0014_4).
+- **Origin**: P4 (atomicity under emergence), P5 (the plan is a hypothesis); clause DEC-0014_1/DEC-0014_4
+- **Aliases prohibited**: "subtask", "sub-story"
+- **Cross-references**: Slice, Slice coordinate (SLC), Sub-slice rate, P4, P5
+
+### Sub-slice rate
+- **Definition**: The proportion of a corpus's slices that carry a sub-slice suffix — a **health signal** for planning altitude (clause DEC-0014_4). Low and concentrated in inherently-emergent work (tooling, cleanup, meta) is healthy: slices were cut at the right granularity and the suffix absorbs only the irreducible tail. Rising, or spreading into the plannable core of the build, indicates slices cut too coarse — a prompt to plan finer, not a mechanism to lean on. Kept observable as a sweeper metric, **not** a hard gate (announced, not cut — P9).
+- **Origin**: P5 (the plan is a hypothesis); clause DEC-0014_4
+- **Cross-references**: Sub-slice, Slice coordinate (SLC), P5, P9
+
 ### Stage
 - **Definition**: A computed view of the dependency DAG — which slices are mergeable now. NOT an imperative time-bound grouping (per P5).
 - **Origin**: P5
