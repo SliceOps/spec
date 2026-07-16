@@ -18,7 +18,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ## P1 — Decision Integrity by Construction
 
-**Statement**: Every decision is anchored to the **session** that produced it — the **slice** in the DEV case, where a decision is often *discovered* mid-build. This is a claim about **provenance** (*where* a decision was made), not about ordering: it does **not** reverse decision-first — architecture, specs, plans, and code remain *consequences* of decisions, never their source (that is the dependency axis, the cognition cycle). No decision floats free: every DEC traces to its originating session and is reachable from it (back-link), and a decision taken out-of-band is backed into a session retroactively.
+**Statement**: Every decision is anchored to the **session** that produced it — the **slice** in the DEV case. Every DEC traces to its originating session and is reachable from it (back-link); a decision made out-of-band is backed into a session retroactively.
 
 **Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the session that produced it. The session is the unit of work AND the unit of provenance (the slice is its DEV special case). Without P1, tribal knowledge re-emerges and the audit plane is theater.
 

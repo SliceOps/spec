@@ -60,13 +60,16 @@ different questions. P1 governs only the second.
 
 ## Decision
 
-### DEC-0015_1 — The statement leads with the session and names its axis
+### DEC-0015_1 — The statement stays a clean definition, session-first
 
-P1's statement is refined to: every decision is anchored to the **session** that produced it
-(the **slice** in the DEV case, where a decision is often *discovered* mid-build); this is a
-claim about **provenance**, not ordering, and does not reverse decision-first. The
-back-link, the "no decision floats free" rule, and the out-of-band-retroactively-anchored
-rule are preserved verbatim in substance.
+P1's statement is refined to a plain declarative anchoring claim: every decision is anchored
+to the **session** that produced it (the **slice** in the DEV case), traces to that session,
+is reachable from it (back-link), and — if taken out-of-band — is backed into a session
+retroactively. Only the opening *"Decisions emerge from slices"* — which scanned causally —
+is replaced; traceability, back-link, and out-of-band retroactivity are preserved in
+substance. The reconciliation of provenance with the cognition cycle is deliberately kept
+**out** of the statement (a principle's statement defines what it *is*, not what it is not);
+it lives in the clarification, DEC-0015_2.
 
 ### DEC-0015_2 — The two axes are named in P1's clarification
 
