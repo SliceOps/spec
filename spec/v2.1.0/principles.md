@@ -18,12 +18,12 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 
 ## P1 — Decision Integrity by Construction
 
-**Statement**: Decisions emerge from slices. Every DEC traces to a slice (where it was produced) and is reachable from that slice (back-link). Decisions made out-of-band must be backed into a slice retroactively.
+**Statement**: Every decision is anchored to the **session** that produced it — the **slice** in the DEV case, where a decision is often *discovered* mid-build. This is a claim about **provenance** (*where* a decision was made), not about ordering: it does **not** reverse decision-first — architecture, specs, plans, and code remain *consequences* of decisions, never their source (that is the dependency axis, the cognition cycle). No decision floats free: every DEC traces to its originating session and is reachable from it (back-link), and a decision taken out-of-band is backed into a session retroactively.
 
-**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the slice that produced it. The slice is the unit of work AND the unit of provenance. Without P1, tribal knowledge re-emerges and the audit plane is theater.
+**Rationale**: Out-of-band decisions accumulate as tribal knowledge — chat DMs, the founder's head. Six months later nobody knows why X. SliceOps eliminates tribal knowledge by requiring every decision to live in the corpus tied to the session that produced it. The session is the unit of work AND the unit of provenance (the slice is its DEV special case). Without P1, tribal knowledge re-emerges and the audit plane is theater.
 
 **Implication**:
-- DEC frontmatter includes slice provenance (`originating_slice:` in the canonical Block-Section-Slice ID format)
+- DEC frontmatter includes session provenance (`originating_slice:` — the field name is historical; it carries the SLC coordinate for a DEV slice, §5 / naming, and a session reference in the general case)
 - Slice PRs include the DEC list produced
 - Retroactive DECs allowed but require a "back-fill slice" with an explicit retro-decision flag
 - Architecture-spanning decisions get their own slice (no decision is "free" of slice provenance)
@@ -34,7 +34,7 @@ Gamification (slice-count badges, streaks, leaderboards, motivation mechanics) i
 - Decisions in a chat backlog never committed to the corpus
 - DECs that supersede priors without explaining what changed in context
 
-**Clarification (decisions emerge from sessions)**: P1's statement is generalized — the **slice** is the DEV Session-Type, but Meta/Audit/Learning sessions also produce decisions with provenance. A governance session that ratifies many DECs without producing a single PR is still anchored by an originating session. The `originating_slice:` field on a DEC therefore reads as **originating session** in the general case (the slice ID being a special case for DEV sessions). This closes the audit-plane hole for governance decisions. See entity catalog entry for Session (#13).
+**Clarification (two axes — do not conflate them)**: P1 is the **provenance** axis — *where* each decision was produced — and it is orthogonal to the **dependency** axis of the cognition cycle, which orders *what justifies what* (insight → conclusion → decision → goal → plan → slice, decisions preceding the execution that is their consequence). A decision's place in that cycle and the session that produced it are different questions; P1 governs only the second, so "anchored to the session that produced it" never contradicts "decisions precede plans and slices." The producing session is the **slice** for DEV work, but Meta/Audit/Learning/governance sessions produce decisions too — a session that ratifies many DECs without a single PR is still their anchor — which is why `originating_slice:` reads as **originating session** in the general case (governed by DEC-0015). This closes the audit-plane hole for governance decisions. See the Session entity (#13).
 
 ---
 
