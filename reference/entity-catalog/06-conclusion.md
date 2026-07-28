@@ -1,6 +1,6 @@
 # Conclusion — Layer B.1 Cognitive Entity
 
-> What we now believe: a generalization promoted from repeated insights, or reached by explicit reasoning. **Mapped principle: P8 (Recursive Learning by Capture).** Canonical filename prefix: `CONC-` (see `../../spec/v2.0.1/naming.md`).
+> What we now believe: a generalization promoted from repeated insights, or reached by explicit reasoning. **Mapped principle: P8 (Recursive Learning by Capture).** Canonical filename prefix: `CONC-` (see `../../spec/v2.1.0/naming.md`).
 
 > **Naming**: this entity was **LearningPattern** before v2.0.0 (renamed by clause DEC-0008_2 — the framework must be understandable in plain words, and what this entity holds are conclusions). The `LP-` prefix is retired.
 

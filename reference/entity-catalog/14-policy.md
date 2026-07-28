@@ -1,6 +1,6 @@
 # Policy — Layer B.1 Cognitive Entity
 
-> An operating rule with scope and enforcement. **Mapped principles: P2 (Audit Plane Discipline), P6 (Evidence-by-Construction).** Canonical filename prefix: `POL-` (see `../../spec/v2.0.1/naming.md`). Entity added by clause DEC-0012_2.
+> An operating rule with scope and enforcement. **Mapped principles: P2 (Audit Plane Discipline), P6 (Evidence-by-Construction).** Canonical filename prefix: `POL-` (see `../../spec/v2.1.0/naming.md`). Entity added by clause DEC-0012_2.
 
 ## Purpose
 

@@ -25,7 +25,7 @@ sensitivity: public | internal | restricted | sensitive   # R11
 
 ## Canonical enums and required edges (v2.0.0)
 
-Normative source: [`spec/v2.0.1/naming.md`](../../spec/v2.0.1/naming.md). What the naming validator enforces on write:
+Normative source: [`spec/v2.1.0/naming.md`](../../spec/v2.1.0/naming.md). What the naming validator enforces on write:
 
 | Entity | Field | Canonical values / rule | Read tolerance (write-prohibited) |
 |---|---|---|---|

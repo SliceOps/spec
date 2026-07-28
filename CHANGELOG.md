@@ -2,9 +2,33 @@
 
 All notable changes to the SliceOps™ framework specification are documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) per the Versioning policy in [`spec/v1.1.0/README.md`](spec/v1.1.0/README.md).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) per the Versioning policy in [`spec/v2.1.0/README.md`](spec/v2.1.0/README.md).
 
 ## [Unreleased]
+
+## [2.1.0] — pending ratification of [`DEC-P-0014`](decisions/DEC-P-0014-20260728-slice-coordinate-subslice-and-alphabetic-sections.md)
+
+The slice coordinate widened, on evidence from a Layer C.1 implementation: migrating a full corpus onto the v2 coordinate found **a third of its real coordinates inexpressible** (75 of 229 distinct coordinates) — named (non-numeric) sections, and the sub-slice suffix the retired dotted form carried and the `SLC` coordinate had silently dropped. Purely additive: every coordinate valid under v2.0.1 is valid here, hence a **minor**. `spec/v2.1.0/` cut; `spec/v2.0.1/` and `spec/v2.0.0/` retained frozen for audit. *(The release date and the version compare link land when the record is approved — see its Ratification section; agents propose, humans dispose (P3).)*
+
+### Added
+
+- **Sub-slice suffix** on the slice coordinate — exactly one optional lowercase letter after the slice number (`SLC0042b`), for a slice split off an in-flight slice mid-implementation without renumbering its siblings (clause DEC-0014_1). This restores a capability the pre-v2 dotted pattern had; foreseeable work is still planned as numbered siblings.
+- **Alphabetic section codes** — `SEC` accepts ≥2 uppercase letters as well as ≥2 digits, each code pure (digits xor letters) and never containing the substring `BL`, so the coordinate stays parseable in a single left-to-right pass; blocks stay numeric (clause DEC-0014_2).
+- **Conformance is pinned** to the spec version an adopting corpus declares in its manifest (`sliceops.json` `spec:`); raising the pin is the migration trigger, and a corpus whose coordinates were not expressible under the version it pinned is not in violation for keeping the dotted form (clause DEC-0014_3).
+- **Sub-slicing rate** (sub-sliced ÷ total coordinates) as a **health signal of planning altitude**, reported as a notice and never a gate; no canonical threshold is set on a single corpus's measurement (clause DEC-0014_4).
+- Glossary: **Sub-slice** and **Sub-slicing rate**.
+
+### Changed
+
+- [`spec/v2.1.0/naming.md`](spec/v2.1.0/naming.md) §5 rewritten: the field-by-field grammar `SLC<digits≥4>[a-z]?(SEC(<digits≥2>|<A-Z≥2>))?(BL<digits≥2>)?`, the canonical order (SLC → sub-slice → SEC → BL), and when to use each form. §1 and §9 tables updated (the alias table now preserves the sub-slice letter).
+- Naming validator: SLC filename and `originating_slice:` forms accept the extension; the retired-dotted recognizer widened to `BL-NN.SEC-(NN|AA).SL-NNN[a-z]` so migration tooling **sees** coordinates that previously matched nothing at all; the anti-`BL` rule reads the parsed section code, never a re-scan. The spec's vendored pre-write hook is re-synced with the toolkit source of truth (it had stayed on the pre-DEC-0013 citation notation).
+- evidence.v1 `sliceId` pattern widened to the same grammar (pre-v2 dotted form still read-tolerated); `reference/evidence/evidence-v1.md` no longer documents the dotted form as canonical.
+- Living references re-pointed to `spec/v2.1.0/` and `spec/latest` → `v2.1.0`, including the root README and the CI taxonomy path, which had stayed on `v2.0.0`.
+
+### Fixed
+
+- Glossary entry **Slice ID** still defined the pre-v2 dotted format as canonical — DEC-0008_6 had replaced it in v2.0.0 and DEC-0008's own consistency-check said so. It now defines the slice coordinate, with the dotted form listed as the prohibited alias (fix-on-touch, P12).
+- `reference/templates/dec-template.md` carried a dotted `originating_slice:` example — now the SLC coordinate.
 
 ## [2.0.1] — 2026-07-13
 
@@ -93,7 +117,8 @@ First public release — the open framework and audit plane for AI-first softwar
 
 Decision-first and platform-agnostic — runs on any text-based AI agent plus git, no specific runtime required (P11). SliceOps™ trademark pending (EUIPO #019381071) — see `TRADEMARK.md`.
 
-[Unreleased]: https://github.com/SliceOps/spec/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/SliceOps/spec/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/SliceOps/spec/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/SliceOps/spec/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/SliceOps/spec/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/SliceOps/spec/compare/v1.0.0...v1.1.0

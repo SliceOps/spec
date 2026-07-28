@@ -2,7 +2,7 @@
 
 Copy-to-start file skeletons. SliceOps IP (Layer B.1); documentation under CC BY 4.0, templates usable under MIT (ratified — see `../../governance/IPR_POLICY.md`).
 
-All templates are born homologated: universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md`, canonical prefixes and frontmatter per [`spec/v2.0.1/naming.md`](../../spec/v2.0.1/naming.md) — claim numbers with the toolkit's `claim_id.py`.
+All templates are born homologated: universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md`, canonical prefixes and frontmatter per [`spec/v2.1.0/naming.md`](../../spec/v2.1.0/naming.md) — claim numbers with the toolkit's `claim_id.py`.
 
 ## Files
 

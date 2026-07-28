@@ -2,7 +2,7 @@
 
 The canonical SliceOps™ cognitive entity catalog: **14 universal entities**, presented on the **cognition cycle** — the natural order in which anything gets built. SliceOps IP, shared across vendors (documentation under CC BY 4.0 — ratified, see `../../governance/IPR_POLICY.md`). Governed by [`DEC-0008`](../../decisions/DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme.md) as amended by [`DEC-0012`](../../decisions/DEC-0012-20260713-catalog-amendments-mental-model-and-policy.md) (MentalModel rename; Policy entity); this README is rewritten from clause DEC-0008_2_1 as amended and never edited independently of it.
 
-These 14 entities are **vendor-neutral and runtime-independent** — each carries meaning standalone in markdown. Runtimes may extend the catalog with runtime-specific entities under their own IP; such extensions are NOT part of this canonical catalog (P11 — Platform-Agnostic; see `../../spec/v2.0.1/ip-boundary.md`).
+These 14 entities are **vendor-neutral and runtime-independent** — each carries meaning standalone in markdown. Runtimes may extend the catalog with runtime-specific entities under their own IP; such extensions are NOT part of this canonical catalog (P11 — Platform-Agnostic; see `../../spec/v2.1.0/ip-boundary.md`).
 
 ## The cognition cycle
 
@@ -39,7 +39,7 @@ DecisionRecord appears **twice** by design — one entity, two moments (strategi
 
 ## The 14 entities
 
-Every entity has exactly **one canonical filename prefix** under the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` — normative source: [`spec/v2.0.1/naming.md`](../../spec/v2.0.1/naming.md).
+Every entity has exactly **one canonical filename prefix** under the universal grammar `PREFIX-NNNN-YYYYMMDD-slug.md` — normative source: [`spec/v2.1.0/naming.md`](../../spec/v2.1.0/naming.md).
 
 | # | Entity | Prefix | Holds | Cycle stage |
 |---|---|---|---|---|
@@ -70,7 +70,7 @@ The vendor-neutral canonical type key is `entity:` (value = the entity name). Ru
 
 ## Naming
 
-Catalog spec files here: `NN-kebab-name.md` (number = stable identifier; ordering/navigation only). **Artifact instances** follow the universal grammar with per-corpus counters and the `.counters/` discipline — normative rules, retired aliases and reserved infrastructure names in [`spec/v2.0.1/naming.md`](../../spec/v2.0.1/naming.md).
+Catalog spec files here: `NN-kebab-name.md` (number = stable identifier; ordering/navigation only). **Artifact instances** follow the universal grammar with per-corpus counters and the `.counters/` discipline — normative rules, retired aliases and reserved infrastructure names in [`spec/v2.1.0/naming.md`](../../spec/v2.1.0/naming.md).
 
 ## Adopter rules
 

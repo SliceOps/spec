@@ -1,6 +1,6 @@
 # Priority — Layer B.1 Cognitive Entity
 
-> A ranked commitment of focus toward a goal. **Mapped principle: universal.** Canonical filename prefix: `PRI-` (see `../../spec/v2.0.1/naming.md`).
+> A ranked commitment of focus toward a goal. **Mapped principle: universal.** Canonical filename prefix: `PRI-` (see `../../spec/v2.1.0/naming.md`).
 
 > **Naming**: this entity was **ActivePriority** before v2.0.0 (renamed by clause DEC-0008_2). **An entity name must never contain a state** — "active" is a `status:` value, and an "ActivePriority" with `status: resolved` was a contradiction in the name. The `AP-` prefix is retired.
 

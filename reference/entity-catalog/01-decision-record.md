@@ -29,7 +29,7 @@ consistency-check: |                          # Layer 1 mandatory paragraph
 
 ## Lifecycle states
 
-`pending` → `approved` → `deprecated`. **The state is carried in the filename prefix**: `DEC-P-` (pending) → `DEC-` (approved) → `DEC-D-` (deprecated/superseded). Supersession requires a bidirectional edge (new DEC `supersedes`; old DEC `superseded-by`) and the old record becomes `DEC-D-` with `status: deprecated`. The supersession graph must be acyclic. DECs are append-only — never deleted, never silently rewritten. A state change renames the file and rewrites all references in the same atomic change (R5); decisions folders are **flat** (no `rfcs/`/`accepted/`/`superseded/` subfolders — see `../../spec/v2.0.1/naming.md` §3).
+`pending` → `approved` → `deprecated`. **The state is carried in the filename prefix**: `DEC-P-` (pending) → `DEC-` (approved) → `DEC-D-` (deprecated/superseded). Supersession requires a bidirectional edge (new DEC `supersedes`; old DEC `superseded-by`) and the old record becomes `DEC-D-` with `status: deprecated`. The supersession graph must be acyclic. DECs are append-only — never deleted, never silently rewritten. A state change renames the file and rewrites all references in the same atomic change (R5); decisions folders are **flat** (no `rfcs/`/`accepted/`/`superseded/` subfolders — see `../../spec/v2.1.0/naming.md` §3).
 
 Legacy status values (`proposed`/`ratified`/`superseded`) are read-tolerated when parsing archives or non-homologated corpora, and prohibited on write.
 
@@ -53,7 +53,7 @@ Resolutions inside a record are **clauses**, cited `DEC-NNNN_n` — never "Decis
 ## Usage example (generic)
 
 ```
-DEC-NNNN-YYYYMMDD-<decision-slug>.md      (universal grammar — spec/v2.0.1/naming.md)
+DEC-NNNN-YYYYMMDD-<decision-slug>.md      (universal grammar — spec/v2.1.0/naming.md)
   entity: DecisionRecord
   status: approved
   originating_slice: SLC<n>SEC<n>BL<n>
@@ -80,6 +80,6 @@ Body sections: Context · Decision · Alternatives considered · Consequences ·
 - DEC without "alternatives considered" (false-binary thinking).
 - DEC with no `originating_slice` and no back-fill flag (violates P1).
 - Decisions left in chat/email/meeting notes without a subsequent DEC.
-- The `DR-` prefix or the term "RFC" (retired — see `../../spec/v2.0.1/naming.md`).
+- The `DR-` prefix or the term "RFC" (retired — see `../../spec/v2.1.0/naming.md`).
 - Lifecycle subfolders (`rfcs/`, `accepted/`, `superseded/`) — the prefix carries the state; folders stay flat.
 - Prefix/status mismatch (e.g., a `DEC-P-` file with `status: approved`).

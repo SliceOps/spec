@@ -21,7 +21,7 @@ approver: <approving human> # OPTIONAL — the human who approved (P3 human gate
                             # the point is recording WHO approved, making self-approval
                             # explicit and auditable instead of implicit.
 sensitivity: internal       # public | internal | restricted | sensitive
-originating_slice: <BL-XX.SEC-XX.SL-XXX>   # P1 provenance
+originating_slice: <SLC0012SEC03BL02>      # P1 provenance — slice coordinate (naming.md §5)
 supersedes: []
 superseded-by: null
 conflicts-with: []          # non-empty → "Conflict Resolution" section below

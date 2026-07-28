@@ -1,6 +1,6 @@
 # MentalModel — Layer B.1 Cognitive Entity
 
-> A mental model or lens the corpus reasons with. **Mapped principle: universal.** Canonical filename prefix: `MM-` (see `../../spec/v2.0.1/naming.md`).
+> A mental model or lens the corpus reasons with. **Mapped principle: universal.** Canonical filename prefix: `MM-` (see `../../spec/v2.1.0/naming.md`).
 
 > **Naming**: this entity was **CognitiveFramework** before v2.0.0, briefly **Frame** during the v2.0.0 design (clause DEC-0008_2), and takes its final name **MentalModel** by clause DEC-0012_1 — self-explanatory to any audience, no collision with "framework". The `CF-` and `FRAME-` prefixes are retired.
 
