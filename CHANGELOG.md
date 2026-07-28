@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Pending ratification — spec v2.2.0 ([`DEC-P-0016`](decisions/DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup.md))
+
+Prepared, **not ratified**: the material below is staged so that approval is a rename and a status flip, not a second authoring pass. It moves to a released `## [2.2.0]` section on ratification, or is reverted with the record on rejection.
+
+- **Canonical topic `naming`** (clause DEC-0016_1) under `meta-framework`, covering the identifier standard of `naming.md` — universal grammar, entity prefixes, slice coordinate, clause identifiers, reserved names, alias tables. Closes a gap the v2 re-founding left: `topics.md` is byte-identical from v1.1.0 through v2.1.0 and therefore predates `DEC-0008`, which created the universal grammar — leaving the identifier standard as the only canonical spec document with no topic, while `meta-framework` named "naming" in its own scope without carrying an entry for it. Four approved constitutive records (`DEC-0011`, `DEC-0012`, `DEC-0013`, `DEC-0014`) had independently tagged themselves `naming`; they become conformant with no edit. Backwards-compatible minor — no `topics:` value valid under v2.1.0 becomes invalid. `spec/v2.2.0/` cut with `topics.md` as its only changed document; `spec/v2.1.0/` and earlier retained frozen; `spec/latest` → `v2.2.0`, with the `spec/README.md` version index and the root `_index.md` routes updated.
+
+### Fixed
+
+- **Bidirectional cross-references restored** — nine `related-decs` edges were declared one-way, failing the repository's own `[cross-references-bidirectional]` gate: `DEC-0008` had no back-edge from `DEC-0011`/`DEC-0012`/`DEC-0013`/`DEC-0014`/`DEC-0015`, `DEC-0009` and `DEC-0010` none from `DEC-0011`, `DEC-0013` none from `DEC-0014`, `DEC-0014` none from `DEC-0015`. `related-decs` is symmetric, and `governance/PROPOSAL-PROCESS.md` step 3 makes reciprocation a Layer 2 pre-merge requirement. Edge addition only — no decision content changed.
+- **Three off-taxonomy topic values corrected** (recorded as clause DEC-0016_2) — mislabels of concepts the taxonomy already carried, resolved to their canonical entries per P12 fix-on-touch rather than by growing the taxonomy: `DEC-0011` `adoption` → `adopter`; `DEC-0012` `glossary` → `vocabulary-discipline`; `DEC-0012` `enforcement` → `r-rules`.
+- **CI topic-taxonomy pin unstuck** (clause DEC-0016_3) — `.github/workflows/ci.yml` pinned `spec/v2.0.0/topics.md` through the v2.0.1 and v2.1.0 cuts. Harmless only because the file happened to be identical across them, but it silently decoupled the published gate from the published spec. The pin now tracks the current version and moves with every cut.
+
 ## [2.1.0] — 2026-07-15
 
 Slice-coordinate grammar extension, raised by the maintainer after using the SLC coordinate against real corpora — plus the sub-slice established as a first-class concept and a clarity refinement of P1's statement. **Backwards-compatible minor** — every slice coordinate valid under v2.0.1 stays valid, and no corpus artifact becomes non-conformant — the first minor of the v2 line. `spec/v2.1.0/` created; `spec/v2.0.1/`, `spec/v2.0.0/`, `spec/v1.1.0/` and `spec/v1.0.0/` retained frozen for audit; `spec/latest` → `v2.1.0`.

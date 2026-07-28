@@ -196,6 +196,19 @@ tiebreaker); adopters extending the taxonomy inherit `naming` as reserved.
 CI pin and `spec/latest` move; adopters pinned to ≤2.1.0 do not see `naming` until they raise
 their pin — per DEC-0014_3 they are not in violation while pinned.
 
+**Deliberately out of scope** — around twenty living documents (`AGENTS.md`, `README.md`,
+`governance/PROPOSAL-PROCESS.md`, most of `reference/entity-catalog/` and
+`reference/templates/`, `reference/r-rules/layer-3-validators.md`) cite the normative source
+as `spec/v2.0.1/…` or `spec/v2.0.0/…`. That drift predates this record — it was already one
+version stale against v2.1.0 — and the links still resolve, since frozen versions are
+retained. Sweeping them here would bury this amendment in an unrelated twenty-file diff, and
+a blind sweep to `v2.2.0` only re-creates the same drift at the next cut. The real question
+is whether living docs should cite a pinned version at all or route through `spec/latest`
+(which exists for exactly this) — a `context-discipline` decision of its own, worth its own
+record. Noted here so the audit plane shows it was seen, not missed. `_index.md` is the one
+exception swept in this slice: it is the corpus entry point whose stated contract is that its
+routes name current canon (DEC-0010_4).
+
 ## Ratification
 
 Pending. On approval: rename `DEC-P-0016-…` → `DEC-0016-…`, set `status: approved` and
