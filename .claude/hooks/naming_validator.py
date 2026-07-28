@@ -177,6 +177,14 @@ def frontmatter(text):
     for line in lines[1:200]:
         if line.strip() == "---":
             break
+        # Only TOP-LEVEL keys (YAML column 0) are the document's own catalog
+        # frontmatter. An INDENTED key belongs to a nested mapping — e.g. a
+        # vendor's own `*-entity-mapping:` block (Layer C data-model annotation,
+        # NOT the SliceOps catalog) — and must never be read as a catalog
+        # signal. The catalog entity is declared by a top-level entity: /
+        # <runtime>_entity: / primary-entity: key (DEC-0008_2_1; entity_of).
+        if line[:1].isspace():
+            continue
         m = FM_KEY.match(line)
         if m:
             key, val = m.group(1), m.group(2).strip()
