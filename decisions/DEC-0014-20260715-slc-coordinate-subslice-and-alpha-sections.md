@@ -11,7 +11,7 @@ originating_slice: null   # maintainer review of the SLC coordinate against real
 supersedes: [DEC-0008_6]
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity]
 topics: [naming, meta-framework]
 vocabulary-changes: ["slice coordinate sub-slice suffix (SLC…[a-z])", "alphabetic section code (SEC…[A-Z])"]
 consistency-check: |
