@@ -11,7 +11,7 @@ originating_slice: null     # back-fill: framework design session with the owner
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0007-20260710-spec-v1-2-0-naming-homologation, DEC-0001-20260512-three-layer-ip-boundary, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure]
+related-decs: [DEC-0007-20260710-spec-v1-2-0-naming-homologation, DEC-0001-20260512-three-layer-ip-boundary, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure, DEC-P-0014-20260728-slice-coordinate-subslice-and-alphabetic-sections]
 topics: [entity-catalog, vocabulary-discipline, corpus-integrity, foundational]
 vocabulary-changes: ["Frame", "Conclusion", "Priority", "cognition cycle", "decision kind (constitutive/strategic/tactical)", "defines-goal", "serves-goal", "decided-by", "SLC (slice coordinate)", "clause identifier (DEC-NNNN_n)"]
 consistency-check: |
@@ -206,7 +206,7 @@ PREFIX-NNNN-YYYYMMDD-slug-in-kebab-case.md
    citations carry corpus context or the full filename.
 6. Scope: the 13 catalog entities' artifact files. Replaces naming.md §2's dual scheme.
 
-### DEC-0008_6 — The slice coordinate: `SLC`, letters as separators
+### DEC-0008_6 — The slice coordinate: `SLC`, letters as separators (DEC-P-0014 extends the grammar — optional sub-slice suffix and alphabetic section codes, spec v2.1.0; the rules below stand unchanged)
 
 ```
 SLC0012SEC03BL02          full coordinate (slice ∈ section ∈ block)
