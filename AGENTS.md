@@ -4,7 +4,7 @@ Agent context for sessions developing the SliceOps™ framework spec itself (rec
 
 ## Decision-first
 
-SliceOps is a **decision-driven framework**, not a spec-first one. Architecture, specs, plans, and execution are **consequences** of foundations and decisions — never the reverse. Read and write in that order: **foundations → decisions → architecture → specs → execution → insights**. Do not lead with "one slice = one PR"; lead with the WHY (the decisions) and let the mechanics follow.
+SliceOps is a **decision-driven framework**, not a **spec-driven-first** one. What that rejects is precise: the spec's **sovereignty** (spec as source of truth) and its **immutability** (divergence = bug). It does **not** reject the spec's existence, nor its authorship ahead of the plan. An adopter can be **spec-first AND SliceOps-compliant** (`reference/development-model/README.md` §2), and `specless` is a prohibited alias — *specs are anchors* (`spec/latest/glossary.md`). Architecture, specs, plans, and execution are **consequences** of foundations and decisions — never the reverse. Read and write in that order: **foundations → decisions → architecture → specs → plan → execution → insights**. Do not lead with "one slice = one PR"; lead with the WHY (the decisions) and let the mechanics follow.
 
 ## What this repo is
 
