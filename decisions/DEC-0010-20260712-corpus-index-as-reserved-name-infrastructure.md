@@ -11,7 +11,7 @@ originating_slice: null   # back-fill: ratification conversation of DEC-0008, 20
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0011-20260713-canonical-corpus-container-and-layout]
 topics: [context-discipline, corpus-integrity, folder-structure]
 vocabulary-changes: ["_index.md (corpus index)", "reserved infrastructure names", "loading chain"]
 consistency-check: |

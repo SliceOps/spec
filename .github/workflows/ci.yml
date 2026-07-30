@@ -78,11 +78,16 @@ jobs:
           test -f LICENSE && test -f LICENSE-CODE || { echo "::error::LICENSE/LICENSE-CODE missing (ratified per DR-2026-06-15)"; exit 1; }
           echo "structure: PASS"
       - name: Consistency validators (R-rules — the gate this repo publishes, now enforced)
+        # --topic-taxonomy tracks the CURRENT spec version and must move with
+        # every cut (DEC-0016_3). It sat on v2.0.0 through the v2.0.1 and
+        # v2.1.0 cuts; harmless only because topics.md happened to be
+        # byte-identical across them, but it decoupled the published gate from
+        # the published spec.
         run: |
           python3 toolkit/templates/consistency-validators/validators.py \
             --root spec \
             --checks all \
-            --topic-taxonomy spec/spec/v2.0.0/topics.md
+            --topic-taxonomy spec/spec/v2.2.0/topics.md
       - name: Naming validator (v1.2.0 homologation — merge gate)
         # One entity = one prefix (spec/v2.0.0/naming.md). Blocks retired
         # prefixes (DR-, IN-, OC-, BR-, SKILL-, RUN-, REF-…), lifecycle
