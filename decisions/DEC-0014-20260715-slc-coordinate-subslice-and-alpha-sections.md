@@ -3,15 +3,15 @@ entity: DecisionRecord
 status: approved
 kind: constitutive
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-07-30
 owner: Andrés Ramírez Sierra
 approver: Andrés Ramírez Sierra
 sensitivity: public
-originating_slice: null   # maintainer review of the SLC coordinate against real corpora, 2026-07-15
+originating_slice: null   # origin: a Layer C.1 implementation handoff, 2026-07-15 (ContextPack kind: handoff, DEC-0009), reviewed by the maintainer against real corpora the same day
 supersedes: [DEC-0008_6]
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-P-0018-20260730-duplicate-decision-number-reconciliation]
 topics: [naming, meta-framework]
 vocabulary-changes: ["slice coordinate sub-slice suffix (SLC…[a-z])", "alphabetic section code (SEC…[A-Z])"]
 consistency-check: |
@@ -38,8 +38,17 @@ consistency-check: |
 
 # DEC-0014 — Slice Coordinate: Sub-Slice Suffix and Alphabetic Section Codes
 
-> A SliceOps DecisionRecord about SliceOps itself. Raised and ratified by the maintainer on
-> 2026-07-15 after using the SLC coordinate against real corpora.
+> A SliceOps DecisionRecord about SliceOps itself. Raised by a Layer C.1 implementation
+> handoff of 2026-07-15, reviewed against real corpora and ratified by the maintainer the
+> same day.
+>
+> **Provenance note (2026-07-30).** This record is canonical for counter value 0014. A
+> second, independent authoring of the same decision — `DEC-P-0014-20260728-slice-coordinate-subslice-and-alphabetic-sections.md`,
+> commit `1054056` on `release/v2.1.0` — was withdrawn under clause DEC-0018_1, and its
+> origin and evidence absorbed here under DEC-0018_2. See
+> [`DEC-P-0018`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md). No clause
+> of this record changed: both authorings stated the same four clauses with the same
+> normative content.
 
 ## Summary
 
@@ -55,6 +64,22 @@ contain the substring `BL`**, the one string that could be read as the block qua
 backwards-compatible **minor**, spec v2.1.0.
 
 ## Context
+
+**Origin.** A Layer C.1 runtime implementation reported, in a 2026-07-15 handoff
+(ContextPack `kind: handoff` — DEC-0009), that migrating its slice identifiers off the
+retired dotted form stalled: a large share of its real coordinates was **not expressible**
+under the published grammar. Its migration paused pending this decision, and it asked the
+standard to choose — widen the grammar, or require the corpus to be remodelled.
+
+**Evidence, corrected.** The handoff reported ~40% (91 of 230). Re-derived from the
+implementation's own migration map, the honest figure is **75 of 229 distinct coordinates —
+33%**: 65 alphabetic sections, 25 sub-slices, and 15 coordinates hitting both gaps, which
+the handoff counted twice; the 230th identifier was malformed and is not a coordinate at
+all. The corrected number is the one this record stands on (P6 — evidence, not the roundest
+available number). A third of a production corpus is the same finding either way, and it is
+evidence about the **grammar**, not about the corpus: implementations are where a reference
+pattern meets reality, and what they cannot express is the standard's finding to act on
+(the Layer B ↔ Layer C feedback path working as designed).
 
 Two gaps surfaced once the SLC coordinate met corpora that had been running the pattern in
 its earlier, dotted shape:
@@ -200,3 +225,5 @@ pinned to 2.0.0 are unaffected until they raise their pin (DEC-0014_3).
 - [`../reference/evidence/evidence-v1.md`](../reference/evidence/evidence-v1.md) — the evidence record whose `sliceId` pattern kept the `[a-z]` sub-slice suffix on its dotted alternative: the documented precedent for clause DEC-0014_1.
 - [`../spec/v2.1.0/naming.md`](../spec/v2.1.0/naming.md) — §5 (slice coordinate) and the grammar table, amended by this record; ships in spec v2.1.0.
 - [`../spec/README.md`](../spec/README.md) — the versioning policy whose "backwards-compatible addition → minor" rule this record applies (v2.1.0).
+- [`DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md) — confirms this record as canonical for counter value 0014 and withdraws the second authoring; the provenance and evidence above were absorbed under its clause DEC-0018_2.
+- Origin: Layer C.1 implementation handoff, 2026-07-15 (ContextPack `kind: handoff`, DEC-0009) — the quantified non-expressibility of the v2.0.x coordinate in a production corpus. Recorded openly per [`../DISCLOSURE.md`](../DISCLOSURE.md); no runtime-internal identifier appears in this record.
