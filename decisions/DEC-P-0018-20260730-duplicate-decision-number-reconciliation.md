@@ -103,7 +103,7 @@ Three grounds, in order of weight:
 1. **First claim.** It claimed 0014 on 2026-07-15, thirteen days before the second
    authoring. A counter is a serialized shared resource (P9); the first claim holds it.
 2. **Merged, immutable history depends on it.** The v2.1.0 cut, the validator regexes, the
-   evidence `sliceId` pattern, `DEC-0015`, `DEC-P-0016`, `DEC-P-0017`, the CHANGELOG's
+   evidence `sliceId` pattern, `DEC-0015`, `DEC-0016`, `DEC-P-0017`, the CHANGELOG's
    released `[2.1.0]` section and spec v2.2.0 all cite it by its full filename.
    Renumbering it would rewrite identifiers already merged — precisely what DEC-0008_5's
    immutable-date rule and DEC-0014_1's own "renumbering rewrites identifiers already in

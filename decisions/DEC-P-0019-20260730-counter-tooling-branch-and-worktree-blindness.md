@@ -88,7 +88,7 @@ counter collision DEC-14: ['./.claude/worktrees/<wt>/decisions/DEC-0014-…md',
 ```
 
 **17 issues, 17 false positives, 0 true positives** — one per DecisionRecord in the corpus.
-(The count was 15 when the defect was first diagnosed; DEC-P-0016 and DEC-P-0017 landing
+(The count was 15 when the defect was first diagnosed; DEC-0016 and DEC-P-0017 landing
 since then raised it, which is the tell: the false-positive count tracks corpus size, so it
 only ever grows.) The check is not merely noisy — a gate whose every finding is false is a
 gate no one reads, which is the precondition for the one true finding to be missed.

@@ -3,9 +3,27 @@ Slice template (Layer B.1) — one chat = one PR = one atomic vertical slice (P4
 Use as the PR description / slice scope declaration. Replace all <…>.
 -->
 
-# Slice: <BL-XX.SEC-XX.SL-XXX> — <short title>
+# Slice: <SLC0001SEC01BL01> — <short title>
 
-**Token band**: <XS | S | M | L | XL>  ·  **Depends on**: [<slice id>...]  ·  **Block**: <BL-XX>
+**Token band**: <XS | S | M | L | XL>  ·  **Context band**: <XS | S | M | L | XL>  ·  **Sensitivity**: <public | internal | restricted | sensitive>  ·  **Execution mode**: <account-with-plan | local-via-API | …>  ·  **Depends on**: [<slice id>...]  ·  **Derives from**: <substrate spec>
+
+<!--
+Every field above is declared, not inferred. Where each is defined:
+
+- **Coordinate** `SLC[n][a]SEC[n|A]BL[n]` — slice ∈ section ∈ block, letters as separators.
+  Normative grammar: `../../spec/latest/naming.md` §5. The dotted `BL-XX.SEC-XX.SL-XXX` form
+  is RETIRED (DEC-0014). The optional one-letter sub-slice suffix records a leaf that emerged
+  during execution — never planned upfront (P5).
+- **Bands** — `../sizing/`. Token-band measures throughput (billed-equivalent); context-band
+  measures peak context footprint. They are ORTHOGONAL: context-band is the primary filter,
+  because a window smaller than the slice's footprint cannot run it at any price (P4).
+- **Sensitivity and execution mode** — `../model-triage/`. Axis 2 is sensitivity → locality:
+  a slice handling real PII during execution runs local, never against an external API,
+  regardless of cost or speed. That is compliance by construction (P7), not an optimization.
+- **Derives from** — the substrate spec this slice decomposes (DEC-P-0017 clause 2). A slice
+  that cannot cite one carries ASSERTED scope, not derived scope, and must say so here.
+-->
+
 
 ## Scope (declared upfront — P4)
 

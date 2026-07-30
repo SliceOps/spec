@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-### Pending ratification — spec v2.2.0 ([`DEC-P-0016`](decisions/DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup.md))
+### Pending ratification — spec v2.2.0 ([`DEC-0016`](decisions/DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup.md))
 
 Prepared, **not ratified**: the material below is staged so that approval is a rename and a status flip, not a second authoring pass. It moves to a released `## [2.2.0]` section on ratification, or is reverted with the record on rejection.
 

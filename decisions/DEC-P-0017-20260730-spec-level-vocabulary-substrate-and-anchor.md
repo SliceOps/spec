@@ -11,7 +11,7 @@ originating_slice: null     # origin: a downstream adopter-session misread, 2026
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0015-20260716-p1-statement-provenance-axis-clarity]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness]
 topics: [vocabulary-discipline, context-discipline, slice-workflow, corpus-integrity, meta-framework]
 vocabulary-changes: ["substrate spec (new canonical term)", "slice spec-anchor (new canonical term; nominalizes the existing spec-anchoring entry)", "spec (canonical term becomes ambiguous alone — must be qualified)"]
 consistency-check: |
@@ -181,7 +181,7 @@ this record's Context, not because approval gates it.
 
 **Observed while gathering evidence, not decided here** (each needs its own record): the spec
 repo carries three divergent lines (`main` @ DEC-0015, `release/v2.1.0` @ DEC-P-0014,
-`fix/topic-taxonomy-naming-and-back-edges` @ DEC-P-0016); `DEC-0014` exists as two files with
+`fix/topic-taxonomy-naming-and-back-edges` @ DEC-0016); `DEC-0014` exists as two files with
 different dates, slugs and lifecycle states across two of them; `.counters/dec.txt` reads `0015`
 on `main` and `0016` on the third line. The counter was reconciled to the real corpus maximum
 (`0016`) before this record claimed `0017`, per DEC-0008_5 rule 1 and P9 — the tool re-scans one
