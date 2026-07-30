@@ -1,0 +1,8 @@
+{
+  "spec": "2.2.0",
+  "corpus": "engineering",
+  "vendor": "none",
+  "extensions": {
+    "published-standard": "SliceOps — this repository IS the standard; its decision record is a CC BY deliverable cited by URL from outside the organization (DEC-P-0022 clause 3, exemption A)"
+  }
+}
