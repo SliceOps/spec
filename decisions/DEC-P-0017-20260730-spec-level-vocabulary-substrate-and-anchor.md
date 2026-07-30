@@ -108,6 +108,17 @@ clarification of the statement, not amendment of the principle. Same remedy appl
 Bare **`spec`** remains a canonical term but is **ambiguous alone**: normative text must qualify
 it as `substrate spec` or `slice spec-anchor`. Ambiguous bare use is fix-on-touch drift.
 
+**Neither term is a catalog entity, and neither takes an identifier prefix.** The catalog stays
+at fourteen; no `SPEC-` prefix is created, reserved or implied, and the universal grammar
+`PREFIX-NNNN-YYYYMMDD-slug` (DEC-0008_5) does not extend to specs. The distinction is
+**identity by version, not by number**: cognitive entities are numbered because the audit plane
+must cite them and trace supersession (P2); a substrate spec is identified by its name and its
+**version** (`grafo-de-identidad v0.3.0`), because what a reader needs from it is which one is
+current, not which one came eleventh. A `slice spec-anchor` is not a file at all — it is the
+Scope and Acceptance-criteria sections **inside** the slice's PR, and it has no identity beyond
+the slice coordinate that already carries it. This clause exists because the pair reads like an
+entity introduction and is not one; adopters must not renumber working specs on adoption.
+
 **2. Derivation rule (normative).** A plan — any slice decomposition or DAG — **derives from**
 substrate specs. Every slice's `slice spec-anchor` must be traceable to the substrate spec whose
 scope it decomposes. A slice whose scope cannot cite one carries **asserted** scope, not
