@@ -11,7 +11,7 @@ originating_slice: null   # origin: a Layer C.1 implementation handoff, 2026-07-
 supersedes: [DEC-0008_6]
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-P-0018-20260730-duplicate-decision-number-reconciliation]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-P-0018-20260730-duplicate-decision-number-reconciliation, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness]
 topics: [naming, meta-framework]
 vocabulary-changes: ["slice coordinate sub-slice suffix (SLC…[a-z])", "alphabetic section code (SEC…[A-Z])"]
 consistency-check: |

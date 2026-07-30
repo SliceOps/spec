@@ -1,11 +1,11 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-07-30
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-30 (P3)
 sensitivity: public
 originating_slice: null     # origin: maintainer-reported red consistency gate on main, 2026-07-28
 supersedes: []
@@ -32,13 +32,13 @@ consistency-check: |
   metadata only.
 ---
 
-# DEC-P-0016 — `naming` becomes a canonical topic; three off-taxonomy values corrected
+# DEC-0016 — `naming` becomes a canonical topic; three off-taxonomy values corrected
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1 — Decision
-> Integrity by Construction, P2 — Audit Plane Discipline). **Status: pending.** Drafted by an
-> AI agent and therefore untrusted until human-reviewed (`AGENTS.md`, P3); it is a
-> constitutive record amending a Layer B.1 canonical artifact, so it lands only with
-> maintainer ratification (`approver:` set on approval — see *Ratification*, below).
+> Integrity by Construction, P2 — Audit Plane Discipline). **Status: approved**, ratified by
+> the maintainer on 2026-07-30 (P3; `approver:` set — DEC-0005: self-ratification is explicit,
+> never silent). Drafted by an AI agent and therefore untrusted until human-reviewed
+> (`AGENTS.md`, P3); it is a constitutive record amending a Layer B.1 canonical artifact.
 
 ## Summary
 
@@ -211,7 +211,7 @@ routes name current canon (DEC-0010_4).
 
 ## Ratification
 
-Pending. On approval: rename `DEC-P-0016-…` → `DEC-0016-…`, set `status: approved` and
+Pending. On approval: rename `DEC-0016-…` → `DEC-0016-…`, set `status: approved` and
 `approver:`, and rewrite the references in `CHANGELOG.md`, `spec/README.md` and
 `spec/v2.2.0/topics.md` in the same atomic change (R5). The spec v2.2.0 material is
 **prepared, not ratified** — it is staged in this branch so that approval is a rename and a

@@ -11,7 +11,7 @@ originating_slice: null   # owner review of the published v2.0.0, 2026-07-13
 supersedes: [DEC-0008_9]
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup]
 topics: [naming, meta-framework]
 vocabulary-changes: ["clause identifier DEC-NNNN_n (was DEC-NNNN.n)"]
 consistency-check: |

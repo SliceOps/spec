@@ -11,7 +11,7 @@ originating_slice: null   # back-fill: layout-design conversation, 2026-07-12/13
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure, DEC-0012-20260713-catalog-amendments-mental-model-and-policy, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0009-20260712-handoffs-as-a-contextpack-kind, DEC-0010-20260712-corpus-index-as-reserved-name-infrastructure, DEC-0012-20260713-catalog-amendments-mental-model-and-policy, DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness]
 topics: [folder-structure, corpus-integrity, context-discipline, naming, adopter]
 vocabulary-changes: ["_sliceops (container)", "unit of work", "canonical decade / free decade", "presence activation", "sliceops.json (adoption manifest)", "_agents.md", "_policies.md", "_metrics/", "_meta/", "fleet agents"]
 consistency-check: |
