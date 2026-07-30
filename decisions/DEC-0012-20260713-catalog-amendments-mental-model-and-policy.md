@@ -11,8 +11,8 @@ originating_slice: null   # back-fill: layout-design conversation, 2026-07-12/13
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0011-20260713-canonical-corpus-container-and-layout]
-topics: [naming, entity-catalog, glossary, enforcement]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup]
+topics: [naming, entity-catalog, vocabulary-discipline, r-rules]
 vocabulary-changes: ["MentalModel (entity — was Frame, was CognitiveFramework)", "MM- prefix", "FRAME- retired", "Policy (entity)", "POL- prefix", "policy scope", "_policies.md (derived view)"]
 consistency-check: |
   Amends the single-source entity table of DEC-0008_2_1 — folded into v2.0.0 before any
