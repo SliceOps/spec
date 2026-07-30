@@ -8,7 +8,7 @@ sensitivity: public
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0001-20260512-three-layer-ip-boundary, DEC-0007-20260710-spec-v1-2-0-naming-homologation]
+related-decs: [DEC-0001-20260512-three-layer-ip-boundary, DEC-0007-20260710-spec-v1-2-0-naming-homologation, DEC-P-0022-20260730-published-standard-and-template-container-exceptions]
 topics: [folder-structure, meta-framework, layer-b-framework-artifact]
 vocabulary-changes: []
 consistency-check: "Records the publishing layout of this repo (5 folders + 7 root files) and its folder-promotion criteria; preserves the Layer B.1 frame from DEC-0001-20260512-three-layer-ip-boundary (folder structure is framework IP); deliberately distinct from the prescribed adopter project structure in reference/project-structure/. No conflicts."

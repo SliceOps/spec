@@ -11,7 +11,7 @@ originating_slice: null     # origin: maintainer questions surfacing a three-way
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme]
+related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0022-20260730-published-standard-and-template-container-exceptions]
 topics: [folder-structure, corpus-integrity, context-discipline, consistency-management, adopter, meta-framework]
 vocabulary-changes: ["context architecture chain (clarified: a reading order, never a folder list)"]
 consistency-check: |
