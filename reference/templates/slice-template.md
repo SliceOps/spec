@@ -20,7 +20,7 @@ Every field above is declared, not inferred. Where each is defined:
 - **Sensitivity and execution mode** — `../model-triage/`. Axis 2 is sensitivity → locality:
   a slice handling real PII during execution runs local, never against an external API,
   regardless of cost or speed. That is compliance by construction (P7), not an optimization.
-- **Derives from** — the substrate spec this slice decomposes (DEC-P-0017 clause 2). A slice
+- **Derives from** — the substrate spec this slice decomposes (DEC-0017 clause 2). A slice
   that cannot cite one carries ASSERTED scope, not derived scope, and must say so here.
 -->
 

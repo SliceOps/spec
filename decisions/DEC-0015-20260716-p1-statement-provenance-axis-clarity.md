@@ -11,7 +11,7 @@ originating_slice: null   # maintainer review of P1 wording against the cognitio
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-P-0017-20260730-spec-level-vocabulary-substrate-and-anchor]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0017-20260730-spec-level-vocabulary-substrate-and-anchor]
 topics: [meta-framework, principles]
 vocabulary-changes: ["P1 statement leads with 'session' (the slice is its DEV special case)", "provenance axis vs dependency axis (named)"]
 consistency-check: |

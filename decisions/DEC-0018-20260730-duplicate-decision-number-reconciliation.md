@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
 updated: 2026-07-30
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-30 (P3)
 sensitivity: public
 originating_slice: null     # maintainer reconciliation of three divergent lines, 2026-07-30
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-P-0019-20260730-counter-tooling-branch-and-worktree-blindness]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0019-20260730-counter-tooling-branch-and-worktree-blindness]
 topics: [counter-discipline, corpus-integrity, naming]
 vocabulary-changes: ["withdrawn draft (a re-authoring of an existing decision, removed as a live artifact)", "integration line"]
 consistency-check: |
@@ -28,10 +28,10 @@ consistency-check: |
   document changes. DEC-0011 (container layout), DEC-0012, DEC-0013 unaffected.
 ---
 
-# DEC-P-0018 — One number, one artifact: reconciling the forked DEC-0014 and naming the integration line
+# DEC-0018 — One number, one artifact: reconciling the forked DEC-0014 and naming the integration line
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2).
-> **Status: pending.** Constitutive: it decides which artifact a spent counter value
+> **Status: approved**, ratified by the maintainer on 2026-07-30 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it decides which artifact a spent counter value
 > addresses, so it lands only with the human ratification P3 requires.
 
 ## Summary
@@ -67,7 +67,7 @@ and still under-reported: `claim_id.py` re-scans the corpus for the real maximum
 claiming, but it re-scans **one working tree**. On a branch cut from `40ea0d4` the real
 maximum visible on disk was 0013, so it issued 0014 — thirteen days after 0014 had been
 spent on another branch. The mechanism and the repair belong to a separate record
-([`DEC-P-0019`](DEC-P-0019-20260730-counter-tooling-branch-and-worktree-blindness.md));
+([`DEC-0019`](DEC-0019-20260730-counter-tooling-branch-and-worktree-blindness.md));
 what matters here is that the corpus is left with one number addressing two artifacts, and
 DEC-0008_5 rule 3 detects that condition without saying how to repair it.
 
@@ -103,7 +103,7 @@ Three grounds, in order of weight:
 1. **First claim.** It claimed 0014 on 2026-07-15, thirteen days before the second
    authoring. A counter is a serialized shared resource (P9); the first claim holds it.
 2. **Merged, immutable history depends on it.** The v2.1.0 cut, the validator regexes, the
-   evidence `sliceId` pattern, `DEC-0015`, `DEC-0016`, `DEC-P-0017`, the CHANGELOG's
+   evidence `sliceId` pattern, `DEC-0015`, `DEC-0016`, `DEC-0017`, the CHANGELOG's
    released `[2.1.0]` section and spec v2.2.0 all cite it by its full filename.
    Renumbering it would rewrite identifiers already merged — precisely what DEC-0008_5's
    immutable-date rule and DEC-0014_1's own "renumbering rewrites identifiers already in
@@ -161,7 +161,7 @@ canonical record carries the pointer.
 merged into it:
 `fix/spec-level-vocabulary-and-agents-drift` has a zero-byte content diff against `main`,
 and `fix/topic-taxonomy-naming-and-back-edges` is strictly **behind** it — its residual
-diff consists only of `main`'s newer DEC-P-0017 work that the branch has not received.
+diff consists only of `main`'s newer DEC-0017 work that the branch has not received.
 Neither needs merging; both are stale refs, deletable once their pull requests close.
 
 `release/v2.1.0` is **not merged**. It is 3 commits ahead and 10 behind, and its content is
@@ -191,9 +191,9 @@ exists to end.
 
 `.counters/dec.txt` on the integration line is reconciled to the **real maximum across all
 refs**, not the maximum visible in one working tree. At the time of this record that
-maximum is **0017** (`DEC-P-0017` on `main`); `release/v2.1.0` carried `14`, which is the
+maximum is **0017** (`DEC-0017` on `main`); `release/v2.1.0` carried `14`, which is the
 fork's artifact and is retired with the branch. This record claims **0018** and its sibling
-[`DEC-P-0019`](DEC-P-0019-20260730-counter-tooling-branch-and-worktree-blindness.md)
+[`DEC-0019`](DEC-0019-20260730-counter-tooling-branch-and-worktree-blindness.md)
 claims **0019**, both verified against every ref rather than against a single checkout;
 `.counters/dec.txt` moves to `0019`.
 
@@ -250,7 +250,7 @@ record.
 
 **Costs**: one non-normative edit to an approved constitutive record (bounded by
 DEC-0018_2 to Context and References); `release/v2.1.0`'s independent v2.1.0 preparation is
-discarded work — the true cost of the fork, and the argument for DEC-P-0019; the column-0
+discarded work — the true cost of the fork, and the argument for DEC-0019; the column-0
 guard is owed upstream to `sliceops-toolkit` as a declared follow-up.
 
 ## References
@@ -262,7 +262,7 @@ guard is owed upstream to `sliceops-toolkit` as a declared follow-up.
   citations unambiguous within a corpus).
 - [`DEC-0014`](DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections.md) — the
   canonical record this reconciliation confirms and grafts into.
-- [`DEC-P-0019`](DEC-P-0019-20260730-counter-tooling-branch-and-worktree-blindness.md) —
+- [`DEC-0019`](DEC-0019-20260730-counter-tooling-branch-and-worktree-blindness.md) —
   the tooling defect that let one counter value be issued twice, and its repair.
 - [`DEC-0005`](DEC-0005-20260702-author-approver-separation.md) — P3 author≠approver; why
   this record ships `pending` with `approver: null`.

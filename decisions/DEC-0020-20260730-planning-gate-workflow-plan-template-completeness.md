@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
 updated: 2026-07-30
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-30 (P3)
 sensitivity: public
 originating_slice: null     # origin: a downstream adopter-session incident, 2026-07-30 (see Context)
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-P-0017-20260730-spec-level-vocabulary-substrate-and-anchor, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0021-20260730-canonical-layout-reconciliation]
+related-decs: [DEC-0017-20260730-spec-level-vocabulary-substrate-and-anchor, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0021-20260730-canonical-layout-reconciliation]
 topics: [slice-workflow, layer-b-framework-artifact, meta-framework, consistency-management, evidence-categories]
 vocabulary-changes: ["plan gate (new canonical term)", "definition of ready (new canonical term, scoped to the plan)"]
 consistency-check: |
@@ -36,10 +36,10 @@ consistency-check: |
   needs its own record and is named in Consequences, not resolved here.
 ---
 
-# DEC-P-0020 — The plan gate: planning workflow, plan template, slice-template routing, completeness validator
+# DEC-0020 — The plan gate: planning workflow, plan template, slice-template routing, completeness validator
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2, P8).
-> **Status: pending.** Constitutive: it adds a mandatory gate to the framework contract, so it
+> **Status: approved**, ratified by the maintainer on 2026-07-30 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it adds a mandatory gate to the framework contract, so it
 > lands only with the human ratification P3 requires (`approver:` set on approval).
 
 ## Summary
@@ -90,7 +90,7 @@ which fields a declared slice carries. P5 licenses not enumerating the leaves; i
 license omitting the HITL, the model triage or the evidence plan of the slices already
 enumerated.
 
-**This is the second instance of one pattern.** DEC-P-0017 records the first: a true statement
+**This is the second instance of one pattern.** DEC-0017 records the first: a true statement
 about one axis (the spec's sovereignty) read as permission on another (the spec's existence).
 Here: a true statement about one axis (planning altitude) read as permission on another (field
 completeness). Same shape, different principle. Under P8 a third instance promotes this to a
@@ -99,13 +99,13 @@ LearningPattern; it is named here so the third is recognized when it arrives.
 ## Decision
 
 **1. The planning workflow is written.** `reference/workflows/` gains the canonical flow from
-substrate specs (DEC-P-0017) to plan to slice decomposition to derived DAG (P5), stating at
+substrate specs (DEC-0017) to plan to slice decomposition to derived DAG (P5), stating at
 each step what must exist before the next may begin. The folder stops being a declared gap.
 
 **2. A plan template joins the canonical eleven.** `reference/templates/plan-template.md`, with
 an explicit **definition of ready**: the enumerated conditions a plan satisfies before any slice
 in it may execute. At minimum — every slice cites the substrate spec it decomposes
-(DEC-P-0017 clause 2); every slice carries the full declared field set of clause 3; blocks and
+(DEC-0017 clause 2); every slice carries the full declared field set of clause 3; blocks and
 sections are assigned under `naming.md` §5; dependencies are declared so the DAG is derivable
 rather than authored (P5); externally blocked slices are marked as blocked rather than omitted.
 
@@ -135,7 +135,7 @@ coarse-and-partial are both defects. The sub-slice rate remains the health signa
   in the incident — 4 of 9 substrate specs — happened before any slice template was consulted.
 - **Document only, no validator (clauses 1–3, drop 4)** — rejected. The framework's own
   evidence is that documentation the reader must know to seek does not reach a partial reader;
-  that is the entire finding of DEC-P-0017. A gate that is prose is a reminder; a gate that runs
+  that is the entire finding of DEC-0017. A gate that is prose is a reminder; a gate that runs
   is a gate. P6's authority comes from executing, not from being written down.
 - **Extend P6 to cover plan time instead of adding a second gate** — rejected. P6 is
   Evidence-by-Construction: evidence *closes* a unit of work. A plan produces no evidence; it
@@ -143,7 +143,7 @@ coarse-and-partial are both defects. The sub-slice rate remains the health signa
   gates at two moments is the honest model.
 - **Promote plan completeness to a thirteenth principle** — rejected under anti-over-promotion
   discipline. Nothing here is a new axiom: clause 5 clarifies P5, clause 4 mechanizes P12's
-  "context authored, not assumed", clause 2 operationalizes DEC-P-0017. Layer B.1 artifacts and
+  "context authored, not assumed", clause 2 operationalizes DEC-0017. Layer B.1 artifacts and
   one gate, no Layer A change.
 - **Wait for the layout drift to be resolved first** — rejected as sequencing. Clauses 1, 3, 4
   and 5 are independent of where a plan file lives. Only clause 2 needs the answer, and it can
@@ -191,6 +191,6 @@ project; this is where it is not yet true.
 - `reference/model-triage/`, `reference/sizing/` — the axes and bands clause 3 routes to
 - `reference/workflows/` — the empty folder clause 1 fills
 - `naming.md` §5 (slice coordinate), §7 (canonical container and layout, DEC-0011)
-- DEC-P-0017 — the first instance of the axis-confusion pattern; clause 2 depends on its
+- DEC-0017 — the first instance of the axis-confusion pattern; clause 2 depends on its
   substrate-spec derivation rule
 - DEC-0014_4 — sub-slice rate as the altitude health signal referenced by clause 5

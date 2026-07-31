@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
 updated: 2026-07-30
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-30 (P3)
 sensitivity: public
 originating_slice: null     # origin: a downstream adopter-session misread, 2026-07-30 (see Context)
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-0020-20260730-planning-gate-workflow-plan-template-completeness]
 topics: [vocabulary-discipline, context-discipline, slice-workflow, corpus-integrity, meta-framework]
 vocabulary-changes: ["substrate spec (new canonical term)", "slice spec-anchor (new canonical term; nominalizes the existing spec-anchoring entry)", "spec (canonical term becomes ambiguous alone — must be qualified)"]
 consistency-check: |
@@ -33,10 +33,10 @@ consistency-check: |
   source and does not depend on this record's approval.
 ---
 
-# DEC-P-0017 — Spec-level vocabulary: `substrate spec` and `slice spec-anchor`
+# DEC-0017 — Spec-level vocabulary: `substrate spec` and `slice spec-anchor`
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2, P8).
-> **Status: pending.** Constitutive: it amends the canonical vocabulary, so it lands only with
+> **Status: approved**, ratified by the maintainer on 2026-07-30 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it amends the canonical vocabulary, so it lands only with
 > the human ratification P3 requires (`approver:` set on approval).
 
 ## Summary

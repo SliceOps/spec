@@ -11,7 +11,7 @@ originating_slice: null     # origin: maintainer questions surfacing a three-way
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0022-20260730-published-standard-and-template-container-exceptions]
+related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0022-20260730-published-standard-and-template-container-exceptions]
 topics: [folder-structure, corpus-integrity, context-discipline, consistency-management, adopter, meta-framework]
 vocabulary-changes: ["context architecture chain (clarified: a reading order, never a folder list)"]
 consistency-check: |
@@ -27,7 +27,7 @@ consistency-check: |
   DEC-0011 and was never updated — it is the stale locus, and DEC-0011 the authority. The
   reconciliation is therefore a rewrite of one Layer B.1 reference artifact plus a clarification
   that P12's chain is a reading order rather than a folder list; both restate existing decisions
-  and add none. Unblocks the dependency DEC-P-0020 named in its Consequences: a plan lives at
+  and add none. Unblocks the dependency DEC-0020 named in its Consequences: a plan lives at
   `60-execution/62-plans/` (DEC-0011_4), so the plan template can state its location. The public
   quickstart is in application scope and is the most urgent locus: it teaches forms DEC-0008
   retired.
@@ -46,7 +46,7 @@ decided the answer — a `_sliceops/` decade container with architecture and spe
 `50-products/<product>/` and plans in `60-execution/62-plans/` — but
 `reference/project-structure/` still prescribes the pre-DEC-0011 layout, and P12's chain reads
 like a folder list when it is a reading order. This record names DEC-0011 as the single
-authority, rewrites the stale artifact, and clarifies the chain. It unblocks DEC-P-0020 clause 2
+authority, rewrites the stale artifact, and clarifies the chain. It unblocks DEC-0020 clause 2
 and puts three drifted surfaces into application scope, the public quickstart first.
 
 ## Context
@@ -63,7 +63,7 @@ The contradiction is not subtle: project-structure makes `architecture/` and `sp
 peers, DEC-0011_3 makes them siblings *inside* a product, and neither mentions the other. A
 reader who lands on project-structure builds the wrong corpus and never learns it.
 
-**How it surfaced.** The maintainer, reading DEC-P-0017, asked why `architecture` was not part
+**How it surfaced.** The maintainer, reading DEC-0017, asked why `architecture` was not part
 of the product's specs — having previously settled the cognition cycle. Both halves of the
 question were right: DEC-0011_3 does place architecture inside `50-products/` ("the complete
 WHAT: definition + architecture + specs + reference"), and the cognition cycle (DEC-0008_1) is a
@@ -105,7 +105,7 @@ an explicit chain → decade mapping so a reader arriving from P12 lands correct
 | foundations | `00-context/` (`01-values`, `02-preferences`, `03-mental-models`) |
 | decisions | `30-decisions/` (flat) |
 | architecture | `50-products/<product>/architecture/` |
-| specs (substrate specs, DEC-P-0017) | `50-products/<product>/specs/` |
+| specs (substrate specs, DEC-0017) | `50-products/<product>/specs/` |
 | plan | `60-execution/62-plans/` (derived only, P5) |
 | execution | `60-execution/` (`61-priorities`, `63-dags`, `64-fleet-agents`, `65-in-flight`) |
 | insights | `10-insights/` → `20-conclusions/` |
@@ -118,7 +118,7 @@ drifted. The glossary entry for the chain gains this sentence at approval.
 
 **4. A plan's location is settled.** `60-execution/62-plans/`, with its DAG in `63-dags/`, both
 **derived only** (DEC-0011_4, P5) — computed from `depends_on` and re-rendered, never
-hand-patched. **This unblocks DEC-P-0020 clause 2**, which could not state a definition of ready
+hand-patched. **This unblocks DEC-0020 clause 2**, which could not state a definition of ready
 without knowing where the artifact lives.
 
 **5. Architecture and specs are siblings inside a product.** `50-products/<product>/` holds
@@ -151,9 +151,9 @@ corrects an artifact against an already-approved record.
   is the most *urgent* locus but not the *causal* one: it drifted because the layout had no
   single authority to conform to. Fixing the copy without naming the source reproduces the drift
   at the next surface.
-- **Fold this into DEC-P-0020** — rejected. DEC-P-0020 is about *when* work is gated; this is
+- **Fold this into DEC-0020** — rejected. DEC-0020 is about *when* work is gated; this is
   about *where* artifacts live. Merging them would produce a record no future reader could cite
-  precisely, and DEC-P-0020 already names this as a blocked dependency rather than absorbing it.
+  precisely, and DEC-0020 already names this as a blocked dependency rather than absorbing it.
 
 ## Consequences
 
@@ -184,5 +184,5 @@ false for the quickstart.
   [`spec/latest/principles.md`](../spec/latest/principles.md)
 - DEC-0008_1 (the cognition cycle — the other map), DEC-0008_5 (flat decisions, prefix lifecycle,
   retired term "RFC")
-- DEC-P-0020 — the blocked dependency clause 4 releases
-- DEC-P-0017 — `substrate spec`, the artifact that lives at `50-products/<product>/specs/`
+- DEC-0020 — the blocked dependency clause 4 releases
+- DEC-0017 — `substrate spec`, the artifact that lives at `50-products/<product>/specs/`
