@@ -1,11 +1,11 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-31
 updated: 2026-07-31
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-31 (P3)
 sensitivity: public
 originating_slice: null     # origin: maintainer observation that an absent decade is unreadable, 2026-07-31
 supersedes: [DEC-0011_2]
@@ -30,10 +30,10 @@ consistency-check: |
   reports rather than silently tolerating.
 ---
 
-# DEC-P-0023 — The complete scaffold: every canonical decade exists, always
+# DEC-0023 — The complete scaffold: every canonical decade exists, always
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2, P12).
-> **Status: pending.** Constitutive: it supersedes a clause of DEC-0011, so it lands only with
+> **Status: approved**, ratified by the maintainer on 2026-07-31 (P3). Constitutive: it supersedes a clause of DEC-0011, so it lands only with
 > the human ratification P3 requires.
 
 ## Summary
