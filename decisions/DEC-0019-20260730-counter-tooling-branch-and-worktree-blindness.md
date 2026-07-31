@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
 updated: 2026-07-30
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-30 (P3)
 sensitivity: public
 originating_slice: null     # diagnosis of the forked DEC counter, 2026-07-30
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0018-20260730-duplicate-decision-number-reconciliation]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0018-20260730-duplicate-decision-number-reconciliation]
 topics: [counter-discipline, worktree-discipline, corpus-integrity, finite-resource-stewardship]
 vocabulary-changes: ["claimed-id set (the union of ids across all refs, not one working tree)", "corpus boundary (a checkout nested inside a corpus is not part of it)"]
 consistency-check: |
@@ -22,17 +22,17 @@ consistency-check: |
   widen it. No identifier, prefix, lifecycle rule or entity definition moves, so no corpus
   artifact's conformance changes and no spec version is cut; `naming.md` §5 item 5 and the
   `counter discipline` glossary entry gain precision about what "the corpus" means when a
-  repository has branches and nested checkouts. Directly enables the repair DEC-P-0018
+  repository has branches and nested checkouts. Directly enables the repair DEC-0018
   performs by hand. P9 (Shared-Resource Pre-flight) is the governing principle: a counter
   is the canonical finite serialized shared resource, and a pre-flight that cannot see the
   whole resource is not a pre-flight. The toolkit changes are a declared follow-up against
   `sliceops-toolkit` (same pattern as DEC-0014's validator-engine follow-up).
 ---
 
-# DEC-P-0019 — The claimed-id set spans refs, and the corpus boundary stops at nested checkouts
+# DEC-0019 — The claimed-id set spans refs, and the corpus boundary stops at nested checkouts
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2).
-> **Status: pending.** Constitutive: it fixes what the counter-discipline pattern must
+> **Status: approved**, ratified by the maintainer on 2026-07-30 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it fixes what the counter-discipline pattern must
 > read, so it lands only with the human ratification P3 requires.
 
 ## Summary
@@ -51,7 +51,7 @@ the set of artifacts across all **refs**, and a checkout nested inside it is not
 
 This record exists because the defect it describes produced a live corpus violation, and
 that violation is not hypothetical: it is
-[`DEC-P-0018`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md), where
+[`DEC-0018`](DEC-0018-20260730-duplicate-decision-number-reconciliation.md), where
 counter value 0014 came to address two different DecisionRecords thirteen days apart.
 
 ### The claim path under-reports
@@ -88,7 +88,7 @@ counter collision DEC-14: ['./.claude/worktrees/<wt>/decisions/DEC-0014-…md',
 ```
 
 **17 issues, 17 false positives, 0 true positives** — one per DecisionRecord in the corpus.
-(The count was 15 when the defect was first diagnosed; DEC-0016 and DEC-P-0017 landing
+(The count was 15 when the defect was first diagnosed; DEC-0016 and DEC-0017 landing
 since then raised it, which is the tell: the false-positive count tracks corpus size, so it
 only ever grows.) The check is not merely noisy — a gate whose every finding is false is a
 gate no one reads, which is the precondition for the one true finding to be missed.
@@ -226,7 +226,7 @@ anywhere, which is the declared follow-up above.
   DEC-0008_5 rule 1 (every corpus REQUIRES the `.counters/` discipline: re-scan the real max
   before claiming) and rule 3 (one counter per entity, shared across lifecycle prefixes) —
   the obligations these tools fail to deliver.
-- [`DEC-P-0018`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md) — the
+- [`DEC-0018`](DEC-0018-20260730-duplicate-decision-number-reconciliation.md) — the
   corpus violation this defect produced, and the hand-performed reconciliation that stood in
   for the tooling.
 - [`spec/v2.2.0/principles.md`](../spec/v2.2.0/principles.md) — **P9 Shared-Resource

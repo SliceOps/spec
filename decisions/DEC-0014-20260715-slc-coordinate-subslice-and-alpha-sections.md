@@ -11,7 +11,7 @@ originating_slice: null   # origin: a Layer C.1 implementation handoff, 2026-07-
 supersedes: [DEC-0008_6]
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-P-0018-20260730-duplicate-decision-number-reconciliation, DEC-P-0020-20260730-planning-gate-workflow-plan-template-completeness]
+related-decs: [DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0013-20260713-clause-identifier-separator-underscore, DEC-0015-20260716-p1-statement-provenance-axis-clarity, DEC-0016-20260728-topic-taxonomy-naming-and-off-taxonomy-cleanup, DEC-0018-20260730-duplicate-decision-number-reconciliation, DEC-0020-20260730-planning-gate-workflow-plan-template-completeness]
 topics: [naming, meta-framework]
 vocabulary-changes: ["slice coordinate sub-slice suffix (SLC…[a-z])", "alphabetic section code (SEC…[A-Z])"]
 consistency-check: |
@@ -46,7 +46,7 @@ consistency-check: |
 > second, independent authoring of the same decision — `DEC-P-0014-20260728-slice-coordinate-subslice-and-alphabetic-sections.md`,
 > commit `1054056` on `release/v2.1.0` — was withdrawn under clause DEC-0018_1, and its
 > origin and evidence absorbed here under DEC-0018_2. See
-> [`DEC-P-0018`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md). No clause
+> [`DEC-0018`](DEC-0018-20260730-duplicate-decision-number-reconciliation.md). No clause
 > of this record changed: both authorings stated the same four clauses with the same
 > normative content.
 
@@ -225,5 +225,5 @@ pinned to 2.0.0 are unaffected until they raise their pin (DEC-0014_3).
 - [`../reference/evidence/evidence-v1.md`](../reference/evidence/evidence-v1.md) — the evidence record whose `sliceId` pattern kept the `[a-z]` sub-slice suffix on its dotted alternative: the documented precedent for clause DEC-0014_1.
 - [`../spec/v2.1.0/naming.md`](../spec/v2.1.0/naming.md) — §5 (slice coordinate) and the grammar table, amended by this record; ships in spec v2.1.0.
 - [`../spec/README.md`](../spec/README.md) — the versioning policy whose "backwards-compatible addition → minor" rule this record applies (v2.1.0).
-- [`DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md`](DEC-P-0018-20260730-duplicate-decision-number-reconciliation.md) — confirms this record as canonical for counter value 0014 and withdraws the second authoring; the provenance and evidence above were absorbed under its clause DEC-0018_2.
+- [`DEC-0018-20260730-duplicate-decision-number-reconciliation.md`](DEC-0018-20260730-duplicate-decision-number-reconciliation.md) — confirms this record as canonical for counter value 0014 and withdraws the second authoring; the provenance and evidence above were absorbed under its clause DEC-0018_2.
 - Origin: Layer C.1 implementation handoff, 2026-07-15 (ContextPack `kind: handoff`, DEC-0009) — the quantified non-expressibility of the v2.0.x coordinate in a production corpus. Recorded openly per [`../DISCLOSURE.md`](../DISCLOSURE.md); no runtime-internal identifier appears in this record.
