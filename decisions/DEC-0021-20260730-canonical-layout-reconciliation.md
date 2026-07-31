@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-07-31
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-31 (P3)
 sensitivity: public
 originating_slice: null     # origin: maintainer questions surfacing a three-way layout contradiction, 2026-07-30
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-P-0022-20260730-published-standard-and-template-container-exceptions]
+related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0020-20260730-planning-gate-workflow-plan-template-completeness, DEC-0008-20260712-cognitive-cycle-and-universal-id-scheme, DEC-0022-20260730-published-standard-and-template-container-exceptions]
 topics: [folder-structure, corpus-integrity, context-discipline, consistency-management, adopter, meta-framework]
 vocabulary-changes: ["context architecture chain (clarified: a reading order, never a folder list)"]
 consistency-check: |
@@ -33,10 +33,10 @@ consistency-check: |
   retired.
 ---
 
-# DEC-P-0021 — Canonical layout reconciliation: one answer to "where does it live?"
+# DEC-0021 — Canonical layout reconciliation: one answer to "where does it live?"
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2, P12).
-> **Status: pending.** Constitutive: it settles which of three loci is normative about corpus
+> **Status: approved**, ratified by the maintainer on 2026-07-31 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it settles which of three loci is normative about corpus
 > layout, so it lands only with the human ratification P3 requires.
 
 ## Summary

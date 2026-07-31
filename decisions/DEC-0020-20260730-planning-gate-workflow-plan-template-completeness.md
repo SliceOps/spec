@@ -11,7 +11,7 @@ originating_slice: null     # origin: a downstream adopter-session incident, 202
 supersedes: []
 superseded-by: null
 conflicts-with: []
-related-decs: [DEC-0017-20260730-spec-level-vocabulary-substrate-and-anchor, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-P-0021-20260730-canonical-layout-reconciliation]
+related-decs: [DEC-0017-20260730-spec-level-vocabulary-substrate-and-anchor, DEC-0014-20260715-slc-coordinate-subslice-and-alpha-sections, DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0021-20260730-canonical-layout-reconciliation]
 topics: [slice-workflow, layer-b-framework-artifact, meta-framework, consistency-management, evidence-categories]
 vocabulary-changes: ["plan gate (new canonical term)", "definition of ready (new canonical term, scoped to the plan)"]
 consistency-check: |

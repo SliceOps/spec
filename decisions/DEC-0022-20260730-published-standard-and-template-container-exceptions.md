@@ -1,17 +1,17 @@
 ---
 entity: DecisionRecord
-status: pending
+status: approved
 kind: constitutive
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-07-31
 owner: Andrés Ramírez Sierra
-approver: null              # P3 — recorded on approval (DEC-0005: self-ratification is explicit, never silent)
+approver: Andrés Ramírez Sierra   # ratified 2026-07-31 (P3)
 sensitivity: public
 originating_slice: null     # origin: three independent DEC-0001s found in one workspace, 2026-07-30
 supersedes: []
 superseded-by: null
 conflicts-with: [DEC-0002-20260514-spec-repo-publishing-layout]
-related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0002-20260514-spec-repo-publishing-layout, DEC-P-0021-20260730-canonical-layout-reconciliation]
+related-decs: [DEC-0011-20260713-canonical-corpus-container-and-layout, DEC-0002-20260514-spec-repo-publishing-layout, DEC-0021-20260730-canonical-layout-reconciliation]
 topics: [folder-structure, corpus-integrity, counter-discipline, adopter, meta-framework, ip-boundary]
 vocabulary-changes: ["published-standard repository (new canonical term)", "clonable-template repository (new canonical term)", "container exemption (new canonical term)"]
 consistency-check: |
@@ -31,10 +31,10 @@ consistency-check: |
   MINOR.
 ---
 
-# DEC-P-0022 — Container exemptions: published-standard and clonable-template repositories
+# DEC-0022 — Container exemptions: published-standard and clonable-template repositories
 
 > A SliceOps DecisionRecord about SliceOps itself — recursive dogfooding (P1, P2, P12).
-> **Status: pending.** Constitutive: it amends the container rule of DEC-0011_1 by exception,
+> **Status: approved**, ratified by the maintainer on 2026-07-31 (P3; `approver:` set — DEC-0005: self-ratification is explicit, never silent). Constitutive: it amends the container rule of DEC-0011_1 by exception,
 > so it lands only with the human ratification P3 requires.
 
 ## Summary
@@ -185,7 +185,7 @@ cannot be completed without it.
 
 - DEC-0011 clauses _1 (container and unit-of-work), _3 (zoom rule), _6 (adoption manifest)
 - DEC-0002 — the publishing layout this record authorizes rather than overrides
-- DEC-P-0021 — the layout reconciliation that named DEC-0011 the single authority on where
+- DEC-0021 — the layout reconciliation that named DEC-0011 the single authority on where
   things live; this record answers the adjacent question of *which corpus* a thing belongs to
 - [`spec/latest/naming.md`](../spec/latest/naming.md) §7 (canonical container and layout)
 - P12 Context Discipline — single source of truth per fact, which one counter per corpus serves

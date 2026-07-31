@@ -2,7 +2,7 @@
 
 > The **prescribed** corpus structure for SliceOps adopters: the `_sliceops/` container and its
 > canonical decades. Normative source: [`naming.md`](../../spec/latest/naming.md) §7 and
-> DEC-0011 (clauses _1–_8); reconciled by DEC-P-0021. Deliberately **distinct** from the
+> DEC-0011 (clauses _1–_8); reconciled by DEC-0021. Deliberately **distinct** from the
 > lightweight *publishing* layout of this spec repo — see the note at the end.
 
 ## The container
@@ -53,7 +53,7 @@ Decades **80 and 90** are free adopter/vendor space, declared in the manifest's 
 
 P12 states the context architecture as a chain: **foundations → decisions → architecture →
 specs → plan → execution**. That chain is a **reading and authoring order** — nothing downstream
-may be authored before what precedes it exists — and *not* a folder list (DEC-P-0021 clause 3).
+may be authored before what precedes it exists — and *not* a folder list (DEC-0021 clause 3).
 It maps onto the decades like this:
 
 | Chain position | Lives in |
