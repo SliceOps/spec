@@ -21,8 +21,9 @@ consolidating or splitting changes the form, never the semantics.
 
 ## The decades
 
-Numbered in cognition-cycle order, semantics **reserved forever**. Presence activates: a corpus
-materializes only what its work needs — an empty decade is not a missing decade.
+Numbered in cognition-cycle order, semantics **reserved forever**. The scaffold is
+**complete, always**: every corpus materializes all nine, whether or not it uses them
+(DEC-0023, superseding DEC-0011_2's presence activation).
 
 ```
 _sliceops/
@@ -37,7 +38,14 @@ _sliceops/
   70-outcomes/   99-archive/ (immutable, R10)
 ```
 
-Decades **80 and 90** are free adopter/vendor space, declared in the manifest's `extensions`.
+Decades **80 and 90** are free adopter/vendor space and stay opt-in: they are created only
+when declared in the manifest's `extensions`.
+
+**Each decade carries a `README.md`** saying what belongs there, which prefixes it holds, and any
+rule that is easy to get wrong there. That is what makes the scaffold useful: an empty folder
+alone is silent, and the point is to read a corpus's gaps from its tree. **An empty decade is a
+declared gap, not a defect** — no corpus is required to fill one, and the framework reports
+emptiness rather than punishing it.
 
 ### Two rules that are easy to get wrong
 
