@@ -20,11 +20,11 @@ Vendor-agnostic, stack-agnostic reference material that materializes the canonic
 | `templates/` | File templates (slice, DEC, InsightRecord) | B.1 |
 | `agent-skill/` | Agent-Skill concept spec (vendor-neutral procedural-pack concept; distinct from the Capability cognitive entity) | B.1 |
 | `patterns/` | Layer B.2 Universal Engineering Patterns — reaffirmed industry-canonical and SliceOps-formalized (Determinism-over-Regeneration, CI/Pipeline Cost Economy) | B.2 |
-| `workflows/` | CI workflow exemplars (full reference implementation lives in the SliceOps toolkit repo) | B.2 |
+| `workflows/` | Canonical workflows. `planning.md`: substrate specs → plan → slices → derived DAG, and the **plan gate** that closes it (DEC-0020). CI workflow exemplars live in the SliceOps toolkit repo | B.1 |
 
 ## Status
 
-Layer B.1 reference core drafted: entity-catalog, evidence, r-rules, frontmatter-schemas, templates, agent-skill, patterns. `workflows/` exemplars and adopter onboarding are remaining.
+Layer B.1 reference core drafted: entity-catalog, evidence, r-rules, frontmatter-schemas, templates, agent-skill, patterns, `workflows/` (planning). Remaining: the plan-completeness validator (DEC-0020 clause 4, lands in the toolkit) and adopter onboarding.
 
 ## Note on "Skill" vs "Capability"
 

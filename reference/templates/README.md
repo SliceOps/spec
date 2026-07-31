@@ -6,7 +6,8 @@ All templates are born homologated: universal grammar `PREFIX-NNNN-YYYYMMDD-slug
 
 ## Files
 
-- [`slice-template.md`](slice-template.md) — a slice scope/PR-description skeleton (P4)
+- [`plan-template.md`](plan-template.md) — a plan skeleton with the **definition of ready** (the plan gate, DEC-0020); derived from the slice source, never hand-patched (P5)
+- [`slice-template.md`](slice-template.md) — a slice scope/PR-description skeleton (P4), routing to `../model-triage/` and `../sizing/` for the fields it declares
 - [`dec-template.md`](dec-template.md) — a DecisionRecord skeleton with Layer 1 fields (lifecycle in the prefix: `DEC-P-` → `DEC-` → `DEC-D-`; flat `decisions/`; optional `approver`, P3)
 - [`insight-record-template.md`](insight-record-template.md) — an InsightRecord skeleton (append-only, P8)
 - [`capability-template.md`](capability-template.md) — a Capability skeleton with the component model (`standard`/`runbook`/`playbook` via `kind:`)
