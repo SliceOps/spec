@@ -1,0 +1,20 @@
+{
+  "version": "<YYYY-MM-DD>",
+  "description": "<adopter-owned C.2 path routing map for decision-aware generation>",
+  "path_routes": [
+    {
+      "id": "<route-id>",
+      "patterns": [
+        "<glob pattern, e.g. src/**/*.cs>"
+      ],
+      "requires_decision_analysis": true,
+      "packs": [
+        {
+          "id": "<SPP id>",
+          "name": "<Stack Pattern Pack name>",
+          "path": "<repo-relative pack path>"
+        }
+      ]
+    }
+  ]
+}
