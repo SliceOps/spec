@@ -1,6 +1,6 @@
-# SliceOps™ Specification v2.2.0
+# SliceOps® Specification v2.2.0
 
-The canonical SliceOps™ framework specification, version 2.2.0.
+The canonical SliceOps® framework specification, version 2.2.0.
 
 **What's new in v2.2.0 (topic taxonomy, DEC-0016) over v2.1.0** — a **backwards-compatible minor**: [`topics.md`](topics.md) gains the canonical topic **`naming`** under `meta-framework`, covering the identifier standard of [`naming.md`](naming.md) — the universal grammar, entity prefixes, the slice coordinate, clause identifiers, reserved names and the alias tables. It closes a gap left by the v2 re-founding: the taxonomy predates `DEC-0008`, so the identifier standard it created was the only canonical spec document with no topic of its own, and `meta-framework` named "naming" in its own scope without carrying an entry for it. Purely additive — every `topics:` value valid in v2.1.0 stays valid, and no other entry is renamed, merged, split or removed. The scope text draws the line the taxonomy needs to keep: `naming` is the *identifier* axis, `vocabulary-discipline` is term canonicity in prose, `hierarchical-taxonomy` is the Layer A/B/C layer names.
 

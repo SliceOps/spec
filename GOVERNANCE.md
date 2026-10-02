@@ -1,6 +1,6 @@
 # Governance
 
-SliceOps™ is a founder-stewarded open framework. This document is the top-level overview; detailed governance lives in `governance/`.
+SliceOps® is a founder-stewarded open framework. This document is the top-level overview; detailed governance lives in `governance/`.
 
 ## Stewardship
 

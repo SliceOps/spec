@@ -1,4 +1,4 @@
-# Development Model — SliceOps™ (Layer B.1)
+# Development Model — SliceOps® (Layer B.1)
 
 The canonical answer to "what kind of development model is SliceOps?" — and how it relates to spec-first / test-first / contract-first authoring styles. SliceOps IP, CC BY 4.0.
 

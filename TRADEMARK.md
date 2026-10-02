@@ -1,19 +1,19 @@
-# SliceOps™ Trademark Policy
+# SliceOps® Trademark Policy
 
-> **Status: active (2026-06-15).** This policy governs use of the **SliceOps™** name, logo, and related marks. Like the rest of this repository's prose it is published under [CC BY 4.0](LICENSE), but it is a **statement of trademark policy** — not a grant of trademark rights. The trademark is held personally by [Andrés Ramírez Sierra](https://andres.co) (pre-incorporation of SliceOps LLC).
+> **Status: active — EU trademark registered 2026-09-26 (EUIPO #019381071).** This policy governs use of the **SliceOps®** name, logo, and related marks. Like the rest of this repository's prose it is published under [CC BY 4.0](LICENSE), but it is a **statement of trademark policy** — not a grant of trademark rights. The trademark is held personally by [Andrés Ramírez Sierra](https://andres.co) (pre-incorporation of SliceOps LLC).
 
-SliceOps™ is an open framework for AI-first software engineering. The **content** of this project — the spec, reference patterns, templates, and tooling — is openly licensed so anyone can read, use, adapt, and redistribute it. The **name and brand** "SliceOps" are a trademark, and trademarks work differently from copyright: their job is to tell people reliably where something comes from and whether it is what it claims to be. This policy explains how you may — and may not — use the SliceOps name and marks, so that the openness of the content is never mistaken for a license to imply endorsement, affiliation, or official status.
+SliceOps® is an open framework for AI-first software engineering. The **content** of this project — the spec, reference patterns, templates, and tooling — is openly licensed so anyone can read, use, adapt, and redistribute it. The **name and brand** "SliceOps" are a trademark, and trademarks work differently from copyright: their job is to tell people reliably where something comes from and whether it is what it claims to be. This policy explains how you may — and may not — use the SliceOps name and marks, so that the openness of the content is never mistaken for a license to imply endorsement, affiliation, or official status.
 
 The policy is deliberately permissive about honest, descriptive, and nominative use, and strict about uses that could mislead.
 
 ## 1. Trademark is separate from the copyright license
 
-The SliceOps content is licensed under **CC BY 4.0** (documentation) and the **MIT License** (code), as set out in [`LICENSE`](LICENSE), [`LICENSE-CODE`](LICENSE-CODE), and [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md). Those licenses govern **copying, modifying, and redistributing the content**. They do **not** grant any right to use the **SliceOps™ trademark**.
+The SliceOps content is licensed under **CC BY 4.0** (documentation) and the **MIT License** (code), as set out in [`LICENSE`](LICENSE), [`LICENSE-CODE`](LICENSE-CODE), and [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md). Those licenses govern **copying, modifying, and redistributing the content**. They do **not** grant any right to use the **SliceOps® trademark**.
 
 This restates Decision 6 of the ratified license decision `DEC-0003-20260615-sliceops-license-ratification`:
 
 - **Copyright license** — governs the **content** (use, copy, redistribute, adapt).
-- **Trademark policy** (this file) — governs the **name "SliceOps™"** in commerce, marketing, and product identity.
+- **Trademark policy** (this file) — governs the **name "SliceOps®"** in commerce, marketing, and product identity.
 
 Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives you **no** trademark rights. Attribution, by contrast, **is required**: CC BY 4.0 requires you to credit "SliceOps" as the source whenever you redistribute or adapt the documentation, and MIT requires preserving the notice (see [`governance/IPR_POLICY.md`](governance/IPR_POLICY.md)). That crediting is *nominative* use of the name (covered in Section 3) — welcome and expected — not a trademark grant.
 
@@ -23,10 +23,10 @@ Receiving content under CC BY 4.0 / MIT, or contributing to the project, gives y
 |---|---|
 | **Mark** | SliceOps (wordmark, plain text) |
 | **Owner** | Andrés Ramírez Sierra (personal IP, pre-incorporation of SliceOps LLC) |
-| **EUIPO application** | **#019381071**, filed 2026-06-15 — Class 9 (downloadable software) and Class 42 (SaaS / software design and development services) — **pending registration** |
-| **Symbol** | Use **™** with the mark. The **®** symbol becomes appropriate only after registration is granted, and only in jurisdictions where the mark is actually registered. |
+| **EUIPO registration** | **#019381071** — filed 2026-06-15, **registered 2026-09-26** (0 oppositions), expires 2036-06-15 — Class 9 (downloadable software) and Class 42 (SaaS / software design and development services) |
+| **Symbol** | Use **®** with the mark. SliceOps is a registered trademark in the **European Union** (EUIPO #019381071); registration in further jurisdictions (US, Madrid Protocol) is in progress. |
 
-Until registration is granted, "SliceOps™" is asserted as a common-law / pending trademark. Do not represent the mark as a *registered* (®) trademark anywhere it is not, in fact, registered.
+"SliceOps®" is a **registered trademark in the European Union** (EUIPO #019381071, registered 2026-09-26); the **®** symbol is used with the mark, and registration in further jurisdictions (US, Madrid Protocol) is in progress.
 
 ## 3. Uses that are always allowed (no permission needed)
 
@@ -50,7 +50,7 @@ You may state that something **conforms to**, **implements**, or is **compatible
 
 - The claim is **self-declared and descriptive**. SliceOps does **not** currently operate an official certification, accreditation, or "approved / official partner" program — so no such status may be claimed or implied.
 - A conformance claim must be **accurate and not misleading**. Do not claim compliance for something that does not follow the principles, and do not present a conformance claim as an endorsement by, or partnership with, the trademark owner.
-- Do not turn a conformance claim into a brand. "SliceOps-compliant" as a factual statement about your product is fine; "SliceOps Certified™", a "SliceOps" badge presented as an official seal, or a product *named* around the claim is not (see Section 5).
+- Do not turn a conformance claim into a brand. "SliceOps-compliant" as a factual statement about your product is fine; "SliceOps Certified®", a "SliceOps" badge presented as an official seal, or a product *named* around the claim is not (see Section 5).
 
 If a formal certification or conformance program is established in the future, it will be announced through the project's official channels and this policy updated.
 
@@ -69,7 +69,7 @@ Permission is **not** unreasonably withheld for good-faith community uses — us
 
 ## 6. The name and logo
 
-**The wordmark.** The canonical written form is **"SliceOps"** — one word, capital "S" and capital "O", no space, no hyphen. Do not render the brand as "Slice Ops", "Slice-Ops", "SLICEOPS", "Sliceops", or "sliceOps". Use the ™ symbol on first or prominent use where practical.
+**The wordmark.** The canonical written form is **"SliceOps"** — one word, capital "S" and capital "O", no space, no hyphen. Do not render the brand as "Slice Ops", "Slice-Ops", "SLICEOPS", "Sliceops", or "sliceOps". Use the ® symbol on first or prominent use where practical.
 
 **The logo.** The SliceOps logo (the wordmark and any associated device, in their black-and-white forms) is also a trademark. You may use the unmodified logo for **nominative reference** — e.g. a "works with SliceOps" context — provided you do not imply endorsement. You may **not**:
 
@@ -100,4 +100,4 @@ The mark is held by **Andrés Ramírez Sierra**. Requests are handled personally
 
 ---
 
-SliceOps™ is an open framework authored by Andrés Ramírez Sierra. Trademark and copyright held personally. This policy may be updated as the project and its trademark registrations evolve; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.
+SliceOps® is an open framework authored by Andrés Ramírez Sierra. Trademark and copyright held personally. This policy may be updated as the project and its trademark registrations evolve; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.

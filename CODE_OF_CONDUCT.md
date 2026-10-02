@@ -2,7 +2,7 @@
 
 ## Our pledge
 
-We pledge to make participation in the SliceOps™ community a harassment-free experience for everyone, regardless of background, identity, or experience level.
+We pledge to make participation in the SliceOps® community a harassment-free experience for everyone, regardless of background, identity, or experience level.
 
 ## Standards
 
@@ -50,7 +50,7 @@ Maintainers follow these Community Impact Guidelines (adapted from the Contribut
 Enforcement governs **participation and the trademark**, never the open-source grant on content already released:
 
 - **Participation** — access to the project's spaces (issues, pull requests, discussions, events) and contributor privileges may be limited, suspended, or revoked.
-- **Trademark** — permission to use the **SliceOps™** name, to present as affiliated, or to claim "SliceOps-compliant" status may be withdrawn from bad-faith actors under [`TRADEMARK.md`](TRADEMARK.md).
+- **Trademark** — permission to use the **SliceOps®** name, to present as affiliated, or to claim "SliceOps-compliant" status may be withdrawn from bad-faith actors under [`TRADEMARK.md`](TRADEMARK.md).
 - **The content license is not a sanction lever.** The CC BY 4.0 and MIT grants on content already released are **irrevocable and perpetual** by design; a Code of Conduct violation does not revoke anyone's right to use, copy, or adapt the openly licensed content. Enforcement therefore acts on participation and on trademark permissions, not on the license.
 
 ## Attribution

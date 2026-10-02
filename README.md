@@ -1,4 +1,4 @@
-# SliceOps™
+# SliceOps®
 
 > The open framework and audit plane for AI-first software engineering. Multi-agent teams ship auditable software, not vibe code.
 
@@ -43,10 +43,10 @@ Code files carry an `SPDX-License-Identifier: MIT` header making per-file scope 
 
 Copyright (c) 2026 Andrés Ramírez Sierra.
 
-SliceOps™ is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). Trademark usage is governed separately by [`TRADEMARK.md`](TRADEMARK.md) — the CC BY 4.0 / MIT licenses **do not** transfer trademark rights. See [`DISCLOSURE.md`](DISCLOSURE.md) and [`DISCLAIMER.md`](DISCLAIMER.md).
+SliceOps® is a registered trademark of Andrés Ramírez Sierra in the European Union (EUIPO #019381071, registered 2026-09-26). Trademark usage is governed separately by [`TRADEMARK.md`](TRADEMARK.md) — the CC BY 4.0 / MIT licenses **do not** transfer trademark rights. See [`DISCLOSURE.md`](DISCLOSURE.md) and [`DISCLAIMER.md`](DISCLAIMER.md).
 
 ---
 
-SliceOps™ is an open framework authored by [Andrés Ramírez Sierra](https://andres.co). Trademark and copyright held personally.
+SliceOps® is an open framework authored by [Andrés Ramírez Sierra](https://andres.co). Trademark and copyright held personally.
 
 Companion repository: [sliceops-toolkit](https://github.com/SliceOps/toolkit) — CI guardrail templates, validators, slice-forecaster, DAG builder.

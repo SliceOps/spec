@@ -1,4 +1,4 @@
-# SliceOps™ Roadmap
+# SliceOps® Roadmap
 
 > Revised quarterly. This is a skeleton; concrete milestones are added as the spec stabilizes.
 

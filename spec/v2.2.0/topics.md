@@ -1,4 +1,4 @@
-# SliceOps™ Canonical Topic Taxonomy — v2.2.0
+# SliceOps® Canonical Topic Taxonomy — v2.2.0
 
 Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatter from this list (Layer 1 frontmatter discipline). Enables:
 
@@ -199,7 +199,7 @@ Canonical taxonomy of SliceOps topics. Every DEC declares `topics:` in frontmatt
 - **Cross-references**: ip-boundary, trademark
 
 ### trademark
-- **Scope**: SliceOps™ trademark — registration, coexistence agreements, marketing usage guidelines.
+- **Scope**: SliceOps® trademark — registration, coexistence agreements, marketing usage guidelines.
 - **Parent**: ip-boundary
 - **Cross-references**: ip-boundary, licensing
 
