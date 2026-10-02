@@ -1,6 +1,6 @@
-# SliceOps™ Canonical Principles (Layer A) — v2.0.0
+# SliceOps® Canonical Principles (Layer A) — v2.0.0
 
-SliceOps™ is a **decision-driven framework** constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**.
+SliceOps® is a **decision-driven framework** constituted by **12 canonical principles (Layer A)**. Without any one of them, the result **is not SliceOps**.
 
 They are presented **Why → How → What**: *why* probabilistic, agentic construction needs disciplined control (**P1–P3**), *how* you build under that discipline (**P4–P10**), and *what* the discipline makes tangible, bound to no vendor (**P11–P12**). **Decision-first**: architecture, specs, plans, and execution are *consequences* of foundations and decisions — never the reverse. Each principle is defined with a statement, rationale, implication, and anti-pattern.
 

@@ -1,4 +1,4 @@
-# SliceOps™ Canonical Naming — v2.0.0
+# SliceOps® Canonical Naming — v2.0.0
 
 The canonical naming standard for SliceOps artifacts: **one concept = one name = one prefix = one grammar, across every layer and every store**. This document is the **single normative source** for artifact naming; every other document points here and never copies the tables (copies drift — principle P12, Context Discipline).
 

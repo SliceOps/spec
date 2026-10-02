@@ -1,6 +1,6 @@
 # spec/ — Versioned canonical framework spec
 
-The authoritative SliceOps™ framework specification, versioned with SemVer.
+The authoritative SliceOps® framework specification, versioned with SemVer.
 
 - `v2.2.0/` — **current version** — the canonical topic `naming` added to the taxonomy (DEC-0016), closing the gap the v2 re-founding left: the identifier standard was the only canonical spec document with no topic of its own; backwards-compatible minor over v2.1.0 (`topics.md` is the only changed document)
 - `v2.1.0/` — slice-coordinate grammar extension (DEC-0014): optional one-letter sub-slice suffix (`SLC0010b`) + alphabetic section codes (`SLC0034SECDOC`, pure, no `BL` substring); backwards-compatible minor over v2.0.1 (frozen — retained for audit)

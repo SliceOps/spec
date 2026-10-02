@@ -1,6 +1,6 @@
 # Disclaimer
 
-SliceOps™ is an open framework provided for use by the community. This disclaimer applies to the whole project — the specification, reference patterns, templates, tooling, and documentation (together, the "Materials").
+SliceOps® is an open framework provided for use by the community. This disclaimer applies to the whole project — the specification, reference patterns, templates, tooling, and documentation (together, the "Materials").
 
 ## No warranty
 
@@ -20,8 +20,8 @@ To the maximum extent permitted by applicable law, in no event shall the author 
 
 ## Trademark
 
-"SliceOps™" is a trademark of [Andrés Ramírez Sierra](https://andres.co); the content licenses do not grant trademark rights. See [`TRADEMARK.md`](TRADEMARK.md).
+"SliceOps®" is a trademark of [Andrés Ramírez Sierra](https://andres.co); the content licenses do not grant trademark rights. See [`TRADEMARK.md`](TRADEMARK.md).
 
 ---
 
-SliceOps™ is an open framework authored by [Andrés Ramírez Sierra](https://andres.co). This disclaimer may be updated; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.
+SliceOps® is an open framework authored by [Andrés Ramírez Sierra](https://andres.co). This disclaimer may be updated; the version on the `main` branch of [SliceOps/spec](https://github.com/SliceOps/spec) is authoritative.

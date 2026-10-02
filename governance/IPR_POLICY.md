@@ -21,7 +21,7 @@ Attribution is **required**, not optional, whenever you redistribute or adapt th
 
 ## Trademark — separate from copyright
 
-"SliceOps™" is a trademark of Andrés Ramírez Sierra (EUIPO filing #019381071, pending registration). **The CC BY 4.0 / MIT licenses do not transfer trademark rights.** Copyright governs use, copying, and redistribution of the content; the trademark governs use of the name "SliceOps™" in commerce and marketing. An adopter may use and redistribute SliceOps content under CC BY 4.0 / MIT (with attribution) and publish derivatives under their own name, but may not brand a derivative "SliceOps &lt;anything&gt;" or claim "SliceOps-compliant" without honoring the spec. Trademark usage guidelines (allowable claims, attribution, anti-misuse) are published separately in [`../TRADEMARK.md`](../TRADEMARK.md). See also [`../DISCLOSURE.md`](../DISCLOSURE.md).
+"SliceOps®" is a registered trademark of Andrés Ramírez Sierra in the European Union (EUIPO #019381071, registered 2026-09-26). **The CC BY 4.0 / MIT licenses do not transfer trademark rights.** Copyright governs use, copying, and redistribution of the content; the trademark governs use of the name "SliceOps®" in commerce and marketing. An adopter may use and redistribute SliceOps content under CC BY 4.0 / MIT (with attribution) and publish derivatives under their own name, but may not brand a derivative "SliceOps &lt;anything&gt;" or claim "SliceOps-compliant" without honoring the spec. Trademark usage guidelines (allowable claims, attribution, anti-misuse) are published separately in [`../TRADEMARK.md`](../TRADEMARK.md). See also [`../DISCLOSURE.md`](../DISCLOSURE.md).
 
 ## Contributions — Inbound = Outbound, certified by the DCO
 
@@ -30,7 +30,7 @@ Contributions are accepted under the **Inbound = Outbound** principle: by openin
 Contributors additionally certify the **Developer Certificate of Origin 1.1** ([`../DCO`](../DCO)) by signing off each commit (`git commit -s`). The DCO is a lightweight attestation that the contributor has the right to submit the work; it is **not** a copyright assignment.
 
 - **No Contributor License Agreement (CLA) is required for v1.** The Inbound = Outbound license plus DCO sign-off keeps contribution friction low while preserving provenance of every change.
-- **Trademark is not included in the contribution license.** Contributing grants no rights in the "SliceOps™" mark, which remains personal IP governed by [`../TRADEMARK.md`](../TRADEMARK.md).
+- **Trademark is not included in the contribution license.** Contributing grants no rights in the "SliceOps®" mark, which remains personal IP governed by [`../TRADEMARK.md`](../TRADEMARK.md).
 - Changes to a principle, reference pattern, or canonical vocabulary follow the proposal process (pending DecisionRecords, `DEC-P-`). See [`PROPOSAL-PROCESS.md`](PROPOSAL-PROCESS.md).
 
 A formal CLA may still be re-evaluated if the contributor base grows past roughly 50 distinct individuals, a re-licensing need arises, or enterprise adopters require it for due diligence.
